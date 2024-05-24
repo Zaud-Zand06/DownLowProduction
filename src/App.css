@@ -12,13 +12,18 @@
 }
 
 .header {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   margin: 0 2rem;
   width: 95%;
+  height: 125px;
+  overflow: visible;
+  z-index: 6;
 }
 
 #logo {
+  top: 10px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -29,31 +34,59 @@
 
 #logo > * {
   margin: 0;
+  text-shadow: 3px 3px 2px black;
 }
 
 #redLogo {
   color: var(--main-red);
 }
 
-#hamburgerButton {
+#hamburgerButton > h1 {
   font-size: 5rem;
+  /* color: var(--main-red);
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 2px;
+  text-shadow: 3px 3px 2px black; */
 }
 
 .carousel-root {
   align-self: center;
-}
-
-.scrollAlert {
-  border: 2px solid seagreen;
-  width: 100%;
+  z-index: 5;
 }
 
 .parallaxContainer {
   display: flex;
+  width: 100svw;
+  justify-content: space-around;
 }
 
 .mapEmbed {
   width: 90svw;
   height: 80svh;
   margin-bottom: 4rem;
+}
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.scrollContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+.horizontalScrollingItems {
+  display: flex;
+  font-size: 40px;
+  width: 2600px;
+  animation-name: infiniteScroll;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.horizontalScrollingItemsItems {
+  white-space: nowrap;
 }

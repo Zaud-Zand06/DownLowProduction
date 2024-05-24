@@ -17,33 +17,50 @@ function App() {
 
       <HeroCarousel />
 
-      <div className="scrollAlert">
-        We Now Do Catering! We Now Do Catering! We Now Do Catering!
+      <div className="scrollContainer">
+        <div className="horizontalScrollingItems">
+          <div className="horizontalScrollingItemsItems">
+            We Now Do Catering! We Now Do Catering! We Now Do Catering! We Now
+            Do Catering! We Now Do Catering! We Now Do Catering!
+          </div>
+          <div className="horizontalScrollingItemsItems">
+            We Now Do Catering! We Now Do Catering! We Now Do Catering! We Now
+            Do Catering! We Now Do Catering! We Now Do Catering!
+          </div>
+        </div>
       </div>
 
       <div className="parallaxContainer">
-        <Parallax speed={40}>
-          <div>info about us</div>
-          <video
-            autoPlay={true}
-            muted={true}
-            loop={true}
-            width={350}
-            src="/src/assets/downLowPromoVid1.mp4"
-          ></video>
-        </Parallax>
-        <Parallax speed={20}>
-          <div>info about the contacts and locations</div>
-          <video
-            autoPlay={true}
-            muted={true}
-            loop={true}
-            width={350}
-            src="/src/assets/downLowPromoVid2.mp4"
-          ></video>
-        </Parallax>
+        <div className="aboutUs">
+          <Parallax speed={-40} style={{ position: "relative", zIndex: 3 }}>
+            <div>info about us</div>
+          </Parallax>
+          <Parallax speed={20} style={{ position: "relative", zIndex: 1 }}>
+            <video
+              autoPlay={true}
+              muted={true}
+              loop={true}
+              width={450}
+              src="/src/assets/downLowPromoVid1.mp4"
+            ></video>
+          </Parallax>
+        </div>
+        <div className="locationContact">
+          <Parallax speed={-20} style={{ position: "relative", zIndex: 3 }}>
+            <div>info about the contacts and locations</div>
+          </Parallax>
+          <Parallax speed={40} style={{ position: "relative", zIndex: 1 }}>
+            <video
+              autoPlay={true}
+              muted={true}
+              loop={true}
+              width={450}
+              src="/src/assets/downLowPromoVid2.mp4"
+            ></video>
+          </Parallax>
+        </div>
       </div>
-      <Parallax speed={10}>
+      <Parallax speed={10} style={{ position: "relative", zIndex: 5 }}>
         <iframe
           className="mapEmbed"
           src="https://storage.googleapis.com/maps-solutions-umrctwt8ee/locator-plus/jrgd/locator-plus.html"
