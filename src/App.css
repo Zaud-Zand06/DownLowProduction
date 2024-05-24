@@ -1,6 +1,8 @@
 :root {
   --main-yellow: #ffb800;
   --main-red: #ff0000;
+  --transparent-color: #00000000;
+  --button-hover-colour: #535bf2;
 }
 
 #root {
@@ -17,8 +19,6 @@
   justify-content: space-between;
   margin: 0 2rem;
   width: 95%;
-  height: 125px;
-  overflow: visible;
   z-index: 6;
 }
 
@@ -41,12 +41,31 @@
   color: var(--main-red);
 }
 
-#hamburgerButton > h1 {
+#hamburgerButton {
   font-size: 5rem;
-  /* color: var(--main-red);
+  padding-left: 2rem;
+  color: var(--main-red);
   -webkit-text-stroke-color: black;
   -webkit-text-stroke-width: 2px;
-  text-shadow: 3px 3px 2px black; */
+  text-shadow: 3px 3px 2px black;
+}
+
+#hamburgerButton:hover {
+  color: var(--button-hover-colour);
+}
+
+.hamburgerMenuButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.hamburgerMenuButtons > * {
+  padding: 2rem;
+  font-size: 2rem;
+  color: var(--main-red);
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 2px;
+  text-shadow: 3px 3px 2px black;
 }
 
 .carousel-root {
