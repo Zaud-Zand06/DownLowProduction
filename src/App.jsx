@@ -27,7 +27,7 @@ function App() {
           <div className="parallaxContainer">
             <div className="aboutUs">
               <Parallax speed={-60} style={{ position: "relative", zIndex: 3 }}>
-                <div>info about us</div>
+                <div className="parallaxText">info about us</div>
               </Parallax>
               <Parallax speed={20} style={{ position: "relative", zIndex: 1 }}>
                 <video
@@ -41,7 +41,9 @@ function App() {
             </div>
             <div className="locationContact">
               <Parallax speed={-20} style={{ position: "relative", zIndex: 3 }}>
-                <div>info about the contacts and locations</div>
+                <div className="parallaxText2">
+                  info about the contacts and locations
+                </div>
               </Parallax>
               <Parallax speed={40} style={{ position: "relative", zIndex: 1 }}>
                 <video

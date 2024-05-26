@@ -3,6 +3,8 @@
   --main-red: #ff0000;
   --transparent-color: #00000000;
   --button-hover-colour: #535bf2;
+  --border-colour: #000000;
+  --shadow-colour: #000000;
 }
 
 #root {
@@ -28,13 +30,13 @@
   display: flex;
   flex-direction: column;
   color: var(--main-yellow);
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: var(--shadow-colour);
   -webkit-text-stroke-width: 2px;
 }
 
 #logo * {
   margin: 0;
-  text-shadow: 3px 3px 2px black;
+  text-shadow: 3px 3px 2px var(--shadow-colour);
 }
 
 #redLogo {
@@ -49,9 +51,9 @@
   font-size: 5rem;
   padding-left: 2rem;
   color: var(--main-red);
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: var(--border-colour);
   -webkit-text-stroke-width: 2px;
-  text-shadow: 3px 3px 2px black;
+  text-shadow: 3px 3px 2px var(--shadow-colour);
 }
 
 #hamburgerButton:hover {
@@ -67,27 +69,52 @@
   padding: 2rem;
   font-size: 2rem;
   color: var(--main-red);
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: var(--border-colour);
   -webkit-text-stroke-width: 2px;
-  text-shadow: 3px 3px 2px black;
+  text-shadow: 3px 3px 2px var(--shadow-colour);
 }
 
 .carousel-root {
-  margin-top: 7.5rem;
+  margin-top: 14.5svh;
+  border: 3px solid var(--border-colour);
+  box-shadow: 2px 2px 2px var(--shadow-colour);
   align-self: center;
   z-index: 5;
 }
 
 .parallaxContainer {
+  position: relative;
   display: flex;
   width: 100svw;
   justify-content: space-around;
+}
+
+.parallaxText,
+.parallaxText2 {
+  color: white;
+  position: relative;
+  padding: 6rem;
+  border: 2px solid var(--main-red);
+  backdrop-filter: blur(15px);
+}
+
+video {
+  border: 2px solid var(--main-red);
+}
+
+.parallaxText {
+  left: 8rem;
+}
+.parallaxText2 {
+  right: 8rem;
+  bottom: -25rem;
 }
 
 .mapEmbed {
   width: 90svw;
   height: 80svh;
   margin-bottom: 4rem;
+  border: 2px solid var(--main-red);
 }
 
 @keyframes infiniteScroll {
@@ -111,6 +138,11 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+.horizontalScrollingItems:hover {
+  animation-play-state: paused;
+}
+
 .horizontalScrollingItemsItems {
   white-space: nowrap;
 }

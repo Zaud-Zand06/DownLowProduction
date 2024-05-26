@@ -32,7 +32,6 @@ function Header({ setDisplayMenu, displayMenu }) {
             <h1>Chicken</h1>
           </a>
         </div>
-        {/* rework to a seperate module */}
         <>
           <a
             id="hamburgerButton"
