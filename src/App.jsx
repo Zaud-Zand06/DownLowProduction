@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <Header setDisplayMenu={setDisplayMenu} />
+      <Header setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
 
       {/* menu display */}
       {displayMenu == true && (

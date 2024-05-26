@@ -32,13 +32,17 @@
   -webkit-text-stroke-width: 2px;
 }
 
-#logo > * {
+#logo * {
   margin: 0;
   text-shadow: 3px 3px 2px black;
 }
 
 #redLogo {
   color: var(--main-red);
+}
+
+#redLogo:hover {
+  color: var(--button-hover-colour);
 }
 
 #hamburgerButton {

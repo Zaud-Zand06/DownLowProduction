@@ -48,7 +48,7 @@ function HeroCarousel() {
         <div className="mySlide">
           <img src="/src/assets/jinBoot.jpg" />
           <p>
-            Miss our Pepino's collab? Check back soon to see our next collab!
+            Miss our Pepinos collab? Check back soon to see our next collab!
           </p>
         </div>
       </Carousel>
