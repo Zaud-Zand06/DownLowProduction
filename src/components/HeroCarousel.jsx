@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./HeroCarousel.css";
 
 function HeroCarousel() {
   const [carouselWidth, setCarouselWidth] = useState(
@@ -31,9 +32,25 @@ function HeroCarousel() {
         emulateTouch={true}
         showArrows={false}
         width={carouselWidth}
+        className="presentationMode"
       >
-        <img src="/src/assets/goKill.png" />
-        <img src="/src/assets/jinBoot.jpg" />
+        <div className="mySlide">
+          <img src="/src/assets/goKill.png" />
+          <p>Check out our monthly special! The typhoon!</p>
+        </div>
+        <div className="mySlide">
+          <img src="/src/assets/jinBoot.jpg" />
+          <p>
+            Missing some bone-in chicken? Come by any Wednesday for Wing
+            Wednesday!
+          </p>
+        </div>
+        <div className="mySlide">
+          <img src="/src/assets/jinBoot.jpg" />
+          <p>
+            Miss our Pepino's collab? Check back soon to see our next collab!
+          </p>
+        </div>
       </Carousel>
     </>
   );

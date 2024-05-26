@@ -69,6 +69,7 @@
 }
 
 .carousel-root {
+  margin-top: 7.5rem;
   align-self: center;
   z-index: 5;
 }
