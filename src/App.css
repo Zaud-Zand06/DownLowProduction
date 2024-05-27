@@ -97,11 +97,26 @@ div:has(div:has(> .hamburgerMenuButtons)) {
   justify-content: space-around;
 }
 
+@media screen and (max-width: 700px) {
+  .parallaxContainer {
+    flex-direction: column;
+  }
+
+  .parallaxText {
+    left: unset;
+  }
+
+  .parallaxText2 {
+    top: 8rem;
+    right: unset;
+  }
+}
+
 .parallaxText,
 .parallaxText2 {
   color: white;
   position: relative;
-  padding: 6rem;
+  padding: 3svw;
   border: 2px solid var(--main-red);
   backdrop-filter: blur(15px);
 }
