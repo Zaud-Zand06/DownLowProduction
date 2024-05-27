@@ -1,9 +1,10 @@
 import "./App.css";
 import { useState } from "react";
-import HeroCarousel from "./components/HeroCarousel";
 import { Parallax } from "react-scroll-parallax";
+import HeroCarousel from "./components/HeroCarousel";
 import Header from "./components/Header";
 import ScrollingAlert from "./components/ScrollingAlert";
+import ParallaxSection from "./components/ParallaxSection";
 
 function App() {
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -24,38 +25,8 @@ function App() {
 
           <ScrollingAlert />
 
-          <div className="parallaxContainer">
-            <div className="aboutUs">
-              <Parallax speed={-60} style={{ position: "relative", zIndex: 3 }}>
-                <div className="parallaxText">info about us</div>
-              </Parallax>
-              <Parallax speed={20} style={{ position: "relative", zIndex: 1 }}>
-                <video
-                  autoPlay={true}
-                  muted={true}
-                  loop={true}
-                  width={450}
-                  src="/src/assets/downLowPromoVid1.mp4"
-                ></video>
-              </Parallax>
-            </div>
-            <div className="locationContact">
-              <Parallax speed={-20} style={{ position: "relative", zIndex: 3 }}>
-                <div className="parallaxText2">
-                  info about the contacts and locations
-                </div>
-              </Parallax>
-              <Parallax speed={40} style={{ position: "relative", zIndex: 1 }}>
-                <video
-                  autoPlay={true}
-                  muted={true}
-                  loop={true}
-                  width={450}
-                  src="/src/assets/downLowPromoVid2.mp4"
-                ></video>
-              </Parallax>
-            </div>
-          </div>
+          <ParallaxSection />
+
           <Parallax speed={10} style={{ position: "relative", zIndex: 5 }}>
             <iframe
               className="mapEmbed"

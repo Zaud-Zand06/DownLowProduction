@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 2rem;
-  width: 95%;
+  width: 95svw;
   z-index: 6;
 }
 
@@ -58,6 +58,10 @@
 
 #hamburgerButton:hover {
   color: var(--button-hover-colour);
+}
+
+div:has(> .hamburgerMenuButtons) {
+  width: 95svw;
 }
 
 .hamburgerMenuButtons {
