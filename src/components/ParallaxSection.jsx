@@ -32,7 +32,7 @@ function ParallaxSection() {
             muted={true}
             loop={true}
             width={450}
-            src="/src/assets/downLowPromoVid1.mp4"
+            src="/public/downLowPromoVid1.mp4"
           ></video>
         </Parallax>
       </div>
@@ -53,7 +53,7 @@ function ParallaxSection() {
               muted={true}
               loop={true}
               width={450}
-              src="/src/assets/downLowPromoVid2.mp4"
+              src="/public/downLowPromoVid2.mp4"
             ></video>
           </Parallax>
         )}

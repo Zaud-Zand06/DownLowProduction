@@ -35,18 +35,18 @@ function HeroCarousel() {
         className="presentationMode"
       >
         <div className="mySlide">
-          <img src="/src/assets/goKill.png" />
+          <img src="/public/goKill.png" />
           <p>Check out our monthly special! The typhoon!</p>
         </div>
         <div className="mySlide">
-          <img src="/src/assets/jinBoot.jpg" />
+          <img src="/public/jinBoot.jpg" />
           <p>
             Missing some bone-in chicken? Come by any Wednesday for Wing
             Wednesday!
           </p>
         </div>
         <div className="mySlide">
-          <img src="/src/assets/jinBoot.jpg" />
+          <img src="/public/jinBoot.jpg" />
           <p>
             Miss our Pepinos collab? Check back soon to see our next collab!
           </p>
