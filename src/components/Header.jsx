@@ -13,7 +13,6 @@ function Header({ setDisplayMenu, displayMenu }) {
   const UBCLink = "https://dl-chicken-ubc.square.site/";
 
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
