@@ -169,3 +169,35 @@ video {
 .horizontalScrollingItemsItems {
   white-space: nowrap;
 }
+
+.menuContainer {
+  width: 95svw;
+  height: 95svh;
+  margin-top: 14.5svh;
+}
+
+.sectionContainer {
+  border: 2px solid var(--main-red);
+  padding: 1rem;
+}
+
+.sectionContainer > h2 {
+  font-size: 3rem;
+  color: var(--main-yellow);
+  filter: drop-shadow(3px 3px 2px var(--shadow-colour));
+  -webkit-text-stroke: var(--border-colour) 2px;
+}
+
+.sectionContainer h3 {
+  font-size: 2rem;
+  color: var(--main-yellow);
+  filter: drop-shadow(3px 3px 2px var(--shadow-colour));
+  -webkit-text-stroke: var(--border-colour) 2px;
+}
+
+.sectionContainer p {
+  font-size: 1.5rem;
+  color: white;
+  filter: drop-shadow(3px 3px 2px var(--shadow-colour));
+  -webkit-text-stroke: var(--border-colour) 2px;
+}

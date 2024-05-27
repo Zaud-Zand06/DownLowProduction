@@ -5,6 +5,7 @@ import HeroCarousel from "./components/HeroCarousel";
 import Header from "./components/Header";
 import ScrollingAlert from "./components/ScrollingAlert";
 import ParallaxSection from "./components/ParallaxSection";
+import Menu from "./components/Menu";
 
 function App() {
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -14,9 +15,7 @@ function App() {
       <Header setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
 
       {/* menu display */}
-      {displayMenu == true && (
-        <div className="menu">this is where the menu is gonna be chilling</div>
-      )}
+      {displayMenu == true && <Menu />}
 
       {/* main page */}
       {displayMenu == false && (
