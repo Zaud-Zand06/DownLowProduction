@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
+import vid1 from "../assets/downLowPromoVid1.mp4";
+import vid2 from "../assets/downLowPromoVid2.mp4";
 
 function ParallaxSection() {
   const [sectionWidth, setSectionWidth] = useState(window.innerWidth);
@@ -32,7 +34,7 @@ function ParallaxSection() {
             muted={true}
             loop={true}
             width={450}
-            src="/downLowPromoVid1.mp4"
+            src={vid1}
           ></video>
         </Parallax>
       </div>
@@ -53,7 +55,7 @@ function ParallaxSection() {
               muted={true}
               loop={true}
               width={450}
-              src="/downLowPromoVid2.mp4"
+              src={vid2}
             ></video>
           </Parallax>
         )}

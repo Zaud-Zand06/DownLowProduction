@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./HeroCarousel.css";
+import sliderImage from "../assets/jinBoot.jpg";
 
 function HeroCarousel() {
   const [carouselWidth, setCarouselWidth] = useState(
@@ -35,18 +36,18 @@ function HeroCarousel() {
         className="presentationMode"
       >
         <div className="mySlide">
-          <img src="/jinBoot.jpg" />
+          <img src={sliderImage} />
           <p>Check out our monthly special! The typhoon!</p>
         </div>
         <div className="mySlide">
-          <img src="/jinBoot.jpg" />
+          <img src={sliderImage} />
           <p>
             Missing some bone-in chicken? Come by any Wednesday for Wing
             Wednesday!
           </p>
         </div>
         <div className="mySlide">
-          <img src="/jinBoot.jpg" />
+          <img src={sliderImage} />
           <p>
             Miss our Pepinos collab? Check back soon to see our next collab!
           </p>
