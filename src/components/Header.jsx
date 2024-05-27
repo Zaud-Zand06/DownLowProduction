@@ -14,19 +14,6 @@ function Header({ setDisplayMenu, displayMenu }) {
 
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   function toggleHambugerMenu() {
     setHamburgerMenu(!hamburgerMenu);
   }
@@ -74,6 +61,7 @@ function Header({ setDisplayMenu, displayMenu }) {
               <a
                 onClick={() => {
                   setDisplayMenu(true);
+                  toggleHambugerMenu();
                 }}
               >
                 Menu
@@ -83,12 +71,19 @@ function Header({ setDisplayMenu, displayMenu }) {
               <a
                 onClick={() => {
                   setDisplayMenu(false);
+                  toggleHambugerMenu();
                 }}
               >
                 Home
               </a>
             )}
-            <a href="" target="_blank">
+            <a
+              href=""
+              target="_blank"
+              onClick={() => {
+                toggleHambugerMenu();
+              }}
+            >
               Catering
             </a>
           </div>
