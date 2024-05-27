@@ -26,11 +26,11 @@ function HeroCarousel() {
   return (
     <>
       <Carousel
+        stopOnHover={false}
         showStatus={false}
         infiniteLoop={true}
         autoPlay={true}
         showThumbs={false}
-        emulateTouch={true}
         showArrows={false}
         width={carouselWidth}
         className="presentationMode"
