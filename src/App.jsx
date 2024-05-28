@@ -1,4 +1,5 @@
 import "./App.css";
+import "./components/backgroundImage.css";
 import { useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import HeroCarousel from "./components/HeroCarousel";
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <Header setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
+      <div className="backgroundImage"></div>
 
       {/* menu display */}
       {displayMenu == true && <Menu />}

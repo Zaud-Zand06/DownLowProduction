@@ -1,0 +1,21 @@
+.backgroundImage {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: block;
+  background-image: url(../assets/the_logo.png);
+  height: 5000px;
+  width: 5076px;
+  filter: blur(5px);
+  z-index: -1111;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, -800px, 0);
+  }
+}
