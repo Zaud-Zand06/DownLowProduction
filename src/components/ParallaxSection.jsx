@@ -22,7 +22,7 @@ function ParallaxSection() {
     <div className="parallaxContainer">
       <div className="aboutUs">
         <Parallax speed={-60} style={{ position: "relative", zIndex: 3 }}>
-          <div className="parallaxText">info about us</div>
+          <p className="parallaxText">info about us</p>
         </Parallax>
         <Parallax
           speed={20}
@@ -39,10 +39,8 @@ function ParallaxSection() {
         </Parallax>
       </div>
       <div className="locationContact">
-        <Parallax speed={-20} style={{ position: "relative", zIndex: 3 }}>
-          <div className="parallaxText2">
-            info about the contacts and locations
-          </div>
+        <Parallax speed={-30} style={{ position: "relative", zIndex: 3 }}>
+          <p className="parallaxText2">info about the contacts and locations</p>
         </Parallax>
         {sectionWidth > 700 && (
           <Parallax

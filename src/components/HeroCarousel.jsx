@@ -6,13 +6,13 @@ import sliderImage from "../assets/jinBoot.jpg";
 
 function HeroCarousel() {
   const [carouselWidth, setCarouselWidth] = useState(
-    window.innerWidth <= 700 ? window.innerWidth * 1 : window.innerWidth * 1
+    window.innerWidth <= 700 ? window.innerWidth * 0.75 : window.innerWidth * 1
   );
 
   useEffect(() => {
     const handleResize = () => {
       window.innerWidth <= 700
-        ? setCarouselWidth(window.innerWidth * 1)
+        ? setCarouselWidth(window.innerWidth * 0.75)
         : setCarouselWidth(window.innerWidth * 1);
     };
 
@@ -26,7 +26,6 @@ function HeroCarousel() {
   return (
     <>
       <Carousel
-        stopOnHover={false}
         showStatus={false}
         infiniteLoop={true}
         autoPlay={true}
@@ -37,13 +36,20 @@ function HeroCarousel() {
       >
         <div className="mySlide">
           <img src={sliderImage} />
-          <p>Check out our monthly special! The typhoon!</p>
+          <h2>The Typhoon!</h2>
+          <p>
+            This months special is a pnw influenced take on the Typhoon spice! A
+            creamy LGM based mayo balanced with a tangy pickle-mustad slaw....
+            get ready to be blown :D away! S
+          </p>
         </div>
         <div className="mySlide">
           <img src={sliderImage} />
+          <h2>......is it Wednesday yet...?</h2>
           <p>
-            Missing some bone-in chicken? Come by any Wednesday for Wing
-            Wednesday!
+            Missing our bone-in chicken? Come by any Wednesday for our full
+            sized wings! Order them by the piece and spice them however you
+            like!
           </p>
         </div>
         <div className="mySlide">

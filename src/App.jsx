@@ -14,15 +14,22 @@ function App() {
   return (
     <>
       <Header setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
-      <div className="backgroundImage"></div>
+      {/* <div className="backgroundImage"></div> */}
 
       {/* menu display */}
-      {displayMenu == true && <Menu />}
+      {displayMenu == true && (
+        <>
+          <div className="backgroundImage"></div>
+
+          <Menu />
+        </>
+      )}
 
       {/* main page */}
       {displayMenu == false && (
         <>
           <HeroCarousel />
+          <div className="backgroundImage"></div>
 
           <ScrollingAlert />
 
