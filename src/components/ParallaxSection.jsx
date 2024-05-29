@@ -22,7 +22,12 @@ function ParallaxSection() {
     <div className="parallaxContainer">
       <div className="aboutUs">
         <Parallax speed={-60} style={{ position: "relative", zIndex: 3 }}>
-          <p className="parallaxText">info about us</p>
+          <p className="parallaxText">
+            Since our inception, Down Low Chicken has been commited to providing
+            the best Nashville style fried chicken you can get. To do this we
+            start with the highest quality ingredients, from our chicken down to
+            our pickles.
+          </p>
         </Parallax>
         <Parallax
           speed={20}
@@ -40,7 +45,9 @@ function ParallaxSection() {
       </div>
       <div className="locationContact">
         <Parallax speed={-30} style={{ position: "relative", zIndex: 3 }}>
-          <p className="parallaxText2">info about the contacts and locations</p>
+          <p className="parallaxText2">
+            Get in touch with us at number or email!
+          </p>
         </Parallax>
         {sectionWidth > 700 && (
           <Parallax

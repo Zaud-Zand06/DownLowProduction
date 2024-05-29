@@ -118,6 +118,7 @@
   padding: 3svw;
   border: 2px solid var(--main-red);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 video {
