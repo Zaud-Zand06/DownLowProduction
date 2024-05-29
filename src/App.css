@@ -19,7 +19,7 @@
 
 .header {
   width: 100svw;
-  height: 20svh;
+  height: 9em;
   background-color: var(--main-yellow);
   box-shadow: 3px 3px 29px var(--shadow-colour);
   border-bottom: 2px solid var(--main-red);
@@ -87,12 +87,6 @@
   text-shadow: 3px 3px 2px var(--shadow-colour);
 }
 
-.carousel-root {
-  border: 3px solid var(--border-colour);
-  box-shadow: 2px 2px 2px var(--shadow-colour);
-  z-index: 5;
-}
-
 .parallaxContainer {
   position: relative;
   display: flex;
@@ -112,7 +106,8 @@
   }
 
   .parallaxText2 {
-    top: 8rem;
+    top: 0;
+    left: 1rem;
   }
 }
 
@@ -138,9 +133,9 @@ video {
 }
 
 .mapEmbed {
-  margin-top: 15svh;
+  margin-top: 3em;
   width: 90svw;
-  height: 80svh;
+  height: 40em;
   margin-bottom: 4rem;
   border: 2px solid var(--main-red);
 }
@@ -176,6 +171,9 @@ video {
 }
 
 .menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 95svw;
   height: 95svh;
   margin-top: 14.5svh;
@@ -184,6 +182,8 @@ video {
 .sectionContainer {
   border: 2px solid var(--main-red);
   padding: 1rem;
+  background-color: var(--main-yellow);
+  /* backdrop-filter: opacity(0.8); */
 }
 
 .sectionContainer > h2 {
@@ -201,7 +201,7 @@ video {
 }
 
 .sectionContainer p {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: white;
   /* filter: drop-shadow(3px 3px 2px var(--shadow-colour)); */
 }

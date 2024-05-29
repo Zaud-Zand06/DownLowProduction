@@ -1,12 +1,13 @@
 .backgroundImage {
   position: fixed;
-  width: 100vw;
+  width: 110vw;
   top: 0px;
   left: -100px;
   background-image: url(../assets/the_logo.png);
   min-height: 1000vh;
   background-attachment: fixed;
-  background-position: center;
+  background-size: 180px;
+  background-repeat: space;
   filter: blur(3px);
   z-index: -10;
 }

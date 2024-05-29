@@ -6,13 +6,13 @@ import sliderImage from "../assets/jinBoot.jpg";
 
 function HeroCarousel() {
   const [carouselWidth, setCarouselWidth] = useState(
-    window.innerWidth <= 700 ? window.innerWidth * 0.75 : window.innerWidth * 1
+    window.innerWidth <= 700 ? window.innerWidth * 1 : window.innerWidth * 1
   );
 
   useEffect(() => {
     const handleResize = () => {
       window.innerWidth <= 700
-        ? setCarouselWidth(window.innerWidth * 0.75)
+        ? setCarouselWidth(window.innerWidth * 1)
         : setCarouselWidth(window.innerWidth * 1);
     };
 
@@ -26,11 +26,11 @@ function HeroCarousel() {
   return (
     <>
       <Carousel
+        swipeable={false}
         showStatus={false}
         infiniteLoop={true}
         autoPlay={true}
         showThumbs={false}
-        showArrows={false}
         width={carouselWidth}
         className="presentationMode"
       >
