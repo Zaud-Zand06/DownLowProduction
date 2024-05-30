@@ -41,9 +41,8 @@ function ParallaxSection() {
       </Parallax>
       <Parallax speed={30}>
         <p className="parallaxText3">
-          Emails! Phone numbers! Some of this could be oved to the maps
-          component, and this could be repurposed as an additional about us
-          section - maybe highlighting our past collabs or sumn
+          Did you know we do catering too? Contact Sydney at (123)123-1234 or
+          Email her at email.com for more information!
         </p>
       </Parallax>
     </div>

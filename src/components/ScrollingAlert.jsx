@@ -1,5 +1,5 @@
 function ScrollingAlert() {
-  const text = "Did you know we do Catering? (123) 123-1234 for more details!";
+  const text = "Check back soon for our next East Van Collab!";
   const repetitions = 10;
   const repeatedText = Array(repetitions).fill(text).join(" ");
 

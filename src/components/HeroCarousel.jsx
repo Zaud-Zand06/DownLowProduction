@@ -40,22 +40,25 @@ function HeroCarousel() {
           <p>
             This months special is a pnw influenced take on the Typhoon spice! A
             creamy LGM based mayo balanced with a tangy pickle-mustad slaw....
-            get ready to be blown :D away! S
+            get ready to be blown :D away!
           </p>
         </div>
         <div className="mySlide">
           <img src={sliderImage} />
-          <h2>......is it Wednesday yet...?</h2>
+          <h2>Customize your Sando!</h2>
           <p>
-            Missing our bone-in chicken? Come by any Wednesday for our full
-            sized wings! Order them by the piece and spice them however you
-            like!
+            Consider yourself a DL veteran? Try customizing your favourite sando
+            with our various toppings! Bacon, Cheese, Eggs, and any other
+            modification your heart desires!
           </p>
         </div>
         <div className="mySlide">
           <img src={sliderImage} />
+          <h2>Got a sweet tooth?</h2>
           <p>
-            Miss our Pepinos collab? Check back soon to see our next collab!
+            Try some of our new desserts! Made fresh by our lovely friends at
+            Vennies. Now offering Tres Leches, Lemon Curd Cake, and Chocolate
+            Mousse Cake!
           </p>
         </div>
       </Carousel>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Parallax } from "react-scroll-parallax";
 import { Masonry } from "@mui/lab";
 
 const sandosList = [
@@ -13,35 +12,35 @@ const sandosList = [
   {
     title: "The Og",
     description:
-      "Pickled onions, Cole slaw, Pickles, DL Sauce, and your choice of breast or leg!",
+      "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce, and your choice of breast or leg!",
     price: 18.25,
     special: false,
   },
   {
     title: "The Rookie",
     description:
-      "Pickled onions, Cole slaw, Pickles, DL Sauce, and your choice of breast or leg!",
+      "Classic Chicken, Shredduce, Tomato, Rookie Sauce, and your choice of breast or leg!",
     price: 18.25,
     special: false,
   },
   {
     title: "The Jerk",
     description:
-      "Pickled onions, Cole slaw, Pickles, DL Sauce, and your choice of breast or leg!",
+      "Jerk Dusted Chicken, Pickled onions, Slaw, Tomato, Jerk Mayo, and your choice of breast or leg!",
     price: 18.25,
     special: false,
   },
   {
     title: "The Boujee",
     description:
-      "Pickled onions, Cole slaw, Pickles, DL Sauce, and your choice of breast or leg!",
+      "Boujee Dusted Chicken, Pickled onions, Cole slaw, Pickles, Boujee Mayo, and your choice of breast or leg!",
     price: 18.25,
     special: false,
   },
   {
     title: "The Chip and Dip",
     description:
-      "Pickled onions, Cole slaw, Pickles, DL Sauce, and your choice of breast or leg!",
+      "Cool Ranch Dusted Chicken, Shredduce, Pickles, Tomato, French Onion Mayo, and your choice of breast or leg!",
     price: 18.25,
     special: false,
   },
@@ -49,9 +48,17 @@ const sandosList = [
 
 const shareablesList = [
   {
-    title: "Tenders",
-    description: "4 or 7 tenders with your choice of dipping sauce!",
+    title: "Four Tenders",
+    description:
+      "The most tender part of the breast! Spiced to your liking with your choice of sauce on the side!",
     price: 12.75,
+    special: false,
+  },
+  {
+    title: "Seven Tenders",
+    description:
+      "The most tender part of the breast! Spiced to your liking with your choice of sauce on the side!",
+    price: 18.75,
     special: false,
   },
   {
@@ -62,7 +69,7 @@ const shareablesList = [
   },
   {
     title: "Wings",
-    description: "Full sized chicken wings! Order by the piece!",
+    description: "Full sized chicken wings! Order as many as you want!",
     price: 3.25,
     special: true,
   },
@@ -71,25 +78,26 @@ const shareablesList = [
 const sidesList = [
   {
     title: "Fries",
-    description: "Crinkle-cut fries! Salted, with our medium dust!",
+    description:
+      "Crinkle-cut fries! Salted, with our medium dust! Comes with ketchup and DL sauce!",
     price: 6.25,
     special: false,
   },
   {
     title: "Potato Salad",
-    description: "Pot salad!",
-    price: 5.0,
+    description: "Mayo, Pickles, Scallion, and Dill",
+    price: 6.25,
     special: false,
   },
   {
     title: "Macaroni Salad",
-    description: "Mac salad!",
-    price: 5.0,
+    description: "Pimento Cheese, Dill, and Celery!",
+    price: 6.25,
     special: false,
   },
   {
     title: "Sweet-and-Sour Slaw",
-    description: "Tangy cole slaw to help with the heat!",
+    description: "Cumin, Pickled Onions!",
     price: 5.0,
     special: false,
   },
