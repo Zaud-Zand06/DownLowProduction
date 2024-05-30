@@ -61,7 +61,7 @@ function LocationsMap() {
         <GoogleMap
           mapContainerClassName="mapEmbed"
           center={locations[0]}
-          zoom={12}
+          zoom={window.innerWidth <= 700 ? 10 : 12}
         >
           {locations.map((location, index) => (
             <Marker
