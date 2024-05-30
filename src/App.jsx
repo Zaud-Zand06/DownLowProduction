@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import ScrollingAlert from "./components/ScrollingAlert";
 import ParallaxSection from "./components/ParallaxSection";
 import Menu from "./components/Menu";
+import LocationsMap from "./components/LocationsMap";
 
 function App() {
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -33,11 +34,12 @@ function App() {
           <ParallaxSection />
 
           <Parallax speed={10} style={{ position: "relative", zIndex: 5 }}>
-            <iframe
+            {/* <iframe
               className="mapEmbed"
               src="https://storage.googleapis.com/maps-solutions-umrctwt8ee/locator-plus/jrgd/locator-plus.html"
               loading="lazy"
-            ></iframe>
+            ></iframe> */}
+            <LocationsMap />
           </Parallax>
         </>
       )}

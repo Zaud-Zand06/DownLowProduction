@@ -153,6 +153,11 @@
   border: 2px solid var(--main-red);
 }
 
+.mapEmbed img {
+  width: 90svw;
+  height: 40em;
+}
+
 .menuContainer {
   display: flex;
   flex-direction: column;
