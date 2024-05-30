@@ -5,7 +5,6 @@
   left: -100px;
   background-image: url(../assets/the_logo.png);
   min-height: 1000vh;
-  background-attachment: fixed;
   background-size: 180px;
   background-repeat: space;
   filter: blur(3px);

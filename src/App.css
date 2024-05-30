@@ -18,24 +18,24 @@
 }
 
 .header {
-  width: 100svw;
-  height: 9em;
-  background-color: var(--main-yellow);
+  position: fixed;
+  width: 95svw;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: var(--transparent-color);
   box-shadow: 3px 3px 29px var(--shadow-colour);
-  border-bottom: 2px solid var(--main-red);
+  border-bottom: 2px solid var(--main-red); */
+  z-index: 10;
 }
 
 #logo,
-#hamburgerButton {
-  z-index: 10;
+.hamburgerMenuButtons {
   background-color: var(--transparent-color);
-  padding: 1rem;
+  margin-top: 1rem;
   transition: background-color 0.5s;
 }
 
 #logo {
-  position: fixed;
-  top: 10px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -57,29 +57,13 @@
   color: var(--button-hover-colour);
 }
 
-#hamburgerButton {
-  position: fixed;
-  top: 1svh;
-  right: 3svw;
-  font-size: 5rem;
-  padding-left: 2rem;
-  color: var(--main-red);
-  -webkit-text-stroke-color: var(--border-colour);
-  -webkit-text-stroke-width: 2px;
-  text-shadow: 3px 3px 2px var(--shadow-colour);
-}
-
-#hamburgerButton:hover {
-  color: var(--button-hover-colour);
-}
-
 .hamburgerMenuButtons {
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
   align-items: end;
 }
 .hamburgerMenuButtons > * {
-  padding: 2rem;
   font-size: 2rem;
   color: var(--main-red);
   -webkit-text-stroke-color: var(--border-colour);
@@ -90,47 +74,21 @@
 .parallaxContainer {
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 100svw;
-  justify-content: space-around;
-}
-
-@media screen and (max-width: 700px) {
-  .parallaxContainer {
-    flex-direction: column;
-  }
-
-  .parallaxText,
-  .parallaxText2 {
-    position: unset;
-    border: 2px solid pink;
-  }
-
-  .parallaxText2 {
-    top: 0;
-    left: 1rem;
-  }
+  align-items: center;
 }
 
 .parallaxText,
-.parallaxText2 {
+.parallaxText2,
+.parallaxText3 {
   color: white;
+  width: 45svw;
   position: relative;
   padding: 3svw;
   border: 2px solid var(--main-red);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-}
-
-video {
-  border: 2px solid var(--main-red);
-}
-
-.parallaxText {
-  left: 8rem;
-}
-.parallaxText2 {
-  right: 8rem;
-  bottom: -25rem;
 }
 
 .mapEmbed {
@@ -205,4 +163,19 @@ video {
   font-size: 1.1rem;
   color: white;
   /* filter: drop-shadow(3px 3px 2px var(--shadow-colour)); */
+}
+@media screen and (max-width: 700px) {
+  .parallaxText,
+  .parallaxText2,
+  .parallaxText3 {
+    width: 95svw;
+  }
+
+  #logo h1 {
+    font-size: 2rem;
+  }
+
+  .hamburgerMenuButtons > * {
+    font-size: 1.5rem;
+  }
 }

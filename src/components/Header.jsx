@@ -31,64 +31,34 @@ function Header({ setDisplayMenu, displayMenu }) {
           <h1>Chicken</h1>
         </a>
       </div>
-      <>
-        <a
-          id="hamburgerButton"
-          onClick={() => {
-            toggleHambugerMenu();
-          }}
-        >
-          =
+      <div className="hamburgerMenuButtons">
+        {displayMenu == true && (
+          <a
+            onClick={() => {
+              setDisplayMenu(false);
+              toggleHambugerMenu();
+            }}
+          >
+            Home
+          </a>
+        )}
+        {displayMenu == false && (
+          <a
+            onClick={() => {
+              setDisplayMenu(true);
+              toggleHambugerMenu();
+            }}
+          >
+            Menu
+          </a>
+        )}
+        <a href={UBCLink} target="_blank">
+          UBC Ordering
         </a>
-
-        <Drawer
-          anchor="bottom"
-          elevation={0}
-          PaperProps={{ sx: { backgroundColor: "#00000000" } }}
-          open={hamburgerMenu}
-          onClose={() => {
-            setHamburgerMenu(false);
-          }}
-        >
-          <div className="hamburgerMenuButtons">
-            <a href={eastVanLink} target="_blank">
-              East Van Ordering
-            </a>
-            <a href={UBCLink} target="_blank">
-              UBC Ordering
-            </a>
-            {displayMenu == false && (
-              <a
-                onClick={() => {
-                  setDisplayMenu(true);
-                  toggleHambugerMenu();
-                }}
-              >
-                Menu
-              </a>
-            )}
-            {displayMenu == true && (
-              <a
-                onClick={() => {
-                  setDisplayMenu(false);
-                  toggleHambugerMenu();
-                }}
-              >
-                Home
-              </a>
-            )}
-            <a
-              href=""
-              target="_blank"
-              onClick={() => {
-                toggleHambugerMenu();
-              }}
-            >
-              Catering
-            </a>
-          </div>
-        </Drawer>
-      </>
+        <a href={eastVanLink} target="_blank">
+          East Van Ordering
+        </a>
+      </div>
     </div>
   );
 }

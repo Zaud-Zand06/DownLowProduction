@@ -1,6 +1,6 @@
 :root {
   --default-width: 100svw;
-  --default-height: 65.5svh;
+  --default-height: 25em;
   --default-padding: 75px;
   --text-color: #f5f5f5;
   --emphasis-color: #ccc;
