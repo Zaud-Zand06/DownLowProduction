@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Drawer } from "@mui/material";
 import PropTypes from "prop-types";
 
 Header.propTypes = {
@@ -12,31 +10,24 @@ function Header({ setDisplayMenu, displayMenu }) {
   const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
   const UBCLink = "https://dl-chicken-ubc.square.site/";
 
-  const [hamburgerMenu, setHamburgerMenu] = useState(false);
-
-  function toggleHambugerMenu() {
-    setHamburgerMenu(!hamburgerMenu);
-  }
-
   return (
     <div className="header">
       <div id="logo">
         <h1>Down Low</h1>
-        <a
+        <h1
           id="redLogo"
           onClick={() => {
             setDisplayMenu(false);
           }}
         >
-          <h1>Chicken</h1>
-        </a>
+          <a>Chicken</a>
+        </h1>
       </div>
       <div className="hamburgerMenuButtons">
         {displayMenu == true && (
           <a
             onClick={() => {
               setDisplayMenu(false);
-              toggleHambugerMenu();
             }}
           >
             Home
@@ -46,7 +37,6 @@ function Header({ setDisplayMenu, displayMenu }) {
           <a
             onClick={() => {
               setDisplayMenu(true);
-              toggleHambugerMenu();
             }}
           >
             Menu

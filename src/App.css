@@ -91,22 +91,29 @@
   -webkit-backdrop-filter: blur(15px);
 }
 
-.mapEmbed {
-  margin-top: 3em;
-  width: 90svw;
-  height: 40em;
-  margin-bottom: 4rem;
-  border: 2px solid var(--main-red);
+.parallaxText {
+  top: -5svw;
+  left: -20svw;
 }
 
-@keyframes infiniteScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+.parallaxText2 {
+  top: -15svw;
+  left: 20svw;
 }
+
+.parallaxImage,
+.parallaxImage2 {
+  position: relative;
+}
+
+.parallaxImage {
+  left: -15svw;
+}
+
+.parallaxImage2 {
+  left: 15svw;
+}
+
 .scrollContainer {
   width: 100%;
   overflow-x: hidden;
@@ -121,12 +128,29 @@
   animation-timing-function: linear;
 }
 
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .horizontalScrollingItems:hover {
   animation-play-state: paused;
 }
 
 .horizontalScrollingItemsItems {
   white-space: nowrap;
+}
+
+.mapEmbed {
+  margin-top: 3em;
+  width: 90svw;
+  height: 40em;
+  margin-bottom: 4rem;
+  border: 2px solid var(--main-red);
 }
 
 .menuContainer {
@@ -168,7 +192,8 @@
   .parallaxText,
   .parallaxText2,
   .parallaxText3 {
-    width: 95svw;
+    width: 90svw;
+    left: 0;
   }
 
   #logo h1 {

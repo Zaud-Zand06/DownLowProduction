@@ -20,26 +20,26 @@ function ParallaxSection() {
   }, []);
   return (
     <div className="parallaxContainer">
-      <Parallax speed={-60} style={{ position: "relative", zIndex: 3 }}>
+      <Parallax speed={-100} style={{ position: "relative", zIndex: 3 }}>
         <p className="parallaxText">
           Since our inception, Down Low Chicken has been commited to providing
-          the best Nashville style fried chicken you can get. To do this we
-          start with the highest quality ingredients, from our chicken down to
-          our pickles.
+          the best Nashville style fried chicken Vancouver has ever seen!
         </p>
       </Parallax>
       <Parallax speed={20} rotateY={[360, 0]} style={{ position: "relative" }}>
-        <img src={logo} />
+        <img className="parallaxImage" src={logo} />
       </Parallax>
-      <Parallax speed={-30} style={{ position: "relative", zIndex: 3 }}>
+      <Parallax speed={80} style={{ position: "relative", zIndex: 3 }}>
         <p className="parallaxText2">
-          Get in touch with us at number or email!
+          We do this by sourcing the highest quality chicken and ingredients we
+          can get our hands on, and hours of time in the kitchen creating the
+          perfect blend of spices.
         </p>
       </Parallax>
       <Parallax speed={40} rotateY={[0, 360]} style={{ position: "relative" }}>
-        <img src={logo} />
+        <img className="parallaxImage2" src={logo} />
       </Parallax>
-      <Parallax>
+      <Parallax speed={30}>
         <p className="parallaxText3">
           Emails! Phone numbers! Some of this could be oved to the maps
           component, and this could be repurposed as an additional about us
