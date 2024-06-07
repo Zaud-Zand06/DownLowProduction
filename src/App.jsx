@@ -33,14 +33,7 @@ function App() {
 
           <ParallaxSection />
 
-          <Parallax speed={10} style={{ position: "relative", zIndex: 5 }}>
-            {/* <iframe
-              className="mapEmbed"
-              src="https://storage.googleapis.com/maps-solutions-umrctwt8ee/locator-plus/jrgd/locator-plus.html"
-              loading="lazy"
-            ></iframe> */}
-            <LocationsMap />
-          </Parallax>
+          <LocationsMap />
         </>
       )}
     </>

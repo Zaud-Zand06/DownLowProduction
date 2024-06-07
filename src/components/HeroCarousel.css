@@ -37,7 +37,12 @@
 
 .mySlide > img {
   position: absolute;
-  filter: blur(5px) grayscale(50%);
+  filter: blur(5px);
+  transition: filter 0.3s ease-in-out;
+}
+
+.mySlide:hover > img {
+  filter: blur(0);
 }
 
 .presentationMode .mySlide h1,
@@ -54,6 +59,7 @@
   padding: 0;
   display: inline-block;
   z-index: 5;
+  text-shadow: #000000 2px 2px 2px;
   text-wrap: balance;
 }
 
@@ -97,7 +103,7 @@
 }
 
 .presentationMode .mySlide p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .presentationMode .mySlide strong,

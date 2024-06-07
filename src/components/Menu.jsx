@@ -3,9 +3,9 @@ import { Masonry } from "@mui/lab";
 
 const sandosList = [
   {
-    title: "The Typhoon",
+    title: "The AgroDulce",
     description:
-      "Pickled onions, Cole slaw, Pickles, DL Sauce, and your choice of breast or leg!",
+      "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce, and your choice of breast or leg!",
     price: 18.75,
     special: true,
   },

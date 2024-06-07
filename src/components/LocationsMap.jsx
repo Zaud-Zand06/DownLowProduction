@@ -45,7 +45,6 @@ function LocationsMap() {
           address,
           ...details[addresses.indexOf(address)],
         });
-        console.log(locations);
       }
 
       setLocations(locations);

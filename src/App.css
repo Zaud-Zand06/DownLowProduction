@@ -92,18 +92,20 @@
 }
 
 .parallaxText {
-  top: -5svw;
   left: -20svw;
 }
 
 .parallaxText2 {
-  top: -15svw;
   left: 20svw;
 }
 
 .parallaxImage,
 .parallaxImage2 {
   position: relative;
+  width: 75svw;
+  max-height: 50rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px var(--shadow-colour);
 }
 
 .parallaxImage {
@@ -197,6 +199,12 @@
   .parallaxText,
   .parallaxText2,
   .parallaxText3 {
+    width: 90svw;
+    left: 0;
+  }
+
+  .parallaxImage,
+  .parallaxImage2 {
     width: 90svw;
     left: 0;
   }
