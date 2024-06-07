@@ -120,8 +120,8 @@ const sidesList = [
     special: false,
   },
   {
-    title: "Tres Leches Cake",
-    description: "Our new tres leches cake!",
+    title: "Strawberry Short Cake",
+    description: "Our new strawberry short cake!",
     price: 5.0,
     special: false,
   },
@@ -166,6 +166,36 @@ const drinksList = [
   },
 ];
 
+const waffleList = [
+  {
+    title: "Solo Waffle",
+    description: "A fresh jalapeno, cheddar, and scallion waffle!",
+    price: 4.25,
+    special: false,
+  },
+  {
+    title: "Chicken and Waffle",
+    description:
+      "A fresh waffle topped with two boneless thighs, dusted to your liking!",
+    price: 8.25,
+    special: false,
+  },
+  {
+    title: "Waffle Slider",
+    description:
+      "Dusted chicken, slaw, pickles, pickled onions and honey jallapeno sauce, built on a waffle.",
+    price: 10.25,
+    special: false,
+  },
+  {
+    title: "Waffle on the DL",
+    description:
+      "A fresh waffle, slaw and honey jalapeno sauce, topped with some chopped boneless thighs!",
+    price: 12.25,
+    special: false,
+  },
+];
+
 function Menu() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -191,6 +221,8 @@ function Menu() {
       >
         <div className="sectionContainer">
           <h2>Sandos</h2>
+          <h4>Choose between boneless leg or breast</h4>
+          <h4>Add a side for 5 </h4>
           <Masonry columns={2} spacing={2}>
             {sandosList.map((sando, index) => {
               return (
@@ -205,6 +237,7 @@ function Menu() {
         </div>
         <div className="sectionContainer">
           <h2>Shareables</h2>
+          <h4>Don't forget to grab some dipping sauce!</h4>
           <Masonry columns={2} spacing={2}>
             {shareablesList.map((shareable, index) => {
               return (
@@ -212,6 +245,20 @@ function Menu() {
                   <h3>{shareable.title}</h3>
                   <p>{shareable.description}</p>
                   <p>{shareable.price}</p>
+                </div>
+              );
+            })}
+          </Masonry>
+        </div>
+        <div className="sectionContainer">
+          <h2>Waffles</h2>
+          <Masonry columns={2} spacing={2}>
+            {waffleList.map((waffle, index) => {
+              return (
+                <div key={index}>
+                  <h3>{waffle.title}</h3>
+                  <p>{waffle.description}</p>
+                  <p>{waffle.price}</p>
                 </div>
               );
             })}

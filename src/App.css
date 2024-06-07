@@ -5,6 +5,7 @@
   --button-hover-colour: #535bf2;
   --border-colour: #000000;
   --shadow-colour: #000000;
+  --white: #ffffff;
 }
 
 #root {
@@ -181,6 +182,7 @@
   color: var(--main-yellow);
   filter: drop-shadow(3px 3px 2px var(--shadow-colour));
   -webkit-text-stroke: var(--border-colour) 2px;
+  margin-bottom: 1rem;
 }
 
 .sectionContainer h3 {
@@ -189,10 +191,17 @@
   filter: drop-shadow(3px 3px 2px var(--shadow-colour));
   -webkit-text-stroke: var(--border-colour) 2px;
 }
+.sectionContainer h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--white);
+  filter: drop-shadow(3px 3px 2px var(--shadow-colour));
+  -webkit-text-stroke: var(--border-colour) 1.5px;
+}
 
 .sectionContainer p {
   font-size: 1.1rem;
-  color: white;
+  color: var(--white);
   filter: drop-shadow(3px 3px 2px var(--shadow-colour));
 }
 @media screen and (max-width: 700px) {
