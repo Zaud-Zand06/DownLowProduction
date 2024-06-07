@@ -1,23 +1,8 @@
-import { useState, useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 import agrodulce4 from "../assets/AgroDulce4.jpg";
 import turkeyDLF from "../assets/TurkeyDLF.jpg";
 
 function ParallaxSection() {
-  // const [sectionWidth, setSectionWidth] = useState(window.innerWidth);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setSectionWidth(window.innerWidth);
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   // Clean up event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
   return (
     <div className="parallaxContainer">
       <Parallax speed={30} style={{ position: "relative", zIndex: 3 }}>
