@@ -1,7 +1,6 @@
 import "./App.css";
 import "./components/backgroundImage.css";
 import { useState } from "react";
-import { Parallax } from "react-scroll-parallax";
 import HeroCarousel from "./components/HeroCarousel";
 import Header from "./components/Header";
 import ScrollingAlert from "./components/ScrollingAlert";

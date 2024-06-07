@@ -1,20 +1,12 @@
 .backgroundImage {
   position: fixed;
   width: 7000px;
-  top: 0px;
-  left: -100px;
   background-image: url(../assets/the_logo.png);
   min-height: 1000vh;
   background-size: 180px;
   background-repeat: space;
   filter: blur(3px);
   z-index: -10;
-}
-
-@media screen and (max-width: 700px) {
-  .backgroundImage {
-    background-size: 150px;
-  }
 }
 
 @keyframes slide {
