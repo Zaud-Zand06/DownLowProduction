@@ -18,26 +18,35 @@ function Header({ setDisplayMenu, displayMenu }) {
         <h1
           id="redLogo"
           onClick={() => {
-            setDisplayMenu(false);
+            setDisplayMenu("home");
           }}
         >
           <a>Chicken</a>
         </h1>
       </div>
       <div className="hamburgerMenuButtons">
-        {displayMenu == true && (
+        {displayMenu == "menu" && (
           <a
             onClick={() => {
-              setDisplayMenu(false);
+              setDisplayMenu("home");
             }}
           >
             Home
           </a>
         )}
-        {displayMenu == false && (
+        {displayMenu == "secret" && (
           <a
             onClick={() => {
-              setDisplayMenu(true);
+              setDisplayMenu("home");
+            }}
+          >
+            Home
+          </a>
+        )}
+        {displayMenu == "home" && (
+          <a
+            onClick={() => {
+              setDisplayMenu("menu");
             }}
           >
             Menu

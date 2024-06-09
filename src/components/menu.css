@@ -44,6 +44,10 @@ h4 {
   filter: drop-shadow(2px 2px 2px var(--shadow-colour));
 }
 
+.secretMenuLink:hover {
+  color: var(--border-colour);
+}
+
 @media screen and (max-width: 500px) {
   .sectionContainer h2,
   h3,

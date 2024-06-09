@@ -19,7 +19,6 @@
 .carousel-root {
   z-index: 5;
   border-bottom: 3px solid var(--border-colour);
-  box-shadow: 2px 2px 2px var(--shadow-colour);
 }
 
 .presentationMode .mySlide {

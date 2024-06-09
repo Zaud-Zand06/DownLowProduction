@@ -6,25 +6,32 @@ import Header from "./components/Header";
 import ScrollingAlert from "./components/ScrollingAlert";
 import ParallaxSection from "./components/ParallaxSection";
 import Menu from "./components/Menu";
+import SecretMenu from "./components/SecretMenu";
 import LocationsMap from "./components/LocationsMap";
 
 function App() {
-  const [displayMenu, setDisplayMenu] = useState(false);
+  const [displayMenu, setDisplayMenu] = useState("home");
 
   return (
     <>
       <Header setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
       <div className="backgroundImage"></div>
 
-      {/* menu display */}
-      {displayMenu == true && (
+      {/* secret menu display */}
+      {displayMenu == "secret" && (
         <>
-          <Menu />
+          <SecretMenu />
+        </>
+      )}
+      {/* menu display */}
+      {displayMenu == "menu" && (
+        <>
+          <Menu setDisplayMenu={setDisplayMenu} />
         </>
       )}
 
       {/* main page */}
-      {displayMenu == false && (
+      {displayMenu == "home" && (
         <>
           <HeroCarousel />
 

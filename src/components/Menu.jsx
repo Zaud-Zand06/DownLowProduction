@@ -231,14 +231,14 @@ const displayMenuList = [
   },
 ];
 
-function Menu() {
+function Menu({ setDisplayMenu }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
       window.innerWidth <= 700
-        ? setWindowWidth(window.innerWidth * 1)
-        : setWindowWidth(window.innerWidth * 1);
+        ? setWindowWidth(window.innerWidth)
+        : setWindowWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -279,7 +279,16 @@ function Menu() {
         })}
       </Masonry>
       <p>
-        Hey.... have you heard of our <a onClick={() => {}}>secret menu</a>?
+        Hey.... have you heard of our{" "}
+        <a
+          onClick={() => {
+            setDisplayMenu("secret");
+          }}
+          className="secretMenuLink"
+        >
+          secret menu
+        </a>
+        ?
       </p>
     </div>
   );
