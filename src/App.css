@@ -29,6 +29,7 @@
 .parallaxText,
 .parallaxText2,
 .parallaxText3 {
+  font-size: 1.5rem;
   color: white;
   width: 45svw;
   position: relative;
@@ -56,11 +57,10 @@
 }
 
 .parallaxImage {
-  left: -15svw;
+  left: -20rem;
 }
-
 .parallaxImage2 {
-  left: 15svw;
+  right: -20rem;
 }
 
 .mapEmbed {
@@ -71,22 +71,34 @@
   border: 2px solid var(--main-red);
 }
 
+.mapEmbed h3 {
+  -webkit-text-stroke: var(--transparent-color) 0px;
+  /* this is here to fix an accidental namespace issue with .sectionContainer */
+  filter: drop-shadow(2px 2px 2px var(--transparent-color));
+}
+
 .mapEmbed img {
   width: 90svw;
   height: 40em;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .parallaxText,
   .parallaxText2,
   .parallaxText3 {
-    width: 90svw;
+    width: 85svw;
     left: 0;
   }
 
   .parallaxImage,
   .parallaxImage2 {
     width: 90svw;
-    left: 0;
+  }
+
+  .parallaxImage {
+    left: 0rem;
+  }
+  .parallaxImage2 {
+    right: 0rem;
   }
 }

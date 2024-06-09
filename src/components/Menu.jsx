@@ -278,6 +278,9 @@ function Menu() {
           );
         })}
       </Masonry>
+      <p>
+        Hey.... have you heard of our <a onClick={() => {}}>secret menu</a>?
+      </p>
     </div>
   );
 }
