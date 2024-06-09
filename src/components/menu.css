@@ -1,10 +1,10 @@
 .menuContainer {
+  margin-top: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 95svw;
   height: 95svh;
-  margin-top: 14.5svh;
 }
 
 .sectionContainer {
@@ -49,6 +49,9 @@ h4 {
 }
 
 @media screen and (max-width: 500px) {
+  .menuContainer {
+    margin-top: 8rem;
+  }
   .sectionContainer h2,
   h3,
   h4 {

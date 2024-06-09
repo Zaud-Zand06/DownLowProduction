@@ -12,6 +12,14 @@
   animation-timing-function: linear;
 }
 
+.horizontalScrollingItems a {
+  color: var(--main-red);
+  -webkit-text-stroke: var(--border-colour) 2px;
+}
+.horizontalScrollingItems a:hover {
+  color: var(--main-yellow);
+}
+
 @keyframes infiniteScroll {
   from {
     transform: translateX(0);
@@ -31,6 +39,9 @@
 
 @media screen and (max-width: 500px) {
   .horizontalScrollingItems {
-    font-size: 20px;
+    font-size: 2rem;
+  }
+  .horizontalScrollingItems a {
+    -webkit-text-stroke: var(--border-colour) 1.5px;
   }
 }

@@ -1,6 +1,4 @@
 import "./secretMenu.css";
-import { useState, useEffect } from "react";
-import { Carousel } from "react-responsive-carousel";
 import logo from "../assets/the_logo.png";
 
 const secretMenuList = [
@@ -37,29 +35,20 @@ const secretMenuList = [
 ];
 
 function SecretMenu() {
-  const [carouselWidth, setCarouselWidth] = useState(
-    window.innerWidth <= 700
-      ? window.innerWidth * 0.9
-      : window.innerWidth * 0.75
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      window.innerWidth <= 700
-        ? setCarouselWidth(window.innerWidth * 0.9)
-        : setCarouselWidth(window.innerWidth * 0.75);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <>
-      <p>Nice work! You found our secret menu </p>
+      <div className="secretMenuContainer">
+        <h2>Nice work! You found our secret menu </h2>
+        {secretMenuList.map((item, index) => {
+          return (
+            <div key={index} className="secretMenuItem">
+              <img src={item.image} alt={item.title} />
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }
