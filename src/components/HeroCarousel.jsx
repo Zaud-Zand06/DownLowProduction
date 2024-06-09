@@ -30,6 +30,7 @@ function HeroCarousel() {
     <>
       <Carousel
         swipeable={false}
+        interval={5000}
         showStatus={false}
         infiniteLoop={true}
         autoPlay={true}

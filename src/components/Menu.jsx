@@ -1,3 +1,4 @@
+import "./menu.css";
 import { useState, useEffect } from "react";
 import { Masonry } from "@mui/lab";
 
@@ -5,194 +6,228 @@ const sandosList = [
   {
     title: "The AgroDulce",
     description:
-      "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce, and your choice of breast or leg!",
+      "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce",
     price: 18.75,
-    special: true,
+    special: null,
   },
   {
     title: "The Og",
     description:
-      "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce, and your choice of breast or leg!",
+      "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
     price: 18.25,
-    special: false,
+    special: null,
   },
   {
     title: "The Rookie",
-    description:
-      "Classic Chicken, Shredduce, Tomato, Rookie Sauce, and your choice of breast or leg!",
+    description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
     price: 18.25,
-    special: false,
+    special: null,
   },
   {
     title: "The Jerk",
-    description:
-      "Jerk Dusted Chicken, Pickled onions, Slaw, Tomato, Jerk Mayo, and your choice of breast or leg!",
+    description: "Jerk Dusted Chicken, Pickled onions, Slaw, Tomato, Jerk Mayo",
     price: 18.25,
-    special: false,
+    special: null,
   },
   {
     title: "The Boujee",
     description:
-      "Boujee Dusted Chicken, Pickled onions, Cole slaw, Pickles, Boujee Mayo, and your choice of breast or leg!",
+      "Boujee Dusted Chicken, Pickled onions, Cole slaw, Pickles, Boujee Mayo",
     price: 18.25,
-    special: false,
+    special: null,
   },
   {
     title: "The Chip and Dip",
     description:
-      "Cool Ranch Dusted Chicken, Shredduce, Pickles, Tomato, French Onion Mayo, and your choice of breast or leg!",
+      "Cool Ranch Dusted Chicken, Shredduce, Pickles, Tomato, French Onion Mayo",
     price: 18.25,
-    special: false,
+    special: null,
+  },
+  {
+    title: "Extra Toppings",
+    description: "Fried Egg, Bacon, Cheese",
+    price: 2.25,
+    special: "Add a honey drizzle for 1",
   },
 ];
-
-const shareablesList = [
+const chickenByThePieceList = [
   {
-    title: "Four Tenders",
-    description:
-      "The most tender part of the breast! Spiced to your liking with your choice of sauce on the side!",
-    price: 12.75,
-    special: false,
+    title: "Breast",
+    description: "All White Meat & Tender",
+    price: 10.95,
+    special: null,
   },
   {
-    title: "Seven Tenders",
+    title: "Thigh",
+    description: "Boneless & Juicy",
+    price: 6.25,
+    special: "2 piece and 4 piece combos available",
+  },
+  {
+    title: "Small Tenders",
     description:
-      "The most tender part of the breast! Spiced to your liking with your choice of sauce on the side!",
-    price: 18.75,
-    special: false,
+      "The most tender part of the breast! Dusted with spice and a side of sauce",
+    price: 15.5,
+    special: "Add a side for 5",
+  },
+  {
+    title: "Large Tenders",
+    description:
+      "The most tender part of the breast! Dusted with spice and a side of sauce",
+    price: 21.85,
+    special: "Add a side for 4",
   },
   {
     title: "Nuggets",
-    description: "A bowl of popcorn chicken with your choice of dipping sauce!",
-    price: 12.75,
-    special: false,
+    description: "A bowl of popcorn chicken with your choice of dipping sauce",
+    price: 11.6,
+    special: null,
   },
   {
     title: "Wings",
-    description: "Full sized chicken wings! Order as many as you want!",
+    description:
+      "Full sized chicken wings! Order as many as you want, but only on Wednesdays",
     price: 3.25,
-    special: true,
+    special: null,
+  },
+  {
+    title: "Pile of Thighs",
+    description: "A pile of 10 boneless thighs! Dusted to your liking",
+    price: 49.75,
   },
 ];
-
 const sidesList = [
   {
     title: "Fries",
     description:
-      "Crinkle-cut fries! Salted, with our medium dust! Comes with ketchup and DL sauce!",
+      "Crinkle-cut, salted, with medium dust! Comes with ketchup and DL sauce",
     price: 6.25,
-    special: false,
+    special: "Get them truffled for 2",
   },
   {
     title: "Potato Salad",
-    description: "Mayo, Pickles, Scallion, and Dill",
+    description: "Sour cream, Celery, Scallion, and Dill",
     price: 6.25,
     special: false,
   },
   {
     title: "Macaroni Salad",
-    description: "Pimento Cheese, Dill, and Celery!",
+    description: "Pimento , Dill, and Pickled Celery",
     price: 6.25,
     special: false,
   },
   {
     title: "Sweet-and-Sour Slaw",
-    description: "Cumin, Pickled Onions!",
-    price: 5.0,
+    description: "Cumin, Pickled Onions",
+    price: 5.75,
     special: false,
   },
   {
     title: "Pickles",
-    description: "A cup of our house-made bread and butter pickles!",
-    price: 5.0,
+    description: "A cup of our house-made bread and butter pickles",
+    price: 2.95,
     special: false,
   },
   {
     title: "Lemon Cake",
-    description: "Our new lemon cake!",
+    description: "Our new lemon cake",
     price: 7,
     special: false,
   },
   {
     title: "Chocolate Cake",
-    description: "Our new chocolate cake!",
+    description: "Our new chocolate cake",
     price: 7,
     special: false,
   },
   {
     title: "Strawberry Short Cake",
-    description: "Our new strawberry short cake!",
-    price: 5.0,
+    description: "Our new strawberry short cake",
+    price: 8.0,
     special: false,
   },
 ];
-
 const drinksList = [
   {
     title: "DL Lemonade",
-    description: "Lemonade!",
+    description: "Lemonade",
     price: 4,
     special: false,
   },
   {
     title: "DL Sweet Tea",
-    description: "Sweet tea!",
+    description: "Sweet tea",
     price: 4,
     special: false,
   },
   {
     title: "Coke",
-    description: "Diet coke, coke zero, or regular!",
+    description: "Diet coke, coke zero, or regular",
     price: 2.5,
     special: false,
   },
   {
     title: "Sprite",
-    description: "Sprite!",
+    description: "Sprite",
     price: 2.5,
     special: false,
   },
   {
     title: "Root Beer",
-    description: "Root Beer!",
+    description: "Root Beer",
     price: 2.5,
     special: false,
   },
   {
     title: "Water",
-    description: "Water!",
+    description: "Water",
     price: 2.5,
     special: false,
   },
 ];
-
 const waffleList = [
   {
-    title: "Solo Waffle",
-    description: "A fresh jalapeno, cheddar, and scallion waffle!",
-    price: 4.25,
-    special: false,
-  },
-  {
     title: "Chicken and Waffle",
-    description:
-      "A fresh waffle topped with two boneless thighs, dusted to your liking!",
+    description: "A fresh waffle topped with two boneless, dusted thighs",
     price: 8.25,
     special: false,
   },
   {
     title: "Waffle Slider",
     description:
-      "Dusted chicken, slaw, pickles, pickled onions and honey jallapeno sauce, built on a waffle.",
+      "Dusted chicken, slaw, pickles, pickled onions and honey jallapeno sauce, built on a waffle",
     price: 10.25,
     special: false,
   },
+];
+
+const displayMenuList = [
   {
-    title: "Waffle on the DL",
-    description:
-      "A fresh waffle, slaw and honey jalapeno sauce, topped with some chopped boneless thighs!",
-    price: 12.25,
-    special: false,
+    title: "Sandos",
+    description: ["Choose between boneless leg or breast", "Add a side for 5"],
+    items: sandosList,
+  },
+  {
+    title: "By the Piece",
+    description: ["Served on white bread and topped with some pickles"],
+    items: chickenByThePieceList,
+  },
+  {
+    title: "Waffles",
+    description: [
+      "A fresh savoury waffle, made with cheddar, jalapeno, buttermilk and scallions",
+    ],
+    items: waffleList,
+  },
+  {
+    title: "Sides",
+    description: null,
+    items: sidesList,
+  },
+  {
+    title: "Drinks",
+    description: null,
+    items: drinksList,
   },
 ];
 
@@ -219,78 +254,29 @@ function Menu() {
         defaultColumns={4}
         defaultSpacing={1}
       >
-        <div className="sectionContainer">
-          <h2>Sandos</h2>
-          <h4>Choose between boneless leg or breast</h4>
-          <h4>Add a side for 5 </h4>
-          <Masonry columns={2} spacing={2}>
-            {sandosList.map((sando, index) => {
-              return (
-                <div key={index}>
-                  <h3>{sando.title}</h3>
-                  <p>{sando.description}</p>
-                  <p>{sando.price}</p>
-                </div>
-              );
-            })}
-          </Masonry>
-        </div>
-        <div className="sectionContainer">
-          <h2>Shareables</h2>
-          <h4>Don't forget to grab some dipping sauce!</h4>
-          <Masonry columns={2} spacing={2}>
-            {shareablesList.map((shareable, index) => {
-              return (
-                <div key={index}>
-                  <h3>{shareable.title}</h3>
-                  <p>{shareable.description}</p>
-                  <p>{shareable.price}</p>
-                </div>
-              );
-            })}
-          </Masonry>
-        </div>
-        <div className="sectionContainer">
-          <h2>Waffles</h2>
-          <Masonry columns={2} spacing={2}>
-            {waffleList.map((waffle, index) => {
-              return (
-                <div key={index}>
-                  <h3>{waffle.title}</h3>
-                  <p>{waffle.description}</p>
-                  <p>{waffle.price}</p>
-                </div>
-              );
-            })}
-          </Masonry>
-        </div>
-        <div className="sectionContainer">
-          <h2>Sides</h2>
-          <Masonry columns={2} spacing={2}>
-            {sidesList.map((side, index) => {
-              return (
-                <div key={index}>
-                  <h3>{side.title}</h3>
-                  <p>{side.description}</p>
-                  <p>{side.price}</p>
-                </div>
-              );
-            })}
-          </Masonry>
-        </div>
-        <div className="sectionContainer">
-          <h2>Drinks</h2>
-          <Masonry columns={2} spacing={2}>
-            {drinksList.map((drink, index) => {
-              return (
-                <div key={index}>
-                  <h3>{drink.title}</h3>
-                  <p>{drink.price}</p>
-                </div>
-              );
-            })}
-          </Masonry>
-        </div>
+        {displayMenuList.map((section, index) => {
+          return (
+            <div key={index} className="sectionContainer">
+              <h2>{section.title}</h2>
+              {section.description &&
+                section.description.map((line, index) => {
+                  return <h4 key={index}>{line}</h4>;
+                })}
+              <Masonry columns={2} spacing={2}>
+                {section.items.map((item, index) => {
+                  return (
+                    <div key={index}>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      {item.special && <h4>{item.special}</h4>}
+                      <p>{item.price}</p>
+                    </div>
+                  );
+                })}
+              </Masonry>
+            </div>
+          );
+        })}
       </Masonry>
     </div>
   );

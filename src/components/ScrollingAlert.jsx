@@ -1,3 +1,5 @@
+import "./scrollingAlert.css";
+
 function ScrollingAlert() {
   const text =
     "Come by our East Van location on Italian Day and try our italian chicken skewers!";

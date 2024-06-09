@@ -1,0 +1,36 @@
+.scrollContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+.horizontalScrollingItems {
+  display: flex;
+  font-size: 40px;
+  width: 2600px;
+  animation-name: infiniteScroll;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.horizontalScrollingItems:hover {
+  animation-play-state: paused;
+}
+
+.horizontalScrollingItemsItems {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 500px) {
+  .horizontalScrollingItems {
+    font-size: 20px;
+  }
+}

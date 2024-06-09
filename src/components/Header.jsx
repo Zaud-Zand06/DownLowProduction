@@ -1,3 +1,4 @@
+import "./header.css";
 import PropTypes from "prop-types";
 
 Header.propTypes = {
