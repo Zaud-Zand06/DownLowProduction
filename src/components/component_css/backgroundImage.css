@@ -1,7 +1,7 @@
 .backgroundImage {
   position: fixed;
   width: 7000px;
-  background-image: url(../assets/the_logo.png);
+  background-image: url(../../assets/the_logo.png);
   min-height: 1000vh;
   background-size: 180px;
   background-repeat: space;

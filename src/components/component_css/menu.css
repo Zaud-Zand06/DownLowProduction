@@ -7,38 +7,38 @@
   height: 95svh;
 }
 
-.sectionContainer {
+.menuCard {
   border: 2px solid var(--main-red);
   padding: 1rem;
   background-color: var(--main-yellow);
   /* backdrop-filter: opacity(0.8); */
 }
 
-.sectionContainer > h2,
+.menuCard > h2,
 h3,
 h4 {
   filter: drop-shadow(2px 2px 2px var(--shadow-colour));
   -webkit-text-stroke: var(--border-colour) 1.7px;
 }
 
-.sectionContainer > h2 {
+.menuCard > h2 {
   font-size: 3rem;
   color: var(--main-yellow);
   margin-bottom: 1rem;
 }
 
-.sectionContainer h3 {
+.menuCard h3 {
   font-size: 2rem;
   color: var(--main-yellow);
 }
-.sectionContainer h4 {
+.menuCard h4 {
   -webkit-text-stroke: var(--border-colour) 1.5px;
   margin: 0;
   font-size: 1.5rem;
   color: var(--white);
 }
 
-.sectionContainer p {
+.menuCard p {
   font-size: 1.1rem;
   color: var(--white);
   filter: drop-shadow(2px 2px 2px var(--shadow-colour));
@@ -52,22 +52,22 @@ h4 {
   .menuContainer {
     margin-top: 8rem;
   }
-  .sectionContainer h2,
+  .menuCard h2,
   h3,
   h4 {
     -webkit-text-stroke: var(--border-colour) 1.5px;
   }
-  .sectionContainer h2 {
+  .menuCard h2 {
     font-size: 2rem;
   }
-  .sectionContainer h3 {
+  .menuCard h3 {
     font-size: 1.5rem;
   }
-  .sectionContainer h4 {
+  .menuCard h4 {
     font-size: 1rem;
     -webkit-text-stroke: var(--border-colour) 1px;
   }
-  .sectionContainer p {
+  .menuCard p {
     font-size: 1rem;
     filter: drop-shadow(1px 1px 1px var(--shadow-colour));
   }

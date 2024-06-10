@@ -256,7 +256,7 @@ function Menu({ setDisplayMenu }) {
       >
         {displayMenuList.map((section, index) => {
           return (
-            <div key={index} className="sectionContainer">
+            <div key={index} className="menuCard">
               <h2>{section.title}</h2>
               {section.description &&
                 section.description.map((line, index) => {

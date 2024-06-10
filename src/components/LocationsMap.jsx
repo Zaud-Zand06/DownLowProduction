@@ -15,14 +15,14 @@ function LocationsMap() {
       const details = [
         {
           address: "905 Commercial Dr, Vancouver, BC V5L 2H2",
-          description: "East Van Location",
+          description: "East Van",
           hours: "11:00am - 9:00pm Mon-Sat / 11:00am - 4:30pm Sun",
           number: "(604) 283-1385",
           gMapsLink: "https://maps.app.goo.gl/hieRWPg8Mhe8muDG7",
         },
         {
           address: "6065 University Blvd, Vancouver, BC V6T 0C5",
-          description: "UBC Location",
+          description: "UBC",
           hours: "11:00am - 9:00pm Mon-Sat / 11:00am - 4:30pm Sun",
           number: "(604) 283-1385",
           gMapsLink: "https://maps.app.goo.gl/aZ5F1FjducPrUPiw7",

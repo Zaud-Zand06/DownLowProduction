@@ -38,7 +38,7 @@ function SecretMenu() {
   return (
     <>
       <div className="secretMenuContainer">
-        <h2>Nice work! You found our secret menu </h2>
+        <h2>Alright alright you found it... </h2>
         {secretMenuList.map((item, index) => {
           return (
             <div key={index} className="secretMenuItem">
