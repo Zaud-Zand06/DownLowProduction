@@ -1,4 +1,4 @@
-import "./secretMenu.css";
+import "./component_css/secretMenu.css";
 import logo from "../assets/the_logo.png";
 
 const secretMenuList = [

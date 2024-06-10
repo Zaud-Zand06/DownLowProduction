@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "./HeroCarousel.css";
+import "./component_css/HeroCarousel.css";
 import agroDulce1 from "../assets/AgroDulce1.jpg";
 import sandoSpread from "../assets/SandoSpread.jpg";
 import sandoSpread2 from "../assets/SandoSpread2.jpg";

@@ -1,4 +1,4 @@
-import "./scrollingAlert.css";
+import "./component_css/scrollingAlert.css";
 
 const giftCardLink = "https://squareup.com/gift/MLWWKAFPWGTFJ/order";
 

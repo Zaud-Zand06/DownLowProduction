@@ -1,4 +1,4 @@
-import "./header.css";
+import "./component_css/header.css";
 import PropTypes from "prop-types";
 
 Header.propTypes = {

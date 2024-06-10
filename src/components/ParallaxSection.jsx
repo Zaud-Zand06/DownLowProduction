@@ -1,3 +1,4 @@
+import "./component_css/parallaxSection.css";
 import { Parallax } from "react-scroll-parallax";
 import agrodulce4 from "../assets/AgroDulce4.jpg";
 import turkeyDLF from "../assets/TurkeyDLF.jpg";

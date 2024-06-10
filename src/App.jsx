@@ -1,5 +1,5 @@
 import "./App.css";
-import "./components/backgroundImage.css";
+import "./components/component_css/backgroundImage.css";
 import { useState } from "react";
 import HeroCarousel from "./components/HeroCarousel";
 import Header from "./components/Header";

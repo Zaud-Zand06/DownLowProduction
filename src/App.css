@@ -18,51 +18,6 @@
   align-items: center;
 }
 
-.parallaxContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100svw;
-  align-items: center;
-}
-
-.parallaxText,
-.parallaxText2,
-.parallaxText3 {
-  font-size: 1.5rem;
-  color: white;
-  width: 45svw;
-  position: relative;
-  padding: 3svw;
-  border: 2px solid var(--border-colour);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-}
-
-.parallaxText {
-  left: -20svw;
-}
-
-.parallaxText2 {
-  left: 20svw;
-}
-
-.parallaxImage,
-.parallaxImage2 {
-  position: relative;
-  width: 75svw;
-  max-height: 50rem;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px var(--shadow-colour);
-}
-
-.parallaxImage {
-  left: -20rem;
-}
-.parallaxImage2 {
-  right: -20rem;
-}
-
 .mapEmbed {
   margin-top: 3em;
   width: 90svw;
@@ -80,25 +35,4 @@
 .mapEmbed img {
   width: 90svw;
   height: 40em;
-}
-
-@media screen and (max-width: 900px) {
-  .parallaxText,
-  .parallaxText2,
-  .parallaxText3 {
-    width: 85svw;
-    left: 0;
-  }
-
-  .parallaxImage,
-  .parallaxImage2 {
-    width: 90svw;
-  }
-
-  .parallaxImage {
-    left: 0rem;
-  }
-  .parallaxImage2 {
-    right: 0rem;
-  }
 }
