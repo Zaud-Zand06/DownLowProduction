@@ -1,6 +1,7 @@
 import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import { Masonry } from "@mui/lab";
+import Card from "@mui/material/Card";
 
 const sandosList = [
   {
@@ -94,6 +95,7 @@ const chickenByThePieceList = [
     title: "Pile of Thighs",
     description: "A pile of 10 boneless thighs! Dusted to your liking",
     price: 49.75,
+    special: "Add 4 sides for 10",
   },
 ];
 const sidesList = [
@@ -221,12 +223,12 @@ const displayMenuList = [
   },
   {
     title: "Sides",
-    description: null,
+    description: ["For sharing, or for yourself"],
     items: sidesList,
   },
   {
     title: "Drinks",
-    description: null,
+    description: ["Something to quench the heat?"],
     items: drinksList,
   },
 ];
@@ -265,12 +267,16 @@ function Menu({ setDisplayMenu }) {
               <Masonry columns={2} spacing={2}>
                 {section.items.map((item, index) => {
                   return (
-                    <div key={index}>
+                    <Card
+                      variant="outlined"
+                      key={index}
+                      style={{ backgroundColor: "orange" }}
+                    >
                       <h3>{item.title}</h3>
                       <p>{item.description}</p>
                       {item.special && <h4>{item.special}</h4>}
                       <p>{item.price}</p>
-                    </div>
+                    </Card>
                   );
                 })}
               </Masonry>

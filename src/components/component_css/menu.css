@@ -12,6 +12,8 @@
   border: 2px solid var(--border-colour);
   padding: 1rem;
   background-color: var(--main-yellow);
+  box-shadow: 2px 2px 5px var(--shadow-colour);
+  border-radius: 5px;
   /* backdrop-filter: opacity(0.8); */
 }
 
@@ -25,18 +27,21 @@ h4 {
 .menuCard > h2 {
   font-size: 3rem;
   color: var(--main-yellow);
-  margin-bottom: 1rem;
-  /* position: absolute;
-  top: -6rem; */
+  position: absolute;
+  top: -6rem;
 }
 
 .menuCard h3 {
+  margin-top: 0px;
   font-size: 2rem;
   color: var(--main-yellow);
+  text-wrap: balance;
 }
 .menuCard h4 {
-  -webkit-text-stroke: var(--border-colour) 1.5px;
   margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  -webkit-text-stroke: var(--border-colour) 1.5px;
   font-size: 1.5rem;
   color: var(--white);
 }
@@ -45,6 +50,7 @@ h4 {
   font-size: 1.1rem;
   color: var(--white);
   filter: drop-shadow(2px 2px 2px var(--shadow-colour));
+  text-wrap: balance;
 }
 
 .secretMenuLink:hover {
@@ -61,13 +67,14 @@ h4 {
     -webkit-text-stroke: var(--border-colour) 1.5px;
   }
   .menuCard h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    top: -4.5rem;
   }
   .menuCard h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .menuCard h4 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     -webkit-text-stroke: var(--border-colour) 1px;
   }
   .menuCard p {
