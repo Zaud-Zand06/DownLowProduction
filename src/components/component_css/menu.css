@@ -9,8 +9,8 @@
 
 .menuCard {
   position: relative;
-  border: 2px solid var(--border-colour);
   padding: 1rem;
+  border: 2px solid var(--border-colour);
   background-color: var(--main-yellow);
   box-shadow: 2px 2px 5px var(--shadow-colour);
   border-radius: 5px;

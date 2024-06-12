@@ -1,5 +1,7 @@
 import "./component_css/secretMenu.css";
+import { Masonry } from "@mui/lab";
 import logo from "../assets/the_logo.png";
+import { useState, useEffect } from "react";
 
 const secretMenuList = [
   {
@@ -35,10 +37,23 @@ const secretMenuList = [
 ];
 
 function SecretMenu() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      window.innerWidth <= 700
+        ? setWindowWidth(window.innerWidth)
+        : setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
-    <>
-      <div className="secretMenuContainer">
-        <h2>Alright alright you found it... </h2>
+    <div className="secretMenuContainer">
+      <h2>Alright alright you found it... </h2>
+      <Masonry columns={windowWidth < 700 ? 1 : 2} spacing={2}>
         {secretMenuList.map((item, index) => {
           return (
             <div key={index} className="secretMenuItem">
@@ -48,8 +63,8 @@ function SecretMenu() {
             </div>
           );
         })}
-      </div>
-    </>
+      </Masonry>
+    </div>
   );
 }
 

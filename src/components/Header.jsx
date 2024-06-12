@@ -37,10 +37,10 @@ function Header({ setDisplayMenu, displayMenu }) {
         {displayMenu == "secret" && (
           <a
             onClick={() => {
-              setDisplayMenu("home");
+              setDisplayMenu("menu");
             }}
           >
-            Home
+            Standard Menu
           </a>
         )}
         {displayMenu == "home" && (

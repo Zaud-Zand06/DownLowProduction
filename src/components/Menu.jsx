@@ -2,6 +2,7 @@ import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import { Masonry } from "@mui/lab";
 import Card from "@mui/material/Card";
+import PropTypes from "prop-types";
 
 const sandosList = [
   {
@@ -233,6 +234,49 @@ const displayMenuList = [
   },
 ];
 
+function makeMenuList(menuList, windowWidth) {
+  return (
+    <Masonry
+      columns={windowWidth <= 700 ? 1 : 2}
+      spacing={2}
+      defaultHeight={450}
+      defaultColumns={4}
+      defaultSpacing={1}
+    >
+      {menuList.map((section, index) => {
+        return (
+          <div key={index} className="menuCard">
+            <h2 className="sectionTitle">{section.title}</h2>
+            {section.description &&
+              section.description.map((line, index) => {
+                return <h4 key={index}>{line}</h4>;
+              })}
+            <Masonry columns={2} spacing={2}>
+              {section.items.map((item, index) => {
+                return (
+                  <Card
+                    variant="outlined"
+                    key={index}
+                    style={{ backgroundColor: "orange" }}
+                  >
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    {item.special && <h4>{item.special}</h4>}
+                    <p className="price">{item.price}</p>
+                  </Card>
+                );
+              })}
+            </Masonry>
+          </div>
+        );
+      })}
+    </Masonry>
+  );
+}
+
+Menu.propTypes = {
+  setDisplayMenu: PropTypes.func.isRequired,
+};
 function Menu({ setDisplayMenu }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -249,41 +293,7 @@ function Menu({ setDisplayMenu }) {
   }, []);
   return (
     <div className="menuContainer">
-      <Masonry
-        columns={windowWidth <= 700 ? 1 : 2}
-        spacing={2}
-        defaultHeight={450}
-        defaultColumns={4}
-        defaultSpacing={1}
-      >
-        {displayMenuList.map((section, index) => {
-          return (
-            <div key={index} className="menuCard">
-              <h2 className="sectionTitle">{section.title}</h2>
-              {section.description &&
-                section.description.map((line, index) => {
-                  return <h4 key={index}>{line}</h4>;
-                })}
-              <Masonry columns={2} spacing={2}>
-                {section.items.map((item, index) => {
-                  return (
-                    <Card
-                      variant="outlined"
-                      key={index}
-                      style={{ backgroundColor: "orange" }}
-                    >
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                      {item.special && <h4>{item.special}</h4>}
-                      <p>{item.price}</p>
-                    </Card>
-                  );
-                })}
-              </Masonry>
-            </div>
-          );
-        })}
-      </Masonry>
+      {makeMenuList(displayMenuList, windowWidth)}
       <p>
         Hey.... have you heard of our{" "}
         <a
