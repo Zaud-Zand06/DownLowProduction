@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 Header.propTypes = {
   setDisplayMenu: PropTypes.func.isRequired,
-  displayMenu: PropTypes.bool.isRequired,
+  displayMenu: PropTypes.string.isRequired,
 };
 
 function Header({ setDisplayMenu, displayMenu }) {

@@ -8,3 +8,7 @@ react-scroll-parallax
 @mui/material
 @emotion/react
 @emotion/styled
+
+main.jsx and App.jsjx are used for the overall structure of the page
+
+the components folder contains the body of the page.

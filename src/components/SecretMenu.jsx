@@ -35,7 +35,6 @@ const secretMenuList = [
     image: logo,
   },
 ];
-
 function SecretMenu() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
