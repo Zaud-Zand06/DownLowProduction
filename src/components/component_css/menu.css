@@ -52,7 +52,9 @@ h4 {
   filter: drop-shadow(2px 2px 2px var(--shadow-colour));
   text-wrap: balance;
 }
-
+.secretMenuLink {
+  font-family: "Ahkio Thin";
+}
 .secretMenuLink:hover {
   color: var(--border-colour);
 }
