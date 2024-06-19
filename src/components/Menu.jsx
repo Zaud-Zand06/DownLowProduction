@@ -258,12 +258,11 @@ function makeMenuList(menuList, windowWidth) {
                     variant="outlined"
                     key={index}
                     style={{ backgroundColor: "orange" }}
+                    className="menuCardItem"
                   >
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
-                    {item.special && (
-                      <h4 className="itemSpecial">{item.special}</h4>
-                    )}
+                    {item.special && <h4>{item.special}</h4>}
                     <p className="price">{item.price}</p>
                   </Card>
                 );

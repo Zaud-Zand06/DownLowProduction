@@ -18,7 +18,7 @@ function Header({ setDisplayMenu, displayMenu }) {
         <h1
           id="redLogo"
           onClick={() => {
-            setDisplayMenu("home");
+            setDisplayMenu("credits");
           }}
         >
           <a>Chicken</a>
@@ -26,6 +26,15 @@ function Header({ setDisplayMenu, displayMenu }) {
       </div>
       <div className="hamburgerMenuButtons">
         {displayMenu == "menu" && (
+          <a
+            onClick={() => {
+              setDisplayMenu("home");
+            }}
+          >
+            Home
+          </a>
+        )}
+        {displayMenu == "credits" && (
           <a
             onClick={() => {
               setDisplayMenu("home");

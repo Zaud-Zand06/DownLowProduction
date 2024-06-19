@@ -8,6 +8,7 @@ import ParallaxSection from "./components/ParallaxSection";
 import Menu from "./components/Menu";
 import SecretMenu from "./components/SecretMenu";
 import LocationsMap from "./components/LocationsMap";
+import Credits from "./components/Credits";
 
 function App() {
   const [displayMenu, setDisplayMenu] = useState("home");
@@ -16,7 +17,18 @@ function App() {
     <>
       <Header setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
       <div className="backgroundImage"></div>
+      {/* main page */}
+      {displayMenu == "home" && (
+        <>
+          <HeroCarousel />
 
+          <ScrollingAlert />
+
+          <ParallaxSection />
+
+          <LocationsMap />
+        </>
+      )}
       {/* secret menu display */}
       {displayMenu == "secret" && (
         <>
@@ -29,17 +41,10 @@ function App() {
           <Menu setDisplayMenu={setDisplayMenu} />
         </>
       )}
-
-      {/* main page */}
-      {displayMenu == "home" && (
+      {/* credits display */}
+      {displayMenu == "credits" && (
         <>
-          <HeroCarousel />
-
-          <ScrollingAlert />
-
-          <ParallaxSection />
-
-          <LocationsMap />
+          <Credits />
         </>
       )}
     </>
