@@ -55,12 +55,15 @@
   color: var(--white);
   -webkit-text-stroke: var(--border-colour) 0.8px;
 }
-.secretMenuLink {
+p.secretMenuLink {
   font-family: "Raleway Medium";
   color: var(--border-colour);
   filter: none;
 }
-.secretMenuLink:hover {
+p.secretMenuLink a {
+  font-family: "Raleway Medium";
+}
+p.secretMenuLink a:hover {
   color: var(--border-colour);
 }
 
