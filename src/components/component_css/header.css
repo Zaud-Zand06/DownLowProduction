@@ -28,7 +28,6 @@
 
 #logo * {
   margin: 0;
-  text-shadow: 3px 3px 2px var(--shadow-colour);
 }
 #logo h1 {
   font-size: 2rem;
@@ -53,7 +52,6 @@
   color: var(--main-red);
   -webkit-text-stroke-color: var(--border-colour);
   -webkit-text-stroke-width: 2px;
-  text-shadow: 3px 3px 2px var(--shadow-colour);
 }
 
 @media screen and (max-width: 700px) {

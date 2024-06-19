@@ -1,3 +1,38 @@
+h2,
+h3,
+h4 {
+  -webkit-text-stroke: var(--border-colour) 1.5px;
+}
+
+.sectionTitle {
+  filter: drop-shadow(2px 2px 2px var(--shadow-colour));
+  font-size: 3rem;
+  color: var(--main-yellow);
+  position: absolute;
+  top: -6rem;
+}
+
+h3 {
+  margin-top: 0px;
+  font-size: 1.5rem;
+  color: var(--menu-item-colour);
+  text-wrap: balance;
+  -webkit-text-stroke: var(--border-colour) 1.1px;
+}
+h4 {
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  -webkit-text-stroke: var(--border-colour) 1px;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+p {
+  font-size: 1.1rem;
+  color: var(--white);
+  filter: drop-shadow(2px 2px 2px var(--shadow-colour));
+  text-wrap: balance;
+}
 .menuContainer {
   margin-top: 12rem;
   display: flex;
@@ -6,7 +41,6 @@
   width: 95svw;
   height: 95svh;
 }
-
 .menuCard {
   position: relative;
   padding: 1rem;
@@ -16,44 +50,15 @@
   border-radius: 5px;
   /* backdrop-filter: opacity(0.8); */
 }
-
-.menuCard > h2,
-h3,
-h4 {
-  filter: drop-shadow(2px 2px 2px var(--shadow-colour));
-  -webkit-text-stroke: var(--border-colour) 1.7px;
-}
-
-.menuCard > h2 {
-  font-size: 3rem;
-  color: var(--main-yellow);
-  position: absolute;
-  top: -6rem;
-}
-
-.menuCard h3 {
-  margin-top: 0px;
-  font-size: 2rem;
-  color: var(--main-yellow);
-  text-wrap: balance;
-}
-.menuCard h4 {
-  margin: 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  -webkit-text-stroke: var(--border-colour) 1.5px;
-  font-size: 1.5rem;
+.itemSpecial {
+  font-size: 1.2rem;
   color: var(--white);
-}
-
-.menuCard p {
-  font-size: 1.1rem;
-  color: var(--white);
-  filter: drop-shadow(2px 2px 2px var(--shadow-colour));
-  text-wrap: balance;
+  -webkit-text-stroke: var(--border-colour) 0.8px;
 }
 .secretMenuLink {
-  font-family: "Ahkio Thin";
+  font-family: "Raleway Medium";
+  color: var(--border-colour);
+  filter: none;
 }
 .secretMenuLink:hover {
   color: var(--border-colour);
@@ -74,10 +79,6 @@ h4 {
   }
   .menuCard h3 {
     font-size: 1.6rem;
-  }
-  .menuCard h4 {
-    font-size: 1.3rem;
-    -webkit-text-stroke: var(--border-colour) 1px;
   }
   .menuCard p {
     font-size: 1rem;

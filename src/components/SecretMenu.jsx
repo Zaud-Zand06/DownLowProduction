@@ -51,7 +51,7 @@ function SecretMenu() {
   }, []);
   return (
     <div className="secretMenuContainer">
-      <h2>Alright alright you found it... </h2>
+      <h2>Nice work, you found our secret menu...</h2>
       <Masonry columns={windowWidth < 700 ? 1 : 2} spacing={2}>
         {secretMenuList.map((item, index) => {
           return (

@@ -166,24 +166,24 @@ const drinksList = [
   {
     title: "Coke",
     description: "Diet coke, coke zero, or regular",
-    price: 2.5,
+    price: 3,
     special: false,
   },
   {
     title: "Sprite",
-    description: "Sprite",
-    price: 2.5,
+    description: "A can of Sprite",
+    price: 3,
     special: false,
   },
   {
     title: "Root Beer",
-    description: "Root Beer",
-    price: 2.5,
+    description: "A&W or Boylans",
+    price: 3,
     special: false,
   },
   {
     title: "Water",
-    description: "Water",
+    description: "A bottle of water",
     price: 2.5,
     special: false,
   },
@@ -227,11 +227,11 @@ const displayMenuList = [
     description: ["For sharing, or for yourself"],
     items: sidesList,
   },
-  {
-    title: "Drinks",
-    description: ["Something to quench the heat?"],
-    items: drinksList,
-  },
+  // {
+  //   title: "Drinks",
+  //   description: ["Something to quench the heat?"],
+  //   items: drinksList,
+  // },
 ];
 
 function makeMenuList(menuList, windowWidth) {
@@ -261,7 +261,9 @@ function makeMenuList(menuList, windowWidth) {
                   >
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
-                    {item.special && <h4>{item.special}</h4>}
+                    {item.special && (
+                      <h4 className="itemSpecial">{item.special}</h4>
+                    )}
                     <p className="price">{item.price}</p>
                   </Card>
                 );
@@ -294,7 +296,7 @@ function Menu({ setDisplayMenu }) {
   return (
     <div className="menuContainer">
       {makeMenuList(displayMenuList, windowWidth)}
-      <p>
+      <p className="secretMenuLink">
         Hey.... have you heard of our{" "}
         <a
           onClick={() => {
