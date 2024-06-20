@@ -1,9 +1,9 @@
 .backgroundImage {
   position: fixed;
   width: 100vw;
-  background-image: url(../../assets/the_logo.png);
-  height: 100vh;
-  background-size: 180px;
+  background-image: url(../../assets/noTextLogo400px.png);
+  height: 98vh;
+  background-size: 350px;
   background-repeat: space;
   filter: blur(3px);
   z-index: -10;

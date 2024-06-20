@@ -12,7 +12,7 @@
   margin-top: 3em;
   width: 90svw;
   height: 40em;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   border: 2px solid var(--main-red);
 }
 /* this is here to fix an accidental namespace issue with .sectionContainer */
