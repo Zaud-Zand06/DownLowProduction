@@ -9,7 +9,7 @@ function ParallaxSection() {
       <Parallax speed={30} style={{ position: "relative", zIndex: 3 }}>
         <p className="parallaxText">
           Since our inception, Down Low Chicken has been commited to providing
-          the best Nashville style fried chicken Vancouver has ever seen!
+          the best Nashville style fried chicken Vancouver has to offer!
         </p>
       </Parallax>
       <Parallax speed={-10} style={{ position: "relative" }}>
@@ -17,9 +17,15 @@ function ParallaxSection() {
       </Parallax>
       <Parallax speed={30} style={{ position: "relative", zIndex: 3 }}>
         <p className="parallaxText2">
-          We do this by sourcing the highest quality chicken and ingredients we
-          can get our hands on, and hours of time in the kitchen creating the
-          perfect blend of spices.
+          From our juicy fried chicken to our custom dessert cups, we only
+          source the highest quality and local ingredients for our recipes.
+        </p>
+      </Parallax>
+      <Parallax speed={20} style={{ position: "relative", zIndex: 3 }}>
+        <p className="parallaxText3">
+          Our fresh BC chicken is provided to us by Legends Haul, a halal
+          certified supplier that shares our commitment to quality and our
+          attention to detail.
         </p>
       </Parallax>
       <Parallax speed={-10} style={{ position: "relative" }}>
@@ -27,8 +33,8 @@ function ParallaxSection() {
       </Parallax>
       <Parallax speed={30} style={{ position: "relative", zIndex: 3 }}>
         <p className="parallaxText3">
-          Let us know about any allergies or dietary restrictions you may have,
-          and we'll do our best to accommodate you!
+          And yes, we can accomodate for all dietary restrictions! Come in and
+          ask us what we can do for you!
         </p>
       </Parallax>
     </div>

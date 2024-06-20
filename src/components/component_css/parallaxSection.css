@@ -10,7 +10,7 @@
 .parallaxText2,
 .parallaxText3 {
   font-size: 1.5rem;
-  color: white;
+  color: black;
   width: 45svw;
   position: relative;
   padding: 3svw;
@@ -33,7 +33,6 @@
   width: 75svw;
   max-height: 50rem;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px var(--shadow-colour);
 }
 
 .parallaxImage {

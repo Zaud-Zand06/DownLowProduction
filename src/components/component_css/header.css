@@ -1,18 +1,20 @@
 .header {
   position: fixed;
-  width: 95svw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  /* background-color: var(--transparent-color);
-    box-shadow: 3px 3px 29px var(--shadow-colour);
-    border-bottom: 2px solid var(--main-red); */
+  background-color: var(--background-colour);
+  border-bottom: 2px solid var(--border-colour);
   z-index: 10;
 }
 
 #logo,
 .hamburgerMenuButtons {
   background-color: var(--transparent-color);
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   transition: background-color 0.5s;
   line-height: 1.5;
 }
@@ -48,7 +50,7 @@
   align-items: end;
 }
 .hamburgerMenuButtons > * {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--main-red);
   -webkit-text-stroke-color: var(--border-colour);
   -webkit-text-stroke-width: 2px;

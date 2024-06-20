@@ -2,21 +2,16 @@
   --default-width: 100svw;
   --default-height: 25em;
   --default-padding: 75px;
-  --text-color: #f5f5f5;
+  --text-color: #ffffff;
   --emphasis-color: #ccc;
-  --link-color: #d6d600;
   --slide-primary-color: #000099;
   --slide-secondary-color: #4d0099;
   --slide-content-color: #004d99;
-  --main-yellow: #ffb800;
-  --main-red: #ff0000;
-  --transparent-color: #00000000;
   --button-hover-colour: #535bf2;
-  --border-colour: #000000;
-  --shadow-colour: #000000;
 }
 
 .carousel-root {
+  margin-top: 7.8rem;
   z-index: 5;
   border-bottom: 3px solid var(--border-colour);
 }
@@ -36,14 +31,7 @@
 
 .mySlide > img {
   position: absolute;
-  filter: blur(5px);
-  transition: filter 0.3s ease-in-out;
 }
-
-.mySlide:hover > img {
-  filter: blur(0);
-}
-
 .presentationMode .mySlide h1,
 .presentationMode .mySlide h2,
 .presentationMode .mySlide h3,
@@ -58,34 +46,34 @@
   padding: 0;
   display: inline-block;
   z-index: 5;
-  text-shadow: #000000 2px 2px 2px;
   text-wrap: balance;
 }
 
 .presentationMode .mySlide h2 {
   font-size: 2.5rem;
-  -webkit-text-stroke: 2px var(--shadow-colour);
   color: var(--main-yellow);
   border-bottom: 2px solid var(--main-red);
-  box-shadow: 0px 4px 6px -6px var(--shadow-colour);
+  -webkit-text-stroke: 2px var(--shadow-colour);
 }
-
+.carouselSlideText {
+  max-width: 65%;
+  z-index: 5;
+  border-radius: 5px;
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+  border: none;
+  transition: backdrop-filter 0.3s ease-in-out, border 0.3s ease-in-out,
+    -webkit-backdrop-filter 0.3s ease-in-out;
+}
+.mySlide:hover .carouselSlideText {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid var(--border-colour);
+}
 .presentationMode .mySlide.complex {
   text-align: left;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.presentationMode .mySlide.complex h1,
-.presentationMode .mySlide.complex h2,
-.presentationMode .mySlide.complex h3,
-.presentationMode .mySlide.complex h4,
-.presentationMode .mySlide.complex h5,
-.presentationMode .mySlide.complex h6,
-.presentationMode .mySlide.complex p,
-.presentationMode .mySlide.complex ul,
-.presentationMode .mySlide.complex ol {
-  margin-bottom: 15px;
 }
 
 .presentationMode .mySlide ul,
@@ -103,7 +91,7 @@
 }
 
 .presentationMode .mySlide p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .presentationMode .mySlide strong,
@@ -112,8 +100,9 @@
 }
 
 .presentationMode .mySlide a {
-  color: var(--link-color);
-  border-bottom: 3px dotted var(--link-color);
+  font-family: "Ahkio Thin";
+  font-size: 1.5rem;
+  color: var(--main-red);
   text-decoration: none;
 }
 
@@ -132,7 +121,7 @@
 
 .presentationMode .mySlide blockquote {
   position: relative;
-  color: var(--text-color);
+  color: var(--main-yellow);
   text-align: left;
   border-left: 10px solid var(--emphasis-color);
   margin: 1.5em 10px;
@@ -170,14 +159,23 @@
 }
 
 @media screen and (max-width: 700px) {
+  .carousel-root {
+    margin-top: 6.8rem;
+  }
   .presentationMode .mySlide h2 {
-    font-size: 1.7rem;
+    font-size: 2rem;
     -webkit-text-stroke: 1.5px var(--shadow-colour);
     color: var(--main-yellow);
     border-bottom: 2px solid var(--main-red);
     box-shadow: 0px 4px 6px -6px var(--shadow-colour);
   }
   .presentationMode .mySlide p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+  .presentationMode .mySlide a {
+    font-size: 1.5rem;
+  }
+  .carouselSlideText {
+    max-width: 90%;
   }
 }

@@ -6,7 +6,6 @@
   font-family: "Ahkio W00 Bold";
   src: url(./assets/fonts/ahkioW00Bold.otf);
 }
-/* Ahkio Thin isnt used anywhere but it might be nice to use it for special text */
 @font-face {
   font-family: "Ahkio Thin";
   src: url(./assets/fonts/ahkioThin.otf);
@@ -20,6 +19,7 @@
   --main-yellow: #ffb800;
   --main-red: #ff0000;
   --transparent-color: #00000000;
+  --background-colour: #ffffff;
   --button-hover-colour: #535bf2;
   --border-colour: #000000;
   --shadow-colour: #000000;
@@ -29,7 +29,7 @@
   font-family: "Raleway Medium";
   line-height: 1.5;
 
-  background-color: #ffb800;
+  background-color: var(--background-colour);
 }
 
 a {
@@ -43,7 +43,7 @@ a:hover {
 }
 
 p {
-  font-family: "Raleway Medium";
+  font-family: "Ahkio Thin";
   font-style: normal;
 }
 

@@ -34,7 +34,7 @@
   text-wrap: balance;
 }
 .menuContainer {
-  margin-top: 12rem;
+  margin-top: 13rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,7 +69,7 @@ p.secretMenuLink a:hover {
 
 @media screen and (max-width: 500px) {
   .menuContainer {
-    margin-top: 8rem;
+    margin-top: 9rem;
   }
   .menuCard h2,
   h3,

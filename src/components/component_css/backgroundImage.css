@@ -1,8 +1,8 @@
 .backgroundImage {
   position: fixed;
-  width: 7000px;
+  width: 100vw;
   background-image: url(../../assets/the_logo.png);
-  min-height: 1000vh;
+  height: 100vh;
   background-size: 180px;
   background-repeat: space;
   filter: blur(3px);
