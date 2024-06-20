@@ -4,8 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./component_css/HeroCarousel.css";
 import agroDulce1 from "../assets/AgroDulce1.jpg";
 import sandoSpread from "../assets/SandoSpread.jpg";
-import sandoSpread2 from "../assets/SandoSpread2.jpg";
 import dessertCup from "../assets/DessertCup1.jpg";
+import jerry from "../assets/jerry1.jpg";
 
 function HeroCarousel() {
   const [carouselWidth, setCarouselWidth] = useState(
@@ -50,7 +50,7 @@ function HeroCarousel() {
           </div>
         </div>
         <div className="mySlide">
-          <img src={sandoSpread} />
+          <img src={jerry} />
           <div className="carouselSlideText">
             <h2>Been here before?</h2>
             <p>

@@ -22,23 +22,26 @@
 }
 .parallaxText {
   top: 2rem;
-  left: 10rem;
+  left: 18rem;
 }
 .parallaxText2 {
   position: absolute;
-  right: 5rem;
+  right: 10rem;
   top: 30rem;
 }
 .parallaxText3 {
-  right: 10rem;
   top: 0rem;
+  right: 10rem;
 }
 .parallaxText4 {
   position: absolute;
   left: 5rem;
   bottom: 10rem;
 }
-
+.parallaxImage,
+.parallaxImage2 {
+  position: relative;
+}
 .parallaxImage img,
 .parallaxImage2 img {
   position: relative;
@@ -47,10 +50,10 @@
   border-radius: 5px;
 }
 
-.parallaxImage img {
-  left: -14rem;
+.parallaxImage {
+  left: -15rem;
 }
-.parallaxImage2 img {
+.parallaxImage2 {
   right: -14rem;
 }
 
@@ -68,16 +71,10 @@
   .parallaxText4 {
     bottom: 15rem;
   }
-
   .parallaxImage,
   .parallaxImage2 {
     width: 90svw;
-  }
-
-  .parallaxImage img {
     left: 0rem;
-  }
-  .parallaxImage2 img {
     right: 0rem;
   }
 }
