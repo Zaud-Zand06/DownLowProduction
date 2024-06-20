@@ -25,6 +25,12 @@ function Header({ setDisplayMenu, displayMenu }) {
         </h1>
       </div>
       <div className="hamburgerMenuButtons">
+        <a href={eastVanLink} target="_blank">
+          East Van Ordering
+        </a>
+        <a href={UBCLink} target="_blank">
+          UBC Ordering
+        </a>
         {displayMenu == "menu" && (
           <a
             onClick={() => {
@@ -61,12 +67,6 @@ function Header({ setDisplayMenu, displayMenu }) {
             Menu
           </a>
         )}
-        <a href={UBCLink} target="_blank">
-          UBC Ordering
-        </a>
-        <a href={eastVanLink} target="_blank">
-          East Van Ordering
-        </a>
       </div>
     </div>
   );
