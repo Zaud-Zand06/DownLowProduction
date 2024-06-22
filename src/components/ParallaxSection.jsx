@@ -1,7 +1,7 @@
 import "./component_css/parallaxSection.css";
 import { Parallax } from "react-scroll-parallax";
-import agrodulce4 from "../assets/AgroDulce4.jpg";
 import dlInterior from "../assets/dlInterior1.jpg";
+import agroducle from "../assets/AgroDulce2.jpg";
 import agroduclePromo from "../assets/agrodulcePromo.jpg";
 
 function ParallaxSection() {
@@ -14,7 +14,7 @@ function ParallaxSection() {
         </p>
       </Parallax>
       <Parallax className="parallaxImage" speed={-10}>
-        <img src={dlInterior} />
+        <img src={agroducle} />
       </Parallax>
       <Parallax className="parallaxText2" speed={30}>
         <p>

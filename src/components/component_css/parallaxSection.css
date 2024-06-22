@@ -46,6 +46,7 @@
 .parallaxImage2 img {
   position: relative;
   width: 100%;
+  min-height: 40rem;
   max-height: 60rem;
   border-radius: 5px;
 }
