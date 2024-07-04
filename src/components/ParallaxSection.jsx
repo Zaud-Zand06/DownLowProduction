@@ -9,8 +9,9 @@ function ParallaxSection() {
     <div className="parallaxContainer">
       <Parallax className="parallaxText" speed={30}>
         <p>
-          Since our inception, Down Low Chicken has been commited to providing
-          the best Nashville style fried chicken Vancouver has to offer!
+          Since our inception, Down Low Chicken and our dedicated team of cooks
+          has been commited to providing the best Nashville style fried chicken
+          Vancouver has to offer!
         </p>
       </Parallax>
       <Parallax className="parallaxImage" speed={-10}>
@@ -34,8 +35,8 @@ function ParallaxSection() {
       </Parallax>
       <Parallax className="parallaxText4" speed={30}>
         <p>
-          And yes, we can accomodate for all dietary restrictions! Come in and
-          ask us what we can do for you!
+          We can accomodate for most dietary restrictions! Come in and ask us
+          what we can do for you!
         </p>
       </Parallax>
     </div>
