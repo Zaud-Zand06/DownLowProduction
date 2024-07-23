@@ -60,16 +60,12 @@
   z-index: 5;
   border-radius: 5px;
   border: none;
-  /* backdrop-filter: blur(0);
-  -webkit-backdrop-filter: blur(0); */
-  /* transition: backdrop-filter 0.3s ease-in-out, border 0.3s ease-in-out,
-    -webkit-backdrop-filter 0.3s ease-in-out; */
   transition: background-color 0.3s ease-in-out;
 }
 .mySlide:hover .carouselSlideText {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   background-color: #1717179c;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 2px solid var(--border-colour);
 }
 .presentationMode .mySlide.complex {
@@ -178,6 +174,6 @@
     font-size: 1.5rem;
   }
   .carouselSlideText {
-    max-width: 90%;
+    max-width: 95%;
   }
 }

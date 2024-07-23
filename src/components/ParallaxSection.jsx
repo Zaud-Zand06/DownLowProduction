@@ -1,8 +1,7 @@
 import "./component_css/parallaxSection.css";
 import { Parallax } from "react-scroll-parallax";
-import dlInterior from "../assets/dlInterior1.jpg";
 import agroducle from "../assets/AgroDulce2resize.jpg";
-import agroduclePromo from "../assets/agrodulcePromo.jpg";
+import agroduclePromo from "../assets/agrodulcePromoresize.jpg";
 
 function ParallaxSection() {
   return (
