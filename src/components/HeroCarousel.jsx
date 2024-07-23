@@ -76,8 +76,8 @@ function HeroCarousel() {
           <div className="carouselSlideText">
             <h2>We also do Catering!</h2>
             <p>
-              Want to leave a big impression for your next event? Get in touch
-              with Sydney at{" "}
+              If you want to leave a big impression at your next event you can
+              reach out to us at{" "}
               <a href="mailto: sydney@dlchicken.ca">sydney@dlchicken.ca</a> for
               more information!
             </p>
