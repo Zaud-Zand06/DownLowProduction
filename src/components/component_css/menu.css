@@ -1,3 +1,7 @@
+:root {
+  --background-colour-menu: #1a1a1aba;
+}
+
 .menuContainer h2,
 .menuContainer h3,
 .menuContainer h4 {
@@ -45,10 +49,14 @@
   position: relative;
   padding: 1rem;
   border: 2px solid var(--border-colour);
-  background-color: var(--main-yellow);
-  box-shadow: 2px 2px 5px var(--shadow-colour);
+  background-color: var(--background-colour-menu);
+  /* box-shadow: 2px 2px 5px var(--shadow-colour); */
   border-radius: 5px;
-  /* backdrop-filter: opacity(0.8); */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+.menuCardItem {
+  background-color: var(--background-colour-menu);
 }
 .menuCardItem h4 {
   font-size: 1.2rem;

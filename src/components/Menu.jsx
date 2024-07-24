@@ -257,7 +257,7 @@ function makeMenuList(menuList, windowWidth) {
                   <Card
                     variant="outlined"
                     key={index}
-                    style={{ backgroundColor: "orange" }}
+                    style={{ backgroundColor: "#1a1a1aba" }}
                     className="menuCardItem"
                   >
                     <h3>{item.title}</h3>

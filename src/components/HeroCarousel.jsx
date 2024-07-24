@@ -41,9 +41,9 @@ function HeroCarousel() {
         <div className="mySlide">
           <img src={agroDulce1} />
           <div className="carouselSlideText">
-            <h2>The AgroDulce!</h2>
+            <h2>The Agrodulce!</h2>
             <p>
-              Our newest special is a sweet and tangy blend of classic italian
+              Our newest sando is a sweet and tangy blend of classic italian
               flavours! Basil mayo, basil slaw, our updated pizza dust, and our
               lovingly prepared Agrodulce, topped with a light cheese dusting.
             </p>
