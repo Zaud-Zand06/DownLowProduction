@@ -14,7 +14,10 @@ function ParallaxSection() {
         </p>
       </Parallax>
       <Parallax className="parallaxImage" speed={-20}>
-        <img src={agroducle} />
+        <img
+          src={agroducle}
+          alt="A fried chicken sandwhich with carmelized onions and cheese dust"
+        />
       </Parallax>
       <Parallax className="parallaxText" speed={30}>
         <p>
@@ -33,7 +36,10 @@ function ParallaxSection() {
         </p>
       </Parallax>
       <Parallax className="parallaxImage2" speed={-20}>
-        <img src={agroduclePromo} />
+        <img
+          src={agroduclePromo}
+          alt="A man smiling and showing off a chicken sandwhich"
+        />
       </Parallax>
       <Parallax className="parallaxText" speed={30}>
         <p>

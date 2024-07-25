@@ -39,7 +39,10 @@ function HeroCarousel() {
         className="presentationMode"
       >
         <div className="mySlide">
-          <img src={agroDulce1} />
+          <img
+            src={agroDulce1}
+            alt="A fried chicken sandwhich next to a gold coloured drink"
+          />
           <div className="carouselSlideText">
             <h2>The AgroDulce!</h2>
             <p>
@@ -50,7 +53,10 @@ function HeroCarousel() {
           </div>
         </div>
         <div className="mySlide">
-          <img src={jerry} />
+          <img
+            src={jerry}
+            alt="A large fried chicken sandwhich with bacon and cheese"
+          />
           <div className="carouselSlideText">
             <h2>Been here before?</h2>
             <p>
@@ -61,7 +67,10 @@ function HeroCarousel() {
           </div>
         </div>
         <div className="mySlide">
-          <img src={dessertCup} />
+          <img
+            src={dessertCup}
+            alt="A plastic cup filled with short cake and topped with strawberries and cream"
+          />
           <div className="carouselSlideText">
             <h2>Leave room for dessert!</h2>
             <p>
@@ -72,7 +81,10 @@ function HeroCarousel() {
           </div>
         </div>
         <div className="mySlide">
-          <img src={sandoSpread} />
+          <img
+            src={sandoSpread}
+            alt="A spread of several different fried chicken sandwhiches"
+          />
           <div className="carouselSlideText">
             <h2>We also do Catering!</h2>
             <p>
