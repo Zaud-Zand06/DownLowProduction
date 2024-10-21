@@ -32,7 +32,8 @@ function ParallaxSection() {
         <p>
           Our team is dedicated to providing the best possible experience for
           our customers. We are always looking for ways to improve our service
-          and our menu. If you have any feedback, don't hesitate to let us know!
+          and our menu. If you have any feedback, don&apos;t hesitate to let us
+          know!
         </p>
       </Parallax>
       <Parallax className="parallaxImage2" speed={-20}>

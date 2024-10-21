@@ -150,44 +150,6 @@ const sidesList = [
     special: false,
   },
 ];
-const drinksList = [
-  {
-    title: "DL Lemonade",
-    description: "Lemonade",
-    price: 4,
-    special: false,
-  },
-  {
-    title: "DL Sweet Tea",
-    description: "Sweet tea",
-    price: 4,
-    special: false,
-  },
-  {
-    title: "Coke",
-    description: "Diet coke, coke zero, or regular",
-    price: 3,
-    special: false,
-  },
-  {
-    title: "Sprite",
-    description: "A can of Sprite",
-    price: 3,
-    special: false,
-  },
-  {
-    title: "Root Beer",
-    description: "A&W or Boylans",
-    price: 3,
-    special: false,
-  },
-  {
-    title: "Water",
-    description: "A bottle of water",
-    price: 2.5,
-    special: false,
-  },
-];
 const waffleList = [
   {
     title: "Chicken and Waffle",
@@ -227,11 +189,6 @@ const displayMenuList = [
     description: ["For sharing, or for yourself"],
     items: sidesList,
   },
-  // {
-  //   title: "Drinks",
-  //   description: ["Something to quench the heat?"],
-  //   items: drinksList,
-  // },
 ];
 
 function makeMenuList(menuList, windowWidth) {
