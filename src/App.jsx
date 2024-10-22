@@ -38,7 +38,7 @@ function App() {
       {/* menu display */}
       {displayMenu == "menu" && (
         <>
-          <Menu setDisplayMenu={setDisplayMenu} />
+          <Menu />
         </>
       )}
       {/* credits display */}

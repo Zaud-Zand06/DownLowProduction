@@ -214,7 +214,7 @@ function makeMenuList(menuList, windowWidth) {
                   <Card
                     variant="outlined"
                     key={index}
-                    style={{ backgroundColor: "orange" }}
+                    style={{ backgroundColor: "var(--card-background-colour)" }}
                     className="menuCardItem"
                   >
                     <h3>{item.title}</h3>
@@ -232,10 +232,7 @@ function makeMenuList(menuList, windowWidth) {
   );
 }
 
-Menu.propTypes = {
-  setDisplayMenu: PropTypes.func.isRequired,
-};
-function Menu({ setDisplayMenu }) {
+function Menu() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -252,18 +249,6 @@ function Menu({ setDisplayMenu }) {
   return (
     <div className="menuContainer">
       {makeMenuList(displayMenuList, windowWidth)}
-      <p className="secretMenuLink">
-        Hey.... have you heard of our{" "}
-        <a
-          onClick={() => {
-            setDisplayMenu("secret");
-          }}
-          className="secretMenuLink"
-        >
-          secret menu
-        </a>
-        ?
-      </p>
     </div>
   );
 }

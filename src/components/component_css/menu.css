@@ -1,11 +1,5 @@
-.menuContainer h2,
-.menuContainer h3,
-.menuContainer h4 {
-  -webkit-text-stroke: var(--border-colour) 1.5px;
-}
-
 .sectionTitle {
-  /* filter: drop-shadow(2px 2px 2px var(--shadow-colour)); */
+  -webkit-text-stroke: var(--border-colour) 1.5px;
   font-size: 3rem;
   color: var(--main-yellow);
   position: absolute;
@@ -13,6 +7,7 @@
 }
 
 .menuContainer h3 {
+  font-family: "Ahkio Thin";
   margin-top: 0px;
   font-size: 1.5rem;
   color: var(--menu-item-colour);
@@ -20,17 +15,16 @@
   -webkit-text-stroke: var(--border-colour) 1.1px;
 }
 .menuContainer h4 {
+  font-family: "Ahkio Thin";
   margin: 0;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  -webkit-text-stroke: var(--border-colour) 1px;
   font-size: 1.5rem;
-  color: var(--white);
+  color: var(--text-dark);
 }
 .menuContainer p {
   font-size: 1.1rem;
-  color: var(--white);
-  filter: drop-shadow(2px 2px 2px var(--shadow-colour));
+  color: var(--text-dark);
   text-wrap: balance;
 }
 .menuContainer {
@@ -45,15 +39,14 @@
   position: relative;
   padding: 1rem;
   border: 2px solid var(--border-colour);
-  background-color: var(--main-yellow);
+  background-color: var(--white);
   /* box-shadow: 2px 2px 5px var(--shadow-colour); */
   border-radius: 5px;
   /* backdrop-filter: opacity(0.8); */
 }
 .menuCardItem h4 {
   font-size: 1.2rem;
-  color: var(--white);
-  -webkit-text-stroke: var(--border-colour) 0.8px;
+  color: var(--main-red);
 }
 p.secretMenuLink {
   font-family: "Raleway Medium";
