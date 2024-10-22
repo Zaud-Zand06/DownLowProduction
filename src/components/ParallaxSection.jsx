@@ -44,8 +44,8 @@ function ParallaxSection() {
       </Parallax>
       <Parallax className="parallaxText" speed={30}>
         <p>
-          We can accomodate for most dietary restrictions! Come in and ask us
-          what we can do for you!
+          We can accomodate most dietary restrictions! Get in touch with us for
+          more information about what we can do for you!
         </p>
       </Parallax>
     </div>

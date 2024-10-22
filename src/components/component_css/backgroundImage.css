@@ -3,17 +3,8 @@
   width: 100vw;
   background-image: url(../../assets/noTextLogo400px.png);
   height: 98vh;
-  background-size: 350px;
+  background-size: 300px;
   background-repeat: space;
   filter: blur(3px);
   z-index: -10;
-}
-
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1692px, -800px, 0);
-  }
 }

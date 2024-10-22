@@ -8,6 +8,7 @@ import ParallaxSection from "./components/ParallaxSection";
 import Menu from "./components/Menu";
 import SecretMenu from "./components/SecretMenu";
 import LocationsMap from "./components/LocationsMap";
+import Catering from "./components/Catering";
 import Credits from "./components/Credits";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Header setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
+
       <div className="backgroundImage"></div>
       {/* main page */}
       {displayMenu == "home" && (
@@ -25,8 +27,6 @@ function App() {
           <ScrollingAlert />
 
           <ParallaxSection />
-
-          <LocationsMap />
         </>
       )}
       {/* secret menu display */}
@@ -41,12 +41,19 @@ function App() {
           <Menu />
         </>
       )}
+      {/* catering display */}
+      {displayMenu == "catering" && (
+        <>
+          <Catering />
+        </>
+      )}
       {/* credits display */}
       {displayMenu == "credits" && (
         <>
           <Credits />
         </>
       )}
+      <LocationsMap setDisplayMenu={setDisplayMenu} />
     </>
   );
 }

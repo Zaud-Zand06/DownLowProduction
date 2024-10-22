@@ -7,7 +7,6 @@ Header.propTypes = {
 };
 
 function Header({ setDisplayMenu, displayMenu }) {
-  // const giftCardLink = "https://squareup.com/gift/MLWWKAFPWGTFJ/order";
   const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
   const UBCLink = "https://dl-chicken-ubc.square.site/";
 
@@ -39,9 +38,9 @@ function Header({ setDisplayMenu, displayMenu }) {
               .scrollIntoView({ behavior: "smooth" });
           }}
         >
-          Locations
+          Get in Touch
         </a>
-        {displayMenu == "menu" && (
+        {["menu", "credits", "catering"].includes(displayMenu) && (
           <a
             onClick={() => {
               setDisplayMenu("home");
@@ -50,15 +49,7 @@ function Header({ setDisplayMenu, displayMenu }) {
             Home
           </a>
         )}
-        {displayMenu == "credits" && (
-          <a
-            onClick={() => {
-              setDisplayMenu("home");
-            }}
-          >
-            Home
-          </a>
-        )}
+
         {displayMenu == "secret" && (
           <a
             onClick={() => {

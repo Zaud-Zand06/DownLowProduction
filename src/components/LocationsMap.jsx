@@ -5,8 +5,12 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
+import PropTypes from "prop-types";
 
-function LocationsMap() {
+LocationsMap.propTypes = {
+  setDisplayMenu: PropTypes.func.isRequired,
+};
+function LocationsMap({ setDisplayMenu }) {
   const [locations, setLocations] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState(null);
 
@@ -90,7 +94,7 @@ function LocationsMap() {
         </GoogleMap>
       </LoadScript>
       <div id="locationsInfo">
-        <h1>Where to find us</h1>
+        <h1>Where we are</h1>
         {locations.map((location, index) => (
           <div key={index}>
             <h2>
@@ -107,6 +111,18 @@ function LocationsMap() {
             <p>{location.number}</p>
           </div>
         ))}
+        <h1>Catering</h1>
+        <p>
+          Interested in large orders and catering? Click the link below for more
+          information!
+        </p>
+        <a
+          onClick={() => {
+            setDisplayMenu("catering");
+          }}
+        >
+          Click Here!
+        </a>
       </div>
     </div>
   );
