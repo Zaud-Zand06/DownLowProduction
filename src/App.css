@@ -49,9 +49,11 @@
   margin: 1.5rem;
   text-align: left;
 }
-
+#locationsInfo h2 {
+  color: var(--main-red);
+  -webkit-text-stroke: 1px var(--border-colour);
+}
 #locationsInfo h1,
-#locationsInfo h2,
 #locationsInfo h3 {
   color: var(--main-yellow);
   -webkit-text-stroke: 1px var(--border-colour);

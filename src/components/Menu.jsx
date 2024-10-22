@@ -2,7 +2,6 @@ import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import { Masonry } from "@mui/lab";
 import Card from "@mui/material/Card";
-import PropTypes from "prop-types";
 
 const sandosList = [
   {

@@ -93,7 +93,15 @@ function LocationsMap() {
         <h1>Where to find us</h1>
         {locations.map((location, index) => (
           <div key={index}>
-            <h2>{location.description}</h2>
+            <h2>
+              <a
+                onClick={() => {
+                  setSelectedLocation(location);
+                }}
+              >
+                {location.description}
+              </a>
+            </h2>
             <p>{location.hours}</p>
             <p>{location.address}</p>
             <p>{location.number}</p>
