@@ -14,7 +14,7 @@ function Header({ setDisplayMenu, displayMenu }) {
   return (
     <div className="header">
       <div id="logo">
-        <h1>Down Low</h1>
+        <h1>DownLow</h1>
         <h1
           id="redLogo"
           onClick={() => {
@@ -25,6 +25,16 @@ function Header({ setDisplayMenu, displayMenu }) {
         </h1>
       </div>
       <div className="hamburgerMenuButtons">
+        <a
+          target="_blank"
+          onClick={() => {
+            document
+              .getElementById("mapSection")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Locations
+        </a>
         <a href={eastVanLink} target="_blank">
           East Van Ordering
         </a>

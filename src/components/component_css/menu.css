@@ -30,7 +30,7 @@
 .menuContainer p {
   font-size: 1.1rem;
   color: var(--white);
-  /* filter: drop-shadow(2px 2px 2px var(--shadow-colour)); */
+  filter: drop-shadow(2px 2px 2px var(--shadow-colour));
   text-wrap: balance;
 }
 .menuContainer {

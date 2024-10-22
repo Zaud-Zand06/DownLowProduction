@@ -8,11 +8,19 @@
   align-items: center;
 }
 
+#mapSection {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-direction: row;
+  margin: auto;
+}
+
 .mapEmbed {
   margin-top: 3em;
-  width: 90svw;
-  height: 40em;
   margin-bottom: 3rem;
+  height: 40em;
+  width: 50svw;
   border: 2px solid var(--main-red);
 }
 /* this is here to fix an accidental namespace issue with .sectionContainer */
@@ -34,4 +42,16 @@
 .mapEmbed img {
   width: 90svw;
   height: 40em;
+}
+
+#locationsInfo {
+  margin: 1.5rem;
+  text-align: left;
+}
+
+#locationsInfo h1,
+#locationsInfo h2,
+#locationsInfo h3 {
+  color: var(--main-yellow);
+  -webkit-text-stroke: 1px var(--border-colour);
 }

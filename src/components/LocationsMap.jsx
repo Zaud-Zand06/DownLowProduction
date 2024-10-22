@@ -51,7 +51,7 @@ function LocationsMap() {
   }, []);
 
   return (
-    <div>
+    <div id="mapSection">
       <LoadScript googleMapsApiKey="AIzaSyD6b5Z3lxK9tZ2uvruzTHQcAX6e_tnqX7k">
         <GoogleMap
           mapContainerClassName="mapEmbed"
@@ -89,6 +89,17 @@ function LocationsMap() {
           )}
         </GoogleMap>
       </LoadScript>
+      <div id="locationsInfo">
+        <h1>Where to find us</h1>
+        {locations.map((location, index) => (
+          <div key={index}>
+            <h2>{location.description}</h2>
+            <p>{location.hours}</p>
+            <p>{location.address}</p>
+            <p>{location.number}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

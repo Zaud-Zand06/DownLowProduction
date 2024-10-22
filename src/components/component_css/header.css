@@ -46,6 +46,7 @@
 
 .hamburgerMenuButtons {
   gap: 1rem;
+  align-items: center;
 }
 .hamburgerMenuButtons > * {
   font-size: 2rem;
