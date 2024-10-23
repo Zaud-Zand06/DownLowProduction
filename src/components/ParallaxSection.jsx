@@ -8,8 +8,11 @@ function ParallaxSection() {
     <div className="parallaxContainer">
       <Parallax className="parallaxText" speed={30}>
         <p>
-          Since our inception, Down Low Chicken and our dedicated team of cooks
-          has been commited to providing the best Nashville style fried chicken
+          Since our inception, DownLow has been proud to serve hormone free, GMO
+          free and Halal certified chicken from Rossdown Farms. Hand dredged and
+          deep fried, our never frozen, always fresh chicken is happily sat atop
+          entirely house-made sauces and sides. Our dedicated team of cooks has
+          been commited to providing the best Nashville style fried chicken
           Vancouver has to offer!
         </p>
       </Parallax>
@@ -22,10 +25,8 @@ function ParallaxSection() {
       <Parallax className="parallaxText" speed={30}>
         <p>
           From our juicy fried chicken to our custom dessert cups, we only
-          source the highest quality, local ingredients for our recipes. Our
-          fresh chicken is provided to us by Legends Haul, a halal certified
-          supplier that shares our commitment to quality and our attention to
-          detail.
+          source the highest quality, local ingredients for our recipes. Come in
+          and ask our dedeicated team of cooks about any of our menu items!
         </p>
       </Parallax>
       <Parallax className={`parallaxText rightColumn`} speed={30}>
@@ -44,8 +45,9 @@ function ParallaxSection() {
       </Parallax>
       <Parallax className="parallaxText" speed={30}>
         <p>
-          We can accomodate most dietary restrictions! Get in touch with us for
-          more information about what we can do for you!
+          We can accomodate most dietary restrictions! Get in touch with us or
+          come ask us in person for more information about what we can do for
+          you!
         </p>
       </Parallax>
     </div>

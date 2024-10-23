@@ -2,7 +2,7 @@
   position: fixed;
   width: 100vw;
   background-image: url(../../assets/noTextLogo400px.png);
-  height: 98vh;
+  height: 100vh;
   background-size: 300px;
   background-repeat: space;
   filter: blur(3px);
