@@ -3,9 +3,9 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./component_css/HeroCarousel.css";
 import agroDulce1 from "../assets/AgroDulce1.jpg";
-import sandoSpread from "../assets/SandoSpread.jpg";
 import dessertCup from "../assets/DessertCup1.jpg";
 import jerry from "../assets/jerry1.jpg";
+import heinzSpecial from "../assets/heinzSando.jpg";
 
 function HeroCarousel() {
   const [carouselWidth, setCarouselWidth] = useState(
@@ -82,16 +82,15 @@ function HeroCarousel() {
         </div>
         <div className="mySlide">
           <img
-            src={sandoSpread}
+            src={heinzSpecial}
             alt="A spread of several different fried chicken sandwhiches"
           />
           <div className="carouselSlideText">
-            <h2>We also do Catering!</h2>
+            <h2>DownLow X Heinz!</h2>
             <p>
-              If you want to leave a big impression at your next event you can
-              reach out to us at{" "}
-              <a href="mailto: sydney@dlchicken.ca">sydney@dlchicken.ca</a> for
-              more information!
+              We&apos;ve recently collaborated with Heinz to bring you some
+              truly original sandos! Come by and try our new
+              PLACEHOLDERTEXTINFO!
             </p>
           </div>
         </div>
