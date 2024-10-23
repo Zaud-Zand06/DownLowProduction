@@ -58,6 +58,8 @@
 }
 #locationsInfo a {
   color: var(--main-red);
+  -webkit-text-stroke: 0.7px var(--border-colour);
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 700px) {

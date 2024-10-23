@@ -119,6 +119,8 @@ function LocationsMap({ setDisplayMenu }) {
         <a
           onClick={() => {
             setDisplayMenu("catering");
+            // TODO: Fix this so it scrolls to the catering section on first click not second
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
           Click Here!

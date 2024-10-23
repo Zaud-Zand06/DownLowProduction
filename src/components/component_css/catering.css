@@ -1,22 +1,27 @@
 #cateringForm {
   background-color: var(--background-colour);
   z-index: 3;
-  margin-top: 12rem;
+  padding-top: 5rem;
+  margin-top: 5.5rem;
   height: 95vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 #cateringForm form {
   max-width: 75%;
 }
-/* Hide the placeholder text in the date input field */
-input[type="date"]::-webkit-datetime-edit-text {
-  color: transparent;
+#cateringForm h1 {
+  font-family: "Ahkio W00 Black";
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: var(--main-yellow);
+  -webkit-text-stroke: 1.2px var(--border-colour);
+  margin: 0;
 }
-
-input[type="date"]::-webkit-datetime-edit-month-field,
-input[type="date"]::-webkit-datetime-edit-day-field,
-input[type="date"]::-webkit-datetime-edit-year-field {
-  color: #000;
+@media screen and (max-width: 700px) {
+  #cateringForm {
+    margin-top: 8.5rem;
+  }
 }
