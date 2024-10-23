@@ -13,6 +13,14 @@ LocationsMap.propTypes = {
 function LocationsMap({ setDisplayMenu }) {
   const [locations, setLocations] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState(null);
+  const [scrollToTop, setScrollToTop] = useState(false);
+
+  useEffect(() => {
+    if (scrollToTop) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setScrollToTop(false);
+    }
+  }, [scrollToTop]);
 
   useEffect(() => {
     const getLocations = async () => {
@@ -119,8 +127,7 @@ function LocationsMap({ setDisplayMenu }) {
         <a
           onClick={() => {
             setDisplayMenu("catering");
-            // TODO: Fix this so it scrolls to the catering section on first click not second
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            setScrollToTop(true);
           }}
         >
           Click Here!
