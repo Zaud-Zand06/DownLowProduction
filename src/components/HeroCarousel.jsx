@@ -46,9 +46,9 @@ function HeroCarousel() {
           <div className="carouselSlideText">
             <h2>The AgroDulce!</h2>
             <p>
-              Our newest special is a sweet and tangy blend of classic italian
+              Our newest sando is a sweet and tangy blend of classic italian
               flavours! Basil mayo, basil slaw, our updated pizza dust, and our
-              lovingly prepared Agrodulce, topped with a light cheese dusting.
+              lovingly prepared Agrodulce, topped with a heavy cheese dusting.
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ function HeroCarousel() {
         <div className="mySlide">
           <img
             src={heinzSpecial}
-            alt="A spread of several different fried chicken sandwhiches"
+            alt="Fried Chicken sandwhich with a pretzl bun and a special heinz sauce"
           />
           <div className="carouselSlideText">
             <h2>DownLow X Heinz!</h2>
