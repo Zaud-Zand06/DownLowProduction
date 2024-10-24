@@ -38,9 +38,8 @@ const sandosList = [
     special: null,
   },
   {
-    title: "The Chip and Dip",
-    description:
-      "Cool Ranch Dusted Chicken, Shredduce, Pickles, Tomato, French Onion Mayo",
+    title: "The Stinger",
+    description: "Fermented Chili Honey, Charred Cabbage Slaw, Rookie Mayo",
     price: 18.25,
     special: null,
   },
