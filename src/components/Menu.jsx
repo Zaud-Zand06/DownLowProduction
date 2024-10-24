@@ -99,21 +99,28 @@ const chickenByThePieceList = [
 ];
 const sidesList = [
   {
-    title: "Fries",
+    title: "Regular Fries",
     description:
       "Crinkle-cut, salted, with medium dust! Comes with ketchup and DL sauce",
-    price: 6.25,
+    price: 7.25,
     special: "Get them truffled for 2",
   },
   {
-    title: "Potato Salad",
-    description: "Sour cream, Celery, Scallion, and Dill",
+    title: "Half-Size Fries",
+    description:
+      "Crinkle-cut, salted, with medium dust! Comes with ketchup and DL sauce",
+    price: 5.25,
+    special: "Get them truffled for 2",
+  },
+  {
+    title: "Bacon Baked Beans",
+    description: "Bacon, onions, beans, with a bit of a kick",
     price: 6.25,
     special: false,
   },
   {
-    title: "Macaroni Salad",
-    description: "Pimento , Dill, and Pickled Celery",
+    title: "Macaroni and Cheese",
+    description: "Warm, Cheesy, and Creamy",
     price: 6.25,
     special: false,
   },
@@ -131,19 +138,19 @@ const sidesList = [
   },
   {
     title: "Lemon Cake",
-    description: "Our new lemon cake",
+    description: "Tart, sweet, and creamy",
     price: 7,
     special: false,
   },
   {
-    title: "Chocolate Cake",
-    description: "Our new chocolate cake",
+    title: "Chocolate Mousse",
+    description: "Choclatey, creamy, and delicious",
     price: 7,
     special: false,
   },
   {
-    title: "Strawberry Short Cake",
-    description: "Our new strawberry short cake",
+    title: "Special Cake",
+    description: "Come in and ask what are special cake is today!",
     price: 8.0,
     special: false,
   },
