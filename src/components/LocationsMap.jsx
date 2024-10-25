@@ -9,18 +9,11 @@ import PropTypes from "prop-types";
 
 LocationsMap.propTypes = {
   setDisplayMenu: PropTypes.func.isRequired,
+  setScrollToTop: PropTypes.func.isRequired,
 };
-function LocationsMap({ setDisplayMenu }) {
+function LocationsMap({ setDisplayMenu, setScrollToTop }) {
   const [locations, setLocations] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState(null);
-  const [scrollToTop, setScrollToTop] = useState(false);
-
-  useEffect(() => {
-    if (scrollToTop) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      setScrollToTop(false);
-    }
-  }, [scrollToTop]);
 
   useEffect(() => {
     const getLocations = async () => {

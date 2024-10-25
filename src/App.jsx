@@ -1,6 +1,6 @@
 import "./App.css";
 import "./components/component_css/backgroundImage.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HeroCarousel from "./components/HeroCarousel";
 import Header from "./components/Header";
 import ScrollingAlert from "./components/ScrollingAlert";
@@ -13,10 +13,22 @@ import Credits from "./components/Credits";
 
 function App() {
   const [displayMenu, setDisplayMenu] = useState("home");
+  const [scrollToTop, setScrollToTop] = useState(false);
+
+  useEffect(() => {
+    if (scrollToTop) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setScrollToTop(false);
+    }
+  }, [scrollToTop]);
 
   return (
     <>
-      <Header setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
+      <Header
+        setDisplayMenu={setDisplayMenu}
+        displayMenu={displayMenu}
+        setScrollToTop={setScrollToTop}
+      />
 
       <div className="backgroundImage"></div>
       {/* main page */}
@@ -53,7 +65,10 @@ function App() {
           <Credits />
         </>
       )}
-      <LocationsMap setDisplayMenu={setDisplayMenu} />
+      <LocationsMap
+        setDisplayMenu={setDisplayMenu}
+        setScrollToTop={setScrollToTop}
+      />
     </>
   );
 }

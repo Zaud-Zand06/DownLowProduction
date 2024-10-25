@@ -4,9 +4,10 @@ import PropTypes from "prop-types";
 Header.propTypes = {
   setDisplayMenu: PropTypes.func.isRequired,
   displayMenu: PropTypes.string.isRequired,
+  setScrollToTop: PropTypes.func.isRequired,
 };
 
-function Header({ setDisplayMenu, displayMenu }) {
+function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
   const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
   const UBCLink = "https://dl-chicken-ubc.square.site/";
 
@@ -18,6 +19,7 @@ function Header({ setDisplayMenu, displayMenu }) {
           id="redLogo"
           onClick={() => {
             setDisplayMenu("secret");
+            setScrollToTop(true);
           }}
         >
           <a>Chicken</a>
@@ -44,6 +46,7 @@ function Header({ setDisplayMenu, displayMenu }) {
           <a
             onClick={() => {
               setDisplayMenu("home");
+              setScrollToTop(true);
             }}
           >
             Home
@@ -54,6 +57,7 @@ function Header({ setDisplayMenu, displayMenu }) {
           <a
             onClick={() => {
               setDisplayMenu("menu");
+              setScrollToTop(true);
             }}
           >
             Standard Menu
@@ -63,6 +67,7 @@ function Header({ setDisplayMenu, displayMenu }) {
           <a
             onClick={() => {
               setDisplayMenu("menu");
+              setScrollToTop(true);
             }}
           >
             Menu
