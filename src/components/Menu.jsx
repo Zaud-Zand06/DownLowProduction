@@ -5,14 +5,14 @@ import Card from "@mui/material/Card";
 
 const sandosList = [
   {
-    title: "The AgroDulce",
+    title: "The Agrodulce",
     description:
       "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce",
     price: 18.75,
     special: null,
   },
   {
-    title: "The Og",
+    title: "The OG",
     description:
       "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
     price: 18.25,
