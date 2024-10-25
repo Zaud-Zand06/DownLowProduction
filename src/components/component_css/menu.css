@@ -64,7 +64,7 @@ p.secretMenuLink a:hover {
 
 @media screen and (max-width: 500px) {
   .menuContainer {
-    margin-top: 10rem;
+    margin-top: 11rem;
   }
   .menuCard h2 {
     font-size: 2.5rem;

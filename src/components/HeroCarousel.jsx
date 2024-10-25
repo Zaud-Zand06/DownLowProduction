@@ -54,15 +54,15 @@ function HeroCarousel() {
         </div>
         <div className="mySlide">
           <img
-            src={jerry}
-            alt="A large fried chicken sandwhich with bacon and cheese"
+            src={heinzSpecial}
+            alt="Fried Chicken sandwhich with a pretzl bun and a special heinz sauce"
           />
           <div className="carouselSlideText">
-            <h2>Been here before?</h2>
+            <h2>DownLow X Heinz!</h2>
             <p>
-              Consider yourself a DL veteran? Try customizing your favourite
-              sando with different toppings like bacon, cheese, or even a fried
-              egg!
+              We&apos;ve recently collaborated with Heinz to bring you some
+              truly original sandos! Come by and try our new
+              PLACEHOLDERTEXTINFO!
             </p>
           </div>
         </div>
@@ -82,15 +82,15 @@ function HeroCarousel() {
         </div>
         <div className="mySlide">
           <img
-            src={heinzSpecial}
-            alt="Fried Chicken sandwhich with a pretzl bun and a special heinz sauce"
+            src={jerry}
+            alt="A large fried chicken sandwhich with bacon and cheese"
           />
           <div className="carouselSlideText">
-            <h2>DownLow X Heinz!</h2>
+            <h2>Been here before?</h2>
             <p>
-              We&apos;ve recently collaborated with Heinz to bring you some
-              truly original sandos! Come by and try our new
-              PLACEHOLDERTEXTINFO!
+              Consider yourself a DL veteran? Try customizing your favourite
+              sando with different toppings like bacon, cheese, or even a fried
+              egg!
             </p>
           </div>
         </div>

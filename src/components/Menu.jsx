@@ -47,7 +47,7 @@ const sandosList = [
     title: "Extra Toppings",
     description: "Fried Egg, Bacon, Cheese",
     price: 2.25,
-    special: "Add a honey drizzle for 1",
+    special: null,
   },
 ];
 const chickenByThePieceList = [
@@ -61,21 +61,21 @@ const chickenByThePieceList = [
     title: "Thigh",
     description: "Boneless & Juicy",
     price: 6.25,
-    special: "2 piece and 4 piece combos available",
+    special: false,
   },
   {
     title: "Small Tenders",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
     price: 15.5,
-    special: "Add a side for 5",
+    special: false,
   },
   {
     title: "Large Tenders",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
     price: 21.85,
-    special: "Add a side for 4",
+    special: false,
   },
   {
     title: "Nuggets",
@@ -94,7 +94,7 @@ const chickenByThePieceList = [
     title: "Pile of Thighs",
     description: "A pile of 10 boneless thighs! Dusted to your liking",
     price: 49.75,
-    special: "Add 4 sides for 10",
+    special: false,
   },
 ];
 const sidesList = [
@@ -170,6 +170,44 @@ const waffleList = [
     special: false,
   },
 ];
+const comboList = [
+  {
+    title: "Two Piece and a Side",
+    description: "2 boneless thighs and any side",
+    price: 17.8,
+    special: false,
+  },
+  {
+    title: "Small Tender Combo",
+    description: "4 tenders and any side",
+    price: 19.95,
+    special: false,
+  },
+  {
+    title: "Large Tender Combo",
+    description: "7 tenders and any side",
+    price: 25.25,
+    special: false,
+  },
+  {
+    title: "Sando and a Side",
+    description: "Any of our sandos and any side",
+    price: 23.95,
+    special: false,
+  },
+  {
+    title: "Two by Four",
+    description: "4 thighs and any 2 sides",
+    price: 31.35,
+    special: false,
+  },
+  {
+    title: "Piled High",
+    description: "10 boneless thighs and any 4 sides",
+    price: 59.95,
+    special: false,
+  },
+];
 
 const displayMenuList = [
   {
@@ -188,6 +226,11 @@ const displayMenuList = [
       "A fresh savoury waffle, made with cheddar, jalapeno, buttermilk and scallions",
     ],
     items: waffleList,
+  },
+  {
+    title: "Combos",
+    description: ["A little bit of everything"],
+    items: comboList,
   },
   {
     title: "Sides",
