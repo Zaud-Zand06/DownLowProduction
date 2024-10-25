@@ -3,7 +3,7 @@
   z-index: 3;
   padding-top: 5rem;
   margin-top: 5.5rem;
-  height: 95vh;
+  min-height: 95vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
