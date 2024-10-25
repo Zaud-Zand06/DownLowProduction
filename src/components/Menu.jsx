@@ -208,6 +208,56 @@ const comboList = [
     special: false,
   },
 ];
+const sauceList = [
+  {
+    title: "DL Sauce",
+    description: "Our house-made sauce, tangy and sweet",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Ranch",
+    description: "Classic ranch, creamy and tangy",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Honey Mustard",
+    description: "Sweet and tangy",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Smoked Jalapeno Honey Mayo",
+    description: "Sweet, Spicy and smokey",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Barbecue",
+    description: "Sweet and smokey",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Chili Sesame",
+    description: "Sweet, Spicy and smokey",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Sweet and Sour",
+    description: "Sweet and Sour",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Truffle Mayo",
+    description: "Truffle Mayo",
+    price: 3,
+    special: false,
+  },
+];
 
 const displayMenuList = [
   {
@@ -236,6 +286,11 @@ const displayMenuList = [
     title: "Sides",
     description: ["For sharing, or for yourself"],
     items: sidesList,
+  },
+  {
+    title: "Sauces",
+    description: ["For dipping, or drizzling. All sauces are made in house"],
+    items: sauceList,
   },
 ];
 
