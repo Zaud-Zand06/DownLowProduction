@@ -20,6 +20,9 @@
   -webkit-text-stroke: 1.2px var(--border-colour);
   margin: 0;
 }
+#cateringForm button {
+  margin-top: 3rem;
+}
 @media screen and (max-width: 700px) {
   #cateringForm {
     margin-top: 8.5rem;

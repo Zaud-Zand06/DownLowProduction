@@ -14,6 +14,7 @@ export default function Catering() {
     email: "",
     phone: "",
     eventDate: "",
+    eventAttendees: "",
     eventDetails: "",
   });
   const [errors, setErrors] = useState({});
@@ -46,6 +47,9 @@ export default function Catering() {
     if (!formData.eventDate) {
       tempError.eventDate = "Event Date is required";
     }
+    if (!/^\d+$/.test(formData.eventAttendees)) {
+      tempError.eventAttendees = "The number of attendees must be a number";
+    }
     setErrors(tempError);
     return Object.keys(tempError).length === 0;
   };
@@ -54,7 +58,7 @@ export default function Catering() {
     e.preventDefault();
     if (validate()) {
       const mailToLink = `mailto:sydney@dlchicken.ca?subject=Catering Request&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nEvent Date: ${formData.eventDate}\nEvent Details: ${formData.eventDetails}`
+        `Name: ${formData.name}\nEmail: ${formData.email}\nPhone Number: ${formData.phone}\nEvent Date: ${formData.eventDate}\nNumber of Attendees: ${formData.eventAttendees}\nEvent Details: ${formData.eventDetails}`
       )}`;
       window.location.href = mailToLink;
     }
@@ -78,7 +82,7 @@ export default function Catering() {
               aria-describedby="name-helper-text"
             />
             <FormHelperText id="name-helper-text">
-              {errors.name || "Please enter your full name."}
+              {errors.name || "Please enter your name."}
             </FormHelperText>
           </FormControl>
 
@@ -92,7 +96,7 @@ export default function Catering() {
               aria-describedby="email-helper-text"
             />
             <FormHelperText id="email-helper-text">
-              {errors.email || "We'll never share your email."}
+              {errors.email || "What email address can we reach you at?"}
             </FormHelperText>
           </FormControl>
 
@@ -126,6 +130,26 @@ export default function Catering() {
             </FormHelperText>
           </FormControl>
 
+          <FormControl
+            fullWidth
+            margin="normal"
+            error={!!errors.eventAttendees}
+          >
+            <InputLabel htmlFor="eventAttendees" shrink>
+              How many people will be attending?
+            </InputLabel>
+            <Input
+              id="eventAttendees"
+              value={formData.eventAttendees}
+              onChange={handleChange}
+              aria-describedby="eventAttendees-helper-text"
+            />
+            <FormHelperText id="eventAttendees-helper-text">
+              {errors.eventAttendees ||
+                "How many people do you anticipate attending your event? Approximate numbers are fine."}
+            </FormHelperText>
+          </FormControl>
+
           <FormControl fullWidth margin="normal" error={!!errors.eventDetails}>
             <InputLabel htmlFor="eventDetails">Event Details</InputLabel>
             <Input
@@ -137,8 +161,9 @@ export default function Catering() {
               aria-describedby="eventDetails-helper-text"
             />
             <FormHelperText id="eventDetails-helper-text">
-              {errors.eventDetails ||
-                "Please provide details about your event."}
+              Please provide any additional details about your event. If there
+              are any allergies or dietary resrictions we should be aware of,
+              please let us know here.
             </FormHelperText>
           </FormControl>
           <Button variant="contained" color="primary" type="submit">
