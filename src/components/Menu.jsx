@@ -15,32 +15,32 @@ const sandosList = [
     title: "The OG",
     description:
       "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
-    price: 18.25,
+    price: 18.75,
     special: null,
   },
   {
     title: "The Rookie",
     description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
-    price: 18.25,
+    price: 18.75,
     special: null,
   },
   {
     title: "The Jerk",
     description: "Jerk Dusted Chicken, Pickled onions, Slaw, Tomato, Jerk Mayo",
-    price: 18.25,
+    price: 18.75,
     special: null,
   },
   {
     title: "The Boujee",
     description:
       "Boujee Dusted Chicken, Pickled onions, Cole slaw, Pickles, Boujee Mayo",
-    price: 18.25,
+    price: 18.75,
     special: null,
   },
   {
     title: "The Stinger",
     description: "Fermented Chili Honey, Charred Cabbage Slaw, Rookie Mayo",
-    price: 18.25,
+    price: 18.75,
     special: null,
   },
   {
@@ -258,7 +258,7 @@ const sauceList = [
     special: false,
   },
 ];
-
+//remember to add the item list to the display list
 const displayMenuList = [
   {
     title: "Sandos",
