@@ -1,7 +1,8 @@
 import "./component_css/parallaxSection.css";
 import { Parallax } from "react-scroll-parallax";
 import agroducle from "../assets/AgroDulce2resize.jpg";
-import agroduclePromo from "../assets/agrodulcePromoresize.jpg";
+import waffleCombo from "../assets/waffleCombo.jpg";
+import dlChickenMelt from "../assets/dlChickenMelt.jpg";
 
 function ParallaxSection() {
   return (
@@ -18,7 +19,7 @@ function ParallaxSection() {
       </Parallax>
       <Parallax className="parallaxImage" speed={-20}>
         <img
-          src={agroducle}
+          src={dlChickenMelt}
           alt="A fried chicken sandwhich with carmelized onions and cheese dust"
         />
       </Parallax>
@@ -39,8 +40,8 @@ function ParallaxSection() {
       </Parallax>
       <Parallax className="parallaxImage2" speed={-20}>
         <img
-          src={agroduclePromo}
-          alt="A man smiling and showing off a chicken sandwhich"
+          src={waffleCombo}
+          alt="A fried chicken sandwhich with waffles, a can of sweet tea, and a chocolate cake"
         />
       </Parallax>
       <Parallax className="parallaxText" speed={30}>
