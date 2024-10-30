@@ -262,7 +262,7 @@ const sauceList = [
 const displayMenuList = [
   {
     title: "Sandos",
-    description: ["Choose between boneless leg or breast", "Add a side for 5"],
+    description: ["Choose between boneless leg or breast"],
     items: sandosList,
   },
   {

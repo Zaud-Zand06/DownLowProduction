@@ -18,20 +18,19 @@ const slides = [
   {
     title: "DownLow X Heinz!",
     image: heinzSpecial,
-    description:
-      "We've recently collaborated with Heinz to bring you some truly original sandos! Come by and try our new PLACEHOLDERTEXTINFO!",
+    description: `The next Heinz masterpiece sauce has finally arrived \nCome by and try the new Brauhaus mustard sauce! Available with our tenders, or on our new Brauhaus sando!`,
   },
   {
     title: "Leave room for dessert!",
     image: dessertCup,
     description:
-      "Try some of our new desserts! Made fresh by our lovely friends at Vennies. Now offering Strawberry Shortcake, Lemon Curd Cake, and Chocolate Mousse Cake!",
+      "Made fresh by our lovely friends at Vennies. We're always offering Lemon Curd Cake and Chocolate Mousse Cake, with a rotating selection of speciality cups for you to try!",
   },
   {
     title: "Been here before?",
     image: jerry,
     description:
-      "Consider yourself a DL veteran? Try customizing your favourite sando with different toppings like bacon, cheese, or even a fried egg!",
+      "Try customizing your favourite sando with different toppings like bacon, cheese, or even a fried egg!",
   },
 ];
 
@@ -56,9 +55,9 @@ function HeroCarousel() {
   const createSlides = (slides) => {
     return slides.map((slide, index) => {
       return (
-        <div key={index} className="mySlide">
+        <div key={index} className="slideDiv">
           <img src={slide.image} alt={slide.description} />
-          <div className="carouselSlideText">
+          <div className="slideText">
             <h2>{slide.title}</h2>
             <p>{slide.description}</p>
           </div>
