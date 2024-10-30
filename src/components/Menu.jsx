@@ -46,7 +46,7 @@ const sandosList = [
   {
     title: "Extra Toppings",
     description: "Fried Egg, Bacon, Cheese",
-    price: 2.25,
+    price: 2.75,
     special: null,
   },
 ];
@@ -67,14 +67,14 @@ const chickenByThePieceList = [
     title: "Small Tenders",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
-    price: 15.5,
+    price: 16.5,
     special: false,
   },
   {
     title: "Large Tenders",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
-    price: 21.85,
+    price: 22.85,
     special: false,
   },
   {
@@ -174,25 +174,25 @@ const comboList = [
   {
     title: "Two Piece and a Side",
     description: "2 boneless thighs and any side",
-    price: 17.8,
+    price: 17.4,
     special: false,
   },
   {
     title: "Small Tender Combo",
     description: "4 tenders and any side",
-    price: 19.95,
+    price: 21.95,
     special: false,
   },
   {
     title: "Large Tender Combo",
     description: "7 tenders and any side",
-    price: 25.25,
+    price: 26.45,
     special: false,
   },
   {
     title: "Sando and a Side",
     description: "Any of our sandos and any side",
-    price: 23.95,
+    price: 23.15,
     special: false,
   },
   {
