@@ -7,7 +7,7 @@ import ScrollingAlert from "./components/ScrollingAlert";
 import ParallaxSection from "./components/ParallaxSection";
 import Menu from "./components/Menu";
 import SecretMenu from "./components/SecretMenu";
-import LocationsMap from "./components/LocationsMap";
+import Footer from "./components/Footer";
 import Catering from "./components/Catering";
 import Credits from "./components/Credits";
 
@@ -65,10 +65,7 @@ function App() {
           <Credits />
         </>
       )}
-      <LocationsMap
-        setDisplayMenu={setDisplayMenu}
-        setScrollToTop={setScrollToTop}
-      />
+      <Footer setDisplayMenu={setDisplayMenu} setScrollToTop={setScrollToTop} />
     </>
   );
 }

@@ -1,12 +1,11 @@
 import "./component_css/parallaxSection.css";
 import { Parallax } from "react-scroll-parallax";
-import agroducle from "../assets/AgroDulce2resize.jpg";
 import waffleCombo from "../assets/waffleCombo.jpg";
 import dlChickenMelt from "../assets/dlChickenMelt.jpg";
 
 function ParallaxSection() {
   return (
-    <div className="parallaxContainer">
+    <section className="parallaxContainer">
       <Parallax className="parallaxText" speed={30}>
         <p>
           Since our inception, DownLow has been proud to serve hormone free, GMO
@@ -51,7 +50,7 @@ function ParallaxSection() {
           you!
         </p>
       </Parallax>
-    </div>
+    </section>
   );
 }
 
