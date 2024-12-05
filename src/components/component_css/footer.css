@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-top: 2.5rem;
   margin: auto;
 }
 #locationAndMap {
@@ -59,9 +60,6 @@
   cursor: pointer;
 }
 
-#privacyPolicy a {
-  font-family: "Raleway Medium";
-}
 @media screen and (max-width: 900px) {
   #locationAndMap {
     flex-direction: column;
