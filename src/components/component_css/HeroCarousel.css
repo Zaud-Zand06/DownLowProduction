@@ -55,13 +55,8 @@
   border-bottom: 2px solid var(--main-red);
   -webkit-text-stroke: 2px var(--shadow-colour);
 }
-<<<<<<< HEAD
-.carouselSlideText {
-  max-width: 75%;
-=======
 .slideText {
   max-width: 70%;
->>>>>>> main
   z-index: 5;
   border-radius: 5px;
   border: none;
