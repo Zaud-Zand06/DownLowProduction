@@ -18,13 +18,15 @@
 :root {
   --main-yellow: #ffb800;
   --main-red: #ff0000;
+  --text-dark: #181818;
+  --text-light: #ffffff;
   --transparent-color: #00000000;
-  --background-colour: #ffffff;
+  --background-colour: #f5f5f5;
+  --card-background-colour: #fdfdfd;
   --button-hover-colour: #535bf2;
   --border-colour: #000000;
   --shadow-colour: #000000;
-  --white: #ffffff;
-  --menu-item-colour: #ffffff;
+  --white: #f5f5f5;
 
   font-family: "Raleway Medium";
   line-height: 1.5;

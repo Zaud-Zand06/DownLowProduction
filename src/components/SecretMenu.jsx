@@ -18,20 +18,18 @@ const secretMenuList = [
   },
   {
     title: "The Double Double Down",
-    description:
-      "A fresh waffle topped with slaw, pickled onions, pickles, topped with thighs or a breast and a side of smoked jalapeno sauce",
+    description: "Two thighs, bacon and cheese, served open face on a OG build",
     image: logo,
   },
   {
     title: "The Jerry",
-    description:
-      "A fresh waffle topped with slaw, pickled onions, pickles, topped with thighs or a breast and a side of smoked jalapeno sauce",
+    description: "Two legs, bacon and cheese, served open face on a OG build",
     image: logo,
   },
   {
     title: "The Chicken Bacon Ranch",
     description:
-      "A fresh waffle topped with slaw, pickled onions, pickles, topped with thighs or a breast and a side of smoked jalapeno sauce",
+      "Our house made ranch, bacon and cool ranch dusted chicken. Served with either a leg or a breast",
     image: logo,
   },
 ];
@@ -51,7 +49,7 @@ function SecretMenu() {
   }, []);
   return (
     <div className="secretMenuContainer">
-      <h2>Nice work, you found our secret menu...</h2>
+      <h2>Nice work finding our secret menu...</h2>
       <Masonry columns={windowWidth < 700 ? 1 : 2} spacing={2}>
         {secretMenuList.map((item, index) => {
           return (

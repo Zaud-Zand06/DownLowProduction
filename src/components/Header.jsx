@@ -4,21 +4,22 @@ import PropTypes from "prop-types";
 Header.propTypes = {
   setDisplayMenu: PropTypes.func.isRequired,
   displayMenu: PropTypes.string.isRequired,
+  setScrollToTop: PropTypes.func.isRequired,
 };
 
-function Header({ setDisplayMenu, displayMenu }) {
-  // const giftCardLink = "https://squareup.com/gift/MLWWKAFPWGTFJ/order";
+function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
   const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
   const UBCLink = "https://dl-chicken-ubc.square.site/";
 
   return (
     <div className="header">
       <div id="logo">
-        <h1>Down Low</h1>
+        <h1>DownLow</h1>
         <h1
           id="redLogo"
           onClick={() => {
-            setDisplayMenu("credits");
+            setDisplayMenu("secret");
+            setScrollToTop(true);
           }}
         >
           <a>Chicken</a>
@@ -31,28 +32,32 @@ function Header({ setDisplayMenu, displayMenu }) {
         <a href={UBCLink} target="_blank">
           UBC Ordering
         </a>
-        {displayMenu == "menu" && (
+        <a
+          target="_blank"
+          onClick={() => {
+            document
+              .getElementById("mapSection")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Get in Touch
+        </a>
+        {["menu", "credits", "catering"].includes(displayMenu) && (
           <a
             onClick={() => {
               setDisplayMenu("home");
+              setScrollToTop(true);
             }}
           >
             Home
           </a>
         )}
-        {displayMenu == "credits" && (
-          <a
-            onClick={() => {
-              setDisplayMenu("home");
-            }}
-          >
-            Home
-          </a>
-        )}
+
         {displayMenu == "secret" && (
           <a
             onClick={() => {
               setDisplayMenu("menu");
+              setScrollToTop(true);
             }}
           >
             Standard Menu
@@ -62,6 +67,7 @@ function Header({ setDisplayMenu, displayMenu }) {
           <a
             onClick={() => {
               setDisplayMenu("menu");
+              setScrollToTop(true);
             }}
           >
             Menu

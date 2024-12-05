@@ -2,54 +2,52 @@ import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import { Masonry } from "@mui/lab";
 import Card from "@mui/material/Card";
-import PropTypes from "prop-types";
 
 const sandosList = [
   {
-    title: "The AgroDulce",
+    title: "The Agrodulce",
     description:
       "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce",
     price: 18.75,
     special: null,
   },
   {
-    title: "The Og",
+    title: "The OG",
     description:
       "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
-    price: 18.25,
+    price: 18.75,
     special: null,
   },
   {
     title: "The Rookie",
     description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
-    price: 18.25,
+    price: 18.75,
     special: null,
   },
   {
     title: "The Jerk",
     description: "Jerk Dusted Chicken, Pickled onions, Slaw, Tomato, Jerk Mayo",
-    price: 18.25,
+    price: 18.75,
     special: null,
   },
   {
     title: "The Boujee",
     description:
       "Boujee Dusted Chicken, Pickled onions, Cole slaw, Pickles, Boujee Mayo",
-    price: 18.25,
+    price: 18.75,
     special: null,
   },
   {
-    title: "The Chip and Dip",
-    description:
-      "Cool Ranch Dusted Chicken, Shredduce, Pickles, Tomato, French Onion Mayo",
-    price: 18.25,
+    title: "The Stinger",
+    description: "Fermented Chili Honey, Charred Cabbage Slaw, Rookie Mayo",
+    price: 18.75,
     special: null,
   },
   {
     title: "Extra Toppings",
     description: "Fried Egg, Bacon, Cheese",
-    price: 2.25,
-    special: "Add a honey drizzle for 1",
+    price: 2.75,
+    special: null,
   },
 ];
 const chickenByThePieceList = [
@@ -63,21 +61,21 @@ const chickenByThePieceList = [
     title: "Thigh",
     description: "Boneless & Juicy",
     price: 6.25,
-    special: "2 piece and 4 piece combos available",
+    special: false,
   },
   {
     title: "Small Tenders",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
-    price: 15.5,
-    special: "Add a side for 5",
+    price: 16.5,
+    special: false,
   },
   {
     title: "Large Tenders",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
-    price: 21.85,
-    special: "Add a side for 4",
+    price: 22.85,
+    special: false,
   },
   {
     title: "Nuggets",
@@ -96,26 +94,33 @@ const chickenByThePieceList = [
     title: "Pile of Thighs",
     description: "A pile of 10 boneless thighs! Dusted to your liking",
     price: 49.75,
-    special: "Add 4 sides for 10",
+    special: false,
   },
 ];
 const sidesList = [
   {
-    title: "Fries",
+    title: "Regular Fries",
     description:
       "Crinkle-cut, salted, with medium dust! Comes with ketchup and DL sauce",
-    price: 6.25,
+    price: 7.25,
     special: "Get them truffled for 2",
   },
   {
-    title: "Potato Salad",
-    description: "Sour cream, Celery, Scallion, and Dill",
+    title: "Half-Size Fries",
+    description:
+      "Crinkle-cut, salted, with medium dust! Comes with ketchup and DL sauce",
+    price: 5.25,
+    special: "Get them truffled for 2",
+  },
+  {
+    title: "Bacon Baked Beans",
+    description: "Bacon, onions, beans, with a bit of a kick",
     price: 6.25,
     special: false,
   },
   {
-    title: "Macaroni Salad",
-    description: "Pimento , Dill, and Pickled Celery",
+    title: "Macaroni and Cheese",
+    description: "Warm, Cheesy, and Creamy",
     price: 6.25,
     special: false,
   },
@@ -133,58 +138,20 @@ const sidesList = [
   },
   {
     title: "Lemon Cake",
-    description: "Our new lemon cake",
+    description: "Tart, sweet, and creamy",
     price: 7,
     special: false,
   },
   {
-    title: "Chocolate Cake",
-    description: "Our new chocolate cake",
+    title: "Chocolate Mousse",
+    description: "Choclatey, creamy, and delicious",
     price: 7,
     special: false,
   },
   {
-    title: "Strawberry Short Cake",
-    description: "Our new strawberry short cake",
+    title: "Special Cake",
+    description: "Come in and ask what are special cake is today!",
     price: 8.0,
-    special: false,
-  },
-];
-const drinksList = [
-  {
-    title: "DL Lemonade",
-    description: "Lemonade",
-    price: 4,
-    special: false,
-  },
-  {
-    title: "DL Sweet Tea",
-    description: "Sweet tea",
-    price: 4,
-    special: false,
-  },
-  {
-    title: "Coke",
-    description: "Diet coke, coke zero, or regular",
-    price: 3,
-    special: false,
-  },
-  {
-    title: "Sprite",
-    description: "A can of Sprite",
-    price: 3,
-    special: false,
-  },
-  {
-    title: "Root Beer",
-    description: "A&W or Boylans",
-    price: 3,
-    special: false,
-  },
-  {
-    title: "Water",
-    description: "A bottle of water",
-    price: 2.5,
     special: false,
   },
 ];
@@ -203,11 +170,99 @@ const waffleList = [
     special: false,
   },
 ];
-
+const comboList = [
+  {
+    title: "Two Piece and a Side",
+    description: "2 boneless thighs and any side",
+    price: 17.4,
+    special: false,
+  },
+  {
+    title: "Small Tender Combo",
+    description: "4 tenders and any side",
+    price: 21.95,
+    special: false,
+  },
+  {
+    title: "Large Tender Combo",
+    description: "7 tenders and any side",
+    price: 26.45,
+    special: false,
+  },
+  {
+    title: "Sando and a Side",
+    description: "Any of our sandos and any side",
+    price: 23.15,
+    special: false,
+  },
+  {
+    title: "Two by Four",
+    description: "4 thighs and any 2 sides",
+    price: 31.35,
+    special: false,
+  },
+  {
+    title: "Piled High",
+    description: "10 boneless thighs and any 4 sides",
+    price: 59.95,
+    special: false,
+  },
+];
+const sauceList = [
+  {
+    title: "DL Sauce",
+    description: "Our house-made sauce, tangy and sweet",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Ranch",
+    description: "Classic ranch, creamy and tangy",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Honey Mustard",
+    description: "Sweet and tangy",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Smoked Jalapeno Honey Mayo",
+    description: "Sweet, Spicy and smokey",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Barbecue",
+    description: "Sweet and smokey",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Chili Sesame",
+    description: "Sweet, Spicy and smokey",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Sweet and Sour",
+    description: "Sweet and Sour",
+    price: 2,
+    special: false,
+  },
+  {
+    title: "Truffle Mayo",
+    description: "Truffle Mayo",
+    price: 3,
+    special: false,
+  },
+];
+//remember to add the item list to the display list
 const displayMenuList = [
   {
     title: "Sandos",
-    description: ["Choose between boneless leg or breast", "Add a side for 5"],
+    description: ["Choose between boneless leg or breast"],
     items: sandosList,
   },
   {
@@ -223,15 +278,20 @@ const displayMenuList = [
     items: waffleList,
   },
   {
+    title: "Combos",
+    description: ["A little bit of everything"],
+    items: comboList,
+  },
+  {
     title: "Sides",
     description: ["For sharing, or for yourself"],
     items: sidesList,
   },
-  // {
-  //   title: "Drinks",
-  //   description: ["Something to quench the heat?"],
-  //   items: drinksList,
-  // },
+  {
+    title: "Sauces",
+    description: ["For dipping, or drizzling. All sauces are made in house"],
+    items: sauceList,
+  },
 ];
 
 function makeMenuList(menuList, windowWidth) {
@@ -257,7 +317,7 @@ function makeMenuList(menuList, windowWidth) {
                   <Card
                     variant="outlined"
                     key={index}
-                    style={{ backgroundColor: "#1a1a1aba" }}
+                    style={{ backgroundColor: "var(--card-background-colour)" }}
                     className="menuCardItem"
                   >
                     <h3>{item.title}</h3>
@@ -275,10 +335,7 @@ function makeMenuList(menuList, windowWidth) {
   );
 }
 
-Menu.propTypes = {
-  setDisplayMenu: PropTypes.func.isRequired,
-};
-function Menu({ setDisplayMenu }) {
+function Menu() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -295,18 +352,6 @@ function Menu({ setDisplayMenu }) {
   return (
     <div className="menuContainer">
       {makeMenuList(displayMenuList, windowWidth)}
-      <p className="secretMenuLink">
-        Hey.... have you heard of our{" "}
-        <a
-          onClick={() => {
-            setDisplayMenu("secret");
-          }}
-          className="secretMenuLink"
-        >
-          secret menu
-        </a>
-        ?
-      </p>
     </div>
   );
 }

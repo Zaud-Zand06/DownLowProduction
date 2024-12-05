@@ -1,40 +1,28 @@
-:root {
-  --background-colour-menu: #1a1a1aba;
-}
-
-.menuContainer h2,
-.menuContainer h3,
-.menuContainer h4 {
-  -webkit-text-stroke: var(--border-colour) 1.5px;
-}
-
 .sectionTitle {
-  filter: drop-shadow(2px 2px 2px var(--shadow-colour));
+  -webkit-text-stroke: var(--border-colour) 1.5px;
   font-size: 3rem;
   color: var(--main-yellow);
   position: absolute;
   top: -6rem;
 }
-
 .menuContainer h3 {
+  font-family: "Ahkio Thin";
   margin-top: 0px;
   font-size: 1.5rem;
   color: var(--menu-item-colour);
   text-wrap: balance;
-  -webkit-text-stroke: var(--border-colour) 1.1px;
 }
 .menuContainer h4 {
+  font-family: "Ahkio Thin";
   margin: 0;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  -webkit-text-stroke: var(--border-colour) 1px;
   font-size: 1.5rem;
-  color: var(--white);
+  color: var(--text-dark);
 }
 .menuContainer p {
   font-size: 1.1rem;
-  color: var(--white);
-  filter: drop-shadow(2px 2px 2px var(--shadow-colour));
+  color: var(--text-dark);
   text-wrap: balance;
 }
 .menuContainer {
@@ -43,25 +31,24 @@
   flex-direction: column;
   align-items: center;
   width: 95svw;
-  height: 95svh;
 }
 .menuCard {
   position: relative;
   padding: 1rem;
   border: 2px solid var(--border-colour);
-  background-color: var(--background-colour-menu);
-  /* box-shadow: 2px 2px 5px var(--shadow-colour); */
+  background-color: var(--white);
   border-radius: 5px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
 }
 .menuCardItem {
-  background-color: var(--background-colour-menu);
+  text-align: left;
+  padding: 0.5rem;
+}
+.menuCardItem .price {
+  text-align: right;
 }
 .menuCardItem h4 {
   font-size: 1.2rem;
-  color: var(--white);
-  -webkit-text-stroke: var(--border-colour) 0.8px;
+  color: var(--main-red);
 }
 p.secretMenuLink {
   font-family: "Raleway Medium";
@@ -77,12 +64,7 @@ p.secretMenuLink a:hover {
 
 @media screen and (max-width: 500px) {
   .menuContainer {
-    margin-top: 9rem;
-  }
-  .menuCard h2,
-  h3,
-  h4 {
-    -webkit-text-stroke: var(--border-colour) 1.5px;
+    margin-top: 11rem;
   }
   .menuCard h2 {
     font-size: 2.5rem;
@@ -93,6 +75,5 @@ p.secretMenuLink a:hover {
   }
   .menuCard p {
     font-size: 1rem;
-    filter: drop-shadow(1px 1px 1px var(--shadow-colour));
   }
 }
