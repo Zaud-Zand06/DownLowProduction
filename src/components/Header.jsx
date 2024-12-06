@@ -36,7 +36,7 @@ function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
           target="_blank"
           onClick={() => {
             document
-              .getElementById("mapSection")
+              .getElementById("locationAndMap")
               .scrollIntoView({ behavior: "smooth" });
           }}
         >

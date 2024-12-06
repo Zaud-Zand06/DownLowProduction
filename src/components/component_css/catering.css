@@ -23,6 +23,18 @@
 #cateringForm button {
   margin-top: 3rem;
 }
+#cateringForm p {
+  width: 50%;
+  font-size: 20px;
+}
+div:has(> .MuiAccordion-root) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.MuiAccordion-root {
+  max-width: 75%;
+}
 @media screen and (max-width: 700px) {
   #cateringForm {
     margin-top: 8.5rem;
