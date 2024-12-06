@@ -1,4 +1,3 @@
-import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -6,7 +5,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function AccordianCateringMenus() {
   return (
-    <div>
+    <>
       <Accordion defaultExpanded>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -16,8 +15,8 @@ export default function AccordianCateringMenus() {
           DownLow Chicken
         </AccordionSummary>
         <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+          Vancouver&apos;s best fried chicken! Our catering options include
+          Tenders, OG Sandos, and which ever sides you&apos;d like!
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -29,8 +28,7 @@ export default function AccordianCateringMenus() {
           Vennie&apos;s Subs
         </AccordionSummary>
         <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+          12 inch and 6 inch subs, fully customizable and made with care.
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -42,10 +40,9 @@ export default function AccordianCateringMenus() {
           DownLow Burgers
         </AccordionSummary>
         <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+          Our burgers are made with the best ingredients and are sure to please.
         </AccordionDetails>
       </Accordion>
-    </div>
+    </>
   );
 }

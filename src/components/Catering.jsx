@@ -10,14 +10,11 @@ export default function Catering() {
         <p>
           From Fried Chicken, Burgers and Specialty Subs we have a variety of
           options to choose from.
-        </p>
-        <p>
+          <br />
           Click the tabs below for specfic catering menus, or fill out the form
           below to get in touch with us about your event!
         </p>
         <AccordianCateringMenus />
-        <div id="DLChickenBurgers"></div>
-        <div id="venniesCatering"></div>
         <CateringForm />
       </div>
     </>
