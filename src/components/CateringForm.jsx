@@ -73,9 +73,7 @@ export default function CateringForm() {
           onChange={handleChange}
           aria-describedby="name-helper-text"
         />
-        <FormHelperText id="name-helper-text">
-          {errors.name || "Please enter your name."}
-        </FormHelperText>
+        {errors.name && <FormHelperText>{errors.name}</FormHelperText>}
       </FormControl>
 
       <FormControl fullWidth margin="normal" error={!!errors.email}>
@@ -87,9 +85,7 @@ export default function CateringForm() {
           onChange={handleChange}
           aria-describedby="email-helper-text"
         />
-        <FormHelperText id="email-helper-text">
-          {errors.email || "Please enter your email address."}
-        </FormHelperText>
+        {errors.email && <FormHelperText>{errors.email}</FormHelperText>}
       </FormControl>
 
       <FormControl fullWidth margin="normal" error={!!errors.phone}>
@@ -101,9 +97,7 @@ export default function CateringForm() {
           onChange={handleChange}
           aria-describedby="phone-helper-text"
         />
-        <FormHelperText id="phone-helper-text">
-          {errors.phone || "Please enter your phone number."}
-        </FormHelperText>
+        {errors.phone && <FormHelperText>{errors.phone}</FormHelperText>}
       </FormControl>
 
       <FormControl fullWidth margin="normal" error={!!errors.eventDate}>
@@ -123,7 +117,7 @@ export default function CateringForm() {
       </FormControl>
 
       <FormControl fullWidth margin="normal" error={!!errors.eventAttendees}>
-        <InputLabel htmlFor="eventAttendees" shrink>
+        <InputLabel htmlFor="eventAttendees">
           How many people will be attending?
         </InputLabel>
         <Input
@@ -133,8 +127,7 @@ export default function CateringForm() {
           aria-describedby="eventAttendees-helper-text"
         />
         <FormHelperText id="eventAttendees-helper-text">
-          {errors.eventAttendees ||
-            "How many people do you anticipate attending your event? Approximate numbers are fine."}
+          {errors.eventAttendees || "Approximate numbers are fine."}
         </FormHelperText>
       </FormControl>
 

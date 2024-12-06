@@ -10,7 +10,7 @@
   align-items: center;
 }
 #cateringForm form {
-  max-width: 75%;
+  width: 50%;
 }
 #cateringForm h1 {
   font-family: "Ahkio W00 Black";
@@ -19,18 +19,22 @@
   color: var(--main-yellow);
   -webkit-text-stroke: 1.2px var(--border-colour);
   margin: 0;
+  margin-bottom: 1.5rem;
 }
 #cateringForm button {
   margin-top: 3rem;
 }
-#cateringForm p {
+#cateringForm > p {
   width: 50%;
   font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 div:has(> .MuiAccordion-root) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1.5rem;
 }
 .MuiAccordion-root {
   max-width: 75%;
@@ -38,5 +42,12 @@ div:has(> .MuiAccordion-root) {
 @media screen and (max-width: 700px) {
   #cateringForm {
     margin-top: 8.5rem;
+  }
+  #cateringForm form {
+    width: 80%;
+  }
+  #cateringForm p {
+    width: 80%;
+    text-align: left;
   }
 }

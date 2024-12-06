@@ -9,9 +9,11 @@ export default function Catering() {
         <h1>Bring us to your next event!</h1>
         <p>
           From Fried Chicken, Burgers and Specialty Subs we have a variety of
-          options to choose from. Click the tabs below for specfic catering
-          menus, or fill out the form below to get in touch with us about your
-          event!
+          options to choose from.
+        </p>
+        <p>
+          Click the tabs below for specfic catering menus, or fill out the form
+          below to get in touch with us about your event!
         </p>
         <AccordianCateringMenus />
         <div id="DLChickenBurgers"></div>
