@@ -32,7 +32,7 @@
 }
 
 .MuiAccordion-root {
-  width: 75%;
+  width: 50%;
 }
 @media screen and (max-width: 700px) {
   #cateringForm {
