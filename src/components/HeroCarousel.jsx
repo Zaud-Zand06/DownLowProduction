@@ -5,7 +5,7 @@ import "./component_css/HeroCarousel.css";
 import agroDulce1 from "../assets/AgroDulce1.jpg";
 import dessertCup from "../assets/DessertCup1.jpg";
 import jerry from "../assets/jerry1.jpg";
-import heinzSpecial from "../assets/heinzSando.jpg";
+import sidesImage from "../assets/sides.jpg";
 
 // Slides should be an array of objects with with an image, description, and title
 const slides = [
@@ -16,9 +16,10 @@ const slides = [
       "Our newest sando is a sweet and tangy blend of classic italian flavours! Basil mayo, basil slaw, our updated pizza dust, and our lovingly prepared Agrodulce, topped with a heavy cheese dusting.",
   },
   {
-    title: "DownLow X Heinz!",
-    image: heinzSpecial,
-    description: `The next Heinz masterpiece sauce has finally arrived \nCome by and try the new Brauhaus mustard sauce! Available with our tenders, or on our new Brauhaus sando!`,
+    title: "Beans are back!",
+    image: sidesImage,
+    description:
+      "You asked, we delivered! Our bacon baked beans are back for the winter season. Make sure to get them before they're gone!",
   },
   {
     title: "Leave room for dessert!",
