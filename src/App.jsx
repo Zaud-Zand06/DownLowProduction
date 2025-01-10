@@ -27,7 +27,7 @@ function App() {
       <Header
         setDisplayMenu={setDisplayMenu}
         displayMenu={displayMenu}
-        role="navigation"
+        role="banner"
         setScrollToTop={setScrollToTop}
       />
 
@@ -35,7 +35,7 @@ function App() {
       {/* main page */}
       {displayMenu == "home" && (
         <>
-          <HeroCarousel />
+          <HeroCarousel role="main" />
 
           <ScrollingAlert />
 
@@ -45,28 +45,32 @@ function App() {
       {/* secret menu display */}
       {displayMenu == "secret" && (
         <>
-          <SecretMenu />
+          <SecretMenu role="main" />
         </>
       )}
       {/* menu display */}
       {displayMenu == "menu" && (
         <>
-          <Menu />
+          <Menu role="main" />
         </>
       )}
       {/* catering display */}
       {displayMenu == "catering" && (
         <>
-          <Catering />
+          <Catering role="main" />
         </>
       )}
       {/* credits display */}
       {displayMenu == "credits" && (
         <>
-          <Credits />
+          <Credits role="main" />
         </>
       )}
-      <Footer setDisplayMenu={setDisplayMenu} setScrollToTop={setScrollToTop} />
+      <Footer
+        setDisplayMenu={setDisplayMenu}
+        setScrollToTop={setScrollToTop}
+        role="region"
+      />
     </>
   );
 }
