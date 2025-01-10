@@ -15,7 +15,11 @@ function App() {
 
   return (
     <>
-      <Header setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />
+      <Header
+        setDisplayMenu={setDisplayMenu}
+        displayMenu={displayMenu}
+        role="navigation"
+      />
       <div className="backgroundImage"></div>
       {/* main page */}
       {displayMenu == "home" && (
