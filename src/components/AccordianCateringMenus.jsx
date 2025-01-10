@@ -16,7 +16,7 @@ export default function AccordianCateringMenus() {
         </AccordionSummary>
         <AccordionDetails>
           Vancouver&apos;s best fried chicken! Our catering options include
-          Tenders, OG Sandos, and which ever sides you&apos;d like!
+          Tenders, Sandos, Boneless Thighs and which ever sides you&apos;d like!
         </AccordionDetails>
       </Accordion>
       <Accordion>
