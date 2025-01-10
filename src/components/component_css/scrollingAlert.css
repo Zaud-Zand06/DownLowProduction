@@ -1,6 +1,7 @@
 .scrollContainer {
   width: 100%;
   overflow-x: hidden;
+  margin-bottom: 25rem;
 }
 .horizontalScrollingItems {
   display: flex;
@@ -37,7 +38,10 @@
   white-space: nowrap;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
+  .scrollContainer {
+    margin-bottom: 10rem;
+  }
   .horizontalScrollingItems {
     font-size: 2rem;
   }

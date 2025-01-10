@@ -1,0 +1,48 @@
+#cateringForm {
+  background-color: var(--background-colour);
+  z-index: 3;
+  padding-top: 5rem;
+  margin-top: 5.5rem;
+  min-height: 95vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#cateringForm form {
+  width: 50%;
+}
+#cateringForm h1 {
+  font-family: "Ahkio W00 Black";
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: var(--main-yellow);
+  -webkit-text-stroke: 1.2px var(--border-colour);
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+#cateringForm button {
+  margin-top: 3rem;
+}
+#cateringForm > p {
+  width: 50%;
+  font-size: 20px;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.MuiAccordion-root {
+  width: 50%;
+}
+@media screen and (max-width: 700px) {
+  #cateringForm {
+    margin-top: 8.5rem;
+  }
+  #cateringForm form {
+    width: 80%;
+  }
+  #cateringForm p {
+    width: 80%;
+    text-align: left;
+  }
+}

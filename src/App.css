@@ -7,31 +7,3 @@
   flex-direction: column;
   align-items: center;
 }
-
-.mapEmbed {
-  margin-top: 3em;
-  width: 90svw;
-  height: 40em;
-  margin-bottom: 3rem;
-  border: 2px solid var(--main-red);
-}
-/* this is here to fix an accidental namespace issue with .sectionContainer */
-.mapEmbed a {
-  font-family: "Raleway Medium";
-}
-.mapEmbed h2 {
-  font-family: "Ahkio W00 Bold";
-  color: var(--main-yellow);
-  margin: 0px;
-  font-size: 2.5rem;
-  -webkit-text-stroke: 2px var(--border-colour);
-}
-.mapEmbed h3 {
-  -webkit-text-stroke: var(--transparent-color) 0px;
-  filter: drop-shadow(2px 2px 2px var(--transparent-color));
-}
-
-.mapEmbed img {
-  width: 90svw;
-  height: 40em;
-}
