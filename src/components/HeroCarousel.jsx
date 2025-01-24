@@ -6,6 +6,7 @@ import agroDulce1 from "../assets/AgroDulce1.jpg";
 import dessertCup from "../assets/DessertCup1.jpg";
 import jerry from "../assets/jerry1.jpg";
 import sidesImage from "../assets/sides.jpg";
+import DLWingsImage from "../assets/DLWings1.jpg";
 
 // Slides should be an array of objects with with an image, description, title and alt text.
 // you can have as many slides as you want, but try and limit it to less than 10 just so its not too crazy
@@ -30,9 +31,17 @@ const slides = [
     title: "Leave room for dessert!",
     image: dessertCup,
     description:
-      "Made fresh by our lovely friends at Vennies. We're always offering Lemon Curd Cake and Chocolate Mousse Cake, with a rotating selection of speciality cups for you to try!",
+      "Made fresh by our lovely friends at Vennies. We're always offering Peanut Butter and Chocolate Dessert bars and Cinnamon Toast Crunch Dessert bars, with a rotating selection of speciality bars for you to try!",
     altText:
       "A dessert cup filled with strawberry cake, surrounded by a bunch of sliced strawberries.",
+  },
+  {
+    title: "Wing Wednesday!",
+    image: DLWingsImage,
+    description:
+      "Looking for bone-in chicken? Every Wednesday, we're offering our famous full-sized DL Wings, spiced however you'd like!",
+    altText:
+      "A small pile of fried chicken wings, topped with pickles and a light seasoning.",
   },
   {
     title: "Been here before?",
