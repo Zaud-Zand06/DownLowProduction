@@ -137,21 +137,15 @@ const sidesList = [
     special: false,
   },
   {
-    title: "Lemon Cake",
-    description: "Tart, sweet, and creamy",
-    price: 7,
+    title: "Peanut Butter and Chocolate Dessert Bar",
+    description: "Sweet, savoury and crunchy",
+    price: 5.45,
     special: false,
   },
   {
-    title: "Chocolate Mousse",
-    description: "Choclatey, creamy, and delicious",
-    price: 7,
-    special: false,
-  },
-  {
-    title: "Special Cake",
-    description: "Come in and ask what are special cake is today!",
-    price: 8.0,
+    title: "Cinnamon Toast Dessert Bar",
+    description: "Cinnamon toast dessert bar",
+    price: 5.45,
     special: false,
   },
 ];
@@ -311,23 +305,24 @@ function makeMenuList(menuList, windowWidth) {
               section.description.map((line, index) => {
                 return <h4 key={index}>{line}</h4>;
               })}
-            <Masonry columns={2} spacing={2}>
-              {section.items.map((item, index) => {
-                return (
-                  <Card
-                    variant="outlined"
-                    key={index}
-                    style={{ backgroundColor: "var(--card-background-colour)" }}
-                    className="menuCardItem"
-                  >
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    {item.special && <h4>{item.special}</h4>}
-                    <p className="price">{item.price}</p>
-                  </Card>
-                );
-              })}
-            </Masonry>
+            {section.items.map((item, index) => {
+              return (
+                <Card
+                  variant="outlined"
+                  key={index}
+                  style={{
+                    backgroundColor: "var(--card-background-colour)",
+                    margin: ".5rem",
+                  }}
+                  className="menuCardItem"
+                >
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  {item.special && <h4>{item.special}</h4>}
+                  <p className="price">{item.price}</p>
+                </Card>
+              );
+            })}
           </div>
         );
       })}

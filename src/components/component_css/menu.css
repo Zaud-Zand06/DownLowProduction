@@ -6,7 +6,7 @@
   top: -6rem;
 }
 .menuContainer h3 {
-  font-family: "Ahkio Thin";
+  font-family: "Ahkio W00 Bold";
   margin-top: 0px;
   font-size: 1.5rem;
   color: var(--menu-item-colour);
@@ -21,7 +21,7 @@
   color: var(--text-dark);
 }
 .menuContainer p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-dark);
   text-wrap: balance;
 }
@@ -42,13 +42,15 @@
 .menuCardItem {
   text-align: left;
   padding: 0.5rem;
+  background-color: var(--card-background-colour);
 }
 .menuCardItem .price {
   text-align: right;
 }
-.menuCardItem h4 {
-  font-size: 1.2rem;
-  color: var(--main-red);
+.menuCardItem h3 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--text-dark);
 }
 p.secretMenuLink {
   font-family: "Raleway Medium";
