@@ -24,7 +24,7 @@ function ParallaxSection() {
       </Parallax>
       <Parallax className="parallaxText" speed={30}>
         <p>
-          From our juicy fried chicken to our custom dessert cups, we only
+          From our juicy fried chicken to our custom dessert bars, we only
           source the highest quality, local ingredients for our recipes. Come in
           and ask our dedeicated team of cooks about any of our menu items!
         </p>
