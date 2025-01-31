@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./component_css/HeroCarousel.css";
-import agroDulce1 from "../assets/AgroDulce1.jpg";
-import dessertCup from "../assets/DessertCup1.jpg";
+import snakeSando from "../assets/snakeSando2.jpg";
+import dessertBar from "../assets/dessertBars1.jpg";
 import jerry from "../assets/jerry1.jpg";
 import sidesImage from "../assets/sides.jpg";
 import DLWingsImage from "../assets/DLWings1.jpg";
@@ -12,12 +12,12 @@ import DLWingsImage from "../assets/DLWings1.jpg";
 // you can have as many slides as you want, but try and limit it to less than 10 just so its not too crazy
 const slides = [
   {
-    title: "The Agrodulce!",
-    image: agroDulce1,
+    title: "The Year of the Snake Sando!",
+    image: snakeSando,
     description:
-      "Our newest sando is a sweet and tangy blend of classic italian flavours! Basil mayo, basil slaw, our updated pizza dust, and our lovingly prepared Agrodulce, topped with a heavy cheese dusting.",
+      "Come celebrate this Lunar New Year with our new Year of the Snake Sando! Pickled mustard green coleslaw, our Famous Typhoon seasoning and a ginger scallion dressing!",
     altText:
-      "A fried chicken sandwhich with basil mayo, basil slaw, pizza dust, and agrodulce. Topped with a heavy cheese dusting.",
+      "A fried chicken sandwhich with coleslaw, ginger scallion dressing and a dusting of typhoon shelter seasoning.",
   },
   {
     title: "Beans are back!",
@@ -29,11 +29,11 @@ const slides = [
   },
   {
     title: "Leave room for dessert!",
-    image: dessertCup,
+    image: dessertBar,
     description:
-      "Made fresh by our lovely friends at Vennies. We're always offering Peanut Butter and Chocolate Dessert bars and Cinnamon Toast Crunch Dessert bars, with a rotating selection of speciality bars for you to try!",
+      "Made fresh by our lovely friends at Vennies. We're always offering Peanut Butter & Chocolate, and Cinnamon Toast Crunch Dessert bars, with a rotating selection of speciality bars for you to try!",
     altText:
-      "A dessert cup filled with strawberry cake, surrounded by a bunch of sliced strawberries.",
+      "Two large dessert bars, one chocolate and one cinnamon, being held by a smiling man.",
   },
   {
     title: "Wing Wednesday!",
