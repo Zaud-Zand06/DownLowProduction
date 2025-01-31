@@ -64,7 +64,7 @@ export default function CateringForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form name="cateringForm" onSubmit={handleSubmit} netlify>
       <FormControl fullWidth margin="normal" error={!!errors.name}>
         <InputLabel htmlFor="name">Name</InputLabel>
         <Input
