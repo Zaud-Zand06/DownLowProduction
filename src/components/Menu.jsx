@@ -5,13 +5,6 @@ import Card from "@mui/material/Card";
 
 const sandosList = [
   {
-    title: "The Agrodulce",
-    description:
-      "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce",
-    price: 18.75,
-    special: null,
-  },
-  {
     title: "The OG",
     description:
       "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
@@ -19,8 +12,8 @@ const sandosList = [
     special: null,
   },
   {
-    title: "The Rookie",
-    description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
+    title: "The Stinger",
+    description: "Fermented Chili Honey, Charred Cabbage Slaw, Rookie Mayo",
     price: 18.75,
     special: null,
   },
@@ -31,15 +24,22 @@ const sandosList = [
     special: null,
   },
   {
-    title: "The Boujee",
+    title: "The Agrodulce",
     description:
-      "Boujee Dusted Chicken, Pickled onions, Cole slaw, Pickles, Boujee Mayo",
+      "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce",
     price: 18.75,
     special: null,
   },
   {
-    title: "The Stinger",
-    description: "Fermented Chili Honey, Charred Cabbage Slaw, Rookie Mayo",
+    title: "The Rookie",
+    description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
+    price: 18.75,
+    special: null,
+  },
+  {
+    title: "The Snake",
+    description:
+      "Typhoon Dusted Chicken, Pickled Mustard Cole slaw, Rookie Mayo, and Ginger Scallion dressing",
     price: 18.75,
     special: null,
   },
@@ -113,14 +113,14 @@ const sidesList = [
     special: "Get them truffled for 2",
   },
   {
-    title: "Bacon Baked Beans",
-    description: "Bacon, onions, beans, with a bit of a kick",
+    title: "Macaroni and Cheese",
+    description: "Warm, Cheesy, and Creamy",
     price: 6.25,
     special: false,
   },
   {
-    title: "Macaroni and Cheese",
-    description: "Warm, Cheesy, and Creamy",
+    title: "Bacon Baked Beans",
+    description: "Bacon, onions, beans, with a bit of a kick",
     price: 6.25,
     special: false,
   },
@@ -166,12 +166,6 @@ const waffleList = [
 ];
 const comboList = [
   {
-    title: "Two Piece and a Side",
-    description: "2 boneless thighs and any side",
-    price: 17.4,
-    special: false,
-  },
-  {
     title: "Small Tender Combo",
     description: "4 tenders and any side",
     price: 21.95,
@@ -187,6 +181,12 @@ const comboList = [
     title: "Sando and a Side",
     description: "Any of our sandos and any side",
     price: 23.15,
+    special: false,
+  },
+  {
+    title: "Two Piece and a Side",
+    description: "2 boneless thighs and any side",
+    price: 17.4,
     special: false,
   },
   {
