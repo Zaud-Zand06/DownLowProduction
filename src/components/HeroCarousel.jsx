@@ -15,33 +15,25 @@ const slides = [
     title: "The Year of the Snake Sando!",
     image: snakeSando,
     description:
-      "Come celebrate this Lunar New Year with our new Year of the Snake Sando! Pickled mustard green coleslaw, our Famous Typhoon seasoning and a ginger scallion dressing!",
+      "The Typhoon Shelter Spice is back! Check it out on our Year of the Snake Sando!",
     altText:
       "A fried chicken sandwhich with coleslaw, ginger scallion dressing and a dusting of typhoon shelter seasoning.",
+  },
+  {
+    title: "Cereal Dessert Bars!",
+    image: dessertBar,
+    description:
+      "Inspired by our childhood favourites, we're always offering Peanut Butter & Chocolate, and Cinnamon Toast Crunch Dessert bars, with a rotating selection of speciality bars for you to try!",
+    altText:
+      "Two large dessert bars, one chocolate and one cinnamon, being held by a smiling man.",
   },
   {
     title: "Beans are back!",
     image: sidesImage,
     description:
-      "You asked, we delivered! Our Bacon Baked Beans and creamy Mac and Cheese are back for the winter season. Make sure to get them before they're gone!",
+      "Our Bacon Baked Beans and creamy Mac and Cheese are back for the winter season! Make sure to get them before they're gone!",
     altText:
       "A side of bacon baked beans, topped with cheese in a to go container, next to it is a side of creamy looking mac and cheese.",
-  },
-  {
-    title: "Leave room for dessert!",
-    image: dessertBar,
-    description:
-      "Made fresh by our lovely friends at Vennies. We're always offering Peanut Butter & Chocolate, and Cinnamon Toast Crunch Dessert bars, with a rotating selection of speciality bars for you to try!",
-    altText:
-      "Two large dessert bars, one chocolate and one cinnamon, being held by a smiling man.",
-  },
-  {
-    title: "Wing Wednesday!",
-    image: DLWingsImage,
-    description:
-      "Looking for bone-in chicken? Every Wednesday, we're offering our famous full-sized DL Wings, spiced however you'd like!",
-    altText:
-      "A small pile of fried chicken wings, topped with pickles and a light seasoning.",
   },
   {
     title: "Been here before?",
