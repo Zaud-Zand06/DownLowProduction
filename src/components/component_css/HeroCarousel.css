@@ -2,11 +2,11 @@
   --default-width: 100svw;
   --default-height: 30rem;
   --default-padding: 75px;
-  --text-color: #ffffff;
-  --emphasis-color: #ccc;
-  --slide-primary-color: #000099;
-  --slide-secondary-color: #4d0099;
-  --slide-content-color: #004d99;
+  --text-colour: #ffffff;
+  --emphasis-colour: #ccc;
+  --slide-primary-colour: #000099;
+  --slide-secondary-colour: #4d0099;
+  --slide-content-colour: #004d99;
   --button-hover-colour: #535bf2;
 }
 
@@ -26,7 +26,7 @@
   padding: var(--default-padding);
   line-height: 1.5;
   font-size: 1.5em;
-  color: var(--text-color);
+  color: var(--text-colour);
 }
 
 .slideDiv > img {
@@ -60,7 +60,7 @@
   z-index: 5;
   border-radius: 5px;
   border: none;
-  transition: background-color 0.3s ease-in-out;
+  transition: var(--background-colour) 0.3s ease-in-out;
 }
 .slideDiv:hover .slideText {
   background-color: #1717179c;
@@ -110,6 +110,7 @@
   width: var(--default-width);
   height: var(--default-height);
   margin: calc(-1 * var(--default-padding));
+  filter: brightness(0.75);
 }
 
 .presentationMode .slideDiv ul,
@@ -159,7 +160,7 @@
 
 @media screen and (max-width: 700px) {
   .carousel-root {
-    margin-top: 6.8rem;
+    margin-top: 8rem;
   }
   .presentationMode .slideDiv h2 {
     font-size: 2rem;

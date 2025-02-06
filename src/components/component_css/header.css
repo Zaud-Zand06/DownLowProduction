@@ -1,11 +1,22 @@
 .header {
   position: fixed;
-  width: 100svw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: var(--background-colour);
   border-bottom: 2px solid var(--border-colour);
   z-index: 10;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.header.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 #logo,
