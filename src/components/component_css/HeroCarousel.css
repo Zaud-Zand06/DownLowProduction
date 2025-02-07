@@ -66,7 +66,7 @@
   background-color: #1717179c;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 2px solid var(--border-colour);
+  outline: 2px solid var(--border-colour);
 }
 .presentationMode .slideDiv.complex {
   text-align: left;
