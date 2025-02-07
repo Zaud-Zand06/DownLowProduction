@@ -165,10 +165,16 @@ const sidesList = [
 ];
 const waffleList = [
   {
-    title: "Chicken and Waffle",
+    title: "Chicken and Waffle (Thighs)",
     description: "A fresh waffle topped with two boneless, dusted thighs",
     price: 18.95,
     special: "Add an extra thigh for 4!",
+  },
+  {
+    title: "Chicken and Waffle (Breast)",
+    description: "A fresh waffle topped with a boneless, dusted breast",
+    price: 18.95,
+    special: false,
   },
   {
     title: "Waffle Slider",
