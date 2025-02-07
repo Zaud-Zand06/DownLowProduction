@@ -5,6 +5,13 @@ import Card from "@mui/material/Card";
 
 const sandosList = [
   {
+    title: "The Buldak",
+    description:
+      "Ramen Dredged Chicken, Ramen Seasoning Hot Sauce, Scallion and red pickle Slaw!",
+    price: 18.75,
+    special: null,
+  },
+  {
     title: "The OG",
     description:
       "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
@@ -33,13 +40,6 @@ const sandosList = [
   {
     title: "The Rookie",
     description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
-    price: 18.75,
-    special: null,
-  },
-  {
-    title: "The Snake",
-    description:
-      "Typhoon Dusted Chicken, Pickled Mustard Cole slaw, Rookie Mayo, and Ginger Scallion dressing",
     price: 18.75,
     special: null,
   },
