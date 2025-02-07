@@ -64,17 +64,31 @@ const chickenByThePieceList = [
     special: false,
   },
   {
-    title: "Small Tenders",
+    title: "4 Piece Tender",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
-    price: 16.5,
+    price: 17.49,
     special: false,
   },
   {
-    title: "Large Tenders",
+    title: "7 Piece Tenders",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
-    price: 22.85,
+    price: 23.89,
+    special: false,
+  },
+  {
+    title: "15 Piece Tenders",
+    description:
+      "The most tender part of the breast! Dusted with spice and a side of sauce",
+    price: 45.59,
+    special: false,
+  },
+  {
+    title: "20 Piece Tenders",
+    description:
+      "The most tender part of the breast! Dusted with spice and a side of sauce",
+    price: 60.29,
     special: false,
   },
   {
@@ -166,15 +180,15 @@ const waffleList = [
 ];
 const comboList = [
   {
-    title: "Small Tender Combo",
+    title: "4 Piece Tender Combo",
     description: "4 tenders, any side and a drink",
     price: 22.49,
     special: false,
   },
   {
-    title: "Large Tender Combo",
+    title: "7 Piece Tender Combo",
     description: "7 tenders, any side and a drink",
-    price: 28.48,
+    price: 28.49,
     special: false,
   },
   {
