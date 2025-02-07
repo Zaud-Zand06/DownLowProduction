@@ -7,7 +7,6 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 import PropTypes from "prop-types";
-import DLPrivacyForm from "./DLPrivacyForm";
 
 Footer.propTypes = {
   setDisplayMenu: PropTypes.func.isRequired,
@@ -129,7 +128,6 @@ function Footer({ setDisplayMenu, setScrollToTop }) {
           </a>
         </section>
       </section>
-      <DLPrivacyForm />
     </section>
   );
 }
