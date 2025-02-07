@@ -1,6 +1,6 @@
 import "./component_css/header.css";
 import PropTypes from "prop-types";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 Header.propTypes = {
   setDisplayMenu: PropTypes.func.isRequired,
@@ -11,14 +11,20 @@ Header.propTypes = {
 function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const headerRef = useRef(null);
 
   const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
   const UBCLink = "https://dl-chicken-ubc.square.site/";
 
   const controlHeader = () => {
     if (typeof window !== "undefined") {
-      const threshold = 50; // Adjust this value to set the sensitivity
-      if (Math.abs(window.scrollY - lastScrollY) >= threshold) {
+      const threshold = 25; // Adjust this value to set the sensitivity
+      const headerHeight = headerRef.current.offsetHeight;
+
+      if (
+        Math.abs(window.scrollY - lastScrollY) >= threshold &&
+        window.scrollY > headerHeight
+      ) {
         if (window.scrollY > lastScrollY) {
           setIsVisible(false);
         } else {
@@ -39,7 +45,10 @@ function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
   }, [lastScrollY]);
 
   return (
-    <div className={`header ${isVisible ? "visible" : "hidden"}`}>
+    <div
+      ref={headerRef}
+      className={`header ${isVisible ? "visible" : "hidden"}`}
+    >
       <div id="logo">
         <h1>DownLow</h1>
         <h1
