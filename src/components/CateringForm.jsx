@@ -143,8 +143,8 @@ export default function CateringForm() {
         />
         <FormHelperText id="eventDetails-helper-text">
           Please provide any additional details about your event. If there are
-          any allergies or dietary resrictions we should be aware of, please let
-          us know here.
+          any allergies or dietary restrictions we should be aware of, please
+          let us know here.
         </FormHelperText>
       </FormControl>
       <Button variant="contained" color="primary" type="submit">
