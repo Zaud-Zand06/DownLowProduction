@@ -5,42 +5,42 @@ import Card from "@mui/material/Card";
 
 const sandosList = [
   {
+    title: "The Buldak",
+    description:
+      "Ramen Dredged Chicken, Ramen Seasoning Hot Sauce, Scallion and red pickle Slaw!",
+    price: 19.15,
+    special: null,
+  },
+  {
     title: "The OG",
     description:
       "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
-    price: 18.75,
+    price: 19.15,
     special: null,
   },
   {
     title: "The Stinger",
     description: "Fermented Chili Honey, Charred Cabbage Slaw, Rookie Mayo",
-    price: 18.75,
+    price: 19.15,
     special: null,
   },
   {
     title: "The Jerk",
     description: "Jerk Dusted Chicken, Pickled onions, Slaw, Tomato, Jerk Mayo",
-    price: 18.75,
+    price: 19.15,
     special: null,
   },
   {
     title: "The Agrodulce",
     description:
       "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce",
-    price: 18.75,
+    price: 19.15,
     special: null,
   },
   {
     title: "The Rookie",
     description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
-    price: 18.75,
-    special: null,
-  },
-  {
-    title: "The Snake",
-    description:
-      "Typhoon Dusted Chicken, Pickled Mustard Cole slaw, Rookie Mayo, and Ginger Scallion dressing",
-    price: 18.75,
+    price: 19.15,
     special: null,
   },
   {
@@ -54,7 +54,7 @@ const chickenByThePieceList = [
   {
     title: "Breast",
     description: "All White Meat & Tender",
-    price: 10.95,
+    price: 10.99,
     special: null,
   },
   {
@@ -64,30 +64,37 @@ const chickenByThePieceList = [
     special: false,
   },
   {
-    title: "Small Tenders",
+    title: "4 Piece Tender",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
-    price: 16.5,
+    price: 17.49,
     special: false,
   },
   {
-    title: "Large Tenders",
+    title: "7 Piece Tenders",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
-    price: 22.85,
+    price: 23.89,
+    special: false,
+  },
+  {
+    title: "15 Piece Tenders",
+    description:
+      "The most tender part of the breast! Dusted with spice and a side of sauce",
+    price: 45.59,
+    special: false,
+  },
+  {
+    title: "20 Piece Tenders",
+    description:
+      "The most tender part of the breast! Dusted with spice and a side of sauce",
+    price: 60.29,
     special: false,
   },
   {
     title: "Nuggets",
     description: "A bowl of popcorn chicken with your choice of dipping sauce",
-    price: 11.6,
-    special: null,
-  },
-  {
-    title: "Wings",
-    description:
-      "Full sized chicken wings! Order as many as you want, but only on Wednesdays",
-    price: 3.25,
+    price: 10.99,
     special: null,
   },
   {
@@ -95,6 +102,13 @@ const chickenByThePieceList = [
     description: "A pile of 10 boneless thighs! Dusted to your liking",
     price: 49.75,
     special: false,
+  },
+  {
+    title: "Wings",
+    description:
+      "Full sized chicken wings! Order as many as you want, but only on Wednesdays",
+    price: 3.25,
+    special: null,
   },
 ];
 const sidesList = [
@@ -115,25 +129,25 @@ const sidesList = [
   {
     title: "Macaroni and Cheese",
     description: "Warm, Cheesy, and Creamy",
-    price: 6.25,
+    price: 5.25,
     special: false,
   },
   {
     title: "Bacon Baked Beans",
     description: "Bacon, onions, beans, with a bit of a kick",
-    price: 6.25,
+    price: 5.25,
     special: false,
   },
   {
     title: "Sweet-and-Sour Slaw",
     description: "Cumin, Pickled Onions",
-    price: 5.75,
+    price: 5.25,
     special: false,
   },
   {
     title: "Pickles",
     description: "A cup of our house-made bread and butter pickles",
-    price: 2.95,
+    price: 3.25,
     special: false,
   },
   {
@@ -151,9 +165,15 @@ const sidesList = [
 ];
 const waffleList = [
   {
-    title: "Chicken and Waffle",
+    title: "Chicken and Waffle (Thighs)",
     description: "A fresh waffle topped with two boneless, dusted thighs",
-    price: 8.25,
+    price: 18.95,
+    special: "Add an extra thigh for 4!",
+  },
+  {
+    title: "Chicken and Waffle (Breast)",
+    description: "A fresh waffle topped with a boneless, dusted breast",
+    price: 18.95,
     special: false,
   },
   {
@@ -166,39 +186,51 @@ const waffleList = [
 ];
 const comboList = [
   {
-    title: "Small Tender Combo",
-    description: "4 tenders and any side",
-    price: 21.95,
+    title: "4 Piece Tender Combo",
+    description: "4 tenders, any side and a drink",
+    price: 22.49,
     special: false,
   },
   {
-    title: "Large Tender Combo",
-    description: "7 tenders and any side",
-    price: 26.45,
+    title: "7 Piece Tender Combo",
+    description: "7 tenders, any side and a drink",
+    price: 28.49,
     special: false,
   },
   {
     title: "Sando and a Side",
     description: "Any of our sandos and any side",
-    price: 23.15,
+    price: 25.15,
     special: false,
   },
   {
     title: "Two Piece and a Side",
-    description: "2 boneless thighs and any side",
-    price: 17.4,
+    description: "2 boneless thighs, any side and a drink",
+    price: 17.49,
     special: false,
   },
   {
     title: "Two by Four",
-    description: "4 thighs and any 2 sides",
-    price: 31.35,
+    description: "4 thighs, any 2 sides and 2 drinks",
+    price: 34.49,
+    special: false,
+  },
+  {
+    title: "1 Breast and a Side",
+    description: "1 white meat breast, any side and a drink",
+    price: 16.49,
+    special: false,
+  },
+  {
+    title: "2 Breasts and a Side",
+    description: "2 white meat breasts, any side and a drink",
+    price: 25.49,
     special: false,
   },
   {
     title: "Piled High",
-    description: "10 boneless thighs and any 4 sides",
-    price: 59.95,
+    description: "10 boneless thighs, any 4 sides and 4 drinks",
+    price: 66.15,
     special: false,
   },
 ];
