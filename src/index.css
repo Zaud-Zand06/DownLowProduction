@@ -16,6 +16,7 @@
 }
 
 :root {
+  --loading-colour: #131313ad;
   --main-yellow: #ffb800;
   --main-red: #ff0000;
   --text-dark: #181818;

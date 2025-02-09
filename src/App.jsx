@@ -1,15 +1,17 @@
 import "./App.css";
 import "./components/component_css/backgroundImage.css";
-import { useState, useEffect } from "react";
-import HeroCarousel from "./components/HeroCarousel";
+import { useState, useEffect, lazy, Suspense } from "react";
 import Header from "./components/Header";
-import ScrollingAlert from "./components/ScrollingAlert";
-import ParallaxSection from "./components/ParallaxSection";
-import Menu from "./components/Menu";
-import SecretMenu from "./components/SecretMenu";
 import Footer from "./components/Footer";
-import Catering from "./components/Catering";
-import Credits from "./components/Credits";
+import logo from "./assets/the_logo.webp";
+
+const HeroCarousel = lazy(() => import("./components/HeroCarousel"));
+const ScrollingAlert = lazy(() => import("./components/ScrollingAlert"));
+const ParallaxSection = lazy(() => import("./components/ParallaxSection"));
+const Menu = lazy(() => import("./components/Menu"));
+const SecretMenu = lazy(() => import("./components/SecretMenu"));
+const Catering = lazy(() => import("./components/Catering"));
+const Credits = lazy(() => import("./components/Credits"));
 
 function App() {
   const [displayMenu, setDisplayMenu] = useState("home");
@@ -32,40 +34,28 @@ function App() {
       />
 
       <div className="backgroundImage"></div>
-      {/* main page */}
-      {displayMenu == "home" && (
-        <>
-          <HeroCarousel role="main" />
 
-          <ScrollingAlert />
-
-          <ParallaxSection />
-        </>
-      )}
-      {/* secret menu display */}
-      {displayMenu == "secret" && (
-        <>
-          <SecretMenu role="main" />
-        </>
-      )}
-      {/* menu display */}
-      {displayMenu == "menu" && (
-        <>
-          <Menu role="main" />
-        </>
-      )}
-      {/* catering display */}
-      {displayMenu == "catering" && (
-        <>
-          <Catering role="main" />
-        </>
-      )}
-      {/* credits display */}
-      {displayMenu == "credits" && (
-        <>
-          <Credits role="main" />
-        </>
-      )}
+      <Suspense
+        fallback={
+          <div id="loadingScreen">
+            {window.scrollTo({ top: 0, behavior: "smooth" })}
+            <img src={logo} />
+            <p>The Chickens are loading...</p>
+          </div>
+        }
+      >
+        {displayMenu == "home" && (
+          <>
+            <HeroCarousel role="main" />
+            <ScrollingAlert />
+            <ParallaxSection />
+          </>
+        )}
+        {displayMenu == "secret" && <SecretMenu role="main" />}
+        {displayMenu == "menu" && <Menu role="main" />}
+        {displayMenu == "catering" && <Catering role="main" />}
+        {displayMenu == "credits" && <Credits role="main" />}
+      </Suspense>
       <Footer
         setDisplayMenu={setDisplayMenu}
         setScrollToTop={setScrollToTop}
