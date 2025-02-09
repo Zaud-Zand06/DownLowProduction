@@ -376,7 +376,6 @@ function Menu() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
   return (
     <div className="menuContainer">
       {makeMenuList(displayMenuList, windowWidth)}
