@@ -1,7 +1,7 @@
 .backgroundImage {
   position: fixed;
   width: 100vw;
-  background-image: url(../../assets/noTextLogo400px.png);
+  background-image: url(../../assets/noTextLogo400px.webp);
   height: 100vh;
   background-size: 300px;
   background-repeat: space;

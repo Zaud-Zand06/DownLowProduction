@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./component_css/HeroCarousel.css";
-import dessertBar from "../assets/dessertBars1.jpg";
-import jerry from "../assets/jerry1.jpg";
-import sidesImage from "../assets/sides.jpg";
-import buldakSando from "../assets/buldakSandoCrop.jpg";
+import dessertBar from "../assets/dessertBars.avif";
+import jerry from "../assets/jerry.avif";
+import sidesImage from "../assets/sides.avif";
+import buldakSando from "../assets/buldakSandoCrop.avif";
 // Slides should be an array of objects with with an image, description, title and alt text.
 // you can have as many slides as you want, but try and limit it to less than 10 just so its not too crazy
 const slides = [
