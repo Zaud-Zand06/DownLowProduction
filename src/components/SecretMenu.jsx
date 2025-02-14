@@ -1,6 +1,6 @@
 import "./component_css/secretMenu.css";
 import { Masonry } from "@mui/lab";
-import logo from "../assets/the_logo.png";
+import logo from "../assets/the_logo.webp";
 import { useState, useEffect } from "react";
 
 const secretMenuList = [

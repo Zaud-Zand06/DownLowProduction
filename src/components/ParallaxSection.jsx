@@ -1,7 +1,7 @@
 import "./component_css/parallaxSection.css";
 import { Parallax } from "react-scroll-parallax";
-import waffleCombo from "../assets/waffleCombo.jpg";
-import dlChickenMelt from "../assets/dlChickenMelt.jpg";
+import waffleCombo from "../assets/waffleCombo.avif";
+import dlChickenMelt from "../assets/dlChickenMelt.avif";
 
 function ParallaxSection() {
   return (
