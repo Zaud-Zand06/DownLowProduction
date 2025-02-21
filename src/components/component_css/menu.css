@@ -70,6 +70,12 @@ p.secretMenuLink a {
 p.secretMenuLink a:hover {
   color: var(--border-colour);
 }
+#cartIcon {
+  background-color: var(--main-red);
+}
+#cartIcon:hover {
+  background-color: var(--main-yellow);
+}
 
 @media screen and (max-width: 500px) {
   .menuContainer {

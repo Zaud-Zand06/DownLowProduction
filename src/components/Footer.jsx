@@ -8,6 +8,8 @@ import {
 } from "@react-google-maps/api";
 import PropTypes from "prop-types";
 
+const GmapsKey = import.meta.env.VITE_GMAPSKEY;
+
 Footer.propTypes = {
   setDisplayMenu: PropTypes.func.isRequired,
   setScrollToTop: PropTypes.func.isRequired,
@@ -40,7 +42,7 @@ function Footer({ setDisplayMenu, setScrollToTop }) {
         const response = await fetch(
           `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
             detail.address
-          )}&key=AIzaSyD6b5Z3lxK9tZ2uvruzTHQcAX6e_tnqX7k`
+          )}&key=${GmapsKey}`
         );
         const data = await response.json();
         const location = data.results[0].geometry.location;
@@ -59,7 +61,7 @@ function Footer({ setDisplayMenu, setScrollToTop }) {
   return (
     <section id="footer">
       <section id="locationAndMap">
-        <LoadScript googleMapsApiKey="AIzaSyD6b5Z3lxK9tZ2uvruzTHQcAX6e_tnqX7k">
+        <LoadScript googleMapsApiKey={GmapsKey}>
           <GoogleMap
             mapContainerClassName="mapEmbed"
             center={locations[0]}

@@ -2,6 +2,11 @@ import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import { Masonry } from "@mui/lab";
 import Card from "@mui/material/Card";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Drawer } from "@mui/material";
+
+//TODO: these lists should be replaced with a function that calls the square api
+// and creates lists based on the the returned data
 
 const sandosList = [
   {
@@ -320,6 +325,8 @@ const displayMenuList = [
   },
 ];
 
+const shoppingCartDisplay = <div>IS THIS SHIT ON OR WHAT</div>;
+
 function makeMenuList(menuList, windowWidth) {
   return (
     <Masonry
@@ -364,6 +371,16 @@ function makeMenuList(menuList, windowWidth) {
 
 function Menu() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [displayCart, setDisplayCart] = useState(false);
+  const [cartInventory, setCartInventory] = useState([]);
+
+  const addToCart = (item) => {
+    setCartInventory(...cartInventory, item);
+  };
+
+  const toggleCart = () => {
+    setDisplayCart(!displayCart);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -379,6 +396,21 @@ function Menu() {
   return (
     <div className="menuContainer">
       {makeMenuList(displayMenuList, windowWidth)}
+      <ShoppingCartIcon
+        id="cartIcon"
+        style={{
+          position: "fixed",
+          bottom: "2rem",
+          right: "3rem",
+          padding: "1rem",
+          borderRadius: "50%",
+          border: "2px solid black",
+        }}
+        onClick={toggleCart}
+      />
+      <Drawer open={displayCart} onClose={toggleCart}>
+        {shoppingCartDisplay}
+      </Drawer>
     </div>
   );
 }
