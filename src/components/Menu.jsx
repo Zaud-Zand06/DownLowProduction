@@ -372,11 +372,19 @@ function makeMenuList(menuList, windowWidth) {
 function Menu() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [displayCart, setDisplayCart] = useState(false);
-  const [cartInventory, setCartInventory] = useState([]);
+  const [catalogItems, setCatalogItems] = useState([]);
 
-  const addToCart = (item) => {
-    setCartInventory(...cartInventory, item);
-  };
+  // const [cartInventory, setCartInventory] = useState([]);
+  // const addToCart = (item) => {
+  //   setCartInventory(...cartInventory, item);
+  // };
+
+  useEffect(() => {
+    fetch("http://localhost:3001/api/catalog")
+      .then((res) => res.json())
+      .then((data) => setCatalogItems(data));
+    console.log(catalogItems);
+  }, []);
 
   const toggleCart = () => {
     setDisplayCart(!displayCart);
