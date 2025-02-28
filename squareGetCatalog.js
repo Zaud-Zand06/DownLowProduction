@@ -3,6 +3,10 @@ import cors from "cors";
 import "dotenv/config";
 import { SquareClient, SquareEnvironment } from "square";
 
+BigInt.prototype.toJSON = function () {
+  return { $bigint: this.toString() };
+};
+
 const app = express();
 app.use(
   cors({
@@ -11,18 +15,18 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
-console.log("SQUARE TOKEN FROM ENV:", process.env.VITE_SQUARETOKEN);
+console.log("SQUARE TOKEN FROM ENV:", process.env.VITE_SQUAREPRODUCTIONTOKEN);
 const client = new SquareClient({
-  environment: SquareEnvironment.Sandbox,
-  accessToken: process.env.VITE_SQUARETOKEN,
+  environment: SquareEnvironment.Production,
+  token: process.env.VITE_SQUAREPRODUCTIONTOKEN,
 });
 
 app.get("/api/catalog", async (_req, res) => {
   try {
-    const { result } = await client.catalog.list(undefined, "ITEM");
-    console.log(result);
-
-    res.json(result.objects);
+    const result = await client.catalog.searchItems({
+      enabledLocationIds: ["LB3TMDHWH2ZB3"],
+    });
+    res.json(result);
   } catch (error) {
     console.error("Error retrieving items:", error);
     res.status(500).json({ error: error.message });

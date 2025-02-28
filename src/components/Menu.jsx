@@ -380,10 +380,28 @@ function Menu() {
   // };
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/catalog")
-      .then((res) => res.json())
-      .then((data) => setCatalogItems(data));
-    console.log(catalogItems);
+    async function fetchCatalog() {
+      try {
+        const response = await fetch("http://localhost:3001/api/catalog");
+        if (!response.ok) {
+          throw new Error(`Server responded with status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log("Catalog data received:", data);
+
+        // Assuming data comes back as expected format with items
+        data.items.forEach((item) => {
+          const prevCatalogItems = catalogItems;
+          setCatalogItems(prevCatalogItems, item);
+          console.log(item);
+        });
+      } catch (err) {
+        console.error("Error fetching catalog:", err);
+      }
+    }
+
+    fetchCatalog();
+    console.log("catalogItems = " + catalogItems);
   }, []);
 
   const toggleCart = () => {
