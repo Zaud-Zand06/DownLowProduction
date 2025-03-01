@@ -24,6 +24,7 @@ const client = new SquareClient({
 app.get("/api/catalog", async (_req, res) => {
   try {
     const result = await client.catalog.searchItems({
+      // this pulls all catalog items from dlev
       enabledLocationIds: ["LB3TMDHWH2ZB3"],
     });
     res.json(result);

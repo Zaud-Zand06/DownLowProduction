@@ -8,6 +8,44 @@ import { Drawer } from "@mui/material";
 //TODO: these lists should be replaced with a function that calls the square api
 // and creates lists based on the the returned data
 
+function SandoMenuItems() {
+  const [sandoCatalogList, setSandoCatalogList] = useState([]);
+  useEffect(() => {
+    async function fetchCatalog() {
+      try {
+        const response = await fetch("http://localhost:3001/api/catalog");
+        if (!response.ok) {
+          throw new Error(`Server responded with status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log("Catalog data received:", data);
+        let regex = /sando/i;
+
+        // Assuming data comes back as expected format with items
+        // this is where we could add regex to create item categories
+        // there is a "kitchen_name" key that lines up with the menu names in the square terminal
+        // item.itemData.kitchen_name
+
+        // TODO: also fix this forEach loop, it doesnt add the items to the catalogItems array
+        data.items.forEach((item) => {
+          const prevCatalogItems = sandoCatalogList;
+          if (item.itemData.name === regex) {
+            setSandoCatalogList(prevCatalogItems, item);
+          }
+          console.log(item);
+        });
+      } catch (err) {
+        console.error("Error fetching catalog:", err);
+      }
+    }
+
+    fetchCatalog();
+    console.log("catalogItems = " + sandoCatalogList);
+  }, []);
+
+  return <div className="menuCard">sando stuff goes here i guess</div>;
+}
+
 const sandosList = [
   {
     title: "The Buldak",
@@ -378,31 +416,6 @@ function Menu() {
   // const addToCart = (item) => {
   //   setCartInventory(...cartInventory, item);
   // };
-
-  useEffect(() => {
-    async function fetchCatalog() {
-      try {
-        const response = await fetch("http://localhost:3001/api/catalog");
-        if (!response.ok) {
-          throw new Error(`Server responded with status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log("Catalog data received:", data);
-
-        // Assuming data comes back as expected format with items
-        data.items.forEach((item) => {
-          const prevCatalogItems = catalogItems;
-          setCatalogItems(prevCatalogItems, item);
-          console.log(item);
-        });
-      } catch (err) {
-        console.error("Error fetching catalog:", err);
-      }
-    }
-
-    fetchCatalog();
-    console.log("catalogItems = " + catalogItems);
-  }, []);
 
   const toggleCart = () => {
     setDisplayCart(!displayCart);
