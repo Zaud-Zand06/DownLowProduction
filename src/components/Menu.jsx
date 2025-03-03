@@ -23,7 +23,7 @@ const byThePieceList = [
   "7 Piece Tenders",
   "15 Piece Tenders",
   "20 Piece Tenders",
-  "Nuggets",
+  "Popcorn Nuggets",
   "Pile of Thighs",
   "Wings",
 ];
@@ -34,7 +34,8 @@ const comboList = [
   "4 Piece Tenders and a Side",
   "7 Piece Tenders and a Side",
   "Sando and a Side",
-  "Two Piece and a Side",
+  "2 x Thigh Combo",
+  "4 x Thigh Combo",
   "Breast Combo",
   "Piled High",
 ];
@@ -71,6 +72,12 @@ function Menu() {
         const data = await response.json();
         console.log("data:");
         console.log(data);
+        console.log("named data:");
+        let namedData = [];
+        data.items.forEach((element) => {
+          namedData.push(element.itemData.name);
+        });
+        console.log(namedData);
 
         // Filter items for each category
         const items = data.items || [];
