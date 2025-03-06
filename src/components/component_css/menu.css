@@ -81,6 +81,17 @@
 #shoppingCart {
   display: grid;
 }
+#shoppingCart > P {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-left: 1rem;
+}
+#shoppingCart a {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  color: var(--main-red);
+  -webkit-text-stroke: 1.5px var(--text-dark);
+}
 #shoppingCart ul {
   list-style-type: none;
   padding: 0;

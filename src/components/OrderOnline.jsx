@@ -171,6 +171,10 @@ export default function OrderOnline() {
       });
     }, 300);
   }
+  function emptyCart() {
+    setCartInventory([]);
+    setCartTotal(0);
+  }
   function toggleCart() {
     setDisplayCart(!displayCart);
   }
@@ -228,6 +232,9 @@ export default function OrderOnline() {
       >
         <div id="shoppingCart">
           <h2>Cart</h2>
+          {cartInventory.length === 0 && (
+            <p id="addToCart">Add something to your cart!</p>
+          )}
           <ul>
             {cartInventory.map((item) => (
               <li
@@ -241,6 +248,7 @@ export default function OrderOnline() {
             ))}
           </ul>
           <h2>Cart Total: ${cartTotal}</h2>
+          <a onClick={() => emptyCart()}>Empty the Cart</a>
         </div>
       </Drawer>
     </div>
