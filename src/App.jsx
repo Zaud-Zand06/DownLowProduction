@@ -10,9 +10,10 @@ import SecretMenu from "./components/SecretMenu";
 import Footer from "./components/Footer";
 import Catering from "./components/Catering";
 import Credits from "./components/Credits";
+import OrderOnline from "./components/OrderOnline";
 
 function App() {
-  const [displayMenu, setDisplayMenu] = useState("home");
+  const [displayMenu, setDisplayMenu] = useState("menu");
   const [scrollToTop, setScrollToTop] = useState(false);
 
   useEffect(() => {
@@ -31,7 +32,8 @@ function App() {
         setScrollToTop={setScrollToTop}
       />
 
-      <div className="backgroundImage"></div>
+      {/* <div className="backgroundImage"></div> */}
+
       {/* main page */}
       {displayMenu == "home" && (
         <>
@@ -51,7 +53,10 @@ function App() {
       {/* menu display */}
       {displayMenu == "menu" && (
         <>
-          <Menu role="main" />
+          {/* ALERT! Dont forget to swap this back for prod */}
+
+          {/* <Menu role="main" /> */}
+          <OrderOnline role="main" />
         </>
       )}
       {/* catering display */}

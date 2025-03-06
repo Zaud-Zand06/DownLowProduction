@@ -1,5 +1,5 @@
 .sectionTitle {
-  -webkit-text-stroke: var(--border-colour) 1.5px;
+  -webkit-text-stroke: var(--text-dark) 1.5px;
   font-size: 3rem;
   color: var(--main-yellow);
   position: absolute;
@@ -34,31 +34,96 @@
 }
 .menuCard {
   position: relative;
-  padding: 1rem;
   border: 2px solid var(--border-colour);
-  background-color: var(--white);
+  background-color: var(--background-colour);
   border-radius: 5px;
+}
+.menuCard p {
+  margin-bottom: 0px;
 }
 .menuCardItem {
   text-align: left;
   padding: 0.5rem;
   background-color: var(--card-background-colour);
 }
-.menuCard p {
-  margin-bottom: 0px;
-}
 .menuCardItem h3 {
   font-size: 1.5rem;
   font-weight: 200;
   color: var(--text-dark);
 }
-.menuCardItem h4 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.menuCardItem p {
+  font-size: 1rem;
+  color: var(--text-dark);
 }
 .menuCardItem .price {
-  text-align: right;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
+.menuCardItem .cartButton {
+  font-size: 1.25rem;
+  color: var(--main-red);
+  -webkit-text-stroke: 1.5px var(--text-dark);
+  border: none;
+  cursor: pointer;
+}
+.menuCardItem .cartButton:hover {
+  color: var(--main-yellow);
+}
+.locationButton {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#shoppingCart {
+  display: grid;
+}
+#shoppingCart ul {
+  list-style-type: none;
+  padding: 0;
+}
+#shoppingCart h2 {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+#shoppingCart .cartItem {
+  display: grid;
+  width: 100%;
+  border-top: 2px solid var(--border-colour);
+  border-bottom: 2px solid var(--border-colour);
+  background-color: var(--card-background-colour);
+}
+.cartItem.removing {
+  animation: slideOutLeft 0.5s forwards;
+}
+@keyframes slideOutLeft {
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+.cartItem > * {
+  margin: 0.5rem;
+}
+.cartItem h3 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--text-dark);
+}
+.cartItem p {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+.cartItem a {
+  font-size: 1.5rem;
+  color: var(--main-red);
+  -webkit-text-stroke: 1.5px var(--text-dark);
+  cursor: pointer;
+}
+
 p.secretMenuLink {
   font-family: "Raleway Medium";
   color: var(--border-colour);
@@ -75,6 +140,9 @@ p.secretMenuLink a:hover {
 }
 #cartIcon:hover {
   background-color: var(--main-yellow);
+}
+#locationSelection {
+  margin-top: 10rem;
 }
 
 @media screen and (max-width: 500px) {

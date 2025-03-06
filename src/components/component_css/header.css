@@ -62,7 +62,7 @@
 .hamburgerMenuButtons > * {
   font-size: 2rem;
   color: var(--main-red);
-  -webkit-text-stroke-color: var(--border-colour);
+  -webkit-text-stroke-color: var(--text-dark);
   -webkit-text-stroke-width: 1.5px;
 }
 
