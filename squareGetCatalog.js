@@ -33,6 +33,17 @@ app.get("/api/catalog", async (_req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+//TODO: test this code
+app.post("/api/order", async (req, res) => {
+  const { order } = req.body;
+  try {
+    const result = await client.orders.createOrder(order);
+    res.json(result);
+  } catch (error) {
+    console.error("Error creating order:", error);
+    res.status(500).json({ error: error.message });
+  }
+});
 
 app.listen(3001, () => {
   console.log("Server running on http://localhost:3001");
