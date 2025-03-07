@@ -128,7 +128,7 @@ export default function OrderOnline() {
             <p>{item.itemData.descriptionPlaintext}</p>
             <p className="price">${getFormattedPrice(item)}</p>
             <a className="cartButton" onClick={() => addToCart(item)}>
-              Add to Cart
+              Add to Bag
             </a>
           </Card>
         ))}
@@ -143,22 +143,28 @@ export default function OrderOnline() {
   ];
 
   function addToCart(item) {
-    setCartInventory((prevInventory) => [...prevInventory, item]);
+    const cartItem = {
+      ...item,
+      cartId: Date.now() + Math.random(),
+    };
+
+    setCartInventory((prevInventory) => [...prevInventory, cartItem]);
+
     setCartTotal((prevTotal) => {
       const newTotal = parseFloat(prevTotal) + getFormattedPrice(item);
       return newTotal.toFixed(2);
     });
   }
-  function removeFromCart(item) {
+  function removeFromCart(cartId) {
     setCartInventory((prev) =>
       prev.map((cartItem) =>
-        cartItem.id === item.id ? { ...cartItem, removing: true } : cartItem
+        cartItem.cartId === cartId ? { ...cartItem, removing: true } : cartItem
       )
     );
     setTimeout(() => {
       setCartInventory((prevInventory) => {
         const index = prevInventory.findIndex(
-          (cartItem) => cartItem.id === item.id
+          (cartItem) => cartItem.cartId === cartId
         );
         if (index < 0) return prevInventory;
         const newInventory = [...prevInventory];
@@ -166,7 +172,11 @@ export default function OrderOnline() {
         return newInventory;
       });
       setCartTotal((prevTotal) => {
-        const newTotal = parseFloat(prevTotal) - getFormattedPrice(item);
+        const removedItem = cartInventory.find(
+          (cartItem) => cartItem.cartId === cartId
+        );
+        if (!removedItem) return prevTotal;
+        const newTotal = parseFloat(prevTotal) - getFormattedPrice(removedItem);
         return newTotal.toFixed(2);
       });
     }, 300);
@@ -200,7 +210,7 @@ export default function OrderOnline() {
   }
 
   return (
-    <div>
+    <>
       <h1>Order Online</h1>
       <h2>{pickUpLocation}</h2>
       <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }} spacing={2}>
@@ -208,18 +218,18 @@ export default function OrderOnline() {
           renderCatalogSection(section.title, section.items)
         )}
       </Masonry>
-      <ShoppingCartIcon
-        id="cartIcon"
-        style={{
-          position: "fixed",
-          bottom: "2rem",
-          right: "3rem",
-          padding: "1rem",
-          borderRadius: "50%",
-          border: "2px solid black",
-        }}
-        onClick={toggleCart}
-      />
+      <div id="cartIconContainer">
+        <div id="cartIconCounter">{cartInventory.length}</div>
+        <ShoppingCartIcon
+          id="cartIcon"
+          style={{
+            padding: "1rem",
+            borderRadius: "15px",
+            border: "2px solid black",
+          }}
+          onClick={toggleCart}
+        />
+      </div>
       <Drawer
         open={displayCart}
         onClose={toggleCart}
@@ -231,26 +241,28 @@ export default function OrderOnline() {
         }}
       >
         <div id="shoppingCart">
-          <h2>Cart</h2>
+          <h2>Bag</h2>
           {cartInventory.length === 0 && (
-            <p id="addToCart">Add something to your cart!</p>
+            <p id="addToCart">Add something to your bag!</p>
           )}
           <ul>
             {cartInventory.map((item) => (
               <li
-                key={item.id}
+                key={item.cartId}
                 className={`cartItem${item.removing ? " removing" : ""}`}
               >
                 <h3>{item.itemData.name}</h3>
                 <p>{getFormattedPrice(item)}</p>
-                <a onClick={() => removeFromCart(item)}>Remove from Cart</a>
+                <a onClick={() => removeFromCart(item.cartId)}>
+                  Remove from Bag
+                </a>
               </li>
             ))}
           </ul>
-          <h2>Cart Total: ${cartTotal}</h2>
-          <a onClick={() => emptyCart()}>Empty the Cart</a>
+          <h2>Bag Total: ${cartTotal}</h2>
+          <a onClick={() => emptyCart()}>Empty the Bag!</a>
         </div>
       </Drawer>
-    </div>
+    </>
   );
 }

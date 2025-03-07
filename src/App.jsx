@@ -71,11 +71,11 @@ function App() {
           <Credits role="main" />
         </>
       )}
-      <Footer
+      {/* <Footer
         setDisplayMenu={setDisplayMenu}
         setScrollToTop={setScrollToTop}
         role="region"
-      />
+      /> */}
     </>
   );
 }

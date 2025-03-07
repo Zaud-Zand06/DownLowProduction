@@ -98,7 +98,7 @@
 }
 #shoppingCart h2 {
   font-size: 2rem;
-  margin-left: 1rem;
+  margin: 1rem 1rem;
 }
 #shoppingCart .cartItem {
   display: grid;
@@ -108,7 +108,7 @@
   background-color: var(--card-background-colour);
 }
 .cartItem.removing {
-  animation: slideOutLeft 0.5s forwards;
+  animation: slideOutLeft 0.3s forwards;
 }
 @keyframes slideOutLeft {
   to {
@@ -145,6 +145,23 @@ p.secretMenuLink a {
 }
 p.secretMenuLink a:hover {
   color: var(--border-colour);
+}
+#cartIconContainer {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+}
+#cartIconCounter {
+  position: relative;
+  width: fit-content;
+  font-size: 1.25rem;
+  padding: 0 0.65rem;
+  outline: 2px solid var(--border-colour);
+  border-radius: 50%;
+  top: 20px;
+  left: 35px;
+
+  background-color: var(--background-colour);
 }
 #cartIcon {
   background-color: var(--main-red);
