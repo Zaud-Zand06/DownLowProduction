@@ -89,6 +89,12 @@
   flex-direction: column;
   align-items: center;
 }
+.itemVariationSelection:hover {
+  background-color: var(--main-yellow);
+}
+.itemVariationSelection:hover > :not(:hover) {
+  background-color: black;
+}
 #shoppingCart {
   display: grid;
 }

@@ -129,7 +129,7 @@ export default function OrderOnline() {
             <h3>{item.itemData.name}</h3>
             <p>{item.itemData.descriptionPlaintext}</p>
             <p className="price">${getFormattedPrice(item)}</p>
-            <a className="cartButton" onClick={() => itemClickHandler(item)}>
+            <a className="cartButton" onClick={() => fetchItemDetails(item.id)}>
               Add to Bag
             </a>
           </Card>
@@ -148,13 +148,23 @@ export default function OrderOnline() {
     setDisplayItemDrawer(!displayItemDrawer);
   }
 
-  function itemClickHandler(item) {
-    toggleMenuItemDrawer();
-    setSelectedItem(item);
-    console.log(selectedItem);
+  const fetchItemDetails = async (objectId) => {
+    try {
+      const response = await fetch(
+        `http://localhost:3001/api/catalog/object/${objectId}`
+      );
+      if (!response.ok) {
+        throw new Error(`Server responded with status: ${response.status}`);
+      }
+      const data = await response.json();
+      setSelectedItem(data.objects[0]);
+      console.log(data.objects[0]);
 
-    // TODO: FINISH THIS FUNC
-  }
+      toggleMenuItemDrawer();
+    } catch (error) {
+      console.error("Error fetching item details:", error);
+    }
+  };
 
   function addToCart(item, variationName) {
     const cartItem = {
@@ -256,18 +266,17 @@ export default function OrderOnline() {
             <h3>Spice</h3>
             <Masonry columns={{ xs: 2, sm: 2, md: 4 }}>
               {selectedItem.itemData.variations.map((variation, index) => (
-                <div key={variation.id} className="itemVariationSelection">
+                <div
+                  key={variation.id}
+                  className="itemVariationSelection"
+                  onClick={() =>
+                    addToCart(selectedItem, variation.itemVariationData.name)
+                  }
+                >
                   <h3>{variation.itemVariationData.name}</h3>
                   <p className="itemVariationPrice">
                     {getFormattedPrice(selectedItem)}
                   </p>
-                  <a
-                    onClick={() =>
-                      addToCart(selectedItem, variation.itemVariationData.name)
-                    }
-                  >
-                    Add to Bag!
-                  </a>
                 </div>
               ))}
             </Masonry>

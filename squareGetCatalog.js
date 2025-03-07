@@ -21,7 +21,7 @@ const client = new SquareClient({
   token: process.env.VITE_SQUAREPRODUCTIONTOKEN,
 });
 
-app.get("/api/catalog", async (_req, res) => {
+app.get("/api/catalog", async (req, res) => {
   try {
     const result = await client.catalog.searchItems({
       // this pulls all catalog items from dlev
@@ -30,6 +30,24 @@ app.get("/api/catalog", async (_req, res) => {
     res.json(result);
   } catch (error) {
     console.error("Error retrieving items:", error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get("/api/catalog/object/:objectId", async (req, res) => {
+  try {
+    const objectId = req.params.objectId;
+
+    const result = await client.catalog.batchGet({
+      objectIds: [objectId],
+      includeRelatedObjects: true,
+      includeCategoryPathToRoot: false,
+      includeDeletedObjects: false,
+    });
+
+    res.json(result);
+  } catch (error) {
+    console.error("Error retrieving object from objectId:", error);
     res.status(500).json({ error: error.message });
   }
 });
