@@ -78,6 +78,17 @@
   cursor: pointer;
   transition: all 0.3s;
 }
+.itemSelectionDrawer {
+  padding: 1rem;
+  align-items: center;
+}
+.itemVariationSelection {
+  background-color: var(--card-background-colour);
+  outline: 2px solid var(--border-colour);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #shoppingCart {
   display: grid;
 }

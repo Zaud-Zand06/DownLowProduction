@@ -4,6 +4,7 @@ import { Card } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Masonry } from "@mui/lab";
 import { Drawer } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 
 const sandoList = [
   "The Buldak Ramen Sando",
@@ -43,6 +44,8 @@ const comboList = [
 export default function OrderOnline() {
   const [pickUpLocation, setPickUpLocation] = useState(null);
   const [displayCart, setDisplayCart] = useState(false);
+  const [displayItemDrawer, setDisplayItemDrawer] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
   const [cartInventory, setCartInventory] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const [sandoCatalogList, setSandoCatalogList] = useState([]);
@@ -58,10 +61,9 @@ export default function OrderOnline() {
           throw new Error(`Server responded with status: ${response.status}`);
         }
         const data = await response.json();
-        console.log("data:");
+        console.log("Catalog data:");
         console.log(data);
-        console.log("named data:");
-        let namedData = [];
+        const namedData = [];
         data.items.forEach((element) => {
           namedData.push(element.itemData.name);
         });
@@ -127,7 +129,7 @@ export default function OrderOnline() {
             <h3>{item.itemData.name}</h3>
             <p>{item.itemData.descriptionPlaintext}</p>
             <p className="price">${getFormattedPrice(item)}</p>
-            <a className="cartButton" onClick={() => addToCart(item)}>
+            <a className="cartButton" onClick={() => itemClickHandler(item)}>
               Add to Bag
             </a>
           </Card>
@@ -142,9 +144,22 @@ export default function OrderOnline() {
     { title: "Combos", items: comboCatalogList },
   ];
 
-  function addToCart(item) {
+  function toggleMenuItemDrawer() {
+    setDisplayItemDrawer(!displayItemDrawer);
+  }
+
+  function itemClickHandler(item) {
+    toggleMenuItemDrawer();
+    setSelectedItem(item);
+    console.log(selectedItem);
+
+    // TODO: FINISH THIS FUNC
+  }
+
+  function addToCart(item, variationName) {
     const cartItem = {
       ...item,
+      cartVariationName: variationName,
       cartId: Date.now() + Math.random(),
     };
 
@@ -154,6 +169,7 @@ export default function OrderOnline() {
       const newTotal = parseFloat(prevTotal) + getFormattedPrice(item);
       return newTotal.toFixed(2);
     });
+    toggleMenuItemDrawer();
   }
   function removeFromCart(cartId) {
     setCartInventory((prev) =>
@@ -218,6 +234,46 @@ export default function OrderOnline() {
           renderCatalogSection(section.title, section.items)
         )}
       </Masonry>
+      {/* THIS DRAWER IS FOR MENU ITEMS SO THAT YOU CAN SELECT ITEM VARIATIONS TO ADD TO CART */}
+      <Drawer
+        open={displayItemDrawer}
+        onClose={toggleMenuItemDrawer}
+        anchor="bottom"
+        PaperProps={{
+          style: {
+            backgroundColor: "var(--background-colour)",
+            borderTop: "2px solid var(--border-colour)",
+          },
+        }}
+      >
+        {selectedItem && (
+          <div className="itemSelectionDrawer">
+            <CloseIcon
+              onClick={toggleMenuItemDrawer}
+              style={{ position: "relative", left: "95%" }}
+            />
+            <h2>{selectedItem.itemData.name}</h2>
+            <h3>Spice</h3>
+            <Masonry columns={{ xs: 2, sm: 2, md: 4 }}>
+              {selectedItem.itemData.variations.map((variation, index) => (
+                <div key={variation.id} className="itemVariationSelection">
+                  <h3>{variation.itemVariationData.name}</h3>
+                  <p className="itemVariationPrice">
+                    {getFormattedPrice(selectedItem)}
+                  </p>
+                  <a
+                    onClick={() =>
+                      addToCart(selectedItem, variation.itemVariationData.name)
+                    }
+                  >
+                    Add to Bag!
+                  </a>
+                </div>
+              ))}
+            </Masonry>
+          </div>
+        )}
+      </Drawer>
       <div id="cartIconContainer">
         <div id="cartIconCounter">{cartInventory.length}</div>
         <ShoppingCartIcon
@@ -252,6 +308,7 @@ export default function OrderOnline() {
                 className={`cartItem${item.removing ? " removing" : ""}`}
               >
                 <h3>{item.itemData.name}</h3>
+                <h4>{item.cartVariationName}</h4>
                 <p>{getFormattedPrice(item)}</p>
                 <a onClick={() => removeFromCart(item.cartId)}>
                   Remove from Bag
