@@ -82,18 +82,20 @@
   padding: 1rem;
   align-items: center;
 }
+.itemVariationSelectionContainer {
+  & > * {
+    transition: opacity 0.3s ease-out;
+  }
+  &:hover > *:not(:hover) {
+    opacity: 0.25;
+  }
+}
 .itemVariationSelection {
   background-color: var(--card-background-colour);
   outline: 2px solid var(--border-colour);
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.itemVariationSelection:hover {
-  background-color: var(--main-yellow);
-}
-.itemVariationSelection:hover > :not(:hover) {
-  background-color: black;
 }
 #shoppingCart {
   display: grid;

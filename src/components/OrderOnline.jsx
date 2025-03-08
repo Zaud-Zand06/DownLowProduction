@@ -157,8 +157,9 @@ export default function OrderOnline() {
         throw new Error(`Server responded with status: ${response.status}`);
       }
       const data = await response.json();
-      setSelectedItem(data.objects[0]);
-      console.log(data.objects[0]);
+      console.log(data);
+
+      setSelectedItem(data.object);
 
       toggleMenuItemDrawer();
     } catch (error) {
@@ -264,8 +265,11 @@ export default function OrderOnline() {
             />
             <h2>{selectedItem.itemData.name}</h2>
             <h3>Spice</h3>
-            <Masonry columns={{ xs: 2, sm: 2, md: 4 }}>
-              {selectedItem.itemData.variations.map((variation, index) => (
+            <Masonry
+              columns={{ xs: 2, sm: 2, md: 4 }}
+              className="itemVariationSelectionContainer"
+            >
+              {selectedItem.itemData.variations.map((variation) => (
                 <div
                   key={variation.id}
                   className="itemVariationSelection"

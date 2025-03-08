@@ -38,8 +38,8 @@ app.get("/api/catalog/object/:objectId", async (req, res) => {
   try {
     const objectId = req.params.objectId;
 
-    const result = await client.catalog.batchGet({
-      objectIds: [objectId],
+    const result = await client.catalog.object.get({
+      objectId: objectId,
       includeRelatedObjects: true,
       includeCategoryPathToRoot: false,
       includeDeletedObjects: false,
