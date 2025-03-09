@@ -79,10 +79,12 @@
   transition: all 0.3s;
 }
 .itemSelectionDrawer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 1rem;
   align-items: center;
 }
-.itemVariationSelectionContainer {
+.itemSelectionContainer {
   & > * {
     transition: opacity 0.3s ease-out;
   }
@@ -90,7 +92,7 @@
     opacity: 0.25;
   }
 }
-.itemVariationSelection {
+.itemSelection {
   background-color: var(--card-background-colour);
   outline: 2px solid var(--border-colour);
   display: flex;

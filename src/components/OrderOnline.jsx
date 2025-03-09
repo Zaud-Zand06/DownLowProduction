@@ -158,34 +158,34 @@ export default function OrderOnline() {
       }
       const data = await response.json();
       console.log(data);
-
       // 'object' is the main ITEM, 'relatedObjects' is everything else (like MODIFIER_LIST, MODIFIER, TAX, etc.)
       const { object: item, relatedObjects } = data;
-
-      // Gather modifiers for this item
       let modifiers = [];
       const modifierListIds =
         item?.itemData?.modifierListInfo?.map((m) => m.modifierListId) || [];
-
-      // Find matching modifier lists among relatedObjects
       const itemModifierLists =
         relatedObjects?.filter(
           (ro) => ro.type === "MODIFIER_LIST" && modifierListIds.includes(ro.id)
         ) || [];
 
-      // For each modifier list, gather the MODIFIER objects
       itemModifierLists.forEach((mlist) => {
+        const listModifiers = [];
         mlist.modifierListData?.modifiers?.forEach((mRef) => {
           if (mRef.type === "MODIFIER") {
-            modifiers.push(mRef);
+            listModifiers.push(mRef);
           }
+        });
+        modifiers.push({
+          modifierGroupName: mlist.modifierListData.name,
+          modifiersList: listModifiers,
         });
       });
 
-      // Store the ITEM data and all found modifiers in your state
       setSelectedItem({ ...item, modifiers });
       console.log("Selected item:");
       console.log(selectedItem);
+      console.log("Modifiers:");
+      console.log(modifiers);
 
       toggleMenuItemDrawer();
     } catch (error) {
@@ -288,42 +288,52 @@ export default function OrderOnline() {
               onClick={toggleMenuItemDrawer}
               style={{ position: "relative", left: "95%" }}
             />
+
+            {/* VARIATIONS */}
             <h2>{selectedItem.itemData.name}</h2>
-            <Masonry
-              columns={{ xs: 2, sm: 2, md: 4 }}
-              className="itemVariationSelectionContainer"
-            >
+            <div className="itemSelectionContainer">
               {selectedItem.itemData?.variations?.map((variation) => (
                 <div
                   key={variation.id}
-                  className="itemVariationSelection"
+                  className="itemSelection"
                   onClick={() =>
                     addToCart(selectedItem, variation.itemVariationData.name)
                   }
                 >
                   <h3>{variation.itemVariationData.name}</h3>
-                  <p className="itemVariationPrice">
+                  <p className="itemSelectionPrice">
                     {getFormattedPrice(selectedItem)}
                   </p>
                 </div>
               ))}
+            </div>
 
-              {selectedItem.modifiers && selectedItem.modifiers.length > 0 && (
-                <div>
-                  <h3>Modifiers</h3>
-                  {selectedItem.modifiers.map((mod) => (
-                    <div key={mod.id}>
-                      <h4>{mod.modifierData?.name}</h4>
-                      <p>
-                        {mod.modifierData?.priceMoney
-                          ? getFormattedPrice(mod)
-                          : "No Price"}
-                      </p>
+            {/* MODIFIERS */}
+            {selectedItem.modifiers && selectedItem.modifiers.length > 0 && (
+              <div className="itemSelectionContainer">
+                <h3>Modifiers</h3>
+                {selectedItem.modifiers.map((mod) => (
+                  <div key={mod.id} className="itemSelection">
+                    <h4>{mod.modifierGroupName}</h4>
+                    <div className="modifierSelectionContainer">
+                      {mod.modifiersList.map((modifier) => (
+                        <div
+                          key={modifier.id}
+                          className="modifierSelection"
+                          onClick={() =>
+                            console.log(
+                              `Adding modifier ${modifier.modifierData.name}`
+                            )
+                          }
+                        >
+                          <h5>{modifier.modifierData.name}</h5>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              )}
-            </Masonry>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </Drawer>
