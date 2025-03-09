@@ -80,9 +80,8 @@
 }
 .itemSelectionDrawer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   padding: 1rem;
-  align-items: center;
+  width: 50vw;
 }
 .itemSelectionContainer {
   & > * {

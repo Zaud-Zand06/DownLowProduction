@@ -279,6 +279,9 @@ export default function OrderOnline() {
           style: {
             backgroundColor: "var(--background-colour)",
             borderTop: "2px solid var(--border-colour)",
+            maxHeight: "80vh",
+            overflowY: "scroll",
+            alignItems: "center",
           },
         }}
       >
@@ -311,15 +314,14 @@ export default function OrderOnline() {
             {/* MODIFIERS */}
             {selectedItem.modifiers && selectedItem.modifiers.length > 0 && (
               <div className="itemSelectionContainer">
-                <h3>Modifiers</h3>
                 {selectedItem.modifiers.map((mod) => (
-                  <div key={mod.id} className="itemSelection">
+                  <>
                     <h4>{mod.modifierGroupName}</h4>
-                    <div className="modifierSelectionContainer">
+                    <div className="itemSelectionContainer">
                       {mod.modifiersList.map((modifier) => (
                         <div
                           key={modifier.id}
-                          className="modifierSelection"
+                          className="itemSelection"
                           onClick={() =>
                             console.log(
                               `Adding modifier ${modifier.modifierData.name}`
@@ -330,7 +332,7 @@ export default function OrderOnline() {
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </>
                 ))}
               </div>
             )}
