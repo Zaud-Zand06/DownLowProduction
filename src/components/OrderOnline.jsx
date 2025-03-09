@@ -159,14 +159,39 @@ export default function OrderOnline() {
       const data = await response.json();
       console.log(data);
 
-      setSelectedItem(data.object);
+      // 'object' is the main ITEM, 'relatedObjects' is everything else (like MODIFIER_LIST, MODIFIER, TAX, etc.)
+      const { object: item, relatedObjects } = data;
+
+      // Gather modifiers for this item
+      let modifiers = [];
+      const modifierListIds =
+        item?.itemData?.modifierListInfo?.map((m) => m.modifierListId) || [];
+
+      // Find matching modifier lists among relatedObjects
+      const itemModifierLists =
+        relatedObjects?.filter(
+          (ro) => ro.type === "MODIFIER_LIST" && modifierListIds.includes(ro.id)
+        ) || [];
+
+      // For each modifier list, gather the MODIFIER objects
+      itemModifierLists.forEach((mlist) => {
+        mlist.modifierListData?.modifiers?.forEach((mRef) => {
+          if (mRef.type === "MODIFIER") {
+            modifiers.push(mRef);
+          }
+        });
+      });
+
+      // Store the ITEM data and all found modifiers in your state
+      setSelectedItem({ ...item, modifiers });
+      console.log("Selected item:");
+      console.log(selectedItem);
 
       toggleMenuItemDrawer();
     } catch (error) {
       console.error("Error fetching item details:", error);
     }
   };
-
   function addToCart(item, variationName) {
     const cartItem = {
       ...item,
@@ -264,12 +289,11 @@ export default function OrderOnline() {
               style={{ position: "relative", left: "95%" }}
             />
             <h2>{selectedItem.itemData.name}</h2>
-            <h3>Spice</h3>
             <Masonry
               columns={{ xs: 2, sm: 2, md: 4 }}
               className="itemVariationSelectionContainer"
             >
-              {selectedItem.itemData.variations.map((variation) => (
+              {selectedItem.itemData?.variations?.map((variation) => (
                 <div
                   key={variation.id}
                   className="itemVariationSelection"
@@ -283,6 +307,22 @@ export default function OrderOnline() {
                   </p>
                 </div>
               ))}
+
+              {selectedItem.modifiers && selectedItem.modifiers.length > 0 && (
+                <div>
+                  <h3>Modifiers</h3>
+                  {selectedItem.modifiers.map((mod) => (
+                    <div key={mod.id}>
+                      <h4>{mod.modifierData?.name}</h4>
+                      <p>
+                        {mod.modifierData?.priceMoney
+                          ? getFormattedPrice(mod)
+                          : "No Price"}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </Masonry>
           </div>
         )}
