@@ -1,7 +1,6 @@
 import "./component_css/menu.css";
 import { useState, useEffect } from "react";
-import { Masonry } from "@mui/lab";
-import Card from "@mui/material/Card";
+import dessertImage from "../assets/dessertBars.avif";
 
 const sandosList = [
   {
@@ -320,66 +319,59 @@ const displayMenuList = [
   },
 ];
 
-function makeMenuList(menuList, windowWidth) {
+function makeMenuList(menuList) {
   return (
-    <Masonry
-      columns={windowWidth <= 700 ? 1 : 2}
-      spacing={2}
-      defaultHeight={450}
-      defaultColumns={4}
-      defaultSpacing={1}
-    >
+    <div className="menuList">
       {menuList.map((section, index) => {
         return (
           <div key={index} className="menuCard">
             <h2 className="sectionTitle">{section.title}</h2>
             {section.description &&
               section.description.map((line, index) => {
-                return <h4 key={index}>{line}</h4>;
+                return (
+                  <h4 className="sectionDescription" key={index}>
+                    {line}
+                  </h4>
+                );
               })}
             {section.items.map((item, index) => {
               return (
-                <Card
-                  variant="outlined"
-                  key={index}
-                  style={{
-                    backgroundColor: "var(--card-background-colour)",
-                    margin: ".5rem",
-                  }}
-                  className="menuCardItem"
-                >
+                <div className="menuCardItem" key={index}>
                   <h3>{item.title}</h3>
-                  <p>{item.description}</p>
+                  <p className="menuItemDescription">{item.description}</p>
                   {item.special && <h4>{item.special}</h4>}
                   <p className="price">{item.price}</p>
-                </Card>
+                </div>
               );
             })}
           </div>
         );
       })}
-    </Masonry>
+    </div>
   );
 }
 
 function Menu() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => {
-      window.innerWidth <= 700
-        ? setWindowWidth(window.innerWidth)
-        : setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     window.innerWidth <= 700
+  //       ? setWindowWidth(window.innerWidth)
+  //       : setWindowWidth(window.innerWidth);
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
   return (
-    <div className="menuContainer">
-      {makeMenuList(displayMenuList, windowWidth)}
-    </div>
+    <>
+      <div className="menuContainer">
+        {makeMenuList(displayMenuList)}
+        <img id="menuImageContainer" src={dessertImage} alt="" />
+      </div>
+    </>
   );
 }
 

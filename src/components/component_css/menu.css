@@ -1,9 +1,16 @@
+.menuContainerImage {
+  width: 25%;
+  aspect-ratio: 1/1;
+}
 .sectionTitle {
   -webkit-text-stroke: var(--border-colour) 1.5px;
   font-size: 3rem;
   color: var(--main-yellow);
   position: absolute;
   top: -6rem;
+}
+.sectionDescription {
+  width: 25rem;
 }
 .menuContainer h3 {
   font-family: "Ahkio W00 Bold";
@@ -27,22 +34,26 @@
 }
 .menuContainer {
   margin-top: 13rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 95svw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .menuCard {
+  display: flex;
   position: relative;
   padding: 1rem;
   border: 2px solid var(--border-colour);
   background-color: var(--white);
   border-radius: 5px;
+  margin: 2rem;
 }
 .menuCardItem {
   text-align: left;
   padding: 0.5rem;
   background-color: var(--card-background-colour);
+  width: 35%;
+  border: 2px solid var(--border-colour);
+  border-radius: 10px;
+  margin: 0.5rem;
 }
 .menuCard p {
   margin-bottom: 0px;
