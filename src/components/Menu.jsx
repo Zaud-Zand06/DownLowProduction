@@ -334,16 +334,18 @@ function makeMenuList(menuList) {
                   </h4>
                 );
               })}
-            {section.items.map((item, index) => {
-              return (
-                <div className="menuCardItem" key={index}>
-                  <h3>{item.title}</h3>
-                  <p className="menuItemDescription">{item.description}</p>
-                  {item.special && <h4>{item.special}</h4>}
-                  <p className="price">{item.price}</p>
-                </div>
-              );
-            })}
+            <div className="menuCardItemContainer">
+              {section.items.map((item, index) => {
+                return (
+                  <div className="menuCardItem" key={index}>
+                    <h3>{item.title}</h3>
+                    <p className="menuItemDescription">{item.description}</p>
+                    {item.special && <h4>{item.special}</h4>}
+                    <p className="price">{item.price}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         );
       })}
@@ -369,7 +371,9 @@ function Menu() {
     <>
       <div className="menuContainer">
         {makeMenuList(displayMenuList)}
-        <img id="menuImageContainer" src={dessertImage} alt="" />
+        <div id="menuImageContainer">
+          <img src={dessertImage} alt="" />
+        </div>
       </div>
     </>
   );

@@ -1,8 +1,4 @@
-.menuContainerImage {
-  width: 25%;
-  aspect-ratio: 1/1;
-}
-.sectionTitle {
+/* .sectionTitle {
   -webkit-text-stroke: var(--border-colour) 1.5px;
   font-size: 3rem;
   color: var(--main-yellow);
@@ -11,6 +7,11 @@
 }
 .sectionDescription {
   width: 25rem;
+}
+.menuContainer {
+  margin-top: 13rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .menuContainer h3 {
   font-family: "Ahkio W00 Bold";
@@ -32,10 +33,18 @@
   color: var(--text-dark);
   text-wrap: balance;
 }
-.menuContainer {
-  margin-top: 13rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.menuList {
+  width: 50%;
+  border: 2px solid var(--border-colour);
+}
+#menuImageContainer {
+  border: 2px solid var(--border-colour);
+  width: auto;
+}
+#menuImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .menuCard {
   display: flex;
@@ -96,4 +105,63 @@ p.secretMenuLink a:hover {
   .menuCard p {
     font-size: 1rem;
   }
+} */
+
+.menuContainer {
+  margin-top: 13rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.menuList {
+  padding-top: 1rem;
+  height: 50vw;
+  overflow-y: scroll;
+}
+.menuCard {
+  display: grid;
+  position: relative;
+  padding: 1rem;
+  border: 2px solid var(--border-colour);
+  background-color: var(--white);
+  border-radius: 5px;
+  margin: 2rem;
+}
+.menuCardItemContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem;
+}
+.menuCardItem {
+  text-align: left;
+  flex: 0 0 35%;
+  background-color: var(--card-background-colour);
+  border: 2px solid var(--border-colour);
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.sectionTitle {
+  -webkit-text-stroke: var(--border-colour) 1.5px;
+  font-size: 3rem;
+  color: var(--main-yellow);
+  position: absolute;
+  top: -6rem;
+}
+.sectionDescription {
+  font-size: 22px;
+}
+#menuImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: 2px solid var(--border-colour);
+  height: 45vw;
+  max-width: 45vw;
+  overflow: hidden;
+}
+#menuImageContainer > img {
+  object-fit: fill;
 }
