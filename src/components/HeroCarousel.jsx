@@ -37,7 +37,7 @@ const slides = [
     title: "Been here before?",
     image: jerry,
     description:
-      "Try customizing your favourite sando with different toppings like bacon, cheese, or even a fried egg!",
+      "Try customizing your favourite sando with different toppings like honey, cheese, or even a fried egg!",
     altText:
       "A massive fried chicken sandwhich, made with two butterflied legs, topped with melted cheese and bacon.",
   },

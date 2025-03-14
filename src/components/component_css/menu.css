@@ -146,6 +146,10 @@ p.secretMenuLink a:hover {
   padding: 0.5rem;
   margin: 0.5rem;
 }
+.menuCardItem .price {
+  font-weight: bold;
+  text-align: right;
+}
 .sectionTitle {
   -webkit-text-stroke: var(--border-colour) 1.5px;
   font-size: 3rem;
@@ -157,6 +161,7 @@ p.secretMenuLink a:hover {
   font-size: 22px;
 }
 #menuImageContainer {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,6 +171,22 @@ p.secretMenuLink a:hover {
   max-width: 45vw;
   overflow: hidden;
 }
+#menuImageContainer > h2 {
+  position: absolute;
+  top: 0rem;
+  left: 1rem;
+  font-size: 30px;
+  color: var(--main-yellow);
+  -webkit-text-stroke: 1px var(--border-colour);
+}
+#menuImageContainer > h3 {
+  position: absolute;
+  left: 1rem;
+  top: 2.5rem;
+  font-size: 25px;
+  color: var(--main-yellow);
+  -webkit-text-stroke: 1px var(--border-colour);
+}
 #menuImageContainer > img {
   object-fit: fill;
 }
@@ -173,6 +194,9 @@ p.secretMenuLink a:hover {
 @media screen and (max-width: 600px) {
   .menuContainer {
     grid-template-columns: 1fr;
+  }
+  .menuCardItem {
+    flex: 0 0 66%;
   }
   .menuList {
     height: auto;
