@@ -30,9 +30,9 @@ const menuImages = [
 
 const sandosList = [
   {
-    title: "The Buldak",
+    title: "The Mr.Feast",
     description:
-      "Ramen Dredged Chicken, Ramen Seasoning Hot Sauce, Scallion and red pickle Slaw!",
+      "Hot Honey glazed Chicken, Turbo Garlic Ranch, Hybrid BnB x Dill garlic pickles, and Slaw!",
     price: 19.15,
     special: null,
   },
