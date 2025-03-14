@@ -1,6 +1,20 @@
 import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import dessertImage from "../assets/dessertBars.avif";
+import melt from "../assets/dlChickenMelt.avif";
+
+const menuImages = [
+  {
+    name: "Dessert Bars",
+    price: 5.45,
+    imageSrc: dessertImage,
+  },
+  {
+    name: "DL Chicken Melt",
+    price: 16,
+    imageSrc: melt,
+  },
+];
 
 const sandosList = [
   {
@@ -320,6 +334,22 @@ const displayMenuList = [
 ];
 
 function makeMenuList(menuList) {
+  const horizontalScroll = (event) => {
+    if (event.target.closest(".menuCardItemContainer")) {
+      event.preventDefault();
+      const container = event.target.closest(".menuCardItemContainer");
+      container.scrollLeft += (event.deltaY + event.deltaX) * 0.8;
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("wheel", horizontalScroll, { passive: false });
+
+    return () => {
+      document.removeEventListener("wheel", horizontalScroll);
+    };
+  }, []);
+
   return (
     <div className="menuList">
       {menuList.map((section, index) => {
@@ -354,25 +384,14 @@ function makeMenuList(menuList) {
 }
 
 function Menu() {
-  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     window.innerWidth <= 700
-  //       ? setWindowWidth(window.innerWidth)
-  //       : setWindowWidth(window.innerWidth);
-  //   };
-  //   window.addEventListener("resize", handleResize);
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
   return (
     <>
       <div className="menuContainer">
         {makeMenuList(displayMenuList)}
         <div id="menuImageContainer">
-          <img src={dessertImage} alt="" />
+          {menuImages.map((image) => {
+            return <img src={image.imageSrc} index={image.name} />;
+          })}
         </div>
       </div>
     </>
