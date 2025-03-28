@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./component_css/HeroCarousel.css";
 import dessertBar from "../assets/dessertBars.avif";
-import jerry from "../assets/jerry.avif";
+import drumsticks from "../assets/DLDrums.avif";
 import sidesImage from "../assets/sides.avif";
 import mrFeastSando from "../assets/ramadanHalalCrop.avif";
 // Slides should be an array of objects with with an image, description, title and alt text.
@@ -18,6 +18,14 @@ const slides = [
       "A fried chicken sandwhich with coleslaw, hot honey dip and garlic ranch.",
   },
   {
+    title: "Looking for a Good Deal?",
+    image: drumsticks,
+    description:
+      "Craving some bone-in chicken? Well you're in luck! We are now offering bone-in chicken drums, for only 2 dollars! Only available on Tuesdays!",
+    altText:
+      "Fried drumsticks in a box, coated in a hot spice blend and topped with pickles, next to a can of coca-cola.",
+  },
+  {
     title: "Cereal Dessert Bars!",
     image: dessertBar,
     description:
@@ -29,17 +37,9 @@ const slides = [
     title: "Have you tried our sides?",
     image: sidesImage,
     description:
-      "Our Bacon Baked Beans and creamy Mac and Cheese are back for the winter season! Make sure to get them before they're gone!",
+      "Our BBQ Beef Baked Beans and creamy Mac and Cheese are back for the winter season! Make sure to get them before they're gone!",
     altText:
-      "A side of bacon baked beans, topped with cheese in a to go container, next to it is a side of creamy looking mac and cheese.",
-  },
-  {
-    title: "Been here before?",
-    image: jerry,
-    description:
-      "Try customizing your favourite sando with different toppings like honey, cheese, or even a fried egg!",
-    altText:
-      "A massive fried chicken sandwhich, made with two butterflied legs, topped with melted cheese and bacon.",
+      "A side of bbq baked beans, topped with cheese in a to go container, next to it is a side of creamy looking mac and cheese.",
   },
 ];
 

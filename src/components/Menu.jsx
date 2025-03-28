@@ -1,7 +1,7 @@
 import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import dessertImage from "../assets/dessertBars.avif";
-import melt from "../assets/dlChickenMelt.avif";
+import ramadan from "../assets/ramadanHalalCrop1.avif";
 import DLTacos from "../assets/DLTacos.avif";
 
 const menuImages = [
@@ -13,11 +13,10 @@ const menuImages = [
       "A man smiling while holding a chocolate peanut butter dessert bar, and a cinnamon toast crunch dessert bar.",
   },
   {
-    name: "DL Chicken Melt",
-    price: 16,
-    imageSrc: melt,
-    altText:
-      "2 halves of a fried chicken melt, stacked on top of each other, with cheese and sauce oozing out the sides.",
+    name: "Mr. Feast Sando",
+    price: 19.15,
+    imageSrc: ramadan,
+    altText: "Spiced and fried chicken dipped in hot honey in a sandwhich.",
   },
   {
     name: "DL Tacos",
