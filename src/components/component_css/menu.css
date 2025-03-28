@@ -36,10 +36,15 @@
 .menuCardItem {
   text-align: left;
   flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
   background-color: var(--card-background-colour);
   border: 2px solid var(--border-colour);
   padding: 0.5rem;
   margin: 0.5rem;
+}
+.menuCardItem > * {
+  margin: 0.25rem;
 }
 .menuCardItem .price {
   font-weight: bold;
