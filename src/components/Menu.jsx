@@ -1,12 +1,38 @@
 import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import dessertImage from "../assets/dessertBars.avif";
+import melt from "../assets/dlChickenMelt.avif";
+import DLTacos from "../assets/DLTacos.avif";
+
+const menuImages = [
+  {
+    name: "Dessert Bars",
+    price: 5.45,
+    imageSrc: dessertImage,
+    altText:
+      "A man smiling while holding a chocolate peanut butter dessert bar, and a cinnamon toast crunch dessert bar.",
+  },
+  {
+    name: "DL Chicken Melt",
+    price: 16,
+    imageSrc: melt,
+    altText:
+      "2 halves of a fried chicken melt, stacked on top of each other, with cheese and sauce oozing out the sides.",
+  },
+  {
+    name: "DL Tacos",
+    price: 8.95,
+    imageSrc: DLTacos,
+    altText:
+      "2 fried chicken tacos covered in sauce being held up on a serving tray.",
+  },
+];
 
 const sandosList = [
   {
-    title: "The Buldak",
+    title: "The Mr.Feast",
     description:
-      "Ramen Dredged Chicken, Ramen Seasoning Hot Sauce, Scallion and red pickle Slaw!",
+      "Hot Honey glazed Chicken, Turbo Garlic Ranch, Hybrid BnB x Dill garlic pickles, and Slaw!",
     price: 19.15,
     special: null,
   },
@@ -44,7 +70,7 @@ const sandosList = [
   },
   {
     title: "Extra Toppings",
-    description: "Fried Egg, Bacon, Cheese",
+    description: "Fried Egg, Cheese",
     price: 2.75,
     special: null,
   },
@@ -320,6 +346,22 @@ const displayMenuList = [
 ];
 
 function makeMenuList(menuList) {
+  const horizontalScroll = (event) => {
+    if (event.target.closest(".menuCardItemContainer")) {
+      event.preventDefault();
+      const container = event.target.closest(".menuCardItemContainer");
+      container.scrollLeft += (event.deltaY + event.deltaX) * 0.8;
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("wheel", horizontalScroll, { passive: false });
+
+    return () => {
+      document.removeEventListener("wheel", horizontalScroll);
+    };
+  }, []);
+
   return (
     <div className="menuList">
       {menuList.map((section, index) => {
@@ -354,25 +396,37 @@ function makeMenuList(menuList) {
 }
 
 function Menu() {
-  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // menuImage will be looped through using the setMenuImage,
+  // which just chooses the item index
+  const [menuImage, setMenuImage] = useState(0);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     window.innerWidth <= 700
-  //       ? setWindowWidth(window.innerWidth)
-  //       : setWindowWidth(window.innerWidth);
-  //   };
-  //   window.addEventListener("resize", handleResize);
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
+  const updateMenuImage = () => {
+    let newIndex = null;
+    if (menuImage < menuImages.length - 1) {
+      newIndex = menuImage + 1;
+      setMenuImage(newIndex);
+    } else {
+      setMenuImage(0);
+    }
+  };
+  // this will be the useEffect function that actually
+  // calls the set interval in order to have the images change
+  useEffect(() => {
+    const interval = setInterval(updateMenuImage, 10000);
+
+    return () => clearInterval(interval);
+  });
   return (
     <>
       <div className="menuContainer">
         {makeMenuList(displayMenuList)}
         <div id="menuImageContainer">
-          <img src={dessertImage} alt="" />
+          <h2>{menuImages[menuImage].name}</h2>
+          <h3>$ {menuImages[menuImage].price}</h3>
+          <img
+            src={menuImages[menuImage].imageSrc}
+            altText={menuImages[menuImage].altText}
+          />
         </div>
       </div>
     </>

@@ -5,17 +5,17 @@ import "./component_css/HeroCarousel.css";
 import dessertBar from "../assets/dessertBars.avif";
 import jerry from "../assets/jerry.avif";
 import sidesImage from "../assets/sides.avif";
-import buldakSando from "../assets/buldakSandoCrop.avif";
+import mrFeastSando from "../assets/ramadanHalalCrop.avif";
 // Slides should be an array of objects with with an image, description, title and alt text.
 // you can have as many slides as you want, but try and limit it to less than 10 just so its not too crazy
 const slides = [
   {
-    title: "The Buldak Sando!",
-    image: buldakSando,
+    title: "The Mr.Feast Sando!",
+    image: mrFeastSando,
     description:
-      "An outrageously crunchy sando that bigtime fans of Down Low will remember! Dredged in crushed Buldak Ramen noodles, dunked in Spicy Ramen hotsauce, and topped with a new scallion, red onion slaw!",
+      "Proudly partnering with Mr.Feast Vancouver to bring you our newest special! Crispy Fried Chicken dipped in a Hot Honey Glaze, Turbo Garlic Ranch, Slaw, Hybrid BnB and Dill pickles with extra Garlic!",
     altText:
-      "A fried chicken sandwhich with coleslaw, ginger scallion dressing and a dusting of typhoon shelter seasoning.",
+      "A fried chicken sandwhich with coleslaw, hot honey dip and garlic ranch.",
   },
   {
     title: "Cereal Dessert Bars!",
@@ -37,7 +37,7 @@ const slides = [
     title: "Been here before?",
     image: jerry,
     description:
-      "Try customizing your favourite sando with different toppings like bacon, cheese, or even a fried egg!",
+      "Try customizing your favourite sando with different toppings like honey, cheese, or even a fried egg!",
     altText:
       "A massive fried chicken sandwhich, made with two butterflied legs, topped with melted cheese and bacon.",
   },
