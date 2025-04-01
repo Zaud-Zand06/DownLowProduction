@@ -12,7 +12,7 @@ import Catering from "./components/Catering";
 import Credits from "./components/Credits";
 
 function App() {
-  const [displayMenu, setDisplayMenu] = useState("home");
+  const [displayMenu, setDisplayMenu] = useState("menu");
   const [scrollToTop, setScrollToTop] = useState(false);
 
   useEffect(() => {
