@@ -125,7 +125,7 @@ const chickenByThePieceList = [
   {
     title: "Nuggets",
     description: "A bowl of popcorn chicken with your choice of dipping sauce",
-    price: 10.99,
+    price: 11.59,
     special: null,
   },
   {
@@ -144,29 +144,21 @@ const chickenByThePieceList = [
 ];
 const sidesList = [
   {
-    title: "Regular Fries",
-    description:
-      "Crinkle-cut, salted, with medium dust! Comes with ketchup and DL sauce",
-    price: 7.25,
-    special: "Get them truffled for 2",
-  },
-  {
-    title: "Half-Size Fries",
-    description:
-      "Crinkle-cut, salted, with medium dust! Comes with ketchup and DL sauce",
-    price: 5.25,
-    special: "Get them truffled for 2",
+    title: "Fries",
+    description: "Crinkle-cut and crispy. Salted, spicy, or truffled!",
+    price: 5.49,
+    special: "Make it a large for 2 more",
   },
   {
     title: "Macaroni and Cheese",
     description: "Warm, Cheesy, and Creamy",
-    price: 5.25,
+    price: 5.99,
     special: false,
   },
   {
-    title: "Bacon Baked Beans",
-    description: "Bacon, onions, beans, with a bit of a kick",
-    price: 5.25,
+    title: "BBQ Beef Baked Beans",
+    description: "BBQ Beef tips, onions, beans, with a bit of a kick",
+    price: 5.99,
     special: false,
   },
   {
@@ -182,14 +174,9 @@ const sidesList = [
     special: false,
   },
   {
-    title: "Peanut Butter and Chocolate Dessert Bar",
-    description: "Sweet, savoury and crunchy",
-    price: 5.45,
-    special: false,
-  },
-  {
-    title: "Cinnamon Toast Dessert Bar",
-    description: "Cinnamon toast dessert bar",
+    title: "Marshmallow Dessert Bar",
+    description:
+      "Cinnamon Toast Crunch, Chocolate Peanut Butter, or our monthly special",
     price: 5.45,
     special: false,
   },
@@ -219,7 +206,7 @@ const comboList = [
   {
     title: "4 Piece Tender Combo",
     description: "4 tenders, any side and a drink",
-    price: 22.49,
+    price: 21.99,
     special: false,
   },
   {
@@ -231,17 +218,17 @@ const comboList = [
   {
     title: "Sando and a Side",
     description: "Any of our sandos and any side",
-    price: 25.15,
+    price: 25.45,
     special: false,
   },
   {
-    title: "Two Piece and a Side",
+    title: "2 Piece and a Side",
     description: "2 boneless thighs, any side and a drink",
     price: 17.49,
     special: false,
   },
   {
-    title: "Two by Four",
+    title: "4 Piece and a Side",
     description: "4 thighs, any 2 sides and 2 drinks",
     price: 34.49,
     special: false,
@@ -250,13 +237,7 @@ const comboList = [
     title: "1 Breast and a Side",
     description: "1 white meat breast, any side and a drink",
     price: 16.49,
-    special: false,
-  },
-  {
-    title: "2 Breasts and a Side",
-    description: "2 white meat breasts, any side and a drink",
-    price: 25.49,
-    special: false,
+    special: "Add an extra breast for 9",
   },
   {
     title: "Piled High",
@@ -344,11 +325,11 @@ const displayMenuList = [
     description: ["For sharing, or for yourself"],
     items: sidesList,
   },
-  {
-    title: "Sauces",
-    description: ["For dipping, or drizzling. All sauces are made in house"],
-    items: sauceList,
-  },
+  // {
+  //   title: "Sauces",
+  //   description: ["For dipping, or drizzling. All sauces are made in house"],
+  //   items: sauceList,
+  // },
 ];
 
 function makeMenuList(menuList) {
