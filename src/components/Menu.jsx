@@ -13,7 +13,7 @@ const menuImages = [
       "A man smiling while holding a chocolate peanut butter dessert bar, and a cinnamon toast crunch dessert bar.",
   },
   {
-    name: "Mr. Feast Sando",
+    name: "Lemon Pepper Sando",
     price: 19.15,
     imageSrc: ramadan,
     altText: "Spiced and fried chicken dipped in hot honey in a sandwhich.",
@@ -29,9 +29,16 @@ const menuImages = [
 
 const sandosList = [
   {
+    title: "The Lemon Pepper Wet",
+    description:
+      "Chili Oil Buffalo dunked chicken, Lemon-y Honey Jalapeno Mayo, Pickled onions, Cole slaw, Pickles, and our Lemon Pepper dust",
+    price: 19.15,
+    special: null,
+  },
+  {
     title: "The Mr.Feast",
     description:
-      "Hot Honey glazed Chicken, Turbo Garlic Ranch, Hybrid BnB x Dill garlic pickles, and Slaw!",
+      "Hot Honey glazed Chicken, Turbo Garlic Ranch, Hybrid BnB x Dill garlic pickles, and Slaw",
     price: 19.15,
     special: null,
   },

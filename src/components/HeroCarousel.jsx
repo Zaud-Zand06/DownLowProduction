@@ -5,17 +5,17 @@ import "./component_css/HeroCarousel.css";
 import dessertBar from "../assets/dessertBars.avif";
 import drumsticks from "../assets/DLDrums.avif";
 import sidesImage from "../assets/sides.avif";
-import mrFeastSando from "../assets/ramadanHalalCrop.avif";
+import lemonPepperSando from "../assets/LemonPepper1.avif";
 // Slides should be an array of objects with with an image, description, title and alt text.
 // you can have as many slides as you want, but try and limit it to less than 10 just so its not too crazy
 const slides = [
   {
-    title: "The Mr.Feast Sando!",
-    image: mrFeastSando,
+    title: "The Return of the Lemon Pepper",
+    image: lemonPepperSando,
     description:
-      "Proudly partnering with Mr.Feast Vancouver to bring you our newest special! Crispy Fried Chicken dipped in a Hot Honey Glaze, Turbo Garlic Ranch, Slaw, Hybrid BnB and Dill pickles with extra Garlic!",
+      "After months of waiting, the Lemon Pepper is finally back! Lemony Honey Jalapeno Mayo, A spicy Frank's Red and Chili Oil dunk, and the classic Lemon Pepper Dusting!",
     altText:
-      "A fried chicken sandwhich with coleslaw, hot honey dip and garlic ranch.",
+      "A fried chicken sandwich with coleslaw, hot honey dip and lemon pepper seasoning.",
   },
   {
     title: "Looking for a Good Deal?",
