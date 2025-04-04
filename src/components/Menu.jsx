@@ -14,7 +14,7 @@ const menuImages = [
   },
   {
     name: "Lemon Pepper Sando",
-    price: 19.15,
+    price: 19.45,
     imageSrc: ramadan,
     altText: "Spiced and fried chicken dipped in hot honey in a sandwhich.",
   },
@@ -32,46 +32,46 @@ const sandosList = [
     title: "The Lemon Pepper Wet",
     description:
       "Chili Oil Buffalo dunked chicken, Lemon-y Honey Jalapeno Mayo, Pickled onions, Cole slaw, Pickles, and our Lemon Pepper dust",
-    price: 19.15,
+    price: 19.45,
     special: null,
   },
   {
     title: "The Mr.Feast",
     description:
       "Hot Honey glazed Chicken, Turbo Garlic Ranch, Hybrid BnB x Dill garlic pickles, and Slaw",
-    price: 19.15,
+    price: 19.45,
     special: null,
   },
   {
     title: "The OG",
     description:
       "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
-    price: 19.15,
+    price: 19.45,
     special: null,
   },
   {
     title: "The Stinger",
     description: "Fermented Chili Honey, Charred Cabbage Slaw, Rookie Mayo",
-    price: 19.15,
+    price: 19.45,
     special: null,
   },
   {
     title: "The Jerk",
     description: "Jerk Dusted Chicken, Pickled onions, Slaw, Tomato, Jerk Mayo",
-    price: 19.15,
+    price: 19.45,
     special: null,
   },
   {
     title: "The Agrodulce",
     description:
       "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce",
-    price: 19.15,
+    price: 19.45,
     special: null,
   },
   {
     title: "The Rookie",
     description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
-    price: 19.15,
+    price: 19.45,
     special: null,
   },
   {
