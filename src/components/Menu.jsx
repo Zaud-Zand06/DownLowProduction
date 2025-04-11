@@ -77,7 +77,7 @@ const sandosList = [
   {
     title: "Extra Toppings",
     description: "Fried Egg, Cheese",
-    price: 2.75,
+    price: 2.25,
     special: null,
   },
 ];
