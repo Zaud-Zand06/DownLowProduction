@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./component_css/HeroCarousel.css";
 import dessertBar from "../assets/dessertBars.avif";
 import drumsticks from "../assets/DLDrums.avif";
-import sidesImage from "../assets/sides.avif";
+import potSaladMacSalad from "../assets/potSaladMacSalad.avif";
 import lemonPepperSando from "../assets/LemonPepper1.avif";
 // Slides should be an array of objects with with an image, description, title and alt text.
 // you can have as many slides as you want, but try and limit it to less than 10 just so its not too crazy
@@ -35,11 +35,9 @@ const slides = [
   },
   {
     title: "Have you tried our sides?",
-    image: sidesImage,
-    description:
-      "Our BBQ Beef Baked Beans and creamy Mac and Cheese are back for the winter season! Make sure to get them before they're gone!",
-    altText:
-      "A side of bbq baked beans, topped with cheese in a to go container, next to it is a side of creamy looking mac and cheese.",
+    image: potSaladMacSalad,
+    description: `You asked and we listened! Our Famous Mac Salad and Potato Salad are back for the Spring and Summer, Cheesy Pimento or Creamy backyard-style dill dressing are perfect for enjoying the sun!`,
+    altText: "A side of potato salad and pimento mac salad.",
   },
 ];
 

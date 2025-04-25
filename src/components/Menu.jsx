@@ -143,14 +143,14 @@ const sidesList = [
     special: "Make it a large for 2 more",
   },
   {
-    title: "Macaroni and Cheese",
-    description: "Warm, Cheesy, and Creamy",
+    title: "Pimento Mac Salad",
+    description: "Pimento Cheese dressing, Pickled Celery, Macaroni Noodles",
     price: 5.99,
     special: false,
   },
   {
-    title: "BBQ Beef Baked Beans",
-    description: "BBQ Beef tips, onions, beans, with a bit of a kick",
+    title: "Dill Potato Salad",
+    description: "Creamy Dill Dressing",
     price: 5.99,
     special: false,
   },
