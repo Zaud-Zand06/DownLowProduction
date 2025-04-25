@@ -56,7 +56,7 @@ export default function CateringForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      const mailToLink = `mailto:sydney@dlchicken.ca?subject=Catering Request&body=${encodeURIComponent(
+      const mailToLink = `mailto:sydney@dlchickenshack.ca?subject=Catering Request&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\nPhone Number: ${formData.phone}\nEvent Date: ${formData.eventDate}\nNumber of Attendees: ${formData.eventAttendees}\nEvent Details: ${formData.eventDetails}`
       )}`;
       window.location.href = mailToLink;
