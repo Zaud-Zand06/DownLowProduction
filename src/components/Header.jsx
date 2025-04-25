@@ -1,12 +1,59 @@
 import "./component_css/header.css";
 import PropTypes from "prop-types";
 import { useState, useEffect, useRef } from "react";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
 Header.propTypes = {
   setDisplayMenu: PropTypes.func.isRequired,
   displayMenu: PropTypes.string.isRequired,
   setScrollToTop: PropTypes.func.isRequired,
 };
+
+function HeaderOrderOnlineMUIMenu({ eastVanLink, UBCLink }) {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <>
+      <a
+        id="orderOnlineMenuButton"
+        aria-controls={open ? "orderOnlineMenu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onClick={handleClick}
+      >
+        Order Pickup
+      </a>
+      <Menu
+        id="orderOnlineMenu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          "aria-labelledby": "orderOnlineMenuButton",
+        }}
+      >
+        <MenuItem>
+          <a target="_blank" href={eastVanLink} onClick={() => handleClose()}>
+            DL East Van
+          </a>
+        </MenuItem>
+        <MenuItem>
+          <a target="_blank" href={UBCLink} onClick={() => handleClose()}>
+            DL UBC
+          </a>
+        </MenuItem>
+      </Menu>
+    </>
+  );
+}
 
 function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
   const [isVisible, setIsVisible] = useState(true);
@@ -62,12 +109,7 @@ function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
         </h1>
       </div>
       <div className="hamburgerMenuButtons">
-        <a href={eastVanLink} target="_blank">
-          East Van Ordering
-        </a>
-        <a href={UBCLink} target="_blank">
-          UBC Ordering
-        </a>
+        <HeaderOrderOnlineMUIMenu eastVanLink={eastVanLink} UBCLink={UBCLink} />
         <a
           target="_blank"
           onClick={() => {
@@ -77,6 +119,14 @@ function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
           }}
         >
           Get in Touch
+        </a>
+        <a
+          onClick={() => {
+            setDisplayMenu("catering");
+            setScrollToTop(true);
+          }}
+        >
+          Catering
         </a>
         {["menu", "credits", "catering"].includes(displayMenu) && (
           <a

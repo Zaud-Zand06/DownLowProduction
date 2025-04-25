@@ -30,7 +30,7 @@ function Footer({ setDisplayMenu, setScrollToTop }) {
           address: "6065 University Blvd, Vancouver, BC V6T 0C5",
           description: "UBC",
           hours: "11:00am - 9:00pm Mon-Sat / 11:00am - 4:30pm Sun",
-          number: "(604) 283-1385",
+          number: "(604) 221-2755",
           gMapsLink: "https://maps.app.goo.gl/aZ5F1FjducPrUPiw7",
         },
       ];

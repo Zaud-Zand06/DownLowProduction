@@ -36,13 +36,6 @@ const sandosList = [
     special: null,
   },
   {
-    title: "The Mr.Feast",
-    description:
-      "Hot Honey glazed Chicken, Turbo Garlic Ranch, Hybrid BnB x Dill garlic pickles, and Slaw",
-    price: 19.15,
-    special: null,
-  },
-  {
     title: "The OG",
     description:
       "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
@@ -412,7 +405,7 @@ function Menu() {
           <h3>$ {menuImages[menuImage].price}</h3>
           <img
             src={menuImages[menuImage].imageSrc}
-            altText={menuImages[menuImage].altText}
+            alttext={menuImages[menuImage].altText}
           />
         </div>
       </div>

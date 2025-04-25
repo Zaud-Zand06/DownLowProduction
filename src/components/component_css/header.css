@@ -54,7 +54,15 @@
 #redLogo:hover {
   color: var(--button-hover-colour);
 }
-
+#orderOnlineMenu a {
+  font-size: 1.5rem;
+  color: var(--main-red);
+  -webkit-text-stroke-color: var(--border-colour);
+  -webkit-text-stroke-width: 1px;
+}
+#orderOnlineMenu a:hover {
+  color: var(--main-yellow);
+}
 .hamburgerMenuButtons {
   gap: 1rem;
   align-items: center;
