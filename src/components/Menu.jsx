@@ -79,13 +79,13 @@ const chickenByThePieceList = [
     title: "Breast",
     description: "All White Meat & Tender",
     price: 10.99,
-    special: null,
+    special: "Add an extra thigh for 9!",
   },
   {
-    title: "Thigh",
-    description: "Boneless & Juicy",
-    price: 6.25,
-    special: false,
+    title: "Two Thighs",
+    description: "Boneless & Juicy.",
+    price: 9.99,
+    special: "Add extra thighs for 4 each!",
   },
   {
     title: "4 Piece Tender",
