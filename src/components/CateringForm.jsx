@@ -5,10 +5,16 @@ import {
   Input,
   FormHelperText,
   Button,
+  RadioGroup,
+  FormControlLabel,
+  FormLabel,
+  Radio,
 } from "@mui/material";
 
 export default function CateringForm() {
   const [formData, setFormData] = useState({
+    whichRestaurant: "",
+    cateringMethod: "",
     name: "",
     email: "",
     phone: "",
@@ -19,19 +25,26 @@ export default function CateringForm() {
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
-    const { id, value } = e.target;
+    const { name, id, value } = e.target;
+    const key = id || name;
     setFormData((prevData) => ({
       ...prevData,
-      [id]: value,
+      [key]: value,
     }));
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [id]: "",
+      [key]: "",
     }));
   };
 
   const validate = () => {
     let tempError = {};
+    if (!formData.whichRestaurant) {
+      formData.whichRestaurant = "All Locations";
+    }
+    if (!formData.cateringMethod) {
+      formData.cateringMethod = "Pick Up";
+    }
     if (!formData.name) {
       tempError.name = "Name is required";
     }
@@ -57,14 +70,85 @@ export default function CateringForm() {
     e.preventDefault();
     if (validate()) {
       const mailToLink = `mailto:sydney@dlchickenshack.ca?subject=Catering Request&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\nPhone Number: ${formData.phone}\nEvent Date: ${formData.eventDate}\nNumber of Attendees: ${formData.eventAttendees}\nEvent Details: ${formData.eventDetails}`
+        `Catering Menu: ${formData.whichRestaurant}\nCatering Service Style: ${formData.cateringMethod}\nName: ${formData.name}\nEmail: ${formData.email}\nPhone Number: ${formData.phone}\nEvent Date: ${formData.eventDate}\nNumber of Attendees: ${formData.eventAttendees}\nEvent Details: ${formData.eventDetails}`
       )}`;
       window.location.href = mailToLink;
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} netlify>
+    <form onSubmit={handleSubmit}>
+      <FormControl fullWidth margin="normal" error={!!errors.whichRestaurant}>
+        <FormLabel id="whichRestaurantLabel">
+          Which restaurant are you interested in catering from?
+        </FormLabel>
+        <RadioGroup
+          aria-labelledby="whichRestaurantLabel"
+          defaultValue="All Locations"
+          name="whichRestaurant"
+          row
+          onChange={handleChange}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <FormControlLabel
+            value="All Locations"
+            control={<Radio />}
+            label="All Locations"
+          />
+          <FormControlLabel
+            value="DL Chicken"
+            control={<Radio />}
+            label="DL Chicken"
+          />
+          <FormControlLabel
+            value="DL Burgers"
+            control={<Radio />}
+            label="DL Burgers"
+          />
+          <FormControlLabel
+            value="Vennies"
+            control={<Radio />}
+            label="Vennie's Subs"
+          />
+        </RadioGroup>
+      </FormControl>
+
+      <FormControl fullWidth margin="normal" error={!!errors.cateringMethod}>
+        <FormLabel id="cateringMethod">
+          What kind of catering are you interested in?
+        </FormLabel>
+        <RadioGroup
+          aria-labelledby="cateringMethodLabel"
+          defaultValue="Pick Up"
+          name="cateringMethod"
+          row
+          onChange={handleChange}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <FormControlLabel
+            value="Pick Up"
+            control={<Radio />}
+            label="Pick Up"
+          />
+          <FormControlLabel
+            value="Delivery"
+            control={<Radio />}
+            label="Delivery"
+          />
+          <FormControlLabel
+            value="On Site Catering "
+            control={<Radio />}
+            label="On Site Catering"
+          />
+        </RadioGroup>
+      </FormControl>
+
       <FormControl fullWidth margin="normal" error={!!errors.name}>
         <InputLabel htmlFor="name">Name</InputLabel>
         <Input

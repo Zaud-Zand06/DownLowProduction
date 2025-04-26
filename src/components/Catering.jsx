@@ -8,7 +8,7 @@ export default function Catering() {
       <div id="cateringForm">
         <h1>Bring us to your next event!</h1>
         <p>
-          From Fried Chicken, Burgers and Specialty Subs we have a variety of
+          From Fried Chicken and Burgers to Specialty Subs we have a variety of
           options to choose from.
           <br />
           Click the tabs below for specfic catering menus, or fill out the form
