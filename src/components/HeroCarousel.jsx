@@ -5,23 +5,23 @@ import "./component_css/HeroCarousel.css";
 import dessertBar from "../assets/dessertBars.avif";
 import drumsticks from "../assets/DLDrums.avif";
 import potSaladMacSalad from "../assets/potSaladMacSalad.avif";
-import lemonPepperSando from "../assets/LemonPepper1.avif";
+import szechuanSando from "../assets/szechuanSando1300px.avif";
 // Slides should be an array of objects with with an image, description, title and alt text.
 // you can have as many slides as you want, but try and limit it to less than 10 just so its not too crazy
 const slides = [
   {
-    title: "The Return of the Lemon Pepper",
-    image: lemonPepperSando,
+    title: "The Mala Sando is here!",
+    image: szechuanSando,
     description:
-      "After months of waiting, the Lemon Pepper is finally back! Lemony Honey Jalapeno Mayo, A spicy Frank's Red and Chili Oil dunk, and the classic Lemon Pepper Dusting!",
+      "Szechuan peppercorn sauce, fresh slaw, scallions and our Rookie Sauce make for a sweet, sour and spicy experience. Guaranteed to leave you with that delightful mala numbness.",
     altText:
-      "A fried chicken sandwich with coleslaw, hot honey dip and lemon pepper seasoning.",
+      "A fried chicken sandwich with coleslaw, scallions and spicy dipped chicken.",
   },
   {
     title: "Looking for a Good Deal?",
     image: drumsticks,
     description:
-      "Craving some bone-in chicken? Well you're in luck! We are now offering bone-in chicken drums, for only 2 dollars! Only available on Tuesdays!",
+      "Craving some bone-in chicken? Well you're in luck! Every Tuesday we're offering bone-in drums for a toonie each",
     altText:
       "Fried drumsticks in a box, coated in a hot spice blend and topped with pickles, next to a can of coca-cola.",
   },
@@ -36,7 +36,7 @@ const slides = [
   {
     title: "Have you tried our sides?",
     image: potSaladMacSalad,
-    description: `You asked and we listened! Our Famous Mac Salad and Potato Salad are back for the Spring and Summer, Cheesy Pimento or Creamy backyard-style dill dressing are perfect for enjoying the sun!`,
+    description: `Our Famous Mac Salad and Potato Salad are back for the Spring and Summer, Cheesy Pimento or Creamy backyard-style dill dressing are perfect for enjoying the sun!`,
     altText: "A side of potato salad and pimento mac salad.",
   },
 ];

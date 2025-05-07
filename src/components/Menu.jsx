@@ -1,37 +1,30 @@
 import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import dessertImage from "../assets/dessertBars.avif";
-import ramadan from "../assets/ramadanHalalCrop1.avif";
-import DLTacos from "../assets/DLTacos.avif";
+import birthdayCakeBar from "../assets/birthdayCakeDessert1300px.avif";
 
 const menuImages = [
   {
-    name: "Dessert Bars",
+    name: "Marshmallow Dessert Bars",
     price: 5.45,
     imageSrc: dessertImage,
     altText:
       "A man smiling while holding a chocolate peanut butter dessert bar, and a cinnamon toast crunch dessert bar.",
   },
   {
-    name: "Lemon Pepper Sando",
-    price: 19.45,
-    imageSrc: ramadan,
-    altText: "Spiced and fried chicken dipped in hot honey in a sandwhich.",
-  },
-  {
-    name: "DL Tacos",
-    price: 8.95,
-    imageSrc: DLTacos,
+    name: "Birthday Cake Dessert Bar",
+    price: 5.45,
+    imageSrc: birthdayCakeBar,
     altText:
-      "2 fried chicken tacos covered in sauce being held up on a serving tray.",
+      "A marshmallow dessert bar covered with pink frosting and sprinkles.",
   },
 ];
 
 const sandosList = [
   {
-    title: "The Lemon Pepper Wet",
+    title: "The Mala Sando",
     description:
-      "Chili Oil Buffalo dunked chicken, Lemon-y Honey Jalapeno Mayo, Pickled onions, Cole slaw, Pickles, and our Lemon Pepper dust",
+      "A numb and spicy Szechuan Peppercorn sauce dip, Scallions and Slaw",
     price: 19.45,
     special: null,
   },
