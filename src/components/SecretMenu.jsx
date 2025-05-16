@@ -1,66 +1,28 @@
 import "./component_css/secretMenu.css";
-import { Masonry } from "@mui/lab";
-import logo from "../assets/the_logo.webp";
-import { useState, useEffect } from "react";
+import szechuanSandoIcon from "../assets/szechuanSandoIcon.png";
 
-const secretMenuList = [
-  {
-    title: "Fries on the DL",
-    description:
-      "Fries topped with slaw, pickled onions, pickles and a big squeeze of our DL sauce, with chopped thighs or a breast",
-    image: logo,
-  },
-  {
-    title: "Waffle on the DL",
-    description:
-      "A fresh waffle topped with slaw, pickled onions, pickles, topped with thighs or a breast and a side of smoked jalapeno sauce",
-    image: logo,
-  },
-  {
-    title: "The Double Double Down",
-    description: "Two thighs, bacon and cheese, served open face on a OG build",
-    image: logo,
-  },
-  {
-    title: "The Jerry",
-    description: "Two legs, bacon and cheese, served open face on a OG build",
-    image: logo,
-  },
-  {
-    title: "The Chicken Bacon Ranch",
-    description:
-      "Our house made ranch, bacon and cool ranch dusted chicken. Served with either a leg or a breast",
-    image: logo,
-  },
-];
 function SecretMenu() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      window.innerWidth <= 700
-        ? setWindowWidth(window.innerWidth)
-        : setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div className="secretMenuContainer">
-      <h2>Nice work finding our secret menu...</h2>
-      <Masonry columns={windowWidth < 700 ? 1 : 2} spacing={2}>
-        {secretMenuList.map((item, index) => {
-          return (
-            <div key={index} className="secretMenuItem">
-              <img src={item.image} alt={item.title} />
-              <h2>{item.title}</h2>
-              <p>{item.description}</p>
-            </div>
-          );
-        })}
-      </Masonry>
+      <h2>Nothing here yet.... were still cooking something up here.......</h2>
+      <div className="spin3d-simple">
+        <img src={szechuanSandoIcon} alt="fried chicken sandwich" />
+      </div>
+      <h1>Thanks for being a fan :3</h1>
+      <p>have you checked out our other brands?</p>
+      <p>dl burgers</p>
+      <p>vennies sub shop</p>
+      <p>the drive canteen</p>
+      <p>sunday pies</p>
+      <span>
+        <h3>Photos by</h3>
+        <p>Alcantara Media</p>
+        <p>"chicken jimmy"</p>
+        <h3>made and designed by</h3>
+        <p>Alex Li</p>
+        <h4>fonts</h4>
+        <a href="http://www.onlinewebfonts.com">Web Fonts</a>
+      </span>
     </div>
   );
 }
