@@ -43,6 +43,7 @@ function Footer({ setDisplayMenu, setScrollToTop }) {
           )}&key=AIzaSyD6b5Z3lxK9tZ2uvruzTHQcAX6e_tnqX7k`
         );
         const data = await response.json();
+        console.log(data);
         const location = data.results[0].geometry.location;
         locations.push({
           ...location,
