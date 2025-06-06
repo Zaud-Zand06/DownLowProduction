@@ -22,9 +22,9 @@ const menuImages = [
 
 const sandosList = [
   {
-    title: "The Mala Sando",
+    title: "The Paisano Sando",
     description:
-      "A numb and spicy Szechuan Peppercorn sauce dip, Scallions and Slaw",
+      "Italian Sausage dust, Sauteed Onions and Peppers, Basil garlic mayo",
     price: 19.45,
     special: null,
   },

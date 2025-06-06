@@ -5,17 +5,17 @@ import "./component_css/HeroCarousel.css";
 import dessertBar from "../assets/dessertBars.avif";
 import drumsticks from "../assets/DLDrums.avif";
 import potSaladMacSalad from "../assets/potSaladMacSalad.avif";
-import szechuanSando from "../assets/szechuanSando1300px.avif";
+import paisanoSando from "../assets/PasisanoSando.avif";
 // Slides should be an array of objects with with an image, description, title and alt text.
 // you can have as many slides as you want, but try and limit it to less than 10 just so its not too crazy
 const slides = [
   {
-    title: "The Mala Sando is here!",
-    image: szechuanSando,
+    title: "Meet the Paisano",
+    image: paisanoSando,
     description:
-      "Szechuan peppercorn sauce, fresh slaw, scallions and our Rookie Sauce make for a sweet, sour and spicy experience. Guaranteed to leave you with that delightful mala numbness.",
+      "Just in time for Italian day, we're bringing all the flavours of a classic Italian sausage on a fried chicken sando! Garlic basil mayo, sauteed peppers and onions, and our new sausage dust!",
     altText:
-      "A fried chicken sandwich with coleslaw, scallions and spicy dipped chicken.",
+      "A fried chicken sandwich with sauteed onions, peppers and spiced dust.",
   },
   {
     title: "Looking for a Good Deal?",
