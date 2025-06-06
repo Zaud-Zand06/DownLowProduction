@@ -5,7 +5,7 @@ import "./component_css/HeroCarousel.css";
 import dessertBar from "../assets/dessertBars.avif";
 import drumsticks from "../assets/DLDrums.avif";
 import potSaladMacSalad from "../assets/potSaladMacSalad.avif";
-import paisanoSando from "../assets/PasisanoSando.avif";
+import paisanoSando from "../assets/PaisanoSando.avif";
 // Slides should be an array of objects with with an image, description, title and alt text.
 // you can have as many slides as you want, but try and limit it to less than 10 just so its not too crazy
 const slides = [
