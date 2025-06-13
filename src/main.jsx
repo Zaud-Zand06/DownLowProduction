@@ -1,13 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { BrowserRouter, Routes, Route } from "react-router";
+import "./index.css";
+import App from "./App.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
+import Catering from "./components/Catering.jsx";
+import Menu from "./components/Menu.jsx";
+import SecretMenu from "./components/SecretMenu.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ParallaxProvider>
-      <App />
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/catering" element={<Catering />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/secret" element={<SecretMenu />} />
+        </Routes>
+      </BrowserRouter>
     </ParallaxProvider>
   </React.StrictMode>
 );

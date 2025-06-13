@@ -1,5 +1,7 @@
 import "./component_css/menu.css";
 import { useState, useEffect } from "react";
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 import dessertImage from "../assets/dessertBars.avif";
 import OGSando from "../assets/OGSando1.avif";
 import PaisanoSando from "../assets/Paisano1.avif";
@@ -406,6 +408,8 @@ function Menu() {
   });
   return (
     <>
+      <Header />
+      <div className="backgroundImage"></div>
       <div className="menuContainer">
         {makeMenuList(displayMenuList)}
         <div id="menuImageContainer">
@@ -417,6 +421,7 @@ function Menu() {
           />
         </div>
       </div>
+      <Footer />
     </>
   );
 }
