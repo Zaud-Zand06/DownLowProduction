@@ -1,22 +1,37 @@
 import "./component_css/menu.css";
 import { useState, useEffect } from "react";
 import dessertImage from "../assets/dessertBars.avif";
-import birthdayCakeBar from "../assets/birthdayCakeDessert1300px.avif";
+import OGSando from "../assets/OGSando1.avif";
+import PaisanoSando from "../assets/Paisano1.avif";
+import PotSalad from "../assets/PotSalad1.avif";
 
 const menuImages = [
+  {
+    name: "OG Sando",
+    price: 19.15,
+    imageSrc: OGSando,
+    altText:
+      "Fried Chicken sandwich with slaw, and pickles, placed on a sheet of wax paper.",
+  },
+  {
+    name: "Potato Salad",
+    price: 5.99,
+    imageSrc: PotSalad,
+    altText: "A creamy potato salad being held on a wooden fork.",
+  },
+  {
+    name: "Paisano Sando",
+    price: 19.15,
+    imageSrc: PaisanoSando,
+    altText:
+      "Fried Chicken sandwich with sauteed onions and peppers, placed on a sheet of wax paper.",
+  },
   {
     name: "Marshmallow Dessert Bars",
     price: 5.45,
     imageSrc: dessertImage,
     altText:
       "A man smiling while holding a chocolate peanut butter dessert bar, and a cinnamon toast crunch dessert bar.",
-  },
-  {
-    name: "Birthday Cake Dessert Bar",
-    price: 5.45,
-    imageSrc: birthdayCakeBar,
-    altText:
-      "A marshmallow dessert bar covered with pink frosting and sprinkles.",
   },
 ];
 
