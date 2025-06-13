@@ -2,7 +2,7 @@ import "./component_css/header.css";
 import { useState, useEffect, useRef } from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function HeaderOrderOnlineMUIMenu({ eastVanLink, UBCLink }) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -49,12 +49,11 @@ function HeaderOrderOnlineMUIMenu({ eastVanLink, UBCLink }) {
   );
 }
 
-function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
+function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const headerRef = useRef(null);
   const location = useLocation();
-  const navigate = useNavigate();
 
   const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
   const UBCLink = "https://dl-chicken-ubc.square.site/";
@@ -95,7 +94,7 @@ function Header({ setDisplayMenu, displayMenu, setScrollToTop }) {
       <div id="logo">
         <h1>DownLow</h1>
         <h1 id="redLogo">
-          {location.pathname === "/" && <Link to="/secret">Chicken</Link>}
+          {location.pathname !== "/secret" && <Link to="/secret">Chicken</Link>}
           {location.pathname === "/secret" && <Link to="/">Home</Link>}
         </h1>
       </div>

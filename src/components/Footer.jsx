@@ -1,20 +1,15 @@
 import "./component_css/footer.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   AdvancedMarker,
   Map,
   APIProvider,
   InfoWindow,
 } from "@vis.gl/react-google-maps";
-import PropTypes from "prop-types";
 
 const gMapsAPI = import.meta.env.VITE_MAPS_API;
 
-Footer.propTypes = {
-  setDisplayMenu: PropTypes.func.isRequired,
-  setScrollToTop: PropTypes.func.isRequired,
-};
-function Footer({ setDisplayMenu, setScrollToTop }) {
+function Footer() {
   const [selectedLocation, setSelectedLocation] = useState(null);
 
   const locations = [
