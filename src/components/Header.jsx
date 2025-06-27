@@ -110,24 +110,40 @@ function Header() {
         >
           Get in Touch
         </a>
-        {location.pathname === "/" && <Link to="/catering">Catering</Link>}
-        {location.pathname === "/" && <Link to="/menu">Menu</Link>}
-        {location.pathname === "/secret" && (
-          <Link to="/catering">Catering</Link>
-        )}
-        {location.pathname === "/secret" && <Link to="/menu">Menu</Link>}
-        {location.pathname === "/catering" && (
-          <>
-            <Link to="/">Home</Link>
-            <Link to="/menu">Menu</Link>
-          </>
-        )}
-        {location.pathname === "/menu" && (
-          <>
-            <Link to="/catering">Catering</Link>
-            <Link to="/">Home</Link>
-          </>
-        )}
+        {/* some serious wizardy, checks which path the header is currently on, and displays the necessary buttons */}
+        {(() => {
+          const navigationConfig = {
+            "/": [
+              { to: "/catering", label: "Catering" },
+              { to: "/menu", label: "Menu" },
+            ],
+            "/secret": [
+              { to: "/catering", label: "Catering" },
+              { to: "/menu", label: "Menu" },
+            ],
+            "/kits": [
+              { to: "/", label: "Home" },
+              { to: "/catering", label: "Catering" },
+              { to: "/menu", label: "Menu" },
+            ],
+            "/catering": [
+              { to: "/", label: "Home" },
+              { to: "/menu", label: "Menu" },
+            ],
+            "/menu": [
+              { to: "/catering", label: "Catering" },
+              { to: "/", label: "Home" },
+            ],
+          };
+
+          const currentNavigation = navigationConfig[location.pathname] || [];
+
+          return currentNavigation.map(({ to, label }) => (
+            <Link key={to} to={to}>
+              {label}
+            </Link>
+          ));
+        })()}
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import Catering from "./components/Catering.jsx";
 import Menu from "./components/Menu.jsx";
 import SecretMenu from "./components/SecretMenu.jsx";
+import DLKits from "./components/DLKits.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/catering" element={<Catering />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/secret" element={<SecretMenu />} />
+          <Route path="/kits" element={<DLKits />} />
         </Routes>
       </BrowserRouter>
     </ParallaxProvider>

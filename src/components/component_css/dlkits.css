@@ -1,0 +1,28 @@
+#DLKitsContainer {
+  margin-top: 8rem;
+  padding: 1rem;
+  min-height: 50vh;
+  width: 95%;
+  border: 2px solid var(--border-colour);
+  background-color: var(--translucent-white);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  & p {
+    font-size: 22px;
+    flex-basis: auto;
+  }
+}
+
+#dlkitsMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  & .dlkitsMenuItem {
+    padding: 1rem;
+
+    & .price {
+      font-size: 18px;
+    }
+  }
+}

@@ -7,7 +7,7 @@ function SecretMenu() {
   return (
     <>
       <Header />
-      <div className="backgroundImage"></div>
+      <div className="backgroundImage" />
       <div className="secretMenuContainer">
         <h2>Nothing here yet.... were still cooking something up.......</h2>
         <div className="spin3d-simple">

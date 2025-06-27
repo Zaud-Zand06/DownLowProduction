@@ -16,21 +16,28 @@ function Footer() {
     {
       address: "905 Commercial Dr, Vancouver, BC V5L 2H2",
       description: "East Van",
-      hours: "11:00am - 9:00pm Mon-Sat / 11:00am - 4:30pm Sun",
+      hours: "11am - 9pm Mon-Sat / 11am - 4:30pm Sun",
       number: "(604) 283-1385",
       gMapsLink: "https://maps.app.goo.gl/hieRWPg8Mhe8muDG7",
-
       lat: 49.27630749999999,
       lng: -123.0697264,
     },
     {
       address: "6065 University Blvd, Vancouver, BC V6T 0C5",
       description: "UBC",
-      hours: "11:00am - 9:00pm Mon-Sat / 11:00am - 4:30pm Sun",
+      hours: "11am - 9pm Mon-Sat / 11am - 4:30pm Sun",
       number: "(604) 221-2755",
       gMapsLink: "https://maps.app.goo.gl/aZ5F1FjducPrUPiw7",
       lat: 49.2662207,
       lng: -123.2475804,
+    },
+    {
+      address: "2035 Cornwall Ave, Vancouver, BC V6K 1B7",
+      description: "DL Express",
+      hours: "3pm - 10pm Mon-Fri / 12pm - 10pm Sat-Sun",
+      gMapsLink: "https://maps.app.goo.gl/RbyMvsbYkiFKdnAQA",
+      lat: 49.272870673864084,
+      lng: -123.15752788901693,
     },
   ];
 
@@ -40,7 +47,7 @@ function Footer() {
         <APIProvider apiKey={gMapsAPI} region="CA" version="beta">
           <Map
             className="mapEmbed"
-            defaultCenter={locations[0]}
+            defaultCenter={locations[2]}
             defaultZoom={window.innerWidth <= 700 ? 10 : 12}
             colorScheme="FOLLOW_SYSTEM"
             disableDefaultUI={true}

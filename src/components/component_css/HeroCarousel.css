@@ -63,7 +63,7 @@
   transition: var(--background-colour) 0.3s ease-in-out;
 }
 .slideDiv:hover .slideText {
-  background-color: #1717179c;
+  background-color: var(--translucent-black);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   outline: 2px solid var(--border-colour);
