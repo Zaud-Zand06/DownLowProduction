@@ -30,9 +30,9 @@
     -webkit-text-stroke: var(--transparent-color) 0px;
     filter: drop-shadow(2px 2px 2px var(--transparent-color));
   }
-  & img {
-    width: 90svw;
-    height: 40em;
+  & a.gMapsLink {
+    font-size: 20px;
+    text-decoration: underline;
   }
 }
 
@@ -70,10 +70,6 @@
     align-items: center;
   }
   .mapEmbed {
-    width: 90svw;
-    height: 30em;
-  }
-  .mapEmbed img {
     width: 90svw;
     height: 30em;
   }

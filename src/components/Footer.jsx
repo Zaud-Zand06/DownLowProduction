@@ -6,6 +6,7 @@ import {
   APIProvider,
   InfoWindow,
 } from "@vis.gl/react-google-maps";
+import markerImage from "../assets/favicon32px.webp";
 
 const gMapsAPI = import.meta.env.VITE_MAPS_API;
 
@@ -48,7 +49,7 @@ function Footer() {
           <Map
             className="mapEmbed"
             defaultCenter={locations[2]}
-            defaultZoom={window.innerWidth <= 700 ? 10 : 12}
+            defaultZoom={12}
             colorScheme="FOLLOW_SYSTEM"
             disableDefaultUI={true}
             controlled={false}
@@ -61,7 +62,9 @@ function Footer() {
                 onClick={() => {
                   setSelectedLocation(location);
                 }}
-              />
+              >
+                <img src={markerImage} width={32} height={32} />
+              </AdvancedMarker>
             ))}
             {selectedLocation && (
               <InfoWindow
@@ -73,7 +76,11 @@ function Footer() {
                 <div>
                   <h2>{selectedLocation.description}</h2>
                   <h3>
-                    <a href={selectedLocation.gMapsLink} target="_blank">
+                    <a
+                      className="gMapsLink"
+                      href={selectedLocation.gMapsLink}
+                      target="_blank"
+                    >
                       {selectedLocation.address}
                     </a>
                   </h3>
