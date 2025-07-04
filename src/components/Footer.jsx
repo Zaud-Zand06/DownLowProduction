@@ -42,57 +42,34 @@ function Footer() {
     },
   ];
 
+  const createMapEmbedUrl = () => {
+    const baseUrl = "https://www.google.com/maps/embed/v1/place";
+    const apiKey = import.meta.env.VITE_MAPS_API;
+    const mainLocation = selectedLocation
+      ? selectedLocation.address
+      : "905 Commercial Dr, Vancouver, BC V5L 2H2";
+    return `${baseUrl}?key=${apiKey}&q=${encodeURIComponent(
+      mainLocation
+    )}&zoom=12`;
+  };
+
   return (
     <section id="footer">
       <section id="locationAndMap">
-        <APIProvider apiKey={gMapsAPI} region="CA" version="beta">
-          <Map
-            className="mapEmbed"
-            defaultCenter={locations[2]}
-            defaultZoom={12}
-            colorScheme="FOLLOW_SYSTEM"
-            disableDefaultUI={true}
-            controlled={false}
-            mapId="c467762c07f903327945a653"
-          >
-            {locations.map((location, index) => (
-              <AdvancedMarker
-                key={index}
-                position={location}
-                onClick={() => {
-                  setSelectedLocation(location);
-                }}
-              >
-                <img src={markerImage} width={32} height={32} />
-              </AdvancedMarker>
-            ))}
-            {selectedLocation && (
-              <InfoWindow
-                position={selectedLocation}
-                onCloseClick={() => {
-                  setSelectedLocation(null);
-                }}
-              >
-                <div>
-                  <h2>{selectedLocation.description}</h2>
-                  <h3>
-                    <a
-                      className="gMapsLink"
-                      href={selectedLocation.gMapsLink}
-                      target="_blank"
-                    >
-                      {selectedLocation.address}
-                    </a>
-                  </h3>
-                  <p>{selectedLocation.hours}</p>
-                  <p>{selectedLocation.number}</p>
-                </div>
-              </InfoWindow>
-            )}
-          </Map>
-        </APIProvider>
+        <iframe
+          className="mapEmbed"
+          src={createMapEmbedUrl()}
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+
         <section id="locationsInfo">
           <h1>Where we are</h1>
+          <h3>Click the red links to change the location shown on the map</h3>
           {locations.map((location, index) => (
             <div key={index}>
               <h2>
@@ -127,5 +104,91 @@ function Footer() {
     </section>
   );
 }
+
+//   return (
+//     <section id="footer">
+//       <section id="locationAndMap">
+//         <APIProvider apiKey={gMapsAPI} region="CA" version="beta">
+//           <Map
+//             className="mapEmbed"
+//             defaultCenter={locations[2]}
+//             defaultZoom={12}
+//             colorScheme="FOLLOW_SYSTEM"
+//             disableDefaultUI={true}
+//             controlled={false}
+//             mapId="c467762c07f903327945a653"
+//           >
+//             {locations.map((location, index) => (
+//               <AdvancedMarker
+//                 key={index}
+//                 position={location}
+//                 onClick={() => {
+//                   setSelectedLocation(location);
+//                 }}
+//               >
+//                 <img src={markerImage} width={32} height={32} />
+//               </AdvancedMarker>
+//             ))}
+//             {selectedLocation && (
+//               <InfoWindow
+//                 position={selectedLocation}
+//                 onCloseClick={() => {
+//                   setSelectedLocation(null);
+//                 }}
+//               >
+//                 <div>
+//                   <h2>{selectedLocation.description}</h2>
+//                   <h3>
+//                     <a
+//                       className="gMapsLink"
+//                       href={selectedLocation.gMapsLink}
+//                       target="_blank"
+//                     >
+//                       {selectedLocation.address}
+//                     </a>
+//                   </h3>
+//                   <p>{selectedLocation.hours}</p>
+//                   <p>{selectedLocation.number}</p>
+//                 </div>
+//               </InfoWindow>
+//             )}
+//           </Map>
+//         </APIProvider>
+//         <section id="locationsInfo">
+//           <h1>Where we are</h1>
+//           {locations.map((location, index) => (
+//             <div key={index}>
+//               <h2>
+//                 <a
+//                   onClick={() => {
+//                     setSelectedLocation(location);
+//                   }}
+//                 >
+//                   {location.description}
+//                 </a>
+//               </h2>
+//               <p>{location.hours}</p>
+//               <p>{location.address}</p>
+//               <p>{location.number}</p>
+//             </div>
+//           ))}
+//           <h1>Catering</h1>
+//           <p>
+//             Interested in large orders and catering? Click the link below for
+//             more information!
+//           </p>
+//           <a
+//             onClick={() => {
+//               setDisplayMenu("catering");
+//               setScrollToTop(true);
+//             }}
+//           >
+//             Click Here!
+//           </a>
+//         </section>
+//       </section>
+//     </section>
+//   );
+// }
 
 export default Footer;
