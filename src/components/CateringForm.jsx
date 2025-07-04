@@ -62,6 +62,10 @@ export default function CateringForm() {
     if (!/^\d+$/.test(formData.eventAttendees)) {
       tempError.eventAttendees = "The number of attendees must be a number";
     }
+    if (formData.eventAttendees < 10) {
+      tempError.eventAttendees =
+        "The minimum number of guests we cater for is 10";
+    }
     setErrors(tempError);
     return Object.keys(tempError).length === 0;
   };
