@@ -39,29 +39,30 @@
 #locationsInfo {
   margin: 1.5rem;
   text-align: left;
-}
-#locationsInfo h2 {
-  color: var(--main-red);
-  -webkit-text-stroke: 1px var(--border-colour);
-}
-#locationsInfo h1,
-#locationsInfo h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: var(--main-yellow);
-  -webkit-text-stroke: 1px var(--border-colour);
-}
-#locationsInfo p {
-  font-size: 1.2rem;
-}
-#locationsInfo a {
-  color: var(--main-red);
-  -webkit-text-stroke: 0.7px var(--border-colour);
-  font-size: 1.5rem;
-}
-#locationsInfo a:hover {
-  color: var(--main-yellow);
-  cursor: pointer;
+
+  & h2 {
+    color: var(--main-red);
+    -webkit-text-stroke: 1px var(--border-colour);
+  }
+  & h1,
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--main-yellow);
+    -webkit-text-stroke: 0.5px var(--border-colour);
+  }
+  & p {
+    font-size: 1.2rem;
+  }
+  & a {
+    color: var(--main-red);
+    -webkit-text-stroke: 0.7px var(--border-colour);
+    font-size: 1.5rem;
+  }
+  & a:hover {
+    color: var(--main-yellow);
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 900px) {

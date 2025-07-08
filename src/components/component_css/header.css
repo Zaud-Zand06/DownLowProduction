@@ -37,7 +37,7 @@
   flex-direction: column;
   color: var(--main-yellow);
   -webkit-text-stroke-color: var(--shadow-colour);
-  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-width: 1px;
 }
 
 #logo * {
