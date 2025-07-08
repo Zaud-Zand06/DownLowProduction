@@ -20,7 +20,7 @@ function DLKits() {
           get here!
         </p>
         <p>
-          Come visit us between 3-10 Wednesday-Sunday, or 12-10 on the Weekends!
+          Come visit us between 3-10 Wednesday-Friday, or 12-10 on the Weekends!
         </p>
         {/* This is where the menu is stored. any adjustments to the menu must be done here */}
         <details>
