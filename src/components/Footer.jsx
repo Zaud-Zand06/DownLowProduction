@@ -35,7 +35,7 @@ function Footer() {
     {
       address: "2035 Cornwall Ave, Vancouver, BC V6K 1B7",
       description: "DL Express",
-      hours: "3pm - 10pm Mon-Fri / 12pm - 10pm Sat-Sun",
+      hours: "3pm - 10pm Wed-Fri / 12pm - 10pm Sat-Sun",
       gMapsLink: "https://maps.app.goo.gl/RbyMvsbYkiFKdnAQA",
       lat: 49.272870673864084,
       lng: -123.15752788901693,
