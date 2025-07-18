@@ -1,4 +1,5 @@
 import "./component_css/scrollingAlert.css";
+import { Link } from "react-router-dom";
 
 function ScrollingAlert() {
   const text = `Click Here to see what events we have coming up!`;
@@ -9,10 +10,10 @@ function ScrollingAlert() {
     <div className="scrollContainer">
       <div className="horizontalScrollingItems">
         <div className="horizontalScrollingItemsItems">
-          <a target="_blank">{repeatedText}</a>
+          <Link to="/events">{repeatedText}</Link>
         </div>
         <div className="horizontalScrollingItemsItems">
-          <a target="_blank">{repeatedText}</a>
+          <Link to="/events">{repeatedText}</Link>
         </div>
       </div>
     </div>
