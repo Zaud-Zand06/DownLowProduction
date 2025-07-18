@@ -65,13 +65,6 @@ const sandosList = [
     special: null,
   },
   {
-    title: "The Agrodulce",
-    description:
-      "New Pizza Dusted Chicken, Basil slaw, Fresh basil, Pesto Sauce",
-    price: 18.99,
-    special: null,
-  },
-  {
     title: "The Rookie",
     description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
     price: 18.99,
@@ -138,10 +131,9 @@ const chickenByThePieceList = [
     special: false,
   },
   {
-    title: "Wings",
-    description:
-      "Full sized chicken wings! Order as many as you want, but only on Wednesdays",
-    price: 3.25,
+    title: "Smoked Wings",
+    description: "A pack of 6 smoked and fried split wings!",
+    price: 9.99,
     special: null,
   },
 ];
