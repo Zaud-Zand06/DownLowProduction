@@ -11,17 +11,21 @@
     width: 100%;
     max-height: 55vh;
     z-index: -1;
-    outline: 2px solid var(--main-red);
+    outline: 2px solid var(--border-colour);
   }
   & #heroContentText {
-    background-color: var(--translucent-black);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    outline: 2px solid var(--main-red);
     position: relative;
     bottom: 12em;
     padding: 1rem;
-
+    width: 75%;
+    & a {
+      font-family: "Ahkio Thin";
+      color: var(--main-red);
+    }
+    & a:hover {
+      font-family: "Ahkio Thin";
+      color: var(--main-yellow);
+    }
     & > h1 {
       font-size: 64px;
       margin: 0px;
@@ -31,7 +35,16 @@
       font-size: 22px;
     }
   }
+  & #heroContentText:hover {
+    background-color: var(--translucent-black);
+    outline: 2px solid var(--main-red);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+  }
   @media screen and (max-width: 800px) {
+    & > img {
+      top: calc(100vw / 5);
+    }
     #heroContentText {
       & > h1 {
         font-size: 36px;
@@ -43,6 +56,9 @@
     }
   }
   @media screen and (max-width: 600px) {
+    & > img {
+      top: calc(100vw / 4);
+    }
     #heroContentText {
       & > h1 {
         font-size: 32px;

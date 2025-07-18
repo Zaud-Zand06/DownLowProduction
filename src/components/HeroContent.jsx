@@ -9,11 +9,23 @@ function HeroContent() {
         alt="spiced chicken sando with sauteed peppers and onions"
       />
       <div id="heroContentText">
-        <h1>Whats new at DL?</h1>
+        <h1>What's New This Month?</h1>
         <p>
-          For this monthly special we're teaming up with Brittania middle school
-          to create the Baller Sando <br /> For every sando purchased 3 dollars
-          goes to funding the Brittania Basketball program!
+          The Baller Sando! Chipotle Mayo, BnB Pickles, and our Signature
+          Coleslaw, dusted with our new Hot Dill Spice!
+          <br />
+          Made proudly in collaboration with
+          <a href="https://bucketsandborders.com/" target="_blank">
+            {" "}
+            Buckets and Borders{" "}
+          </a>
+          and
+          <a href="https://www.girlswholeap.com/" target="_blank">
+            {" "}
+            Girls Who Leap
+          </a>
+          , for every sando purchased, $2 will be donated to Buckets and
+          Borders.
         </p>
       </div>
     </section>
