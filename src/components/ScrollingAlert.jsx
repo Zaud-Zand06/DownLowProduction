@@ -1,9 +1,8 @@
 import "./component_css/scrollingAlert.css";
-
-const giftCardLink = "https://squareup.com/gift/MLWWKAFPWGTFJ/order";
+import { Link } from "react-router-dom";
 
 function ScrollingAlert() {
-  const text = `Online Gift cards are now available!`;
+  const text = `Click Here to see what events we have coming up!`;
   const repetitions = 10;
   const repeatedText = Array(repetitions).fill(text).join(" ");
 
@@ -11,14 +10,10 @@ function ScrollingAlert() {
     <div className="scrollContainer">
       <div className="horizontalScrollingItems">
         <div className="horizontalScrollingItemsItems">
-          <a href={giftCardLink} target="_blank">
-            {repeatedText}
-          </a>
+          <Link to="/events">{repeatedText}</Link>
         </div>
         <div className="horizontalScrollingItemsItems">
-          <a href={giftCardLink} target="_blank">
-            {repeatedText}
-          </a>
+          <Link to="/events">{repeatedText}</Link>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Link, useLocation } from "react-router-dom";
 
-function HeaderOrderOnlineMUIMenu({ eastVanLink, UBCLink }) {
+function HeaderOrderOnlineMUIMenu({ eastVanLink, UBCLink, giftCardLink }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -44,6 +44,11 @@ function HeaderOrderOnlineMUIMenu({ eastVanLink, UBCLink }) {
             DL UBC
           </a>
         </MenuItem>
+        <MenuItem>
+          <a target="_blank" href={giftCardLink} onClick={() => handleClose()}>
+            Online Gift Cards
+          </a>
+        </MenuItem>
       </Menu>
     </>
   );
@@ -57,6 +62,7 @@ function Header() {
 
   const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
   const UBCLink = "https://dl-chicken-ubc.square.site/";
+  const giftCardLink = "https://squareup.com/gift/MLWWKAFPWGTFJ/order";
 
   const controlHeader = () => {
     if (typeof window !== "undefined") {
@@ -99,7 +105,11 @@ function Header() {
         </h1>
       </div>
       <div className="hamburgerMenuButtons">
-        <HeaderOrderOnlineMUIMenu eastVanLink={eastVanLink} UBCLink={UBCLink} />
+        <HeaderOrderOnlineMUIMenu
+          eastVanLink={eastVanLink}
+          UBCLink={UBCLink}
+          giftCardLink={giftCardLink}
+        />
         <a
           target="_blank"
           onClick={() => {
@@ -122,9 +132,9 @@ function Header() {
               { to: "/menu", label: "Menu" },
             ],
             "/kits": [
-              { to: "/", label: "Home" },
               { to: "/catering", label: "Catering" },
               { to: "/menu", label: "Menu" },
+              { to: "/", label: "Home" },
             ],
             "/catering": [
               { to: "/", label: "Home" },
@@ -132,6 +142,11 @@ function Header() {
             ],
             "/menu": [
               { to: "/catering", label: "Catering" },
+              { to: "/", label: "Home" },
+            ],
+            "/events": [
+              { to: "/catering", label: "Catering" },
+              { to: "/menu", label: "Menu" },
               { to: "/", label: "Home" },
             ],
           };
