@@ -1,3 +1,4 @@
 #eventsSection {
+  margin-top: calc(100vw / 12);
   height: 90vh;
 }
