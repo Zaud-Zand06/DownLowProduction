@@ -132,9 +132,9 @@ function Header() {
               { to: "/menu", label: "Menu" },
             ],
             "/kits": [
-              { to: "/", label: "Home" },
               { to: "/catering", label: "Catering" },
               { to: "/menu", label: "Menu" },
+              { to: "/", label: "Home" },
             ],
             "/catering": [
               { to: "/", label: "Home" },
