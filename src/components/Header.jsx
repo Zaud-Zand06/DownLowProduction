@@ -144,6 +144,11 @@ function Header() {
               { to: "/catering", label: "Catering" },
               { to: "/", label: "Home" },
             ],
+            "/events": [
+              { to: "/catering", label: "Catering" },
+              { to: "/menu", label: "Menu" },
+              { to: "/", label: "Home" },
+            ],
           };
 
           const currentNavigation = navigationConfig[location.pathname] || [];
