@@ -1,9 +1,7 @@
 import "./component_css/scrollingAlert.css";
 
-const giftCardLink = "https://squareup.com/gift/MLWWKAFPWGTFJ/order";
-
 function ScrollingAlert() {
-  const text = `Online Gift cards are now available!`;
+  const text = `Click Here to see what events we have coming up!`;
   const repetitions = 10;
   const repeatedText = Array(repetitions).fill(text).join(" ");
 
@@ -11,14 +9,10 @@ function ScrollingAlert() {
     <div className="scrollContainer">
       <div className="horizontalScrollingItems">
         <div className="horizontalScrollingItemsItems">
-          <a href={giftCardLink} target="_blank">
-            {repeatedText}
-          </a>
+          <a target="_blank">{repeatedText}</a>
         </div>
         <div className="horizontalScrollingItemsItems">
-          <a href={giftCardLink} target="_blank">
-            {repeatedText}
-          </a>
+          <a target="_blank">{repeatedText}</a>
         </div>
       </div>
     </div>
