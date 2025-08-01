@@ -37,7 +37,7 @@ export default function UpcomingEvents() {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?` +
+          `https://www.googleapis.com/calendar/v3/calendars/${calendarID}/events?` +
             new URLSearchParams({
               key: calendarAPIKey,
               timeMin: new Date().toISOString(),
@@ -50,8 +50,10 @@ export default function UpcomingEvents() {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
+
         const data = await response.json();
         setEvents(data.tems || []);
+        console.log(events);
       } catch (err) {
         setError(err.message);
         console.error("Error fetching calendar events");

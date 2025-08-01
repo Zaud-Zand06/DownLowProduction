@@ -39,6 +39,12 @@ const menuImages = [
 
 const sandosList = [
   {
+    title: "The Baller",
+    description: "Hot Dill spice, Chipotle Mayo, Pickles and Slaw! ",
+    price: 18.99,
+    special: null,
+  },
+  {
     title: "The Paisano Sando",
     description:
       "Italian Sausage dust, Sauteed Onions and Peppers, Basil garlic mayo",
@@ -49,12 +55,6 @@ const sandosList = [
     title: "The OG",
     description:
       "Nashville Dusted Chicken, Pickled onions, Cole slaw, Pickles, DL Sauce",
-    price: 18.99,
-    special: null,
-  },
-  {
-    title: "The Stinger",
-    description: "Fermented Chili Honey, Charred Cabbage Slaw, Rookie Mayo",
     price: 18.99,
     special: null,
   },
@@ -91,7 +91,7 @@ const chickenByThePieceList = [
     special: "Add extra thighs for 5 each!",
   },
   {
-    title: "4 Piece Tender",
+    title: "4 Piece Tenders",
     description:
       "The most tender part of the breast! Dusted with spice and a side of sauce",
     price: 17.99,
@@ -119,7 +119,7 @@ const chickenByThePieceList = [
     special: false,
   },
   {
-    title: "Nuggets",
+    title: "Pop-corn Nuggets",
     description: "A bowl of popcorn chicken with your choice of dipping sauce",
     price: 11.59,
     special: null,
