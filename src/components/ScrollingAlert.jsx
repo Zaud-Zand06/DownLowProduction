@@ -4,7 +4,7 @@ const instaLink =
   "https://www.instagram.com/dlchicken?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 
 function ScrollingAlert() {
-  const text = `Click Here to Check out our Insta!`;
+  const text = `Click Here For Information About Kits!`;
   const repetitions = 10;
   const repeatedText = Array(repetitions).fill(text).join(" ");
 
@@ -12,14 +12,10 @@ function ScrollingAlert() {
     <div className="scrollContainer">
       <div className="horizontalScrollingItems">
         <div className="horizontalScrollingItemsItems">
-          <a href={instaLink} target="_blank">
-            {repeatedText}
-          </a>
+          <Link to={"/kits"}>{repeatedText}</Link>
         </div>
         <div className="horizontalScrollingItemsItems">
-          <a href={instaLink} target="_blank">
-            {repeatedText}
-          </a>
+          <Link to={"/kits"}>{repeatedText}</Link>
         </div>
       </div>
     </div>
