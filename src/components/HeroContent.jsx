@@ -1,5 +1,5 @@
 import "./component_css/heroContent.css";
-import heroImage from "../assets/baller1600px.avif";
+import heroImage from "../assets/cowboySando1600.avif";
 
 function HeroContent() {
   return (
@@ -11,21 +11,11 @@ function HeroContent() {
       <div id="heroContentText">
         <h1>What's New This Month?</h1>
         <p>
-          The Baller Sando! Chipotle Mayo, BnB Pickles, and our Signature
-          Coleslaw, dusted with our new Hot Dill Spice!
+          The Cowboy Sando! Made with our brand-new Cowboy Ranch and dusted with
+          our new Cowboy Spice dust, topped with our Signature Slaw and BnB
+          Pickles!
           <br />
-          Made proudly in collaboration with
-          <a href="https://bucketsandborders.com/" target="_blank">
-            {" "}
-            Buckets and Borders{" "}
-          </a>
-          and
-          <a href="https://www.girlswholeap.com/" target="_blank">
-            {" "}
-            Girls Who Leap
-          </a>
-          , for every sando purchased, $2 will be donated to Buckets and
-          Borders.
+          Only available for August so come get it while it's around!
         </p>
       </div>
     </section>

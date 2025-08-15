@@ -39,8 +39,8 @@ const menuImages = [
 
 const sandosList = [
   {
-    title: "The Baller",
-    description: "Hot Dill spice, Chipotle Mayo, Pickles and Slaw! ",
+    title: "The Cowboy Sando",
+    description: "Cowboy Spice dust, Cowboy Ranch, Slaw and BnB pickles! ",
     price: 18.99,
     special: null,
   },
