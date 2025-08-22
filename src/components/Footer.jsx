@@ -1,4 +1,5 @@
 import "./component_css/footer.css";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import {
   AdvancedMarker,
@@ -16,7 +17,7 @@ function Footer() {
   const locations = [
     {
       address: "905 Commercial Dr, Vancouver, BC V5L 2H2",
-      description: "East Van",
+      description: "DownLow East Van",
       hours: "11am - 9pm Mon-Sat / 11am - 4:30pm Sun",
       number: "(604) 283-1385",
       gMapsLink: "https://maps.app.goo.gl/hieRWPg8Mhe8muDG7",
@@ -25,7 +26,7 @@ function Footer() {
     },
     {
       address: "6065 University Blvd, Vancouver, BC V6T 0C5",
-      description: "UBC",
+      description: "DownLow UBC",
       hours: "11am - 9pm Mon-Sat / 11am - 4:30pm Sun",
       number: "(604) 221-2755",
       gMapsLink: "https://maps.app.goo.gl/aZ5F1FjducPrUPiw7",
@@ -34,7 +35,7 @@ function Footer() {
     },
     {
       address: "2035 Cornwall Ave, Vancouver, BC V6K 1B7",
-      description: "DL Express",
+      description: "DownLow Express",
       hours: "3pm - 10pm Wed-Fri / 12pm - 10pm Sat-Sun",
       gMapsLink: "https://maps.app.goo.gl/RbyMvsbYkiFKdnAQA",
       lat: 49.272870673864084,
@@ -91,14 +92,7 @@ function Footer() {
             Interested in large orders and catering? Click the link below for
             more information!
           </p>
-          <a
-            onClick={() => {
-              setDisplayMenu("catering");
-              setScrollToTop(true);
-            }}
-          >
-            Click Here!
-          </a>
+          <Link to={"/catering"}>Click Here!</Link>
         </section>
       </section>
     </section>
