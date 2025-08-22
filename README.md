@@ -74,4 +74,14 @@ Built with React and VanillaJs, using Vite, Bun and a few additional libraries.
       - The advanced map looks much better and provides more customizability, but it costs A LOT more to use that web api. It will raise the monthly cost from ~10 dollars to ~50
     - all locations must contain a lat and lng in order for the embeded map to show the correct position
     - default location is set to DLEV
-    -
+
+# Css Variables
+
+    - the 4 font-face declerations are all the fonts we are using for the site, any additional fonts should be added to the assets/fonts folder, and imported in the same way in the css file
+    - main-yellow and main-red are the primary colours for the site, along side background-colour
+      - main-red and main-yellow are mainly used for the colour of <h1>,<h2>, and <h3> elements
+      - background-colour is used for the background of the site
+    - text-dark and text-light are clearly just for the different <p> texts
+    - translucent-white and translucent-black are used for cards like the ones in heroContent and parallaxSection, that need to show the images underneath
+    - card-background-colour is used for the menu items, so that they stand out a tiny bit more from the background
+    - border-colour and shadow-colour are the same, but they are used for different things, i have them as seperate variables just in case we want them to be different for whatever reason. That being said I dont think im using any shadows on the site
