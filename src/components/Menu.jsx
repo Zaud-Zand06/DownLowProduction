@@ -406,9 +406,9 @@ function Menu() {
   // this will be the useEffect function that actually
   // calls the set interval in order to have the images change
   useEffect(() => {
-    const interval = setInterval(updateMenuImage, 10000);
+    const intervalMilliseconds = setInterval(updateMenuImage, 10000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(intervalMilliseconds);
   });
   return (
     <>
