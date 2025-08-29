@@ -20,7 +20,7 @@ function HeroContent() {
           and featuring a crispy piece of Soy Glazed Chicken, shredded and fried
           Halal Chicken Spam, our famous Coleslaw and a new Lemon-y Rookie Mayo!
           <br />
-          Available from Sept 3, to the end of the month! Get it while you can!
+          Available from Sept 2, to the end of the month! Get it while you can!
         </p>
       </div>
     </section>
