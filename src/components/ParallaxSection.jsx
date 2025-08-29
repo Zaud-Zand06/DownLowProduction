@@ -20,6 +20,8 @@ function ParallaxSection() {
         <img
           src={dlChickenMelt}
           alt="A fried chicken sandwhich with carmelized onions and cheese dust"
+          loading="lazy"
+          decoding="async"
         />
       </Parallax>
       <Parallax className="parallaxText" speed={30}>
@@ -41,6 +43,8 @@ function ParallaxSection() {
         <img
           src={waffleCombo}
           alt="A fried chicken sandwhich with waffles, a can of sweet tea, and a chocolate cake"
+          loading="lazy"
+          decoding="async"
         />
       </Parallax>
       <Parallax className="parallaxText" speed={30}>

@@ -7,6 +7,8 @@ function HeroContent() {
       <img
         src={heroImage}
         alt="spiced chicken sando with sauteed peppers and onions"
+        loading="eager"
+        decoding="async"
       />
       <div id="heroContentText">
         <h1>What's New This Month?</h1>

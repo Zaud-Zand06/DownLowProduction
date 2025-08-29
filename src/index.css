@@ -1,18 +1,22 @@
 @font-face {
   font-family: "Ahkio W00 Black";
   src: url(./assets/fonts/ahkioW00Black.otf);
+  font-display: swap;
 }
 @font-face {
   font-family: "Ahkio W00 Bold";
   src: url(./assets/fonts/ahkioW00Bold.otf);
+  font-display: swap;
 }
 @font-face {
   font-family: "Ahkio Thin";
   src: url(./assets/fonts/ahkioThin.otf);
+  font-display: swap;
 }
 @font-face {
   font-family: "Raleway Medium";
   src: url(./assets/fonts/Raleway-Medium.ttf);
+  font-display: swap;
 }
 
 :root {
@@ -30,14 +34,14 @@
   --shadow-colour: #000000;
   --white: #f5f5f5;
 
-  font-family: "Raleway Medium";
+  font-family: "Raleway Medium", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 
   background-color: var(--background-colour);
 }
 
 a {
-  font-family: "Ahkio W00 Black";
+  font-family: "Ahkio W00 Black", "Arial Black", sans-serif;
   font-weight: 500;
   text-decoration: inherit;
   color: inherit;
@@ -48,7 +52,7 @@ a:hover {
 }
 
 p {
-  font-family: "Ahkio Thin";
+  font-family: "Ahkio Thin", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
 }
 
@@ -60,7 +64,7 @@ body {
 }
 
 h1 {
-  font-family: "Ahkio W00 Black";
+  font-family: "Ahkio W00 Black", "Arial Black", sans-serif;
   font-size: 3.2em;
   line-height: 1.1;
 }
@@ -68,7 +72,7 @@ h1 {
 h2,
 h3,
 h4 {
-  font-family: "Ahkio W00 Bold";
+  font-family: "Ahkio W00 Bold", "Arial", sans-serif;
 }
 
 li {
