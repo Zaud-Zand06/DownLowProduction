@@ -1,124 +1,272 @@
-Rebuild of the Downlow Chicken site for the DownLow Brands.
+# DownLow Production Website
 
-Built with React and VanillaJs, using Vite, Bun and a few additional libraries.
+A modern, responsive React website for DownLow Brands, featuring dynamic content, parallax scrolling, and integrated Google Calendar events. Built with performance and user experience in mind.
 
-# Libraries
+## 🚀 Tech Stack
 
-## react-responsive-carousel
+- **Frontend Framework:** React 18
+- **Build Tool:** Vite 5
+- **Runtime:** Bun (Package Manager & Runtime)
+- **Deployment:** Cloudflare Pages
+- **UI Library:** Material-UI (MUI) with Emotion styling
+- **Routing:** React Router DOM v7
+- **Animations:** React Spring & React Scroll Parallax
 
-- deprecated and replaced with heroContent as opposed to heroCarousel. Im leaving this here as well as the heroCarousel component incase there is any desire to swap back to using a carousel display (which i would reccomend against but whatever man)
+## 📋 Prerequisites
 
-## react-scroll-parallax
+- [Bun](https://bun.sh/) (latest version)
+- Node.js 18+ (for compatibility)
+- Git
 
-- used for the parallax scrolling in parallaxSection
+## 🛠 Installation & Setup
 
-## @mui/material
+1. **Clone the repository:**
 
-## @emotion/react
+   ```bash
+   git clone https://github.com/Zaud-Zand06/DownLowProduction.git
+   cd DownLowProduction
+   ```
 
-## @emotion/styled
+2. **Install dependencies:**
 
-- these three are used for the styling of components. They arent necessary if you want to build new components, but they help create a unified look
+   ```bash
+   bun install
+   ```
 
-# Components
+3. **Environment Setup:**
+   Create a `.env` file in the root directory:
 
-- each of the following components has a seperate .css file for styling, and all style changes should be made to the approptiate .css file. The only exception to this is for **colours and fonts**, which are defined as root variables in the index.css
+   ```env
+   VITE_CALENDAR_API=your_google_calendar_api_key
+   ```
 
-## main.jsx
+4. **Development Server:**
 
-- Contains all pages of the site, and the required routes to take people there.
-- The parallax provider allows for react-scroll-parallax components to create the parallax effect, and must contain the parallax components.
-- ScrollToTop is a utility component that lets the window scroll to the top whenever a user selects a new page
-- BrowserRouter and the Routes allow people to navigate the site using subdomains (e.g. dlchicken.com/kits, dlchicken.com/menu)
+   ```bash
+   bun run dev
+   ```
 
-## App.jsx
+5. **Build for Production:**
 
-- This is the landing page when you load the site.
-- contains the Header, HeroContent, the clickable scroll bar, the parallax information section and the footer
-- if you want to change the structure of the landing page this is where you would do it.
+   ```bash
+   bun run build
+   ```
 
-## Header.jsx
+6. **Preview Production Build:**
+   ```bash
+   bun run preview
+   ```
 
-- Contains the dl logo, as well as all the navigation buttons, and the dropdown menu for online ordering.
-- the drop down menu is built within this component and is labeled as "HeaderOrderOnlineMUIMenu".
-- this component also includes a utility function called controlHeader, that allows for the header to disappear and reappear depending on how the user scrolls.
-  - this function relies on the useEffect function to determine the direction the user scrolls in
-- The navigation buttons are dynamically generated using a navigationConfig map, and any adjustments to the routing should also be adjusted in here to ensure the correct buttons appear for the page the user requests
+## 📁 Project Structure
 
-## HeroContent.jsx
+```
+src/
+├── assets/               # Static assets (images, fonts)
+│   ├── fonts/           # Custom font files
+│   └── *.{avif,webp}    # Optimized images
+├── components/          # React components
+│   ├── component_css/   # Component-specific stylesheets
+│   ├── Header.jsx       # Navigation & header
+│   ├── Footer.jsx       # Footer with locations
+│   ├── Menu.jsx         # Menu display
+│   ├── Catering.jsx     # Catering information
+│   ├── UpcomingEvents.jsx # Google Calendar integration
+│   └── ...             # Other components
+├── App.jsx             # Main landing page
+├── main.jsx            # App entry point & routing
+├── index.css           # Global styles & CSS variables
+└── App.css             # App-specific styles
+```
 
-- This is the first component a user sees when the load the site.
-- the image you are using should be placed in the assets folder
-- the text in the image should be titled using an <h1>, and the main text should use a <p>
+## 🔧 Key Dependencies
 
-## ScrollingAlert.jsx
+### Core Libraries
 
-- if you want to change the text that scrolls across the screen, edit the text const.
-- repetitions and repeatedText should be left alone - its a hacky solution to make it scroll endlessly, and shouldnt be changed unless you have a better solution.
-- if you want to change the speed of the scrolling, you must change animation-duration in the .css file. It will be within the horizontalScrollingItems class
-- currently the scrolling text links to the /kits subdomain, but it can changed to linking to whatever you want as long as you add the link as a variable, and change the <Link> element to an <a> element
-  - remember to edit the repeated text if you are doing this to match whatever link you have it set to
+- **React & React DOM**: UI framework and rendering
+- **React Router DOM**: Client-side routing
+- **Vite**: Fast build tool and development server
 
-## ParallaxSection.jsx
+### UI & Styling
 
-- the Parallax import `import { Parallax } from "react-scroll-parallax";` is required to make the effect work
-- each item that has a parallax effect must be placed insode of a <Parallax> element and given a speed value
-- the classnames are very hacky right now and should be fixed in later iterations, so right now pay attention to the classnames and the relevant .css styles
-- Currently using css grid for the placement of the images and text
+- **@mui/material**: Component library
+- **@emotion/react & @emotion/styled**: CSS-in-JS styling
+- **@mui/icons-material**: Material Design icons
 
-## Footer.jsx
+### Animations & Effects
 
-- Contains all information pertaining the different locations of DLC, a google maps embed showing the locations, as well as contact information for catering
-- the google map is done as a web embed.
-  - the vis.gl import and gmapsAPI is there as a vestigal remain of the advanced gmap i was using. The commented out code is also a part of this.
-  - The advanced map looks much better and provides more customizability, but it costs A LOT more to use that web api. It will raise the monthly cost from ~10 dollars to ~50
-- all locations must contain a lat and lng in order for the embeded map to show the correct position
-- default location is set to DLEV
+- **react-scroll-parallax**: Parallax scrolling effects
+- **@react-spring/web**: Spring-based animations
 
-## Menu.jsx
+### Integrations
 
-- all menu items must be added to their respective lists (sandosList, sidesList, etc.) as an object with a title, description, price, and whether or not it has any special text
-- additional images must be added to the menuImages array, with its name, price, imagesrc and altText
-- when adding a new list of items, it must also be added to the displayMenuList array, with a title, description and the new list you want to add. This will automatically add all the items to the menu with a title and description for the section using the makeMenuList function
-- the menu component also contains a utility function to flip through all the images you want to display, and is currently set to 10 seconds per image
+- **@vis.gl/react-google-maps**: Google Maps integration
+- **react-responsive-carousel**: Image carousels (legacy)
 
-## Catering.jsx
+## 🎨 CSS Architecture
 
-- just information for catering, the main bulk of it is stored within the AccodianCateringMenus.jsx component and the CateringForm.jsx component
+### Global Variables (index.css)
 
-## AccordianCateringMenu.jsx
+The application uses CSS custom properties for consistent theming:
 
-- this contains all the info for the different catering locations (dl chicken, dl burgs, and vennies)
-- all built using mui components to help keep everything clean, but could be re-written in base html if we want more customization
+```css
+:root {
+  --main-yellow: #f4d03f;
+  --main-red: #e74c3c;
+  --background-colour: #1a1a1a;
+  --text-dark: #2c3e50;
+  --text-light: #ecf0f1;
+  --translucent-white: rgba(255, 255, 255, 0.9);
+  --translucent-black: rgba(0, 0, 0, 0.7);
+  --card-background-colour: #34495e;
+  --border-colour: #bdc3c7;
+  --shadow-colour: #bdc3c7;
+}
+```
 
-## CateringForm.jsx
+### Font Loading
 
-- this will be all the information we collect for catering. the formdata is saved as a state, and is then pushed to the users email client for submission. We could handle server side emailing with cloudflare worker functions
-- validation is checked via a function that just makes sure the form is filled properly using regex
-- form is built using MUI components, but again, can be re-written if we want more customization
+Custom fonts are loaded via `@font-face` declarations:
 
-## DLKits.jsx
+- **Ahkio**: Primary brand font (Thin, Bold, Black weights)
+- **Raleway**: Secondary font for body text
 
-- all the information pertaining to dl kits is contained here
-- the menu is hardcoded in, as such when you edit the menu, you must place the new item in the #dlkitsMenu section, and create a <span> with the className="dlkitsMenuItem".
+## 📱 Component Documentation
 
-## UpcomingEvents.jsx
+### Core Components
 
-- uses google calendar id and api key to load a collaborative, public calendar with all the upcoming events on it.
-- there are utility functions that help with window resizing.
-- not currently in use, but as dl kits winds down we could replace that with our events page
+#### `main.jsx`
 
-## SecretMenu.jsx
+- **Purpose**: Application entry point and routing configuration
+- **Features**:
+  - React Router setup with subdomain routing
+  - Parallax provider wrapper
+  - Scroll-to-top functionality
 
-- currently contains credits for jimmys photography as well as my webdesign, also contains credits for the fonts that i used, as they have a CC liscense that requires us to credit them
+#### `App.jsx`
 
-# Css Variables
+- **Purpose**: Landing page composition
+- **Includes**: Header, HeroContent, scrolling alerts, parallax sections, footer
 
-- the 4 font-face declerations are all the fonts we are using for the site, any additional fonts should be added to the assets/fonts folder, and imported in the same way in the css file
-- main-yellow and main-red are the primary colours for the site, along side background-colour
-  - main-red and main-yellow are mainly used for the colour of <h1>,<h2>, and <h3> elements
-  - background-colour is used for the background of the site
-- text-dark and text-light are clearly just for the different <p> texts
-- translucent-white and translucent-black are used for cards like the ones in heroContent and parallaxSection, that need to show the images underneath
-- card-background-colour is used for the menu items, so that they stand out a tiny bit more from the background
-- border-colour and shadow-colour are the same, but they are used for different things, i have them as seperate variables just in case we want them to be different for whatever reason. That being said I dont think im using any shadows on the site
+#### `Header.jsx`
+
+- **Purpose**: Navigation and branding
+- **Features**:
+  - Responsive navigation with MUI dropdown
+  - Dynamic header visibility on scroll
+  - Configurable navigation items via `navigationConfig`
+
+#### `UpcomingEvents.jsx`
+
+- **Purpose**: Google Calendar integration
+- **Features**:
+  - Fetches events via Google Calendar API
+  - Responsive iframe embedding
+  - Real-time window resize handling
+- **Environment**: Requires `VITE_CALENDAR_API` key
+
+#### `Menu.jsx`
+
+- **Purpose**: Dynamic menu display
+- **Data Structure**:
+  ```javascript
+  const menuItem = {
+    title: "Item Name",
+    description: "Item description",
+    price: "$12.99",
+    specialText: "Popular!", // optional
+  };
+  ```
+
+#### `Catering.jsx` & Sub-components
+
+- **CateringForm.jsx**: Contact form with email integration
+- **AccordianCateringMenus.jsx**: Expandable menu sections for different locations
+
+### Utility Components
+
+#### `ScrollingAlert.jsx`
+
+- **Purpose**: Animated scrolling text banner
+- **Customization**: Edit `text` constant for content, CSS animation-duration for speed
+
+#### `ParallaxSection.jsx`
+
+- **Purpose**: Parallax scrolling effects
+- **Implementation**: Uses `react-scroll-parallax` with speed-based animations
+
+## 🌐 Deployment (Cloudflare Pages)
+
+### Build Configuration
+
+```json
+{
+  "build": {
+    "command": "bun run build",
+    "directory": "dist",
+    "environment": {
+      "NODE_VERSION": "18"
+    }
+  }
+}
+```
+
+### Environment Variables
+
+Set in Cloudflare Pages dashboard:
+
+- `VITE_CALENDAR_API`: Google Calendar API key
+
+## 🔍 Development Guidelines
+
+### Adding New Menu Items
+
+1. Add item object to appropriate list in `Menu.jsx`
+2. Update `menuImages` array if visual component needed
+3. Ensure item follows established data structure
+
+### Styling Best Practices
+
+- Use CSS custom properties for colors and fonts
+- Component-specific styles go in `component_css/`
+- Global styles and variables in `index.css`
+- Maintain responsive design principles
+
+### Performance Considerations
+
+- Images are optimized (AVIF/WebP formats)
+- Bun provides fast dependency resolution
+- Vite enables fast HMR during development
+- Cloudflare Pages provides global CDN distribution
+
+## 🐛 Common Issues & Solutions
+
+### Google Calendar API
+
+- Ensure API key has Calendar API enabled
+- Check CORS settings for domain
+- Verify calendar is public for embedded iframe
+
+### Build Issues
+
+- Clear Bun cache: `bun pm cache rm`
+- Verify all environment variables are set
+- Check for console errors in browser developer tools
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit changes: `git commit -m 'Add new feature'`
+4. Push to branch: `git push origin feature/new-feature`
+5. Submit a pull request
+
+## 📄 License
+
+This project is proprietary to DownLow Brands. All rights reserved.
+
+## 🙏 Credits
+
+- **Photography**: Jimmy's Photography
+- **Web Design & Development**: Alex Li
+- **Fonts**: Licensed under Creative Commons (credits in SecretMenu.jsx)
+- **Icons**: Material Design Icons by Google
