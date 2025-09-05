@@ -1,6 +1,6 @@
 import "./component_css/footer.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   AdvancedMarker,
   Map,
