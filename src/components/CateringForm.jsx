@@ -145,11 +145,6 @@ export default function CateringForm() {
             control={<Radio />}
             label="Delivery"
           />
-          <FormControlLabel
-            value="On Site Catering "
-            control={<Radio />}
-            label="On Site Catering"
-          />
         </RadioGroup>
       </FormControl>
 
