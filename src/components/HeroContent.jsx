@@ -1,5 +1,5 @@
 import "./component_css/heroContent.css";
-import heroImage from "../assets/baldySando1600crop.avif";
+import heroImage from "../assets/baldySando1600cropMedCompression.avif";
 
 function HeroContent() {
   return (
