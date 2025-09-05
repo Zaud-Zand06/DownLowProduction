@@ -71,7 +71,7 @@ function Footer() {
 
         <section id="locationsInfo">
           <h1>Where we are</h1>
-          <h3>Click the red links to change the location shown on the map</h3>
+          <h2>Click the red links to change the location shown on the map</h2>
           {locations.map((location, index) => (
             <div key={index}>
               <h2>
