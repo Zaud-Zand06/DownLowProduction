@@ -45,7 +45,7 @@
     -webkit-text-stroke: 1px var(--border-colour);
   }
   & h1,
-  h3 {
+  #locationInfoTag {
     margin-top: 0;
     margin-bottom: 1rem;
     color: var(--main-yellow);
