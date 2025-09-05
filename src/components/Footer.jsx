@@ -66,6 +66,7 @@ function Footer() {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          title="googleMapsEmbed"
         ></iframe>
 
         <section id="locationsInfo">
