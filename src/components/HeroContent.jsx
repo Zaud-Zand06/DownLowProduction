@@ -11,10 +11,9 @@ function HeroContent() {
         decoding="async"
       />
       <div id="heroContentText">
-        <h1>What's New This Month?</h1>
+        <h1>The Baldy Sando!</h1>
         <p>
-          The Baldy Sando!
-          <br /> Made with love and in Collaboration with{" "}
+          Made with love and in Collaboration with{" "}
           <a href="https://baldyloxvintage.com/" target="_blank">
             BaldyLox Vintage
           </a>{" "}
