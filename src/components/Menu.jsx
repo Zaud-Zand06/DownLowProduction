@@ -355,7 +355,7 @@ function MakeMenuList(menuList) {
             className={
               selectedMenu === section
                 ? "selected sectionTitle"
-                : "sectionTitle"
+               : "sectionTitle"
             }
             onClick={() => handleMenuClick(section)}
             key={index}
