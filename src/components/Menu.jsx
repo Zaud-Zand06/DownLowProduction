@@ -181,13 +181,53 @@ const waffleList = [
     title: "Chicken and Waffle (Breast)",
     description: "A fresh waffle topped with a boneless, dusted breast",
     price: 19.99,
+  },
+  {
+    title: "4 Piece Tender Combo",
+    description: "4 tenders, any side and a drink",
+    price: 21.99,
     special: false,
   },
   {
-    title: "Waffle Slider",
-    description:
-      "Dusted chicken, slaw, pickles, pickled onions and honey jallapeno sauce, built on a waffle",
-    price: 10.25,
+    title: "7 Piece Tender Combo",
+    description: "7 tenders, any side and a drink",
+    price: 28.49,
+    special: false,
+  },
+  {
+    title: "15 Piece Tender Combo",
+    description: "15 tenders, any two sides and two drinks",
+    price: 49.99,
+    special: false,
+  },
+  {
+    title: "20 Piece Tender Combo",
+    description: "20 tenders, any four side and four drinks",
+    price: 86.99,
+    special: false,
+  },
+  {
+    title: "2 Piece and a Side",
+    description: "2 boneless thighs, any side and a drink",
+    price: 17.99,
+    special: false,
+  },
+  {
+    title: "4 Piece and a Side",
+    description: "4 thighs, any 2 sides and 2 drinks",
+    price: 33.99,
+    special: false,
+  },
+  {
+    title: "1 Breast and a Side",
+    description: "1 white meat breast, any side and a drink",
+    price: 17.99,
+    special: "Add an extra breast for 10",
+  },
+  {
+    title: "Piled High",
+    description: "10 boneless thighs, any 4 sides and 4 drinks",
+    price: 72.99,
     special: false,
   },
 ];
@@ -355,7 +395,7 @@ function MakeMenuList(menuList) {
             className={
               selectedMenu === section
                 ? "selected sectionTitle"
-               : "sectionTitle"
+                : "sectionTitle"
             }
             onClick={() => handleMenuClick(section)}
             key={index}
