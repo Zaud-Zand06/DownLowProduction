@@ -36,11 +36,11 @@ const menuImages = [
       "A man smiling while holding a chocolate peanut butter dessert bar, and a cinnamon toast crunch dessert bar.",
   },
 ];
-
 const sandosList = [
   {
-    title: "The Cowboy Sando",
-    description: "Cowboy Spice dust, Cowboy Ranch, Slaw and BnB pickles! ",
+    title: "The Baldy Sando",
+    description:
+      "Crispy Fried Chicken, Soy Garlic Glaze, Halal Chicken Spam-Coleslaw, Lemon-y Rookie Mayo",
     price: 18.99,
     special: null,
   },
@@ -68,12 +68,6 @@ const sandosList = [
     title: "The Rookie",
     description: "Classic Chicken, Shredduce, Tomato, Rookie Sauce",
     price: 18.99,
-    special: null,
-  },
-  {
-    title: "Extra Toppings",
-    description: "Fried Egg, Cheese",
-    price: 2.25,
     special: null,
   },
 ];
@@ -307,7 +301,10 @@ const sauceList = [
 const displayMenuList = [
   {
     title: "Sandos",
-    description: ["Choose between boneless leg or breast"],
+    description: [
+      "Choose between boneless leg or breast",
+      "Add a fried egg or a slice of fried cheese for 2.25",
+    ],
     items: sandosList,
   },
   {
@@ -339,53 +336,60 @@ const displayMenuList = [
   // },
 ];
 
-function makeMenuList(menuList) {
-  const horizontalScroll = (event) => {
-    if (event.target.closest(".menuCardItemContainer")) {
-      event.preventDefault();
-      const container = event.target.closest(".menuCardItemContainer");
-      container.scrollLeft += (event.deltaY + event.deltaX) * 0.8;
+function MakeMenuList(menuList) {
+  const [selectedMenu, setSelectedMenu] = useState(null);
+
+  const handleMenuClick = (menuTitle) => {
+    if (selectedMenu === menuTitle) {
+      setSelectedMenu(null); // Deselect if same menu
+    } else {
+      setSelectedMenu(menuTitle);
     }
   };
 
-  useEffect(() => {
-    document.addEventListener("wheel", horizontalScroll, { passive: false });
-
-    return () => {
-      document.removeEventListener("wheel", horizontalScroll);
-    };
-  }, []);
-
   return (
-    <div className="menuList">
-      {menuList.map((section, index) => {
-        return (
-          <div key={index} className="menuCard">
-            <h2 className="sectionTitle">{section.title}</h2>
-            {section.description &&
-              section.description.map((line, index) => {
-                return (
-                  <h4 className="sectionDescription" key={index}>
-                    {line}
-                  </h4>
-                );
-              })}
-            <div className="menuCardItemContainer">
-              {section.items.map((item, index) => {
-                return (
-                  <div className="menuCardItem" key={index}>
-                    <h3>{item.title}</h3>
-                    <p className="menuItemDescription">{item.description}</p>
-                    {item.special && <h4>{item.special}</h4>}
-                    <p className="price">{item.price}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        );
-      })}
-    </div>
+    <section className="menu">
+      <div className="menuList">
+        {menuList.map((section, index) => (
+          <h2
+            className={
+              selectedMenu === section
+                ? "selected sectionTitle"
+                : "sectionTitle"
+            }
+            onClick={() => handleMenuClick(section)}
+            key={index}
+          >
+            {section.title}
+          </h2>
+        ))}
+      </div>
+      <div className="menuCard">
+        {!selectedMenu && (
+          <p>Click on one of the menu categories above to see what we have!</p>
+        )}
+        {selectedMenu && (
+          <>
+            {Array.isArray(selectedMenu.description) ? (
+              selectedMenu.description.map((desc, i) => (
+                <h2 className="sectionDescription" key={i}>
+                  {desc}
+                </h2>
+              ))
+            ) : (
+              <h2 className="sectionDescription">{selectedMenu.description}</h2>
+            )}
+            {selectedMenu.items.map((item, index) => (
+              <div className="menuCardItem" key={index}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <p className="itemPrice">${item.price}</p>
+              </div>
+            ))}
+          </>
+        )}
+      </div>
+    </section>
   );
 }
 
@@ -415,7 +419,7 @@ function Menu() {
       <Header />
       <div className="backgroundImage"></div>
       <div className="menuContainer">
-        {makeMenuList(displayMenuList)}
+        {MakeMenuList(displayMenuList)}
         <div id="menuImageContainer">
           <h2>{menuImages[menuImage].name}</h2>
           <h3>$ {menuImages[menuImage].price}</h3>
