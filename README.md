@@ -2,7 +2,7 @@
 
 A modern, responsive React website for DownLow Brands, featuring dynamic content, parallax scrolling, and integrated Google Calendar events. Built with performance and user experience in mind.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Frontend Framework:** React 18
 - **Build Tool:** Vite 5
@@ -12,13 +12,13 @@ A modern, responsive React website for DownLow Brands, featuring dynamic content
 - **Routing:** React Router DOM v7
 - **Animations:** React Spring & React Scroll Parallax
 
-## 📋 Prerequisites
+## Prerequisites
 
 - [Bun](https://bun.sh/) (latest version)
 - Node.js 18+ (for compatibility)
 - Git
 
-## 🛠 Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository:**
 
@@ -57,7 +57,7 @@ A modern, responsive React website for DownLow Brands, featuring dynamic content
    bun run preview
    ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -78,7 +78,7 @@ src/
 └── App.css             # App-specific styles
 ```
 
-## 🔧 Key Dependencies
+## Key Dependencies
 
 ### Core Libraries
 
@@ -102,7 +102,7 @@ src/
 - **@vis.gl/react-google-maps**: Google Maps integration
 - **react-responsive-carousel**: Image carousels (legacy)
 
-## 🎨 CSS Architecture
+## CSS Architecture
 
 ### Global Variables (index.css)
 
@@ -130,7 +130,7 @@ Custom fonts are loaded via `@font-face` declarations:
 - **Ahkio**: Primary brand font (Thin, Bold, Black weights)
 - **Raleway**: Secondary font for body text
 
-## 📱 Component Documentation
+## Component Documentation
 
 ### Core Components
 
@@ -194,7 +194,7 @@ Custom fonts are loaded via `@font-face` declarations:
 - **Purpose**: Parallax scrolling effects
 - **Implementation**: Uses `react-scroll-parallax` with speed-based animations
 
-## 🌐 Deployment (Cloudflare Pages)
+## Deployment (Cloudflare Pages)
 
 ### Build Configuration
 
@@ -238,7 +238,7 @@ Set in Cloudflare Pages dashboard:
 - Vite enables fast HMR during development
 - Cloudflare Pages provides global CDN distribution
 
-## 🐛 Common Issues & Solutions
+## Common Issues & Solutions
 
 ### Google Calendar API
 
@@ -252,7 +252,7 @@ Set in Cloudflare Pages dashboard:
 - Verify all environment variables are set
 - Check for console errors in browser developer tools
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/new-feature`
@@ -260,11 +260,11 @@ Set in Cloudflare Pages dashboard:
 4. Push to branch: `git push origin feature/new-feature`
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is proprietary to DownLow Brands. All rights reserved.
 
-## 🙏 Credits
+## Credits
 
 - **Photography**: Jimmy's Photography
 - **Web Design & Development**: Alex Li
