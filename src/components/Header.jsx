@@ -4,9 +4,15 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Link, useLocation } from "react-router-dom";
 
-function HeaderOrderOnlineMUIMenu({ eastVanLink, UBCLink, giftCardLink }) {
+function HeaderOrderOnlineMUIMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
+  const UBCLink = "https://dl-chicken-ubc.square.site/";
+  const uberEatsDLEV =
+    "https://www.order.store/store/downlow-chicken-shack-commercial-drive/6NJHkXsaVEKchwfzK6qWoA";
+  const uberEatsDLUBC =
+    "https://www.order.store/store/downlow-chicken-shack-ubc/tZAZORljWCK3pXoGHTm7AQ";
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -24,7 +30,7 @@ function HeaderOrderOnlineMUIMenu({ eastVanLink, UBCLink, giftCardLink }) {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        Order Pickup
+        Order Online
       </a>
       <Menu
         id="orderOnlineMenu"
@@ -37,17 +43,22 @@ function HeaderOrderOnlineMUIMenu({ eastVanLink, UBCLink, giftCardLink }) {
       >
         <MenuItem>
           <a target="_blank" href={eastVanLink} onClick={() => handleClose()}>
-            DL East Van
+            DL East Van Pickup
           </a>
         </MenuItem>
         <MenuItem>
           <a target="_blank" href={UBCLink} onClick={() => handleClose()}>
-            DL UBC
+            DL UBC Pickup
           </a>
         </MenuItem>
         <MenuItem>
-          <a target="_blank" href={giftCardLink} onClick={() => handleClose()}>
-            Online Gift Cards
+          <a target="_blank" href={uberEatsDLEV} onClick={() => handleClose()}>
+            DL East Van Delivery
+          </a>
+        </MenuItem>
+        <MenuItem>
+          <a target="_blank" href={uberEatsDLUBC} onClick={() => handleClose()}>
+            DL UBC Delivery
           </a>
         </MenuItem>
       </Menu>
@@ -60,10 +71,6 @@ function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const headerRef = useRef(null);
   const location = useLocation();
-
-  const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
-  const UBCLink = "https://dl-chicken-ubc.square.site/";
-  const giftCardLink = "https://squareup.com/gift/MLWWKAFPWGTFJ/order";
 
   const controlHeader = () => {
     if (typeof window !== "undefined") {
@@ -106,11 +113,7 @@ function Header() {
         </h1>
       </div>
       <div className="hamburgerMenuButtons">
-        <HeaderOrderOnlineMUIMenu
-          eastVanLink={eastVanLink}
-          UBCLink={UBCLink}
-          giftCardLink={giftCardLink}
-        />
+        <HeaderOrderOnlineMUIMenu />
         <a
           target="_blank"
           onClick={() => {

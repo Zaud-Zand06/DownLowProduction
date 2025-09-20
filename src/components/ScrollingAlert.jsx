@@ -1,10 +1,8 @@
 import "./component_css/scrollingAlert.css";
-import { Link } from "react-router-dom";
-const instaLink =
-  "https://www.instagram.com/dlchicken?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+const giftCardLink = "https://squareup.com/gift/MLWWKAFPWGTFJ/order";
 
 function ScrollingAlert() {
-  const text = `Click Here For Information About Kits!`;
+  const text = `Click Here to Purchase Gift Cards! ${"⭐"}`;
   const repetitions = 10;
   const repeatedText = Array(repetitions).fill(text).join(" ");
 
@@ -12,10 +10,14 @@ function ScrollingAlert() {
     <div className="scrollContainer">
       <div className="horizontalScrollingItems">
         <div className="horizontalScrollingItemsItems">
-          <Link to={"/kits"}>{repeatedText}</Link>
+          <a target="_blank" href={giftCardLink}>
+            {repeatedText}
+          </a>
         </div>
         <div className="horizontalScrollingItemsItems">
-          <Link to={"/kits"}>{repeatedText}</Link>
+          <a target="_blank" href={giftCardLink}>
+            {repeatedText}
+          </a>
         </div>
       </div>
     </div>
