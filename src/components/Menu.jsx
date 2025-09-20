@@ -377,14 +377,10 @@ const displayMenuList = [
 ];
 
 function MakeMenuList(menuList) {
-  const [selectedMenu, setSelectedMenu] = useState(null);
+  const [selectedMenu, setSelectedMenu] = useState(displayMenuList[0]);
 
   const handleMenuClick = (menuTitle) => {
-    if (selectedMenu === menuTitle) {
-      setSelectedMenu(null); // Deselect if same menu
-    } else {
-      setSelectedMenu(menuTitle);
-    }
+    setSelectedMenu(menuTitle);
   };
 
   return (
@@ -405,9 +401,6 @@ function MakeMenuList(menuList) {
         ))}
       </div>
       <div className="menuCard">
-        {!selectedMenu && (
-          <p>Click on one of the menu categories above to see what we have!</p>
-        )}
         {selectedMenu && (
           <>
             {Array.isArray(selectedMenu.description) ? (
