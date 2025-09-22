@@ -65,6 +65,52 @@ function HeaderOrderOnlineMUIMenu() {
     </>
   );
 }
+// TODO: Refactor this to avoid code duplication with the main Header component
+// This is for the mobile hamburger menu
+function mobileHeaderButtons() {
+  return (
+    <div>
+      {(() => {
+        const navigationConfig = {
+          "/": [
+            { to: "/catering", label: "Catering" },
+            { to: "/menu", label: "Menu" },
+          ],
+          "/secret": [
+            { to: "/catering", label: "Catering" },
+            { to: "/menu", label: "Menu" },
+          ],
+          "/kits": [
+            { to: "/catering", label: "Catering" },
+            { to: "/menu", label: "Menu" },
+            { to: "/", label: "Home" },
+          ],
+          "/catering": [
+            { to: "/", label: "Home" },
+            { to: "/menu", label: "Menu" },
+          ],
+          "/menu": [
+            { to: "/catering", label: "Catering" },
+            { to: "/", label: "Home" },
+          ],
+          "/events": [
+            { to: "/catering", label: "Catering" },
+            { to: "/menu", label: "Menu" },
+            { to: "/", label: "Home" },
+          ],
+        };
+
+        const currentNavigation = navigationConfig[location.pathname] || [];
+
+        return currentNavigation.map(({ to, label }) => (
+          <Link key={to} to={to}>
+            {label}
+          </Link>
+        ));
+      })()}
+    </div>
+  );
+}
 
 function Header() {
   const [isVisible, setIsVisible] = useState(true);

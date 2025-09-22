@@ -14,20 +14,26 @@ function SecretMenu() {
           <img src={szechuanSandoIcon} alt="fried chicken sandwich" />
         </div>
         <h1>Thanks for being a fan :3</h1>
-        <p>have you checked out our other brands?</p>
-        <p>dl burgers</p>
-        <p>vennies sub shop</p>
-        <p>the drive canteen</p>
-        <p>sunday pies</p>
-        <span>
-          <h3>Photos by</h3>
-          <p>Alcantara Media</p>
-          <p>"chicken jimmy"</p>
-          <h3>made and designed by</h3>
-          <p>Alex Li</p>
-          <h4>fonts</h4>
-          <a href="http://www.onlinewebfonts.com">Web Fonts</a>
-        </span>
+        <section className="mainBody">
+          <section className="brands">
+            <h3>have you checked out our other brands?</h3>
+            <a href="https://www.dlburgers.com">dl burgers</a>
+            <a href="https://www.vennies.com">vennies sub shop</a>
+            <a href="https://www.thedrivecanteen.ca/">the drive canteen</a>
+          </section>
+          <section className="credits">
+            <h3>Photos by</h3>
+            <p>
+              Alcantara Media <br /> &apos;chicken jimmy&apos;
+            </p>
+            <h3>made and designed by</h3>
+            <p id="me">Alex Li</p>
+            <p>
+              fonts provided by{" "}
+              <a href="http://www.onlinewebfonts.com">Web Fonts</a>
+            </p>
+          </section>
+        </section>
       </div>
       <Footer />
     </>
