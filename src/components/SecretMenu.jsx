@@ -17,8 +17,8 @@ function SecretMenu() {
         <section className="mainBody">
           <section className="brands">
             <h3>have you checked out our other brands?</h3>
-            <a href="https://www.dlburgers.com">dl burgers</a>
-            <a href="https://www.vennies.com">vennies sub shop</a>
+            <a href="https://www.dlburgers.ca">dl burgers</a>
+            <a href="https://www.vennies.ca">vennies sub shop</a>
             <a href="https://www.thedrivecanteen.ca/">the drive canteen</a>
           </section>
           <section className="credits">
