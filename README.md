@@ -97,11 +97,6 @@ src/
 - **react-scroll-parallax**: Parallax scrolling effects
 - **@react-spring/web**: Spring-based animations
 
-### Integrations
-
-- **@vis.gl/react-google-maps**: Google Maps integration
-- **react-responsive-carousel**: Image carousels (legacy)
-
 ## CSS Architecture
 
 ### Global Variables (index.css)
@@ -216,7 +211,7 @@ Set in Cloudflare Pages dashboard:
 
 - `VITE_CALENDAR_API`: Google Calendar API key
 
-## 🔍 Development Guidelines
+##  Development Guidelines
 
 ### Adding New Menu Items
 
@@ -226,7 +221,7 @@ Set in Cloudflare Pages dashboard:
 
 ### Styling Best Practices
 
-- Use CSS custom properties for colors and fonts
+- Use CSS custom properties for colours and fonts
 - Component-specific styles go in `component_css/`
 - Global styles and variables in `index.css`
 - Maintain responsive design principles
