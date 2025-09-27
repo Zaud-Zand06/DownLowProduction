@@ -1,0 +1,34 @@
+#modalEventPopUp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    & > .modalOverlay {
+        border: 2px solid var(--border-colour);
+        border-radius: 10px;
+        background-color: var(--background-colour);
+        padding: 1rem;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    & a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: var(--main-red);
+        -webkit-text-stroke: 0.5px black;
+    }
+    & a:hover {
+        color: var(--main-yellow);
+    }
+}
