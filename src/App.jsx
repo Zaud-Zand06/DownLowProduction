@@ -1,5 +1,5 @@
-import { useState } from "react";
 import "./App.css";
+import { useState, useEffect } from "react";
 import "./components/component_css/backgroundImage.css";
 import HeroContent from "./components/HeroContent";
 import Header from "./components/Header";
@@ -11,6 +11,7 @@ import PopUpEvents from "./components/PopUpEvents";
 function App() {
   const [isModalOpen, setModalOpen] = useState(true);
   const handleClose = () => setModalOpen(false);
+
   return (
     <>
       <PopUpEvents isOpen={isModalOpen} onClose={handleClose} />
