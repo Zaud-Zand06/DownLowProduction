@@ -150,6 +150,11 @@ Custom fonts are loaded via `@font-face` declarations:
   - Dynamic header visibility on scroll
   - Configurable navigation items via `navigationConfig`
 
+#### `PopUpEvents.jsx`
+
+- **Purpose**: Pop up notification for important events, or specials
+- **Features**:
+  - Simple popup that can be exited by clicking elsewhere on the screen
 #### `UpcomingEvents.jsx`
 
 - **Purpose**: Google Calendar integration
