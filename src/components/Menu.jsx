@@ -3,23 +3,26 @@ import { useState, useEffect } from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import dessertImage from "../assets/dessertBars.avif";
-import OGSando from "../assets/OGSando1.avif";
+// import OGSando from "../assets/OGSando1.avif";
 import PaisanoSando from "../assets/Paisano1.avif";
-import PotSalad from "../assets/PotSalad1.avif";
+// import PotSalad from "../assets/PotSalad1.avif";
+import OktoberfestSando from "../assets/octoberfestSando.avif";
+import OktoberfestFries from "../assets/octoberfestFries.avif";
 
 const menuImages = [
   {
-    name: "OG Sando",
+    name: "Oktoberfest Sando",
     price: 18.99,
-    imageSrc: OGSando,
+    imageSrc: OktoberfestSando,
     altText:
-      "Fried Chicken sandwich with slaw, and pickles, placed on a sheet of wax paper.",
+      "Fried Chicken sandwhich with sauerkraut slaw, placed on a sheet of wax paper.",
   },
   {
-    name: "Potato Salad",
-    price: 5.99,
-    imageSrc: PotSalad,
-    altText: "A creamy potato salad being held on a wooden fork.",
+    name: "Oktoberfest Fries",
+    price: 8,
+    imageSrc: OktoberfestFries,
+    altText:
+      "A bowl of crinkle cut fries topped with sauerkraut slaw and grainy dijon mustard mayo.",
   },
   {
     name: "Paisano Sando",
@@ -38,11 +41,11 @@ const menuImages = [
 ];
 const sandosList = [
   {
-    title: "The Baldy Sando",
+    title: "The Oktoberfest Sando",
     description:
-      "Crispy Fried Chicken, Soy Garlic Glaze, Halal Chicken Spam-Coleslaw, Lemon-y Rookie Mayo",
+      "Grainy Dijon Mustard Mayo, Pickled Sauerkraut Slaw, and our new Dilly Dust",
     price: 18.99,
-    special: null,
+    special: "Limited time only!",
   },
   {
     title: "The Paisano Sando",
@@ -132,6 +135,13 @@ const chickenByThePieceList = [
   },
 ];
 const sidesList = [
+  {
+    title: "Oktoberfest Fries",
+    description:
+      "Crinkle-cut fries tossed in our new Dilly dust, with Pickled Reds and dill pickles. Served with grainy dijon mustard mayo",
+    price: 8,
+    special: "Limited time only!",
+  },
   {
     title: "Fries",
     description: "Crinkle-cut and crispy. Salted, spicy, or truffled!",
@@ -415,6 +425,9 @@ function MakeMenuList(menuList) {
             {selectedMenu.items.map((item, index) => (
               <div className="menuCardItem" key={index}>
                 <h3>{item.title}</h3>
+                {item.special && (
+                  <h4 className="itemSpecial">{item.special}</h4>
+                )}
                 <p>{item.description}</p>
                 <p className="itemPrice">${item.price}</p>
               </div>

@@ -51,16 +51,24 @@
   & > h3 {
     font-size: 1.5rem;
     font-weight: 100;
+    margin: 0px;
   }
   & > p {
     width: 80%;
     font-size: 1.4rem;
     margin: 0px;
+    margin-top: 0.5rem;
     text-align: left;
   }
   & > p.itemPrice {
     font-weight: bold;
     text-align: right;
+  }
+  & > h4.itemSpecial {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--main-red);
+    margin: 0px;
   }
 }
 .sectionDescription {
