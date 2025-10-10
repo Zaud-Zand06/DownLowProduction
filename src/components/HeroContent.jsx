@@ -1,5 +1,5 @@
 import "./component_css/heroContent.css";
-import heroImage from "../assets/baldySando1600cropMedCompression.avif";
+import heroImage from "../assets/pumpkinSpiceDessertBar1600.avif";
 
 function HeroContent() {
   return (
@@ -11,16 +11,14 @@ function HeroContent() {
         decoding="async"
       />
       <div id="heroContentText">
-        <h1>The Baldy Sando!</h1>
+        <h1>Our October Specials Have Arrived!</h1>
         <p>
-          Made with love and in Collaboration with{" "}
-          <a href="https://baldyloxvintage.com/" target="_blank">
-            BaldyLox Vintage
-          </a>{" "}
-          and featuring a crispy piece of Soy Glazed Chicken, shredded and fried
-          Halal Chicken Spam, our famous Coleslaw and a new Lemon-y Rookie Mayo!
+          Come by and try our new Oktoberfest Sando and Fries! Featuring a new
+          Grainy Dijon Mustard Mayo, Pickled sauerkraut coleslaw, and a new
+          dilly dust!
           <br />
-          Available from Sept 2, to the end of the month! Get it while you can!
+          While you&apos;re here, try our Pumpkin Spice Dessert Bar! Featuring
+          your favourite fall flavours packed into a crispy, sweet dessert bar!
         </p>
       </div>
     </section>
