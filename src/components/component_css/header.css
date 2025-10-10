@@ -6,7 +6,9 @@
   background-color: var(--background-colour);
   border-bottom: 2px solid var(--border-colour);
   z-index: 10;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
 }
 
 .header.hidden {
@@ -47,13 +49,6 @@
   font-size: 2rem;
 }
 
-#redLogo {
-  color: var(--main-red);
-}
-
-#redLogo:hover {
-  color: var(--button-hover-colour);
-}
 #orderOnlineMenu a {
   font-size: 1.5rem;
   color: var(--main-red);

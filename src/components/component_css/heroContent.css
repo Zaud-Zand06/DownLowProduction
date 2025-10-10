@@ -27,10 +27,7 @@
       font-family: "Ahkio Thin";
       color: var(--main-red);
     }
-    & a:hover {
-      font-family: "Ahkio Thin";
-      color: var(--main-yellow);
-    }
+
     & > h1 {
       color: var(--main-yellow);
       -webkit-text-stroke: 2px var(--border-colour);
@@ -42,6 +39,7 @@
       font-size: 22px;
     }
   }
+  {/* TODO: i need to adjust this behaviour when i have clickable elements within the hero  */}
   & #heroContentText:hover {
     opacity: 0;
     transition: opacity 0.3s ease;

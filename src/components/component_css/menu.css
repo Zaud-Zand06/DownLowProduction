@@ -119,6 +119,9 @@
   }
   .menuCardItem {
     flex: 0 0 33%;
+    & > p {
+      font-size: 1.1rem;
+    }
   }
   .menuList {
     height: auto;
