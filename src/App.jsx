@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <PopUpEvents isOpen={isModalOpen} onClose={handleClose} />
+      {/* <PopUpEvents isOpen={isModalOpen} onClose={handleClose} /> */}
       <Header role="banner" />
 
       <div className="backgroundImage"></div>
