@@ -149,17 +149,29 @@ const sidesList = [
     special: "Make it a large for 2 more",
   },
   {
-    title: "Pimento Mac Salad",
-    description: "Pimento Cheese dressing, Pickled Celery, Macaroni Noodles",
+    title: "Mac and Cheese",
+    description: "Creamy Cheddar Cheese Sauce, Elbow Macaroni",
     price: 5.99,
     special: false,
   },
   {
-    title: "Dill Potato Salad",
-    description: "Creamy Dill Dressing",
+    title: "Baked Beans",
+    description: "Sweet and Savoury with Smoked Beef cheeks",
     price: 5.99,
     special: false,
   },
+  // {
+  //   title: "Pimento Mac Salad",
+  //   description: "Pimento Cheese dressing, Pickled Celery, Macaroni Noodles",
+  //   price: 5.99,
+  //   special: false,
+  // },
+  // {
+  //   title: "Dill Potato Salad",
+  //   description: "Creamy Dill Dressing",
+  //   price: 5.99,
+  //   special: false,
+  // },
   {
     title: "Sweet-and-Sour Slaw",
     description: "Cumin, Pickled Onions",
