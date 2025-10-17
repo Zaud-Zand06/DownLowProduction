@@ -123,6 +123,10 @@
             font-size: 1.1rem;
         }
     }
+    .menuContainer {
+        grid-template-columns: 1fr;
+    }
+
     .menuList {
         height: auto;
         & > h2 {
