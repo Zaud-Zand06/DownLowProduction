@@ -450,12 +450,10 @@ function MakeMenuList(menuList) {
     </section>
   );
 }
-
-function Menu() {
-  // menuImage will be looped through using the setMenuImage,
+function menuImageContainer() {
+ // menuImage will be looped through using the setMenuImage,
   // which just chooses the item index
   const [menuImage, setMenuImage] = useState(0);
-
   const updateMenuImage = () => {
     let newIndex = null;
     if (menuImage < menuImages.length - 1) {
@@ -465,20 +463,14 @@ function Menu() {
       setMenuImage(0);
     }
   };
-  // this will be the useEffect function that actually
-  // calls the set interval in order to have the images change
   useEffect(() => {
+    // 10 second interval before changing image
     const intervalMilliseconds = setInterval(updateMenuImage, 10000);
-
     return () => clearInterval(intervalMilliseconds);
   });
-  return (
-    <>
-      <Header />
-      <div className="backgroundImage"></div>
-      <div className="menuContainer">
-        {MakeMenuList(displayMenuList)}
-        <div id="menuImageContainer">
+
+  return(
+    <div id="menuImageContainer">
           <h2>{menuImages[menuImage].name}</h2>
           <h3>$ {menuImages[menuImage].price}</h3>
           <img
@@ -486,6 +478,17 @@ function Menu() {
             alttext={menuImages[menuImage].altText}
           />
         </div>
+  ) 
+}
+
+function Menu() {
+   return (
+    <>
+      <Header />
+      <div className="backgroundImage"></div>
+      <div className="menuContainer">
+        {MakeMenuList(displayMenuList)}
+        {menuImageContainer()}
       </div>
       <Footer />
     </>
