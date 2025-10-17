@@ -81,11 +81,11 @@
     #heroContentText {
       top: 35%;
       & > h1 {
-        font-size: 22px;
+        font-size: 26px;
         -webkit-text-stroke-width: 1.5px;
       }
       & > p {
-        font-size: 16px;
+        font-size: 20px;
       }
     }
   }
