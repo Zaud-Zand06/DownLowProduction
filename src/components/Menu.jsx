@@ -271,7 +271,7 @@ const comboList = [
     description: "7 tenders, any side and a drink",
     price: 28.49,
     special: false,
-  },
+ },
   {
     title: "15 Piece Tender Combo",
     description: "15 tenders, any two sides and two drinks",
