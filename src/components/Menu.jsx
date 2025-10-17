@@ -450,7 +450,7 @@ function MakeMenuList(menuList) {
     </section>
   );
 }
-function menuImageContainer() {
+function MakeMenuImageContainer() {
  // menuImage will be looped through using the setMenuImage,
   // which just chooses the item index
   const [menuImage, setMenuImage] = useState(0);
@@ -471,13 +471,10 @@ function menuImageContainer() {
 
   return(
     <div id="menuImageContainer">
-          <h2>{menuImages[menuImage].name}</h2>
-          <h3>$ {menuImages[menuImage].price}</h3>
-          <img
-            src={menuImages[menuImage].imageSrc}
-            alttext={menuImages[menuImage].altText}
-          />
-        </div>
+      <h2>{menuImages[menuImage].name}</h2>
+      <h3>$ {menuImages[menuImage].price}</h3>
+      <img src={menuImages[menuImage].imageSrc} alttext={menuImages[menuImage].altText} />
+    </div>
   ) 
 }
 
@@ -488,7 +485,7 @@ function Menu() {
       <div className="backgroundImage"></div>
       <div className="menuContainer">
         {MakeMenuList(displayMenuList)}
-        {menuImageContainer()}
+        {MakeMenuImageContainer()}
       </div>
       <Footer />
     </>
