@@ -8,7 +8,7 @@
   & > img {
     margin-top: calc(100vh / 9);
     width: 100%;
-    height: 55vh;
+    height: auto;
     object-fit: cover;
     z-index: -1;
     outline: 2px solid var(--border-colour);
@@ -17,7 +17,7 @@
     position: absolute;
     top: 40%;
     padding: 1rem;
-    width: 75%;
+    width: 80%;
     z-index: 3;
     outline: 2px solid var(--main-red);
     background-color: var(--translucent-black);
@@ -49,6 +49,7 @@
       margin-top: calc(100vw / 5);
     }
     #heroContentText {
+    width: 90%;
       & > h1 {
         font-size: 36px;
         -webkit-text-stroke-width: 1.5px;
@@ -80,11 +81,11 @@
     #heroContentText {
       top: 35%;
       & > h1 {
-        font-size: 28px;
+        font-size: 22px;
         -webkit-text-stroke-width: 1.5px;
       }
       & > p {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   }

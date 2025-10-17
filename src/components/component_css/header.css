@@ -91,3 +91,13 @@
     -webkit-text-stroke-width: 1.5px;
   }
 }
+@media screen and (max-width: 400px) {
+    #logo h1 {
+        font-size:1rem;
+        -webkit-text-stroke-width: 0.8px;
+    }
+    .hamburgerMenuButtons > * {
+        font-size: 1rem;
+        -webkit-text-stroke-width: 0.8px;
+    }
+}
