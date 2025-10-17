@@ -48,7 +48,12 @@
 #logo h1 {
   font-size: 2rem;
 }
-
+#redLogo {
+  color: var(--main-red);
+}
+#redLogo:hover {
+  color: var(--button-hover-colour);
+}
 #orderOnlineMenu a {
   font-size: 1.5rem;
   color: var(--main-red);
