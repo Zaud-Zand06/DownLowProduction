@@ -1,56 +1,56 @@
-import "./component_css/footer.css";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import './component_css/footer.css';
+import {Link} from 'react-router-dom';
+import {useState, useEffect} from 'react';
 import {
   AdvancedMarker,
   Map,
   APIProvider,
   InfoWindow,
-} from "@vis.gl/react-google-maps";
-import markerImage from "../assets/favicon32px.webp";
+} from '@vis.gl/react-google-maps';
+import markerImage from '../assets/favicon32px.webp';
 
-const gMapsAPI = import.meta.env.VITE_MAPS_API;
+const gMapsAPI = process.env.VITE_MAPS_API;
 
 function Footer() {
   const [selectedLocation, setSelectedLocation] = useState(null);
 
   const locations = [
     {
-      address: "905 Commercial Dr, Vancouver, BC V5L 2H2",
-      description: "DownLow East Van",
-      hours: "11am - 9pm Mon-Sat / 11am - 4:30pm Sun",
-      number: "(604) 283-1385",
-      gMapsLink: "https://maps.app.goo.gl/hieRWPg8Mhe8muDG7",
+      address: '905 Commercial Dr, Vancouver, BC V5L 2H2',
+      description: 'DownLow East Van',
+      hours: '11am - 9pm Mon-Sat / 11am - 4:30pm Sun',
+      number: '(604) 283-1385',
+      gMapsLink: 'https://maps.app.goo.gl/hieRWPg8Mhe8muDG7',
       lat: 49.27630749999999,
       lng: -123.0697264,
     },
     {
-      address: "6065 University Blvd, Vancouver, BC V6T 0C5",
-      description: "DownLow UBC",
-      hours: "11am - 9pm Mon-Sat / 11am - 4:30pm Sun",
-      number: "(604) 221-2755",
-      gMapsLink: "https://maps.app.goo.gl/aZ5F1FjducPrUPiw7",
+      address: '6065 University Blvd, Vancouver, BC V6T 0C5',
+      description: 'DownLow UBC',
+      hours: '11am - 9pm Mon-Sat / 11am - 4:30pm Sun',
+      number: '(604) 221-2755',
+      gMapsLink: 'https://maps.app.goo.gl/aZ5F1FjducPrUPiw7',
       lat: 49.2662207,
       lng: -123.2475804,
     },
     {
-      address: "2035 Cornwall Ave, Vancouver, BC V6K 1B7",
-      description: "DownLow Express",
-      hours: "3pm - 10pm Wed-Fri / 12pm - 10pm Sat-Sun",
-      gMapsLink: "https://maps.app.goo.gl/RbyMvsbYkiFKdnAQA",
+      address: '2035 Cornwall Ave, Vancouver, BC V6K 1B7',
+      description: 'DownLow Express',
+      hours: '3pm - 10pm Wed-Fri / 12pm - 10pm Sat-Sun',
+      gMapsLink: 'https://maps.app.goo.gl/RbyMvsbYkiFKdnAQA',
       lat: 49.272870673864084,
       lng: -123.15752788901693,
     },
   ];
 
   const createMapEmbedUrl = () => {
-    const baseUrl = "https://www.google.com/maps/embed/v1/place";
+    const baseUrl = 'https://www.google.com/maps/embed/v1/place';
     const apiKey = import.meta.env.VITE_MAPS_API;
     const mainLocation = selectedLocation
       ? selectedLocation.address
-      : "905 Commercial Dr, Vancouver, BC V5L 2H2";
+      : '905 Commercial Dr, Vancouver, BC V5L 2H2';
     return `${baseUrl}?key=${apiKey}&q=${encodeURIComponent(
-      mainLocation
+      mainLocation,
     )}&zoom=12`;
   };
 
@@ -62,7 +62,7 @@ function Footer() {
           src={createMapEmbedUrl()}
           width="100%"
           height="400"
-          style={{ border: 0 }}
+          style={{border: 0}}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
@@ -95,7 +95,7 @@ function Footer() {
             Interested in large orders and catering? Click the link below for
             more information!
           </p>
-          <Link to={"/catering"}>Click Here!</Link>
+          <Link to={'/catering'}>Click Here!</Link>
         </section>
       </section>
     </section>
