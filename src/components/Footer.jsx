@@ -45,7 +45,7 @@ function Footer() {
 
   const createMapEmbedUrl = () => {
     const baseUrl = 'https://www.google.com/maps/embed/v1/place';
-    const apiKey = import.meta.env.VITE_MAPS_API;
+    const apiKey = process.env.VITE_MAPS_API;
     const mainLocation = selectedLocation
       ? selectedLocation.address
       : '905 Commercial Dr, Vancouver, BC V5L 2H2';
