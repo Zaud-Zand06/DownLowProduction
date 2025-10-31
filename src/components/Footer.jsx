@@ -9,7 +9,7 @@ import {
 } from '@vis.gl/react-google-maps';
 import markerImage from '../assets/favicon32px.webp';
 
-const gMapsAPI = process.env.VITE_MAPS_API;
+const gMapsAPI = env.VITE_MAPS_API;
 
 function Footer() {
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -45,7 +45,7 @@ function Footer() {
 
   const createMapEmbedUrl = () => {
     const baseUrl = 'https://www.google.com/maps/embed/v1/place';
-    const apiKey = process.env.VITE_MAPS_API;
+    const apiKey = env.VITE_MAPS_API;
     const mainLocation = selectedLocation
       ? selectedLocation.address
       : '905 Commercial Dr, Vancouver, BC V5L 2H2';
