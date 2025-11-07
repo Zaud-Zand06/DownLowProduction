@@ -1,18 +1,20 @@
-import "./component_css/header.css";
-import { useState, useEffect, useRef } from "react";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import { Link, useLocation } from "react-router-dom";
+import './component_css/header.css';
+import {useState, useEffect, useRef} from 'react';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import {Link, useLocation} from 'react-router-dom';
 
 function HeaderOrderOnlineMUIMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const eastVanLink = "https://dl-chicken-east-vancouver.square.site/";
-  const UBCLink = "https://dl-chicken-ubc.square.site/";
+  const eastVanLink = 'https://dl-chicken-east-vancouver.square.site/';
+  const UBCLink = 'https://dl-chicken-ubc.square.site/';
   const uberEatsDLEV =
-    "https://www.order.store/store/downlow-chicken-shack-commercial-drive/6NJHkXsaVEKchwfzK6qWoA";
+    'https://www.order.store/store/downlow-chicken-shack-commercial-drive/6NJHkXsaVEKchwfzK6qWoA';
   const uberEatsDLUBC =
-    "https://www.order.store/store/downlow-chicken-shack-ubc/tZAZORljWCK3pXoGHTm7AQ";
+    'https://www.order.store/store/downlow-chicken-shack-ubc/tZAZORljWCK3pXoGHTm7AQ';
+  const uberEatsDLEXPRESS =
+    'https://www.order.store/store/dl-express-2305-cornwall-avenue/R64Ee1DcVMKjwxXjlDfDLA';
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -25,9 +27,9 @@ function HeaderOrderOnlineMUIMenu() {
     <>
       <a
         id="orderOnlineMenuButton"
-        aria-controls={open ? "orderOnlineMenu" : undefined}
+        aria-controls={open ? 'orderOnlineMenu' : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         Order Online
@@ -37,8 +39,8 @@ function HeaderOrderOnlineMUIMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "orderOnlineMenuButton",
+        slotProps={{
+          'aria-labelledby': 'orderOnlineMenuButton',
         }}
       >
         <MenuItem>
@@ -72,37 +74,37 @@ function mobileHeaderButtons() {
     <div>
       {(() => {
         const navigationConfig = {
-          "/": [
-            { to: "/catering", label: "Catering" },
-            { to: "/menu", label: "Menu" },
+          '/': [
+            {to: '/catering', label: 'Catering'},
+            {to: '/menu', label: 'Menu'},
           ],
-          "/secret": [
-            { to: "/catering", label: "Catering" },
-            { to: "/menu", label: "Menu" },
+          '/secret': [
+            {to: '/catering', label: 'Catering'},
+            {to: '/menu', label: 'Menu'},
           ],
-          "/kits": [
-            { to: "/catering", label: "Catering" },
-            { to: "/menu", label: "Menu" },
-            { to: "/", label: "Home" },
+          '/kits': [
+            {to: '/catering', label: 'Catering'},
+            {to: '/menu', label: 'Menu'},
+            {to: '/', label: 'Home'},
           ],
-          "/catering": [
-            { to: "/", label: "Home" },
-            { to: "/menu", label: "Menu" },
+          '/catering': [
+            {to: '/', label: 'Home'},
+            {to: '/menu', label: 'Menu'},
           ],
-          "/menu": [
-            { to: "/catering", label: "Catering" },
-            { to: "/", label: "Home" },
+          '/menu': [
+            {to: '/catering', label: 'Catering'},
+            {to: '/', label: 'Home'},
           ],
-          "/events": [
-            { to: "/catering", label: "Catering" },
-            { to: "/menu", label: "Menu" },
-            { to: "/", label: "Home" },
+          '/events': [
+            {to: '/catering', label: 'Catering'},
+            {to: '/menu', label: 'Menu'},
+            {to: '/', label: 'Home'},
           ],
         };
 
         const currentNavigation = navigationConfig[location.pathname] || [];
 
-        return currentNavigation.map(({ to, label }) => (
+        return currentNavigation.map(({to, label}) => (
           <Link key={to} to={to}>
             {label}
           </Link>
@@ -119,7 +121,7 @@ function Header() {
   const location = useLocation();
 
   const controlHeader = () => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const threshold = 25; // Adjust this value to set the sensitivity
       const headerHeight = headerRef.current.offsetHeight;
 
@@ -138,10 +140,10 @@ function Header() {
   };
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlHeader);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlHeader);
       return () => {
-        window.removeEventListener("scroll", controlHeader);
+        window.removeEventListener('scroll', controlHeader);
       };
     }
   }, [lastScrollY]);
@@ -149,13 +151,13 @@ function Header() {
   return (
     <div
       ref={headerRef}
-      className={`header ${isVisible ? "visible" : "hidden"}`}
+      className={`header ${isVisible ? 'visible' : 'hidden'}`}
     >
       <div id="logo">
         <h1>DownLow</h1>
         <h1 id="redLogo">
-          {location.pathname !== "/secret" && <Link to="/secret">Chicken</Link>}
-          {location.pathname === "/secret" && <Link to="/">Home</Link>}
+          {location.pathname !== '/secret' && <Link to="/secret">Chicken</Link>}
+          {location.pathname === '/secret' && <Link to="/">Home</Link>}
         </h1>
       </div>
       <div className="hamburgerMenuButtons">
@@ -164,8 +166,8 @@ function Header() {
           target="_blank"
           onClick={() => {
             document
-              .getElementById("locationAndMap")
-              .scrollIntoView({ behavior: "smooth" });
+              .getElementById('locationAndMap')
+              .scrollIntoView({behavior: 'smooth'});
           }}
         >
           Get in Touch
@@ -173,37 +175,37 @@ function Header() {
         {/* some serious wizardy, checks which path the header is currently on, and displays the necessary buttons */}
         {(() => {
           const navigationConfig = {
-            "/": [
-              { to: "/catering", label: "Catering" },
-              { to: "/menu", label: "Menu" },
+            '/': [
+              {to: '/catering', label: 'Catering'},
+              {to: '/menu', label: 'Menu'},
             ],
-            "/secret": [
-              { to: "/catering", label: "Catering" },
-              { to: "/menu", label: "Menu" },
+            '/secret': [
+              {to: '/catering', label: 'Catering'},
+              {to: '/menu', label: 'Menu'},
             ],
-            "/kits": [
-              { to: "/catering", label: "Catering" },
-              { to: "/menu", label: "Menu" },
-              { to: "/", label: "Home" },
+            '/kits': [
+              {to: '/catering', label: 'Catering'},
+              {to: '/menu', label: 'Menu'},
+              {to: '/', label: 'Home'},
             ],
-            "/catering": [
-              { to: "/", label: "Home" },
-              { to: "/menu", label: "Menu" },
+            '/catering': [
+              {to: '/', label: 'Home'},
+              {to: '/menu', label: 'Menu'},
             ],
-            "/menu": [
-              { to: "/catering", label: "Catering" },
-              { to: "/", label: "Home" },
+            '/menu': [
+              {to: '/catering', label: 'Catering'},
+              {to: '/', label: 'Home'},
             ],
-            "/events": [
-              { to: "/catering", label: "Catering" },
-              { to: "/menu", label: "Menu" },
-              { to: "/", label: "Home" },
+            '/events': [
+              {to: '/catering', label: 'Catering'},
+              {to: '/menu', label: 'Menu'},
+              {to: '/', label: 'Home'},
             ],
           };
 
           const currentNavigation = navigationConfig[location.pathname] || [];
 
-          return currentNavigation.map(({ to, label }) => (
+          return currentNavigation.map(({to, label}) => (
             <Link key={to} to={to}>
               {label}
             </Link>
