@@ -1,31 +1,39 @@
-import "./App.css";
-import { useState, useEffect } from "react";
-import "./components/component_css/backgroundImage.css";
-import HeroContent from "./components/HeroContent";
-import Header from "./components/Header";
-import ScrollingAlert from "./components/ScrollingAlert";
-import ParallaxSection from "./components/ParallaxSection";
-import Footer from "./components/Footer";
-import PopUpEvents from "./components/PopUpEvents";
+import './App.css';
+import {useState, useEffect} from 'react';
+import './components/component_css/backgroundImage.css';
+import HeroContent from './components/HeroContent';
+import Header from './components/Header';
+import ScrollingAlert from './components/ScrollingAlert';
+import ParallaxSection from './components/ParallaxSection';
+import Footer from './components/Footer';
+import LocationSelector from './components/LocationSelector';
+// import PopUpEvents from "./components/PopUpEvents";
 
 function App() {
-  const [isModalOpen, setModalOpen] = useState(true);
-  const handleClose = () => setModalOpen(false);
+  // const [isModalOpen, setModalOpen] = useState(true);
+  // const handleClose = () => setModalOpen(false);
+  // default location to vancouver for now
+  const [location, setLocation] = useState(null);
 
   return (
     <>
+      {!location && <LocationSelector setLocation={setLocation} />}
       {/* <PopUpEvents isOpen={isModalOpen} onClose={handleClose} /> */}
-      <Header role="banner" />
+      {location && (
+        <>
+          <Header role="banner" />
 
-      <div className="backgroundImage"></div>
+          <div className="backgroundImage"></div>
 
-      <HeroContent />
+          <HeroContent />
 
-      <ScrollingAlert />
+          <ScrollingAlert />
 
-      <ParallaxSection />
+          <ParallaxSection />
 
-      <Footer role="region" />
+          <Footer role="region" />
+        </>
+      )}
     </>
   );
 }
