@@ -49,18 +49,28 @@ function HeaderOrderOnlineMUIMenu() {
           </a>
         </MenuItem>
         <MenuItem>
-          <a target="_blank" href={UBCLink} onClick={() => handleClose()}>
-            DL UBC Pickup
-          </a>
-        </MenuItem>
-        <MenuItem>
           <a target="_blank" href={uberEatsDLEV} onClick={() => handleClose()}>
             DL East Van Delivery
           </a>
         </MenuItem>
         <MenuItem>
+          <a target="_blank" href={UBCLink} onClick={() => handleClose()}>
+            DL UBC Pickup
+          </a>
+        </MenuItem>
+
+        <MenuItem>
           <a target="_blank" href={uberEatsDLUBC} onClick={() => handleClose()}>
             DL UBC Delivery
+          </a>
+        </MenuItem>
+        <MenuItem>
+          <a
+            target="_blank"
+            href={uberEatsDLEXPRESS}
+            onClick={() => handleClose()}
+          >
+            DL Express Delivery
           </a>
         </MenuItem>
       </Menu>
