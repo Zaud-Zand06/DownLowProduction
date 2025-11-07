@@ -1,24 +1,25 @@
-import "./component_css/heroContent.css";
-import heroImage from "../assets/pumpkinSpiceDessertBar1600.avif";
+import './component_css/heroContent.css';
+import heroImage from '../assets/provencal1600Px.avif';
 
 function HeroContent() {
   return (
     <section id="heroContent">
       <img
         src={heroImage}
-        alt="soy glazed fried chicken sando with shredded and fried spam, coleslaw and lemon mayo sauce"
+        alt="fried chicken sando with sauteed veggie slaw and herbs de provence spices"
         loading="eager"
         decoding="async"
       />
       <div id="heroContentText">
-        <h1>Our October Specials Have Arrived!</h1>
+        <h1>The New Provençal Sando!</h1>
         <p>
-          Come by and try our new Oktoberfest Sando and Fries! Featuring a new
-          Grainy Dijon Mustard Mayo, Pickled sauerkraut coleslaw, and a new
-          dilly dust!
+          Come by and try our newest monthly special! Featuring a sauteed veggie
+          slaw, a new Herbs de Provence Spice dust and a limited-time Chicken
+          Gravy mayo! Available for all of November only!
           <br />
-          While you&apos;re here, try our Pumpkin Spice Dessert Bar! Featuring
-          your favourite fall flavours packed into a crispy, sweet dessert bar!
+          While you&apos;re here, make sure to try our new Hoe Cake sides! A
+          warm, savoury cornmeal flatbread, perfect for soaking up any extra
+          sauces and spices!
         </p>
       </div>
     </section>
