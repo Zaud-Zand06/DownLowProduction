@@ -34,7 +34,7 @@ function Footer() {
       lng: -123.2475804,
     },
     {
-      address: '2035 Cornwall Ave, Vancouver, BC V6K 1B7',
+      address: '2305 Cornwall Ave, Vancouver, BC V6K 1B7',
       description: 'DownLow Express',
       hours: '3pm - 10pm Wed-Fri / 12pm - 10pm Sat-Sun',
       gMapsLink: 'https://maps.app.goo.gl/RbyMvsbYkiFKdnAQA',
@@ -101,91 +101,5 @@ function Footer() {
     </section>
   );
 }
-
-//   return (
-//     <section id="footer">
-//       <section id="locationAndMap">
-//         <APIProvider apiKey={gMapsAPI} region="CA" version="beta">
-//           <Map
-//             className="mapEmbed"
-//             defaultCenter={locations[2]}
-//             defaultZoom={12}
-//             colorScheme="FOLLOW_SYSTEM"
-//             disableDefaultUI={true}
-//             controlled={false}
-//             mapId="c467762c07f903327945a653"
-//           >
-//             {locations.map((location, index) => (
-//               <AdvancedMarker
-//                 key={index}
-//                 position={location}
-//                 onClick={() => {
-//                   setSelectedLocation(location);
-//                 }}
-//               >
-//                 <img src={markerImage} width={32} height={32} />
-//               </AdvancedMarker>
-//             ))}
-//             {selectedLocation && (
-//               <InfoWindow
-//                 position={selectedLocation}
-//                 onCloseClick={() => {
-//                   setSelectedLocation(null);
-//                 }}
-//               >
-//                 <div>
-//                   <h2>{selectedLocation.description}</h2>
-//                   <h3>
-//                     <a
-//                       className="gMapsLink"
-//                       href={selectedLocation.gMapsLink}
-//                       target="_blank"
-//                     >
-//                       {selectedLocation.address}
-//                     </a>
-//                   </h3>
-//                   <p>{selectedLocation.hours}</p>
-//                   <p>{selectedLocation.number}</p>
-//                 </div>
-//               </InfoWindow>
-//             )}
-//           </Map>
-//         </APIProvider>
-//         <section id="locationsInfo">
-//           <h1>Where we are</h1>
-//           {locations.map((location, index) => (
-//             <div key={index}>
-//               <h2>
-//                 <a
-//                   onClick={() => {
-//                     setSelectedLocation(location);
-//                   }}
-//                 >
-//                   {location.description}
-//                 </a>
-//               </h2>
-//               <p>{location.hours}</p>
-//               <p>{location.address}</p>
-//               <p>{location.number}</p>
-//             </div>
-//           ))}
-//           <h1>Catering</h1>
-//           <p>
-//             Interested in large orders and catering? Click the link below for
-//             more information!
-//           </p>
-//           <a
-//             onClick={() => {
-//               setDisplayMenu("catering");
-//               setScrollToTop(true);
-//             }}
-//           >
-//             Click Here!
-//           </a>
-//         </section>
-//       </section>
-//     </section>
-//   );
-// }
 
 export default Footer;
