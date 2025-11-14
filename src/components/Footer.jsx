@@ -36,7 +36,7 @@ function Footer() {
     {
       address: '2305 Cornwall Ave, Vancouver, BC V6K 1B7',
       description: 'DownLow Express',
-      hours: '3pm - 10pm Wed-Fri / 12pm - 10pm Sat-Sun',
+      hours: `4pm - 10pm Thu-Fri / 12pm - 10pm Sat-Sun / May Change Depending on the Weather!`,
       gMapsLink: 'https://maps.app.goo.gl/RbyMvsbYkiFKdnAQA',
       lat: 49.272870673864084,
       lng: -123.15752788901693,
